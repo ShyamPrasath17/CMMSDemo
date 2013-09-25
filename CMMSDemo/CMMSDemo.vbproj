@@ -75,6 +75,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmTaskLists.Designer.vb">
+      <DependentUpon>frmTaskLists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTaskLists.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTasks.Designer.vb">
+      <DependentUpon>frmTasks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTasks.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmWorkOrder.Designer.vb">
       <DependentUpon>frmWorkOrder.vb</DependentUpon>
     </Compile>
@@ -110,6 +122,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmTaskLists.resx">
+      <DependentUpon>frmTaskLists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTasks.resx">
+      <DependentUpon>frmTasks.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWorkOrder.resx">
       <DependentUpon>frmWorkOrder.vb</DependentUpon>
     </EmbeddedResource>

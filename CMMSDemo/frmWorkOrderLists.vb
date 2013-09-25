@@ -22,7 +22,7 @@
     End Sub
 
     Private Sub dgvWo_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvWo.CellDoubleClick
-        FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWo)
+        FormMain.RadDockMain.DockWindow(FormMain.ToolWindowWo, Telerik.WinControls.UI.Docking.DockPosition.Right)
     End Sub
 
     

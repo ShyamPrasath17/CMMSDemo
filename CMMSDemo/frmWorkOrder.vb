@@ -10,4 +10,5 @@
         txtsertype.Text = dr("ServiceType").ToString()
         txtstatus.Text = dr("status").ToString()
     End Sub
+
 End Class

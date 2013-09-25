@@ -23,27 +23,28 @@ Partial Class FormMain
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
-        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
-        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolTabStrip1.SuspendLayout()
+        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.ToolWindowWo
+        Me.RadDockMain.ActiveWindow = Me.ToolWindowWoLst
         Me.RadDockMain.Controls.Add(Me.ToolTabStrip1)
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
         Me.RadDockMain.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadDockMain.IsCleanUpTarget = True
         Me.RadDockMain.Location = New System.Drawing.Point(0, 0)
         Me.RadDockMain.MainDocumentContainer = Me.DocumentContainer1
         Me.RadDockMain.MainDocumentContainerVisible = False
@@ -58,27 +59,14 @@ Partial Class FormMain
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
         '
-        'DocumentContainer1
+        'ToolWindowWo
         '
-        Me.DocumentContainer1.Collapsed = True
-        Me.DocumentContainer1.Name = "DocumentContainer1"
-        '
-        '
-        '
-        Me.DocumentContainer1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.DocumentContainer1.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.DocumentContainer1.SizeInfo.AbsoluteSize = New System.Drawing.Size(25, 200)
-        Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
-        Me.DocumentContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(-472, 0)
-        '
-        'ToolWindowWoLst
-        '
-        Me.ToolWindowWoLst.Caption = Nothing
-        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
-        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWoLst.Size = New System.Drawing.Size(903, 326)
-        Me.ToolWindowWoLst.Text = "Work Order List"
+        Me.ToolWindowWo.Caption = Nothing
+        Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWo.Name = "ToolWindowWo"
+        Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWo.Size = New System.Drawing.Size(903, 326)
+        Me.ToolWindowWo.Text = "WorkOrder"
         '
         'ToolTabStrip1
         '
@@ -91,21 +79,35 @@ Partial Class FormMain
         '
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip1.SelectedIndex = 1
+        Me.ToolTabStrip1.SelectedIndex = 0
         Me.ToolTabStrip1.Size = New System.Drawing.Size(905, 376)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
         '
-        'ToolWindowWo
+        'ToolWindowWoLst
         '
-        Me.ToolWindowWo.Caption = Nothing
-        Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWo.Name = "ToolWindowWo"
-        Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWo.Size = New System.Drawing.Size(903, 326)
-        Me.ToolWindowWo.Text = "WorkOrder"
+        Me.ToolWindowWoLst.Caption = Nothing
+        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
+        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWoLst.Size = New System.Drawing.Size(903, 326)
+        Me.ToolWindowWoLst.Text = "Work Order List"
+        '
+        'DocumentContainer1
+        '
+        Me.DocumentContainer1.Collapsed = True
+        Me.DocumentContainer1.Name = "DocumentContainer1"
+        '
+        '
+        '
+        Me.DocumentContainer1.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.DocumentContainer1.RootElement.Padding = New System.Windows.Forms.Padding(5)
+        Me.DocumentContainer1.SizeInfo.AbsoluteSize = New System.Drawing.Size(25, 200)
+        Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
+        Me.DocumentContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(-472, 0)
+        Me.DocumentContainer1.TabIndex = 2
         '
         'ToolTabStrip4
         '
@@ -149,9 +151,9 @@ Partial Class FormMain
         Me.Text = "FormMain"
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadDockMain.ResumeLayout(False)
-        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolTabStrip1.ResumeLayout(False)
+        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
