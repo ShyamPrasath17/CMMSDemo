@@ -55,6 +55,11 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Telerik.WinControls, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.GridView, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.RadDock, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
+    <Reference Include="Telerik.WinControls.UI, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="TelerikCommon, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -70,6 +75,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmWorkOrder.Designer.vb">
+      <DependentUpon>frmWorkOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWorkOrderLists.Designer.vb">
+      <DependentUpon>frmWorkOrderLists.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmWorkOrderLists.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormMain.Designer.vb">
       <DependentUpon>FormMain.vb</DependentUpon>
     </Compile>
@@ -93,6 +110,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmWorkOrder.resx">
+      <DependentUpon>frmWorkOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWorkOrderLists.resx">
+      <DependentUpon>frmWorkOrderLists.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
