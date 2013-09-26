@@ -1,11 +1,13 @@
 ﻿Public Class FormMain
-    Dim frmwolst As frmWorkOrderLists
+    Public frmwolst As frmWorkOrderLists
     Public frmwo As frmWorkOrder
+    Public frmtasklst As frmTaskLists
+    Public frmtask As frmTasks
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         addWoLst()
         addwofrm()
-        ToolWindowWo.Hide()
-        'ToolWindowWo
+        addtaskfrm()
+        addtasklstfrm()
     End Sub
 
     Private Sub addwofrm()
@@ -15,6 +17,22 @@
         frmwo.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmwo.Show()
         ToolWindowWo.Controls.Add(frmwo)
+    End Sub
+    Private Sub addtaskfrm()
+        frmtask = New frmTasks()
+        frmtask.Dock = DockStyle.Fill
+        frmtask.TopLevel = False
+        frmtask.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmtask.Show()
+        ToolWindowTask.Controls.Add(frmtask)
+    End Sub
+    Private Sub addtasklstfrm()
+        frmtasklst = New frmTaskLists()
+        frmtasklst.Dock = DockStyle.Fill
+        frmtasklst.TopLevel = False
+        frmtasklst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmtasklst.Show()
+        ToolWindowTaskLst.Controls.Add(frmtasklst)
     End Sub
 
     Private Sub addWoLst()
