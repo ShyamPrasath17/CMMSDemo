@@ -6,6 +6,14 @@
         addwofrm()
         ToolWindowWo.Hide()
         'ToolWindowWo
+
+
+        SplitContainer1.SplitterDistance = SplitContainer1.Height - 400
+        SplitContainer1.FixedPanel = FixedPanel.Panel1
+
+
+        SplitContainer2.SplitterDistance = SplitContainer2.Height - 50
+        SplitContainer2.FixedPanel = FixedPanel.Panel2
     End Sub
 
     Private Sub addwofrm()
