@@ -1,13 +1,17 @@
 ﻿Public Class FormMain
-    Public frmwolst As frmWorkOrderLists
+    Dim frmwolst As frmWorkOrderLists
     Public frmwo As frmWorkOrder
-    Public frmtasklst As frmTaskLists
-    Public frmtask As frmTasks
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         addWoLst()
         addwofrm()
-        addtaskfrm()
-        addtasklstfrm()
+        ToolWindowWo.Hide()
+
+        SplitContainer1.SplitterDistance = SplitContainer1.Height - 400
+        SplitContainer1.FixedPanel = FixedPanel.Panel1
+
+
+        SplitContainer2.SplitterDistance = SplitContainer2.Height - 600
+        SplitContainer2.FixedPanel = FixedPanel.Panel1
     End Sub
 
     Private Sub addwofrm()
@@ -17,22 +21,6 @@
         frmwo.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmwo.Show()
         ToolWindowWo.Controls.Add(frmwo)
-    End Sub
-    Private Sub addtaskfrm()
-        frmtask = New frmTasks()
-        frmtask.Dock = DockStyle.Fill
-        frmtask.TopLevel = False
-        frmtask.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmtask.Show()
-        ToolWindowTask.Controls.Add(frmtask)
-    End Sub
-    Private Sub addtasklstfrm()
-        frmtasklst = New frmTaskLists()
-        frmtasklst.Dock = DockStyle.Fill
-        frmtasklst.TopLevel = False
-        frmtasklst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmtasklst.Show()
-        ToolWindowTaskLst.Controls.Add(frmtasklst)
     End Sub
 
     Private Sub addWoLst()
