@@ -60,13 +60,13 @@ Partial Class frmWorkOrder
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.chkBillable = New System.Windows.Forms.CheckBox()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.Sercust = New System.Windows.Forms.Button()
         Me.lblCust = New System.Windows.Forms.Label()
         Me.txtcust = New System.Windows.Forms.TextBox()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.chkBillable = New System.Windows.Forms.CheckBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -138,8 +138,8 @@ Partial Class frmWorkOrder
         '
         'BtnAddWo
         '
-        Me.BtnAddWo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddWo.Location = New System.Drawing.Point(94, 17)
+        Me.BtnAddWo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAddWo.Location = New System.Drawing.Point(114, 14)
         Me.BtnAddWo.Name = "BtnAddWo"
         Me.BtnAddWo.Size = New System.Drawing.Size(105, 23)
         Me.BtnAddWo.TabIndex = 31
@@ -148,9 +148,9 @@ Partial Class frmWorkOrder
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(205, 17)
+        Me.Button1.Location = New System.Drawing.Point(225, 14)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 32
@@ -159,9 +159,9 @@ Partial Class frmWorkOrder
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(286, 16)
+        Me.Button2.Location = New System.Drawing.Point(306, 13)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 33
@@ -170,9 +170,9 @@ Partial Class frmWorkOrder
         '
         'Button3
         '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(367, 16)
+        Me.Button3.Location = New System.Drawing.Point(387, 13)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 34
@@ -346,14 +346,11 @@ Partial Class frmWorkOrder
         '
         'TextBox3
         '
-        Me.TextBox3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox3.Location = New System.Drawing.Point(18, 522)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(505, 130)
+        Me.TextBox3.Size = New System.Drawing.Size(525, 91)
         Me.TextBox3.TabIndex = 88
         '
         'ComboBox2
@@ -447,35 +444,17 @@ Partial Class frmWorkOrder
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
         Me.SplitContainer1.Size = New System.Drawing.Size(555, 718)
-        Me.SplitContainer1.SplitterDistance = 666
+        Me.SplitContainer1.SplitterDistance = 623
         Me.SplitContainer1.TabIndex = 94
         '
-        'TextBox7
+        'Button7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(113, 284)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox7.TabIndex = 97
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(17, 291)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(55, 13)
-        Me.Label15.TabIndex = 96
-        Me.Label15.Text = "Total Cost"
-        '
-        'chkBillable
-        '
-        Me.chkBillable.AutoSize = True
-        Me.chkBillable.Location = New System.Drawing.Point(19, 419)
-        Me.chkBillable.Name = "chkBillable"
-        Me.chkBillable.Size = New System.Drawing.Size(59, 17)
-        Me.chkBillable.TabIndex = 98
-        Me.chkBillable.Text = "Billable"
-        Me.chkBillable.UseVisualStyleBackColor = True
+        Me.Button7.Location = New System.Drawing.Point(18, 467)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(111, 23)
+        Me.Button7.TabIndex = 102
+        Me.Button7.Text = "File Attachments >>"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'Sercust
         '
@@ -505,20 +484,37 @@ Partial Class frmWorkOrder
         Me.txtcust.Size = New System.Drawing.Size(185, 20)
         Me.txtcust.TabIndex = 99
         '
-        'Button7
+        'chkBillable
         '
-        Me.Button7.Location = New System.Drawing.Point(18, 467)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(111, 23)
-        Me.Button7.TabIndex = 102
-        Me.Button7.Text = "File Attachments >>"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.chkBillable.AutoSize = True
+        Me.chkBillable.Location = New System.Drawing.Point(19, 419)
+        Me.chkBillable.Name = "chkBillable"
+        Me.chkBillable.Size = New System.Drawing.Size(59, 17)
+        Me.chkBillable.TabIndex = 98
+        Me.chkBillable.Text = "Billable"
+        Me.chkBillable.UseVisualStyleBackColor = True
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(113, 284)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.ReadOnly = True
+        Me.TextBox7.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox7.TabIndex = 97
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(17, 291)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(55, 13)
+        Me.Label15.TabIndex = 96
+        Me.Label15.Text = "Total Cost"
         '
         'Button8
         '
-        Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button8.Enabled = False
-        Me.Button8.Location = New System.Drawing.Point(448, 16)
+        Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button8.Location = New System.Drawing.Point(468, 13)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 110
