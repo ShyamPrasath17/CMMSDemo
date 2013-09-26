@@ -31,19 +31,19 @@ Partial Class FormMain
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.rpvMain = New Telerik.WinControls.UI.RadPageView()
         Me.rpvpProjects = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.btnViewProjects = New System.Windows.Forms.Button()
         Me.btnAddProject = New System.Windows.Forms.Button()
         Me.rpvpWorkOrders = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.rpvpTasks = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.rpvpScheduler = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.btnViewProjects = New System.Windows.Forms.Button()
         Me.btnViewWorkOrders = New System.Windows.Forms.Button()
         Me.btnAddWorkOrder = New System.Windows.Forms.Button()
+        Me.rpvpTasks = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnViewTasks = New System.Windows.Forms.Button()
         Me.btnAddTask = New System.Windows.Forms.Button()
+        Me.rpvpScheduler = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.rpvpReports = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpSettings = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.btnSave = New System.Windows.Forms.Button()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +85,7 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockMain.Size = New System.Drawing.Size(644, 550)
+        Me.RadDockMain.Size = New System.Drawing.Size(774, 361)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
@@ -96,7 +96,7 @@ Partial Class FormMain
         Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
         Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
         Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWoLst.Size = New System.Drawing.Size(632, 490)
+        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 303)
         Me.ToolWindowWoLst.Text = "Work Order List"
         '
         'ToolTabStrip1
@@ -111,7 +111,7 @@ Partial Class FormMain
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(634, 540)
+        Me.ToolTabStrip1.Size = New System.Drawing.Size(764, 351)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
@@ -184,21 +184,30 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpProjects
-        Me.rpvMain.Size = New System.Drawing.Size(323, 607)
+        Me.rpvMain.SelectedPage = Me.rpvpWorkOrders
+        Me.rpvMain.Size = New System.Drawing.Size(193, 640)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
         '
         'rpvpProjects
         '
-        Me.rpvpProjects.BackColor = System.Drawing.Color.FromArgb(CType(CType(189, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.rpvpProjects.BackColor = System.Drawing.Color.White
         Me.rpvpProjects.Controls.Add(Me.btnViewProjects)
         Me.rpvpProjects.Controls.Add(Me.btnAddProject)
         Me.rpvpProjects.Location = New System.Drawing.Point(5, 29)
         Me.rpvpProjects.Name = "rpvpProjects"
-        Me.rpvpProjects.Size = New System.Drawing.Size(313, 388)
+        Me.rpvpProjects.Size = New System.Drawing.Size(183, 421)
         Me.rpvpProjects.Text = "Projects"
+        '
+        'btnViewProjects
+        '
+        Me.btnViewProjects.Location = New System.Drawing.Point(7, 3)
+        Me.btnViewProjects.Name = "btnViewProjects"
+        Me.btnViewProjects.Size = New System.Drawing.Size(80, 80)
+        Me.btnViewProjects.TabIndex = 1
+        Me.btnViewProjects.Text = "View Projects"
+        Me.btnViewProjects.UseVisualStyleBackColor = True
         '
         'btnAddProject
         '
@@ -215,61 +224,8 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Controls.Add(Me.btnAddWorkOrder)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(313, 388)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(183, 421)
         Me.rpvpWorkOrders.Text = "Work Orders"
-        '
-        'rpvpTasks
-        '
-        Me.rpvpTasks.Controls.Add(Me.btnViewTasks)
-        Me.rpvpTasks.Controls.Add(Me.btnAddTask)
-        Me.rpvpTasks.Location = New System.Drawing.Point(5, 29)
-        Me.rpvpTasks.Name = "rpvpTasks"
-        Me.rpvpTasks.Size = New System.Drawing.Size(313, 388)
-        Me.rpvpTasks.Text = "Tasks"
-        '
-        'rpvpScheduler
-        '
-        Me.rpvpScheduler.Controls.Add(Me.Button3)
-        Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
-        Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(313, 388)
-        Me.rpvpScheduler.Text = "Scheduler"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(7, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 76)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(184, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.Controls.Add(Me.rpvMain)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(971, 607)
-        Me.SplitContainer1.SplitterDistance = 323
-        Me.SplitContainer1.TabIndex = 2
-        '
-        'btnViewProjects
-        '
-        Me.btnViewProjects.Location = New System.Drawing.Point(7, 3)
-        Me.btnViewProjects.Name = "btnViewProjects"
-        Me.btnViewProjects.Size = New System.Drawing.Size(80, 80)
-        Me.btnViewProjects.TabIndex = 1
-        Me.btnViewProjects.Text = "View Projects"
-        Me.btnViewProjects.UseVisualStyleBackColor = True
         '
         'btnViewWorkOrders
         '
@@ -289,6 +245,15 @@ Partial Class FormMain
         Me.btnAddWorkOrder.Text = "Add Work Order"
         Me.btnAddWorkOrder.UseVisualStyleBackColor = True
         '
+        'rpvpTasks
+        '
+        Me.rpvpTasks.Controls.Add(Me.btnViewTasks)
+        Me.rpvpTasks.Controls.Add(Me.btnAddTask)
+        Me.rpvpTasks.Location = New System.Drawing.Point(5, 29)
+        Me.rpvpTasks.Name = "rpvpTasks"
+        Me.rpvpTasks.Size = New System.Drawing.Size(183, 421)
+        Me.rpvpTasks.Text = "Tasks"
+        '
         'btnViewTasks
         '
         Me.btnViewTasks.Location = New System.Drawing.Point(7, 3)
@@ -307,19 +272,54 @@ Partial Class FormMain
         Me.btnAddTask.Text = "Add Tasks"
         Me.btnAddTask.UseVisualStyleBackColor = True
         '
+        'rpvpScheduler
+        '
+        Me.rpvpScheduler.Controls.Add(Me.Button3)
+        Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
+        Me.rpvpScheduler.Name = "rpvpScheduler"
+        Me.rpvpScheduler.Size = New System.Drawing.Size(183, 5)
+        Me.rpvpScheduler.Text = "Scheduler"
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(7, 3)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 76)
+        Me.Button3.TabIndex = 0
+        Me.Button3.Text = "Button3"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'rpvpReports
         '
         Me.rpvpReports.Location = New System.Drawing.Point(5, 29)
         Me.rpvpReports.Name = "rpvpReports"
-        Me.rpvpReports.Size = New System.Drawing.Size(313, 388)
+        Me.rpvpReports.Size = New System.Drawing.Size(183, 5)
         Me.rpvpReports.Text = "Reports"
         '
         'rpvpSettings
         '
         Me.rpvpSettings.Location = New System.Drawing.Point(5, 29)
         Me.rpvpSettings.Name = "rpvpSettings"
-        Me.rpvpSettings.Size = New System.Drawing.Size(313, 388)
+        Me.rpvpSettings.Size = New System.Drawing.Size(900, 0)
         Me.rpvpSettings.Text = "Settings"
+        '
+        'SplitContainer1
+        '
+        Me.SplitContainer1.BackColor = System.Drawing.Color.FromArgb(CType(CType(184, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.SplitContainer1.Name = "SplitContainer1"
+        '
+        'SplitContainer1.Panel1
+        '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.rpvMain)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
+        Me.SplitContainer1.Size = New System.Drawing.Size(971, 640)
+        Me.SplitContainer1.SplitterDistance = 193
+        Me.SplitContainer1.TabIndex = 2
         '
         'SplitContainer2
         '
@@ -337,14 +337,14 @@ Partial Class FormMain
         Me.SplitContainer2.Panel2.AccessibleRole = System.Windows.Forms.AccessibleRole.None
         Me.SplitContainer2.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(184, Byte), Integer), CType(CType(215, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.SplitContainer2.Panel2.Controls.Add(Me.btnSave)
-        Me.SplitContainer2.Size = New System.Drawing.Size(644, 607)
-        Me.SplitContainer2.SplitterDistance = 550
+        Me.SplitContainer2.Size = New System.Drawing.Size(774, 640)
+        Me.SplitContainer2.SplitterDistance = 361
         Me.SplitContainer2.TabIndex = 1
         '
         'btnSave
         '
         Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSave.Location = New System.Drawing.Point(522, 12)
+        Me.btnSave.Location = New System.Drawing.Point(1058, -133)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(110, 29)
         Me.btnSave.TabIndex = 2
@@ -355,7 +355,7 @@ Partial Class FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(971, 607)
+        Me.ClientSize = New System.Drawing.Size(971, 640)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
