@@ -138,14 +138,8 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Icons\projects.png" />
-    <Content Include="Icons\Reports.png" />
-    <Content Include="Icons\Scheduler.png" />
-    <Content Include="Icons\Settings.png" />
-    <Content Include="Icons\tasks.png" />
-    <Content Include="Icons\WO.png" />
+    <Folder Include="Icons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

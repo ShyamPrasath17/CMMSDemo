@@ -10,8 +10,8 @@
         SplitContainer1.FixedPanel = FixedPanel.Panel1
 
 
-        SplitContainer2.SplitterDistance = SplitContainer2.Height - 50
-        SplitContainer2.FixedPanel = FixedPanel.Panel2
+        SplitContainer2.SplitterDistance = SplitContainer2.Height - 600
+        SplitContainer2.FixedPanel = FixedPanel.Panel1
     End Sub
 
     Private Sub addwofrm()
