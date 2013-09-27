@@ -4,10 +4,25 @@
 
     End Sub
 
-    Public Sub fillworkorder(dr As DataRow)
+    Public Sub fillworkorder(ByRef dr As DataRow, ByRef dt As DataTable)
         txtwono.Text = dr("WorkOrderNo").ToString()
-        txtarea.Text = dr("areaID").ToString()
-        txtsertype.Text = dr("ServiceType").ToString()
+        Cmbsertype.Text = dr("ServiceType").ToString()
         txtstatus.Text = dr("status").ToString()
+    End Sub
+
+    Private Sub BtnAddWo_Click(sender As Object, e As EventArgs) Handles BtnAddWo.Click
+       
+    End Sub
+
+    Private Sub chkBillable_CheckedChanged(sender As Object, e As EventArgs) Handles chkBillable.CheckedChanged
+        If chkBillable.Checked Then
+            lblCust.Enabled = True
+            txtcust.Enabled = True
+            Sercust.Enabled = True
+        Else
+            lblCust.Enabled = False
+            txtcust.Enabled = False
+            Sercust.Enabled = False
+        End If
     End Sub
 End Class

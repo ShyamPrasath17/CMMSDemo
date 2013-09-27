@@ -21,16 +21,10 @@
         dgvWo.DataSource = dt
     End Sub
 
-    Private Sub dgvWo_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvWo.CellDoubleClick
-        FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWo)
-    End Sub
-
-    
-
     Private Sub dgvWo_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvWo.CurrentRowChanged
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                FormMain.frmwo.fillworkorder(dt.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0))
+                FormMain.frmwo.fillworkorder(dt.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dt)
             End If
         End If
     End Sub
