@@ -3,12 +3,16 @@
     Public frmwo As frmWorkOrder
     Public frmtasklst As frmTaskLists
     Public frmtask As frmTasks
+    Public frmProject As frmProject
+    Public frmProjectLst As frmProjectList
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         addWoLst()
         addwofrm()
         addTaskListfrm()
         addTaskfrm()
+        addProjectListfrm()
+        addProjectfrm()
 
         'ToolWindowWo.Hide()
         'ToolWindowWoLst.Hide()
@@ -24,7 +28,22 @@
         SplitContainer2.SplitterDistance = SplitContainer2.Height - 900
         SplitContainer2.FixedPanel = FixedPanel.Panel1
     End Sub
-
+    Private Sub addProjectListfrm()
+        frmProjectLst = New frmProjectList()
+        frmProjectLst.Dock = DockStyle.Fill
+        frmProjectLst.TopLevel = False
+        frmProjectLst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmProjectLst.Show()
+        ToolWindowProjectLst.Controls.Add(frmProjectLst)
+    End Sub
+    Private Sub addProjectfrm()
+        frmProject = New frmProject()
+        frmProject.Dock = DockStyle.Fill
+        frmProject.TopLevel = False
+        frmProject.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmProject.Show()
+        ToolWindowProject.Controls.Add(frmProject)
+    End Sub
     Private Sub addTaskListfrm()
         frmtasklst = New frmTaskLists()
         frmtasklst.Dock = DockStyle.Fill

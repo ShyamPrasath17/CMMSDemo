@@ -157,7 +157,7 @@ Partial Class FormMain
         Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
         Me.ToolWindowWo.Name = "ToolWindowWo"
         Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWo.Size = New System.Drawing.Size(762, 481)
+        Me.ToolWindowWo.Size = New System.Drawing.Size(1100, 721)
         Me.ToolWindowWo.Text = "WorkOrder"
         '
         'ToolWindowTaskLst
@@ -175,7 +175,7 @@ Partial Class FormMain
         Me.ToolWindowTask.Location = New System.Drawing.Point(1, 24)
         Me.ToolWindowTask.Name = "ToolWindowTask"
         Me.ToolWindowTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowTask.Size = New System.Drawing.Size(762, 481)
+        Me.ToolWindowTask.Size = New System.Drawing.Size(1100, 721)
         Me.ToolWindowTask.Text = "Task"
         '
         'DocumentContainer1

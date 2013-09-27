@@ -443,8 +443,8 @@ Partial Class frmWorkOrder
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button3)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(555, 718)
-        Me.SplitContainer1.SplitterDistance = 623
+        Me.SplitContainer1.Size = New System.Drawing.Size(555, 666)
+        Me.SplitContainer1.SplitterDistance = 618
         Me.SplitContainer1.TabIndex = 94
         '
         'Button7
@@ -526,9 +526,9 @@ Partial Class frmWorkOrder
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(555, 718)
+        Me.ClientSize = New System.Drawing.Size(555, 666)
         Me.Controls.Add(Me.SplitContainer1)
-        Me.MinimumSize = New System.Drawing.Size(571, 756)
+        Me.MinimumSize = New System.Drawing.Size(571, 704)
         Me.Name = "frmWorkOrder"
         Me.Text = "WorkOrder"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
