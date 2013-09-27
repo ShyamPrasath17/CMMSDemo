@@ -1,17 +1,34 @@
 ﻿Public Class FormMain
     Dim frmwolst As frmWorkOrderLists
     Public frmwo As frmWorkOrder
+    Dim frmDashBoard As frmDashBoard
+
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         addWoLst()
         addwofrm()
-        ToolWindowWo.Hide()
+        addDashBoardFrm()
 
+
+        ToolWindowWo.Hide()
+        AdjustSplitters()
+    End Sub
+
+    Private Sub AdjustSplitters()
+        'Set Fixed size for Split Panels
         SplitContainer1.SplitterDistance = SplitContainer1.Height - 400
         SplitContainer1.FixedPanel = FixedPanel.Panel1
 
-
-        SplitContainer2.SplitterDistance = SplitContainer2.Height - 600
+        SplitContainer2.SplitterDistance = SplitContainer2.Height - 700
         SplitContainer2.FixedPanel = FixedPanel.Panel1
+    End Sub
+
+    Private Sub addDashBoardFrm()
+        frmDashBoard = New frmDashBoard()
+        frmDashBoard.Dock = DockStyle.Fill
+        frmDashBoard.TopLevel = False
+        frmDashBoard.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmDashBoard.Show()
+        twDashBoard.Controls.Add(frmDashBoard)
     End Sub
 
     Private Sub addwofrm()
