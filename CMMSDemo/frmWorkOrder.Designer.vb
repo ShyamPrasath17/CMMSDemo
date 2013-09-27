@@ -350,7 +350,7 @@ Partial Class frmWorkOrder
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(525, 91)
+        Me.TextBox3.Size = New System.Drawing.Size(525, 85)
         Me.TextBox3.TabIndex = 88
         '
         'ComboBox2
