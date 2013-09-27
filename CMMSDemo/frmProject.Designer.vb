@@ -24,14 +24,16 @@ Partial Class frmProject
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProject))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.txtstatus = New System.Windows.Forms.TextBox()
+        Me.txtprojectID = New System.Windows.Forms.TextBox()
+        Me.txtpname = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -40,11 +42,11 @@ Partial Class frmProject
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.BtnAddWo = New System.Windows.Forms.Button()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtstatus = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -61,6 +63,8 @@ Partial Class frmProject
         'SplitContainer1.Panel1
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtstatus)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox2)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button7)
@@ -69,8 +73,8 @@ Partial Class frmProject
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label14)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label12)
         Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox3)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox1)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.txtstatus)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtprojectID)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtpname)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label4)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label5)
         Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox5)
@@ -88,6 +92,22 @@ Partial Class frmProject
         Me.SplitContainer1.Size = New System.Drawing.Size(548, 445)
         Me.SplitContainer1.SplitterDistance = 391
         Me.SplitContainer1.TabIndex = 95
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(113, 123)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox2.TabIndex = 104
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(17, 130)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(77, 13)
+        Me.Label1.TabIndex = 103
+        Me.Label1.Text = "Estimated Cost"
         '
         'Button7
         '
@@ -118,7 +138,7 @@ Partial Class frmProject
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(16, 53)
+        Me.Label14.Location = New System.Drawing.Point(18, 27)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(54, 13)
         Me.Label14.TabIndex = 93
@@ -142,20 +162,20 @@ Partial Class frmProject
         Me.TextBox3.Size = New System.Drawing.Size(525, 91)
         Me.TextBox3.TabIndex = 88
         '
-        'TextBox1
+        'txtprojectID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(112, 46)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox1.TabIndex = 92
+        Me.txtprojectID.Location = New System.Drawing.Point(114, 20)
+        Me.txtprojectID.Name = "txtprojectID"
+        Me.txtprojectID.ReadOnly = True
+        Me.txtprojectID.Size = New System.Drawing.Size(185, 20)
+        Me.txtprojectID.TabIndex = 92
         '
-        'txtstatus
+        'txtpname
         '
-        Me.txtstatus.Location = New System.Drawing.Point(112, 72)
-        Me.txtstatus.Name = "txtstatus"
-        Me.txtstatus.Size = New System.Drawing.Size(185, 20)
-        Me.txtstatus.TabIndex = 15
+        Me.txtpname.Location = New System.Drawing.Point(112, 72)
+        Me.txtpname.Name = "txtpname"
+        Me.txtpname.Size = New System.Drawing.Size(185, 20)
+        Me.txtpname.TabIndex = 15
         '
         'Label4
         '
@@ -225,6 +245,16 @@ Partial Class frmProject
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 79
         '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Location = New System.Drawing.Point(350, 13)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(105, 23)
+        Me.Button1.TabIndex = 111
+        Me.Button1.Text = "Close Project"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Button8
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -245,31 +275,22 @@ Partial Class frmProject
         Me.BtnAddWo.Text = "New Project"
         Me.BtnAddWo.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtstatus
         '
-        Me.TextBox2.Location = New System.Drawing.Point(113, 123)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox2.TabIndex = 104
+        Me.txtstatus.Location = New System.Drawing.Point(114, 46)
+        Me.txtstatus.Name = "txtstatus"
+        Me.txtstatus.ReadOnly = True
+        Me.txtstatus.Size = New System.Drawing.Size(185, 20)
+        Me.txtstatus.TabIndex = 105
         '
-        'Label1
+        'Label2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(17, 130)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(77, 13)
-        Me.Label1.TabIndex = 103
-        Me.Label1.Text = "Estimated Cost"
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(350, 13)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(105, 23)
-        Me.Button1.TabIndex = 111
-        Me.Button1.Text = "Close Project"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(16, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.TabIndex = 106
+        Me.Label2.Text = "Status"
         '
         'frmProject
         '
@@ -295,8 +316,8 @@ Partial Class frmProject
     Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents txtstatus As System.Windows.Forms.TextBox
+    Friend WithEvents txtprojectID As System.Windows.Forms.TextBox
+    Friend WithEvents txtpname As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
@@ -310,4 +331,6 @@ Partial Class frmProject
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents txtstatus As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 End Class

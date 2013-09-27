@@ -46,7 +46,7 @@ Partial Class frmTasks
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.txtTaskID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -105,7 +105,7 @@ Partial Class frmTasks
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label9)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Button7)
         Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox6)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox7)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.txtTaskID)
         Me.SplitContainer1.Panel1.Controls.Add(Me.Label10)
         Me.SplitContainer1.Panel1.Controls.Add(Me.GroupBox1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.TextBox2)
@@ -344,13 +344,13 @@ Partial Class frmTasks
         Me.TextBox6.Size = New System.Drawing.Size(185, 20)
         Me.TextBox6.TabIndex = 102
         '
-        'TextBox7
+        'txtTaskID
         '
-        Me.TextBox7.Location = New System.Drawing.Point(116, 153)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.ReadOnly = True
-        Me.TextBox7.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox7.TabIndex = 104
+        Me.txtTaskID.Location = New System.Drawing.Point(116, 153)
+        Me.txtTaskID.Name = "txtTaskID"
+        Me.txtTaskID.ReadOnly = True
+        Me.txtTaskID.Size = New System.Drawing.Size(185, 20)
+        Me.txtTaskID.TabIndex = 104
         '
         'Label10
         '
@@ -670,7 +670,7 @@ Partial Class frmTasks
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
+    Friend WithEvents txtTaskID As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents radOutsourced As System.Windows.Forms.RadioButton

@@ -51,10 +51,10 @@
 
     Private Sub AdjustSplitters()
         'Set Fixed size for Split Panels
-        SplitContainer1.SplitterDistance = SplitContainer1.Height - 400
+        SplitContainer1.SplitterDistance = SplitContainer1.Height - 800
         SplitContainer1.FixedPanel = FixedPanel.Panel1
 
-        SplitContainer2.SplitterDistance = SplitContainer2.Height - 700
+        SplitContainer2.SplitterDistance = SplitContainer2.Height - 900
         SplitContainer2.FixedPanel = FixedPanel.Panel1
     End Sub
 
@@ -90,7 +90,7 @@
         frmTsk.Dock = DockStyle.Fill
         frmTsk.TopLevel = False
         frmTsk.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmProj.Show()
+        frmTsk.Show()
 
     End Sub
 
@@ -139,5 +139,9 @@
             twDashBoard.Show()
             twDashBoard.Select()
         End If
+    End Sub
+
+    Private Sub btnCreateProjects_Click(sender As Object, e As EventArgs)
+
     End Sub
 End Class

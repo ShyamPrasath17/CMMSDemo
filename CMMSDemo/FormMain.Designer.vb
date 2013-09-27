@@ -107,26 +107,26 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(762, 584)
+        Me.twDashBoard.Size = New System.Drawing.Size(762, 582)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
         '
         Me.ToolTabStrip1.CanUpdateChildIndex = True
-        Me.ToolTabStrip1.Controls.Add(Me.twProjectList)
+        Me.ToolTabStrip1.Controls.Add(Me.twDashBoard)
+        Me.ToolTabStrip1.Controls.Add(Me.ToolWindowWo)
         Me.ToolTabStrip1.Controls.Add(Me.twProject)
+        Me.ToolTabStrip1.Controls.Add(Me.ToolWindowWoLst)
+        Me.ToolTabStrip1.Controls.Add(Me.twProjectList)
         Me.ToolTabStrip1.Controls.Add(Me.twTaskList)
         Me.ToolTabStrip1.Controls.Add(Me.twTask)
-        Me.ToolTabStrip1.Controls.Add(Me.twDashBoard)
-        Me.ToolTabStrip1.Controls.Add(Me.ToolWindowWoLst)
-        Me.ToolTabStrip1.Controls.Add(Me.ToolWindowWo)
         Me.ToolTabStrip1.Location = New System.Drawing.Point(5, 5)
         Me.ToolTabStrip1.Name = "ToolTabStrip1"
         '
         '
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip1.SelectedIndex = 4
+        Me.ToolTabStrip1.SelectedIndex = 0
         Me.ToolTabStrip1.Size = New System.Drawing.Size(764, 632)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
@@ -166,7 +166,7 @@ Partial Class FormMain
         Me.twTask.Location = New System.Drawing.Point(1, 24)
         Me.twTask.Name = "twTask"
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTask.Size = New System.Drawing.Size(762, 584)
+        Me.twTask.Size = New System.Drawing.Size(762, 582)
         Me.twTask.Text = "Task"
         '
         'ToolWindowWoLst
@@ -175,7 +175,7 @@ Partial Class FormMain
         Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
         Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
         Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 481)
+        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 582)
         Me.ToolWindowWoLst.Text = "Work Order List"
         '
         'ToolWindowWo
@@ -184,7 +184,7 @@ Partial Class FormMain
         Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
         Me.ToolWindowWo.Name = "ToolWindowWo"
         Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWo.Size = New System.Drawing.Size(762, 481)
+        Me.ToolWindowWo.Size = New System.Drawing.Size(762, 582)
         Me.ToolWindowWo.Text = "WorkOrder"
         '
         'DocumentContainer1
@@ -479,13 +479,14 @@ Partial Class FormMain
         '
         'FormMain
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(971, 671)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
-        CType(Me.RadDockMain,System.ComponentModel.ISupportInitialize).EndInit
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadDockMain.ResumeLayout(false)
         CType(Me.ToolTabStrip1,System.ComponentModel.ISupportInitialize).EndInit
         Me.ToolTabStrip1.ResumeLayout(false)
