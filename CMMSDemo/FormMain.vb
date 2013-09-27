@@ -1,6 +1,18 @@
 ﻿Public Class FormMain
+
+
+
     Dim frmwolst As frmWorkOrderLists
     Public frmwo As frmWorkOrder
+
+    Dim frmProjLst As frmProjectList
+    Public frmProj As frmProject
+
+    Dim frmTskLst As frmTaskLists
+    Public frmTsk As frmTasks
+
+
+
     Dim frmDashBoard As frmDashBoard
 
     Sub New()
@@ -13,13 +25,21 @@
         addWoLst()
         addwofrm()
         addDashBoardFrm()
-
+        addfrmProj()
+        addfrmProjLst()
+        addfrmTsk()
+        addfrmTskLst()
 
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ToolWindowWo.Hide()
         ToolWindowWoLst.Hide()
+        twProject.Hide()
+        twProjectList.Hide()
+        twTask.Hide()
+        twTaskList.Hide()
+
         AdjustSplitters()
     End Sub
 
@@ -41,6 +61,41 @@
         twDashBoard.Controls.Add(frmDashBoard)
     End Sub
 
+    Private Sub addfrmProj()
+        frmProj = New frmProject()
+        frmProj.Dock = DockStyle.Fill
+        frmProj.TopLevel = False
+        frmProj.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmProj.Show()
+        twProject.Controls.Add(frmProj)
+    End Sub
+
+    Private Sub addfrmProjLst()
+        frmProjLst = New frmProjectList()
+        frmProjLst.Dock = DockStyle.Fill
+        frmProjLst.TopLevel = False
+        frmProjLst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmProjLst.Show()
+        twProjectList.Controls.Add(frmProjLst)
+    End Sub
+
+    Private Sub addfrmTsk()
+        frmTsk = New frmTasks()
+        frmTsk.Dock = DockStyle.Fill
+        frmTsk.TopLevel = False
+        frmTsk.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmProj.Show()
+        twTask.Controls.Add(frmTsk)
+    End Sub
+
+    Private Sub addfrmTskLst()
+        frmTskLst = New frmTaskLists()
+        frmTskLst.Dock = DockStyle.Fill
+        frmTskLst.TopLevel = False
+        frmTskLst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmTskLst.Show()
+        twTaskList.Controls.Add(frmTskLst)
+    End Sub
     Private Sub addwofrm()
         frmwo = New frmWorkOrder()
         frmwo.Dock = DockStyle.Fill
@@ -63,6 +118,16 @@
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
             ToolWindowWoLst.Show()
             ToolWindowWoLst.Select()
+        ElseIf rpvMain.SelectedPage Is rpvpProjects Then
+            twProjectList.Show()
+            twProjectList.Select()
+
+        ElseIf rpvMain.SelectedPage Is rpvpTasks Then
+            twTask.Show()
+            twTask.Select()
+        ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
+            frmDashBoard.Show()
+            frmDashBoard.Select()
         End If
     End Sub
 End Class
