@@ -24,8 +24,9 @@ Partial Class FormMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
@@ -46,7 +47,6 @@ Partial Class FormMain
         Me.rpvpSettings = New Telerik.WinControls.UI.RadPageViewPage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip5 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
@@ -91,14 +91,14 @@ Partial Class FormMain
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
         '
-        'ToolWindowWoLst
+        'twDashBoard
         '
-        Me.ToolWindowWoLst.Caption = Nothing
-        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
-        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 481)
-        Me.ToolWindowWoLst.Text = "Work Order List"
+        Me.twDashBoard.Caption = Nothing
+        Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
+        Me.twDashBoard.Name = "twDashBoard"
+        Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twDashBoard.Size = New System.Drawing.Size(762, 584)
+        Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
         '
@@ -118,6 +118,15 @@ Partial Class FormMain
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
+        '
+        'ToolWindowWoLst
+        '
+        Me.ToolWindowWoLst.Caption = Nothing
+        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
+        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 481)
+        Me.ToolWindowWoLst.Text = "Work Order List"
         '
         'ToolWindowWo
         '
@@ -186,7 +195,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpProjects
+        Me.rpvMain.SelectedPage = Me.rpvpWorkOrders
         Me.rpvMain.Size = New System.Drawing.Size(193, 671)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -237,7 +246,7 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(183, 192)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(183, 248)
         Me.rpvpWorkOrders.Text = "Work Orders"
         '
         'btnCreateWorkOrder
@@ -325,7 +334,7 @@ Partial Class FormMain
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(183, 192)
+        Me.rpvpScheduler.Size = New System.Drawing.Size(183, 248)
         Me.rpvpScheduler.Text = "Scheduler"
         '
         'rpvpReportsCharts
@@ -377,15 +386,6 @@ Partial Class FormMain
         Me.SplitContainer2.Size = New System.Drawing.Size(774, 671)
         Me.SplitContainer2.SplitterDistance = 25
         Me.SplitContainer2.TabIndex = 1
-        '
-        'twDashBoard
-        '
-        Me.twDashBoard.Caption = Nothing
-        Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
-        Me.twDashBoard.Name = "twDashBoard"
-        Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(762, 582)
-        Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip5
         '

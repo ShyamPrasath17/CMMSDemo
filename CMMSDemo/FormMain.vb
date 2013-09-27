@@ -3,13 +3,23 @@
     Public frmwo As frmWorkOrder
     Dim frmDashBoard As frmDashBoard
 
-    Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
         addWoLst()
         addwofrm()
         addDashBoardFrm()
 
 
+    End Sub
+
+    Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ToolWindowWo.Hide()
+        ToolWindowWoLst.Hide()
         AdjustSplitters()
     End Sub
 
@@ -49,4 +59,10 @@
         ToolWindowWoLst.Controls.Add(frmwolst)
     End Sub
 
+    Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
+        If rpvMain.SelectedPage Is rpvpWorkOrders Then
+            ToolWindowWoLst.Show()
+            ToolWindowWoLst.Select()
+        End If
+    End Sub
 End Class
