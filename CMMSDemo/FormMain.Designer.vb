@@ -26,37 +26,34 @@ Partial Class FormMain
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
         Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.rpvMain = New Telerik.WinControls.UI.RadPageView()
+        Me.rpvpDashBoard = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpProjects = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnCreateProjects = New System.Windows.Forms.Button()
-        Me.btnViewProject = New System.Windows.Forms.Button()
         Me.rpvpWorkOrders = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnCreateWorkOrder = New System.Windows.Forms.Button()
-        Me.btnViewWorkOrders = New System.Windows.Forms.Button()
         Me.rpvpTasks = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnCreateTaskInternal = New System.Windows.Forms.Button()
         Me.btnCreateTaskOutsourced = New System.Windows.Forms.Button()
-        Me.btnViewTasks = New System.Windows.Forms.Button()
         Me.rpvpScheduler = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpReportsCharts = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpSettings = New Telerik.WinControls.UI.RadPageViewPage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.ToolTabStrip5 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip9 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip3 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip6 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip7 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.rpvpDashBoard = New Telerik.WinControls.UI.RadPageViewPage()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,7 +82,7 @@ Partial Class FormMain
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.twTask
+        Me.RadDockMain.ActiveWindow = Me.twDashBoard
         Me.RadDockMain.Controls.Add(Me.ToolTabStrip1)
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
         Me.RadDockMain.Dock = System.Windows.Forms.DockStyle.Fill
@@ -110,7 +107,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(378, 582)
+        Me.twDashBoard.Size = New System.Drawing.Size(762, 584)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
@@ -129,12 +126,48 @@ Partial Class FormMain
         '
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip1.SelectedIndex = 3
+        Me.ToolTabStrip1.SelectedIndex = 4
         Me.ToolTabStrip1.Size = New System.Drawing.Size(764, 632)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
+        '
+        'twProjectList
+        '
+        Me.twProjectList.Caption = Nothing
+        Me.twProjectList.Location = New System.Drawing.Point(1, 24)
+        Me.twProjectList.Name = "twProjectList"
+        Me.twProjectList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twProjectList.Size = New System.Drawing.Size(762, 582)
+        Me.twProjectList.Text = "Project List"
+        '
+        'twProject
+        '
+        Me.twProject.Caption = Nothing
+        Me.twProject.Location = New System.Drawing.Point(1, 24)
+        Me.twProject.Name = "twProject"
+        Me.twProject.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twProject.Size = New System.Drawing.Size(762, 582)
+        Me.twProject.Text = "Project"
+        '
+        'twTaskList
+        '
+        Me.twTaskList.Caption = Nothing
+        Me.twTaskList.Location = New System.Drawing.Point(1, 24)
+        Me.twTaskList.Name = "twTaskList"
+        Me.twTaskList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twTaskList.Size = New System.Drawing.Size(762, 582)
+        Me.twTaskList.Text = "Task List"
+        '
+        'twTask
+        '
+        Me.twTask.Caption = Nothing
+        Me.twTask.Location = New System.Drawing.Point(1, 24)
+        Me.twTask.Name = "twTask"
+        Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twTask.Size = New System.Drawing.Size(762, 584)
+        Me.twTask.Text = "Task"
         '
         'ToolWindowWoLst
         '
@@ -219,11 +252,18 @@ Partial Class FormMain
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
         '
+        'rpvpDashBoard
+        '
+        Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
+        Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
+        Me.rpvpDashBoard.Name = "rpvpDashBoard"
+        Me.rpvpDashBoard.Size = New System.Drawing.Size(183, 183)
+        Me.rpvpDashBoard.Text = "Dash Board"
+        '
         'rpvpProjects
         '
         Me.rpvpProjects.BackColor = System.Drawing.Color.White
         Me.rpvpProjects.Controls.Add(Me.btnCreateProjects)
-        Me.rpvpProjects.Controls.Add(Me.btnViewProject)
         Me.rpvpProjects.Image = CType(resources.GetObject("rpvpProjects.Image"), System.Drawing.Image)
         Me.rpvpProjects.Location = New System.Drawing.Point(5, 29)
         Me.rpvpProjects.Name = "rpvpProjects"
@@ -238,29 +278,16 @@ Partial Class FormMain
         Me.btnCreateProjects.FlatAppearance.BorderSize = 0
         Me.btnCreateProjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCreateProjects.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCreateProjects.Location = New System.Drawing.Point(5, 70)
+        Me.btnCreateProjects.Location = New System.Drawing.Point(5, 14)
         Me.btnCreateProjects.Name = "btnCreateProjects"
         Me.btnCreateProjects.Size = New System.Drawing.Size(175, 50)
         Me.btnCreateProjects.TabIndex = 1
         Me.btnCreateProjects.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCreateProjects.UseVisualStyleBackColor = False
         '
-        'btnViewProject
-        '
-        Me.btnViewProject.BackgroundImage = CType(resources.GetObject("btnViewProject.BackgroundImage"), System.Drawing.Image)
-        Me.btnViewProject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnViewProject.FlatAppearance.BorderSize = 0
-        Me.btnViewProject.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewProject.Location = New System.Drawing.Point(5, 14)
-        Me.btnViewProject.Name = "btnViewProject"
-        Me.btnViewProject.Size = New System.Drawing.Size(175, 50)
-        Me.btnViewProject.TabIndex = 0
-        Me.btnViewProject.UseVisualStyleBackColor = True
-        '
         'rpvpWorkOrders
         '
         Me.rpvpWorkOrders.Controls.Add(Me.btnCreateWorkOrder)
-        Me.rpvpWorkOrders.Controls.Add(Me.btnViewWorkOrders)
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
@@ -275,34 +302,21 @@ Partial Class FormMain
         Me.btnCreateWorkOrder.FlatAppearance.BorderSize = 0
         Me.btnCreateWorkOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCreateWorkOrder.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCreateWorkOrder.Location = New System.Drawing.Point(5, 70)
+        Me.btnCreateWorkOrder.Location = New System.Drawing.Point(5, 14)
         Me.btnCreateWorkOrder.Name = "btnCreateWorkOrder"
         Me.btnCreateWorkOrder.Size = New System.Drawing.Size(175, 50)
         Me.btnCreateWorkOrder.TabIndex = 5
         Me.btnCreateWorkOrder.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCreateWorkOrder.UseVisualStyleBackColor = False
         '
-        'btnViewWorkOrders
-        '
-        Me.btnViewWorkOrders.BackgroundImage = CType(resources.GetObject("btnViewWorkOrders.BackgroundImage"), System.Drawing.Image)
-        Me.btnViewWorkOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnViewWorkOrders.FlatAppearance.BorderSize = 0
-        Me.btnViewWorkOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewWorkOrders.Location = New System.Drawing.Point(5, 14)
-        Me.btnViewWorkOrders.Name = "btnViewWorkOrders"
-        Me.btnViewWorkOrders.Size = New System.Drawing.Size(175, 50)
-        Me.btnViewWorkOrders.TabIndex = 4
-        Me.btnViewWorkOrders.UseVisualStyleBackColor = True
-        '
         'rpvpTasks
         '
         Me.rpvpTasks.Controls.Add(Me.btnCreateTaskInternal)
         Me.rpvpTasks.Controls.Add(Me.btnCreateTaskOutsourced)
-        Me.rpvpTasks.Controls.Add(Me.btnViewTasks)
         Me.rpvpTasks.Image = CType(resources.GetObject("rpvpTasks.Image"), System.Drawing.Image)
         Me.rpvpTasks.Location = New System.Drawing.Point(5, 29)
         Me.rpvpTasks.Name = "rpvpTasks"
-        Me.rpvpTasks.Size = New System.Drawing.Size(183, 248)
+        Me.rpvpTasks.Size = New System.Drawing.Size(183, 183)
         Me.rpvpTasks.Text = "Tasks"
         '
         'btnCreateTaskInternal
@@ -313,7 +327,7 @@ Partial Class FormMain
         Me.btnCreateTaskInternal.FlatAppearance.BorderSize = 0
         Me.btnCreateTaskInternal.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCreateTaskInternal.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCreateTaskInternal.Location = New System.Drawing.Point(5, 70)
+        Me.btnCreateTaskInternal.Location = New System.Drawing.Point(5, 14)
         Me.btnCreateTaskInternal.Name = "btnCreateTaskInternal"
         Me.btnCreateTaskInternal.Size = New System.Drawing.Size(175, 50)
         Me.btnCreateTaskInternal.TabIndex = 4
@@ -328,24 +342,12 @@ Partial Class FormMain
         Me.btnCreateTaskOutsourced.FlatAppearance.BorderSize = 0
         Me.btnCreateTaskOutsourced.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCreateTaskOutsourced.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCreateTaskOutsourced.Location = New System.Drawing.Point(5, 126)
+        Me.btnCreateTaskOutsourced.Location = New System.Drawing.Point(5, 70)
         Me.btnCreateTaskOutsourced.Name = "btnCreateTaskOutsourced"
         Me.btnCreateTaskOutsourced.Size = New System.Drawing.Size(175, 50)
         Me.btnCreateTaskOutsourced.TabIndex = 3
         Me.btnCreateTaskOutsourced.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCreateTaskOutsourced.UseVisualStyleBackColor = False
-        '
-        'btnViewTasks
-        '
-        Me.btnViewTasks.BackgroundImage = CType(resources.GetObject("btnViewTasks.BackgroundImage"), System.Drawing.Image)
-        Me.btnViewTasks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnViewTasks.FlatAppearance.BorderSize = 0
-        Me.btnViewTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewTasks.Location = New System.Drawing.Point(5, 14)
-        Me.btnViewTasks.Name = "btnViewTasks"
-        Me.btnViewTasks.Size = New System.Drawing.Size(175, 50)
-        Me.btnViewTasks.TabIndex = 2
-        Me.btnViewTasks.UseVisualStyleBackColor = True
         '
         'rpvpScheduler
         '
@@ -419,42 +421,6 @@ Partial Class FormMain
         Me.ToolTabStrip5.TabIndex = 0
         Me.ToolTabStrip5.TabStop = False
         '
-        'twTask
-        '
-        Me.twTask.Caption = Nothing
-        Me.twTask.Location = New System.Drawing.Point(1, 24)
-        Me.twTask.Name = "twTask"
-        Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTask.Size = New System.Drawing.Size(762, 582)
-        Me.twTask.Text = "Task"
-        '
-        'twTaskList
-        '
-        Me.twTaskList.Caption = Nothing
-        Me.twTaskList.Location = New System.Drawing.Point(1, 24)
-        Me.twTaskList.Name = "twTaskList"
-        Me.twTaskList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTaskList.Size = New System.Drawing.Size(762, 582)
-        Me.twTaskList.Text = "Task List"
-        '
-        'twProject
-        '
-        Me.twProject.Caption = Nothing
-        Me.twProject.Location = New System.Drawing.Point(1, 24)
-        Me.twProject.Name = "twProject"
-        Me.twProject.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twProject.Size = New System.Drawing.Size(762, 582)
-        Me.twProject.Text = "Project"
-        '
-        'twProjectList
-        '
-        Me.twProjectList.Caption = Nothing
-        Me.twProjectList.Location = New System.Drawing.Point(1, 24)
-        Me.twProjectList.Name = "twProjectList"
-        Me.twProjectList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twProjectList.Size = New System.Drawing.Size(762, 582)
-        Me.twProjectList.Text = "Project List"
-        '
         'ToolTabStrip9
         '
         Me.ToolTabStrip9.CanUpdateChildIndex = True
@@ -511,14 +477,6 @@ Partial Class FormMain
         Me.ToolTabStrip7.TabIndex = 0
         Me.ToolTabStrip7.TabStop = False
         '
-        'rpvpDashBoard
-        '
-        Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
-        Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
-        Me.rpvpDashBoard.Name = "rpvpDashBoard"
-        Me.rpvpDashBoard.Size = New System.Drawing.Size(183, 183)
-        Me.rpvpDashBoard.Text = "Dash Board"
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -566,15 +524,12 @@ End Sub
     Friend WithEvents rpvpWorkOrders As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents rpvpTasks As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents rpvpScheduler As Telerik.WinControls.UI.RadPageViewPage
-    Friend WithEvents btnViewProject As System.Windows.Forms.Button
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents btnCreateProjects As System.Windows.Forms.Button
     Friend WithEvents rpvpReportsCharts As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents rpvpSettings As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents btnCreateWorkOrder As System.Windows.Forms.Button
-    Friend WithEvents btnViewWorkOrders As System.Windows.Forms.Button
     Friend WithEvents btnCreateTaskOutsourced As System.Windows.Forms.Button
-    Friend WithEvents btnViewTasks As System.Windows.Forms.Button
     Friend WithEvents btnCreateTaskInternal As System.Windows.Forms.Button
     Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
     Friend WithEvents twDashBoard As Telerik.WinControls.UI.Docking.ToolWindow

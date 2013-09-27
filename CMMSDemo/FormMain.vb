@@ -16,19 +16,26 @@
     Dim frmDashBoard As frmDashBoard
 
     Sub New()
+        addDashBoardFrm()
+        addWoLst()
+        addwofrm()
+        addfrmProj()
+        addfrmProjLst()
+        addfrmTsk()
+        addfrmTskLst()
+
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-
-        addWoLst()
-        addwofrm()
-        addDashBoardFrm()
-        addfrmProj()
-        addfrmProjLst()
-        addfrmTsk()
-        addfrmTskLst()
+        twDashBoard.Controls.Add(frmDashBoard)
+        twProject.Controls.Add(frmProj)
+        twProjectList.Controls.Add(frmProjLst)
+        twTask.Controls.Add(frmTsk)
+        twTaskList.Controls.Add(frmTskLst)
+        ToolWindowWo.Controls.Add(frmwo)
+        ToolWindowWoLst.Controls.Add(frmwolst)
 
     End Sub
 
@@ -39,7 +46,6 @@
         twProjectList.Hide()
         twTask.Hide()
         twTaskList.Hide()
-
         AdjustSplitters()
     End Sub
 
@@ -58,7 +64,7 @@
         frmDashBoard.TopLevel = False
         frmDashBoard.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmDashBoard.Show()
-        twDashBoard.Controls.Add(frmDashBoard)
+
     End Sub
 
     Private Sub addfrmProj()
@@ -67,7 +73,7 @@
         frmProj.TopLevel = False
         frmProj.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmProj.Show()
-        twProject.Controls.Add(frmProj)
+
     End Sub
 
     Private Sub addfrmProjLst()
@@ -76,7 +82,7 @@
         frmProjLst.TopLevel = False
         frmProjLst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmProjLst.Show()
-        twProjectList.Controls.Add(frmProjLst)
+
     End Sub
 
     Private Sub addfrmTsk()
@@ -85,7 +91,7 @@
         frmTsk.TopLevel = False
         frmTsk.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmProj.Show()
-        twTask.Controls.Add(frmTsk)
+
     End Sub
 
     Private Sub addfrmTskLst()
@@ -94,7 +100,7 @@
         frmTskLst.TopLevel = False
         frmTskLst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmTskLst.Show()
-        twTaskList.Controls.Add(frmTskLst)
+
     End Sub
     Private Sub addwofrm()
         frmwo = New frmWorkOrder()
@@ -102,7 +108,7 @@
         frmwo.TopLevel = False
         frmwo.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmwo.Show()
-        ToolWindowWo.Controls.Add(frmwo)
+
     End Sub
 
     Private Sub addWoLst()
@@ -111,10 +117,14 @@
         frmwolst.TopLevel = False
         frmwolst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmwolst.Show()
-        ToolWindowWoLst.Controls.Add(frmwolst)
+
     End Sub
 
     Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
+ 
+    End Sub
+
+    Private Sub rpvMain_MouseClick(sender As Object, e As MouseEventArgs) Handles rpvMain.MouseClick
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
             ToolWindowWoLst.Show()
             ToolWindowWoLst.Select()
@@ -123,11 +133,11 @@
             twProjectList.Select()
 
         ElseIf rpvMain.SelectedPage Is rpvpTasks Then
-            twTask.Show()
-            twTask.Select()
+            twTaskList.Show()
+            twTaskList.Select()
         ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
-            frmDashBoard.Show()
-            frmDashBoard.Select()
+            twDashBoard.Show()
+            twDashBoard.Select()
         End If
     End Sub
 End Class
