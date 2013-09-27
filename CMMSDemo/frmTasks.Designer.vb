@@ -283,7 +283,7 @@ Partial Class frmTasks
         Me.btnOutSource.Name = "btnOutSource"
         Me.btnOutSource.Size = New System.Drawing.Size(245, 43)
         Me.btnOutSource.TabIndex = 0
-        Me.btnOutSource.Text = "Out Source Task >>"
+        Me.btnOutSource.Text = "Outsource Task >>"
         Me.btnOutSource.UseVisualStyleBackColor = True
         '
         'GroupBox2
@@ -302,10 +302,10 @@ Partial Class frmTasks
         Me.radOutsourced.AutoSize = True
         Me.radOutsourced.Location = New System.Drawing.Point(140, 30)
         Me.radOutsourced.Name = "radOutsourced"
-        Me.radOutsourced.Size = New System.Drawing.Size(85, 17)
+        Me.radOutsourced.Size = New System.Drawing.Size(80, 17)
         Me.radOutsourced.TabIndex = 1
         Me.radOutsourced.TabStop = True
-        Me.radOutsourced.Text = "Out Suorced"
+        Me.radOutsourced.Text = "Outsourced"
         Me.radOutsourced.UseVisualStyleBackColor = True
         '
         'radInternal

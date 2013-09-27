@@ -56,9 +56,9 @@ Partial Class frmOutsource
         Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(12, 22)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(72, 13)
+        Me.Label6.Size = New System.Drawing.Size(70, 13)
         Me.Label6.TabIndex = 118
-        Me.Label6.Text = "OutSource ID"
+        Me.Label6.Text = "Outsource ID"
         '
         'TextBox3
         '
@@ -140,9 +140,9 @@ Partial Class frmOutsource
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(12, 51)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(98, 13)
+        Me.Label16.Size = New System.Drawing.Size(93, 13)
         Me.Label16.TabIndex = 146
-        Me.Label16.Text = "Out Source Vendor"
+        Me.Label16.Text = "Outsource Vendor"
         '
         'TextBox10
         '
@@ -164,9 +164,9 @@ Partial Class frmOutsource
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(12, 118)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(85, 13)
+        Me.Label4.Size = New System.Drawing.Size(83, 13)
         Me.Label4.TabIndex = 149
-        Me.Label4.Text = "OutSource Type"
+        Me.Label4.Text = "Outsource Type"
         '
         'ComboBox1
         '
