@@ -56,6 +56,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Telerik.WinControls, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
+    <Reference Include="Telerik.WinControls.ChartView, Version=2013.1.220.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
     <Reference Include="Telerik.WinControls.GridView, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.RadDock, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e, processorArchitecture=MSIL" />
     <Reference Include="Telerik.WinControls.UI, Version=2013.2.612.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e" />
@@ -75,52 +76,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAssignEmployees.Designer.vb">
-      <DependentUpon>frmAssignEmployees.vb</DependentUpon>
+    <Compile Include="frmDashBoard.Designer.VB">
+      <DependentUpon>frmDashBoard.VB</DependentUpon>
     </Compile>
-    <Compile Include="frmAssignEmployees.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmEquipments.Designer.vb">
-      <DependentUpon>frmEquipments.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmEquipments.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmInventoryItems.Designer.vb">
-      <DependentUpon>frmInventoryItems.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmInventoryItems.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmOutsource.Designer.vb">
-      <DependentUpon>frmOutsource.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmOutsource.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProject.Designer.vb">
-      <DependentUpon>frmProject.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmProject.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmProjectList.Designer.vb">
-      <DependentUpon>frmProjectList.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmProjectList.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTaskLists.Designer.vb">
-      <DependentUpon>frmTaskLists.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTaskLists.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmTasks.Designer.vb">
-      <DependentUpon>frmTasks.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmTasks.vb">
+    <Compile Include="frmDashBoard.VB">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmWorkOrder.Designer.vb">
@@ -158,29 +117,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmAssignEmployees.resx">
-      <DependentUpon>frmAssignEmployees.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEquipments.resx">
-      <DependentUpon>frmEquipments.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmInventoryItems.resx">
-      <DependentUpon>frmInventoryItems.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmOutsource.resx">
-      <DependentUpon>frmOutsource.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProject.resx">
-      <DependentUpon>frmProject.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmProjectList.resx">
-      <DependentUpon>frmProjectList.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTaskLists.resx">
-      <DependentUpon>frmTaskLists.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmTasks.resx">
-      <DependentUpon>frmTasks.vb</DependentUpon>
+    <EmbeddedResource Include="frmDashBoard.resx">
+      <DependentUpon>frmDashBoard.VB</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWorkOrder.resx">
       <DependentUpon>frmWorkOrder.vb</DependentUpon>
@@ -210,9 +148,7 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
