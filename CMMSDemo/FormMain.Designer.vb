@@ -54,6 +54,8 @@ Partial Class FormMain
         Me.ToolTabStrip3 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip6 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip7 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.btnViewWorkOrders = New System.Windows.Forms.Button()
+        Me.btnViewTasks = New System.Windows.Forms.Button()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -107,7 +109,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(762, 584)
+        Me.twDashBoard.Size = New System.Drawing.Size(762, 582)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
@@ -246,7 +248,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.SelectedPage = Me.rpvpTasks
         Me.rpvMain.Size = New System.Drawing.Size(193, 671)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -287,6 +289,7 @@ Partial Class FormMain
         '
         'rpvpWorkOrders
         '
+        Me.rpvpWorkOrders.Controls.Add(Me.btnViewWorkOrders)
         Me.rpvpWorkOrders.Controls.Add(Me.btnCreateWorkOrder)
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
@@ -311,6 +314,7 @@ Partial Class FormMain
         '
         'rpvpTasks
         '
+        Me.rpvpTasks.Controls.Add(Me.btnViewTasks)
         Me.rpvpTasks.Controls.Add(Me.btnCreateTaskInternal)
         Me.rpvpTasks.Controls.Add(Me.btnCreateTaskOutsourced)
         Me.rpvpTasks.Image = CType(resources.GetObject("rpvpTasks.Image"), System.Drawing.Image)
@@ -477,6 +481,36 @@ Partial Class FormMain
         Me.ToolTabStrip7.TabIndex = 0
         Me.ToolTabStrip7.TabStop = False
         '
+        'btnViewWorkOrders
+        '
+        Me.btnViewWorkOrders.BackColor = System.Drawing.Color.Transparent
+        Me.btnViewWorkOrders.BackgroundImage = CType(resources.GetObject("btnViewWorkOrders.BackgroundImage"), System.Drawing.Image)
+        Me.btnViewWorkOrders.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnViewWorkOrders.FlatAppearance.BorderSize = 0
+        Me.btnViewWorkOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewWorkOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnViewWorkOrders.Location = New System.Drawing.Point(4, 66)
+        Me.btnViewWorkOrders.Name = "btnViewWorkOrders"
+        Me.btnViewWorkOrders.Size = New System.Drawing.Size(175, 50)
+        Me.btnViewWorkOrders.TabIndex = 6
+        Me.btnViewWorkOrders.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnViewWorkOrders.UseVisualStyleBackColor = False
+        '
+        'btnViewTasks
+        '
+        Me.btnViewTasks.BackColor = System.Drawing.Color.Transparent
+        Me.btnViewTasks.BackgroundImage = CType(resources.GetObject("btnViewTasks.BackgroundImage"), System.Drawing.Image)
+        Me.btnViewTasks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnViewTasks.FlatAppearance.BorderSize = 0
+        Me.btnViewTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnViewTasks.Location = New System.Drawing.Point(5, 126)
+        Me.btnViewTasks.Name = "btnViewTasks"
+        Me.btnViewTasks.Size = New System.Drawing.Size(175, 50)
+        Me.btnViewTasks.TabIndex = 7
+        Me.btnViewTasks.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnViewTasks.UseVisualStyleBackColor = False
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -544,4 +578,6 @@ End Sub
     Friend WithEvents ToolTabStrip6 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolTabStrip7 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents rpvpDashBoard As Telerik.WinControls.UI.RadPageViewPage
+    Friend WithEvents btnViewWorkOrders As System.Windows.Forms.Button
+    Friend WithEvents btnViewTasks As System.Windows.Forms.Button
 End Class

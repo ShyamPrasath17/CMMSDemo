@@ -118,12 +118,6 @@
     <Compile Include="frmProjectList.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmShedular.Designer.vb">
-      <DependentUpon>frmShedular.vb</DependentUpon>
-    </Compile>
-    <Compile Include="frmShedular.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="frmTaskLists.Designer.vb">
       <DependentUpon>frmTaskLists.vb</DependentUpon>
     </Compile>
@@ -191,9 +185,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProjectList.resx">
       <DependentUpon>frmProjectList.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmShedular.resx">
-      <DependentUpon>frmShedular.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaskLists.resx">
       <DependentUpon>frmTaskLists.vb</DependentUpon>
