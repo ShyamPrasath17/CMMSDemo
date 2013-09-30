@@ -246,7 +246,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpTasks
+        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
         Me.rpvMain.Size = New System.Drawing.Size(193, 671)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
