@@ -24,6 +24,8 @@ Partial Class frmProject
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProject))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.txtstatus = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button7 = New System.Windows.Forms.Button()
@@ -44,9 +46,6 @@ Partial Class frmProject
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.BtnAddWo = New System.Windows.Forms.Button()
-        Me.txtstatus = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -88,10 +87,26 @@ Partial Class frmProject
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button8)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.BtnAddWo)
         Me.SplitContainer1.Size = New System.Drawing.Size(548, 445)
         Me.SplitContainer1.SplitterDistance = 391
         Me.SplitContainer1.TabIndex = 95
+        '
+        'txtstatus
+        '
+        Me.txtstatus.Location = New System.Drawing.Point(114, 46)
+        Me.txtstatus.Name = "txtstatus"
+        Me.txtstatus.ReadOnly = True
+        Me.txtstatus.Size = New System.Drawing.Size(185, 20)
+        Me.txtstatus.TabIndex = 105
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(16, 53)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(37, 13)
+        Me.Label2.TabIndex = 106
+        Me.Label2.Text = "Status"
         '
         'TextBox2
         '
@@ -265,33 +280,6 @@ Partial Class frmProject
         Me.Button8.Text = "Save"
         Me.Button8.UseVisualStyleBackColor = True
         '
-        'BtnAddWo
-        '
-        Me.BtnAddWo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddWo.Location = New System.Drawing.Point(239, 13)
-        Me.BtnAddWo.Name = "BtnAddWo"
-        Me.BtnAddWo.Size = New System.Drawing.Size(105, 23)
-        Me.BtnAddWo.TabIndex = 31
-        Me.BtnAddWo.Text = "New Project"
-        Me.BtnAddWo.UseVisualStyleBackColor = True
-        '
-        'txtstatus
-        '
-        Me.txtstatus.Location = New System.Drawing.Point(114, 46)
-        Me.txtstatus.Name = "txtstatus"
-        Me.txtstatus.ReadOnly = True
-        Me.txtstatus.Size = New System.Drawing.Size(185, 20)
-        Me.txtstatus.TabIndex = 105
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 13)
-        Me.Label2.TabIndex = 106
-        Me.Label2.Text = "Status"
-        '
         'frmProject
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -327,7 +315,6 @@ Partial Class frmProject
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents BtnAddWo As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button

@@ -26,12 +26,12 @@ Partial Class FormMain
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
         Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
@@ -107,7 +107,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(762, 582)
+        Me.twDashBoard.Size = New System.Drawing.Size(762, 584)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
@@ -133,14 +133,14 @@ Partial Class FormMain
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
         '
-        'twProjectList
+        'ToolWindowWo
         '
-        Me.twProjectList.Caption = Nothing
-        Me.twProjectList.Location = New System.Drawing.Point(1, 24)
-        Me.twProjectList.Name = "twProjectList"
-        Me.twProjectList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twProjectList.Size = New System.Drawing.Size(762, 582)
-        Me.twProjectList.Text = "Project List"
+        Me.ToolWindowWo.Caption = Nothing
+        Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWo.Name = "ToolWindowWo"
+        Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWo.Size = New System.Drawing.Size(762, 582)
+        Me.ToolWindowWo.Text = "WorkOrder"
         '
         'twProject
         '
@@ -150,6 +150,24 @@ Partial Class FormMain
         Me.twProject.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.twProject.Size = New System.Drawing.Size(762, 582)
         Me.twProject.Text = "Project"
+        '
+        'ToolWindowWoLst
+        '
+        Me.ToolWindowWoLst.Caption = Nothing
+        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
+        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 582)
+        Me.ToolWindowWoLst.Text = "Work Order List"
+        '
+        'twProjectList
+        '
+        Me.twProjectList.Caption = Nothing
+        Me.twProjectList.Location = New System.Drawing.Point(1, 24)
+        Me.twProjectList.Name = "twProjectList"
+        Me.twProjectList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twProjectList.Size = New System.Drawing.Size(762, 582)
+        Me.twProjectList.Text = "Project List"
         '
         'twTaskList
         '
@@ -168,24 +186,6 @@ Partial Class FormMain
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.twTask.Size = New System.Drawing.Size(762, 582)
         Me.twTask.Text = "Task"
-        '
-        'ToolWindowWoLst
-        '
-        Me.ToolWindowWoLst.Caption = Nothing
-        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
-        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 582)
-        Me.ToolWindowWoLst.Text = "Work Order List"
-        '
-        'ToolWindowWo
-        '
-        Me.ToolWindowWo.Caption = Nothing
-        Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWo.Name = "ToolWindowWo"
-        Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWo.Size = New System.Drawing.Size(762, 582)
-        Me.ToolWindowWo.Text = "WorkOrder"
         '
         'DocumentContainer1
         '
@@ -246,7 +246,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.SelectedPage = Me.rpvpTasks
         Me.rpvMain.Size = New System.Drawing.Size(193, 671)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"

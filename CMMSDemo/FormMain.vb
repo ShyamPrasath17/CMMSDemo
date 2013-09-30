@@ -54,7 +54,7 @@
         SplitContainer1.SplitterDistance = SplitContainer1.Height - 800
         SplitContainer1.FixedPanel = FixedPanel.Panel1
 
-        SplitContainer2.SplitterDistance = SplitContainer2.Height - 900
+        SplitContainer2.SplitterDistance = SplitContainer2.Height - 1000
         SplitContainer2.FixedPanel = FixedPanel.Panel1
     End Sub
 
@@ -141,7 +141,25 @@
         End If
     End Sub
 
-    Private Sub btnCreateProjects_Click(sender As Object, e As EventArgs)
+    Private Sub btnCreateProjects_Click(sender As Object, e As EventArgs) Handles btnCreateProjects.Click
+        twProject.Show()
+        twProject.Select()
+    End Sub
 
+    Private Sub btnCreateWorkOrder_Click(sender As Object, e As EventArgs) Handles btnCreateWorkOrder.Click
+        ToolWindowWo.Show()
+        ToolWindowWo.Select()
+    End Sub
+
+    Private Sub btnCreateTaskInternal_Click(sender As Object, e As EventArgs) Handles btnCreateTaskInternal.Click
+        twTask.Show()
+        twTask.Select()
+        frmTsk.radInternal.Checked = True
+    End Sub
+
+    Private Sub btnCreateTaskOutsourced_Click(sender As Object, e As EventArgs) Handles btnCreateTaskOutsourced.Click
+        twTask.Show()
+        twTask.Select()
+        frmTsk.radOutsourced.Checked = True
     End Sub
 End Class

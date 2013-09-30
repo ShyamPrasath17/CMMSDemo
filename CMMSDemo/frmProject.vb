@@ -7,4 +7,8 @@
         txtprojectID.Text = dr("ProjectNo").ToString()
         txtstatus.Text = dr("status").ToString()
     End Sub
+
+    Private Sub BtnAddWo_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class

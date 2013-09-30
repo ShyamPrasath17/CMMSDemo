@@ -73,7 +73,6 @@ Partial Class frmTasks
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.BtnAddWo = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -130,7 +129,6 @@ Partial Class frmTasks
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.BtnAddWo)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
         Me.SplitContainer1.Size = New System.Drawing.Size(730, 778)
@@ -300,6 +298,7 @@ Partial Class frmTasks
         'radOutsourced
         '
         Me.radOutsourced.AutoSize = True
+        Me.radOutsourced.Enabled = False
         Me.radOutsourced.Location = New System.Drawing.Point(140, 30)
         Me.radOutsourced.Name = "radOutsourced"
         Me.radOutsourced.Size = New System.Drawing.Size(80, 17)
@@ -311,6 +310,7 @@ Partial Class frmTasks
         'radInternal
         '
         Me.radInternal.AutoSize = True
+        Me.radInternal.Enabled = False
         Me.radInternal.Location = New System.Drawing.Point(11, 30)
         Me.radInternal.Name = "radInternal"
         Me.radInternal.Size = New System.Drawing.Size(60, 17)
@@ -579,16 +579,6 @@ Partial Class frmTasks
         Me.Button4.Text = "Save"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'BtnAddWo
-        '
-        Me.BtnAddWo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddWo.Location = New System.Drawing.Point(370, 3)
-        Me.BtnAddWo.Name = "BtnAddWo"
-        Me.BtnAddWo.Size = New System.Drawing.Size(105, 23)
-        Me.BtnAddWo.TabIndex = 31
-        Me.BtnAddWo.Text = "New Task"
-        Me.BtnAddWo.UseVisualStyleBackColor = True
-        '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
@@ -660,7 +650,6 @@ Partial Class frmTasks
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents BtnAddWo As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
