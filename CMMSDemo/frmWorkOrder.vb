@@ -10,8 +10,8 @@
         txtstatus.Text = dr("status").ToString()
     End Sub
 
-    Private Sub BtnAddWo_Click(sender As Object, e As EventArgs) Handles BtnAddWo.Click
-       
+    Private Sub BtnAddWo_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub chkBillable_CheckedChanged(sender As Object, e As EventArgs) Handles chkBillable.CheckedChanged

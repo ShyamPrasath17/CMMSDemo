@@ -30,7 +30,6 @@ Partial Class frmWorkOrder
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtstatus = New System.Windows.Forms.TextBox()
-        Me.BtnAddWo = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -135,16 +134,6 @@ Partial Class frmWorkOrder
         Me.txtstatus.ReadOnly = True
         Me.txtstatus.Size = New System.Drawing.Size(185, 20)
         Me.txtstatus.TabIndex = 15
-        '
-        'BtnAddWo
-        '
-        Me.BtnAddWo.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddWo.Location = New System.Drawing.Point(114, 14)
-        Me.BtnAddWo.Name = "BtnAddWo"
-        Me.BtnAddWo.Size = New System.Drawing.Size(105, 23)
-        Me.BtnAddWo.TabIndex = 31
-        Me.BtnAddWo.Text = "New Workorder"
-        Me.BtnAddWo.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -439,7 +428,6 @@ Partial Class frmWorkOrder
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button8)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.BtnAddWo)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button3)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
@@ -548,7 +536,6 @@ Partial Class frmWorkOrder
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtstatus As System.Windows.Forms.TextBox
-    Friend WithEvents BtnAddWo As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button

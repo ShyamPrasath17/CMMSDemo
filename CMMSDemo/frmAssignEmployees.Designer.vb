@@ -274,10 +274,10 @@ Partial Class frmAssignEmployees
         Me.radOutsourced.AutoSize = True
         Me.radOutsourced.Location = New System.Drawing.Point(140, 30)
         Me.radOutsourced.Name = "radOutsourced"
-        Me.radOutsourced.Size = New System.Drawing.Size(85, 17)
+        Me.radOutsourced.Size = New System.Drawing.Size(80, 17)
         Me.radOutsourced.TabIndex = 1
         Me.radOutsourced.TabStop = True
-        Me.radOutsourced.Text = "Out Suorced"
+        Me.radOutsourced.Text = "Outsourced"
         Me.radOutsourced.UseVisualStyleBackColor = True
         '
         'radInternal
