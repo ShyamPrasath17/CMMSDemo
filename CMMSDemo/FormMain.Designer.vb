@@ -354,7 +354,7 @@ Partial Class FormMain
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(183, 248)
+        Me.rpvpScheduler.Size = New System.Drawing.Size(183, 183)
         Me.rpvpScheduler.Text = "Scheduler"
         '
         'rpvpReportsCharts
@@ -362,7 +362,7 @@ Partial Class FormMain
         Me.rpvpReportsCharts.Image = CType(resources.GetObject("rpvpReportsCharts.Image"), System.Drawing.Image)
         Me.rpvpReportsCharts.Location = New System.Drawing.Point(5, 29)
         Me.rpvpReportsCharts.Name = "rpvpReportsCharts"
-        Me.rpvpReportsCharts.Size = New System.Drawing.Size(183, 248)
+        Me.rpvpReportsCharts.Size = New System.Drawing.Size(183, 183)
         Me.rpvpReportsCharts.Text = "Reports & Charts"
         '
         'rpvpSettings
