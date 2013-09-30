@@ -38,4 +38,13 @@
         Dim frmItems As frmInventoryItems = New frmInventoryItems()
         frmItems.ShowDialog()
     End Sub
+    Public Sub filltask(ByRef dr As DataRow, ByRef dt As DataTable)
+        txtTaskID.Text = dr("TaskNo").ToString()
+        txtstatus.Text = dr("status").ToString()
+    End Sub
+
+    Private Sub btnOutSource_Click(sender As Object, e As EventArgs) Handles btnOutSource.Click
+        Dim frmoutsource As frmOutsource = New frmOutsource()
+        frmoutsource.ShowDialog()
+    End Sub
 End Class

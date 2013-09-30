@@ -17,4 +17,8 @@
         Dim frmou As frmOutsource = New frmOutsource()
         frmou.ShowDialog()
     End Sub
+
+    Private Sub frmAssignEquipments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        radInternal.Checked = True
+    End Sub
 End Class
