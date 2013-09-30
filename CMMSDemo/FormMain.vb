@@ -2,13 +2,13 @@
 
 
 
-    Dim frmwolst As frmWorkOrderLists
+    Public frmwolst As frmWorkOrderLists
     Public frmwo As frmWorkOrder
 
-    Dim frmProjLst As frmProjectList
+    Public frmProjLst As frmProjectList
     Public frmProj As frmProject
 
-    Dim frmTskLst As frmTaskLists
+    Public frmTskLst As frmTaskLists
     Public frmTsk As frmTasks
 
 
@@ -121,7 +121,25 @@
     End Sub
 
     Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
- 
+        If rpvMain.SelectedPage Is rpvpWorkOrders Then
+            If Not frmProjLst.dgvProjectList.CurrentRow Is Nothing Then
+                Dim dt_wo As DataTable = Me.frmwolst.dtWo.Copy()
+                dt_wo.DefaultView.RowFilter = "ProjectNo = '" & Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectNo").Value.ToString() & "'"
+                Dim dttask_copy As DataTable = Me.frmTskLst.dttask.Copy()
+                dttask_copy.Clear()
+                Me.frmTskLst.dgvTasks.DataSource = dttask_copy
+                Me.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
+            End If
+        ElseIf rpvMain.SelectedPage Is rpvpTasks Then
+            If Not frmwolst.dgvWo.CurrentRow Is Nothing Then
+                If (Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
+                    Me.frmwo.fillworkorder(frmwolst.dtWo.Select("WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), frmwolst.dtWo)
+                    Dim dt_task As DataTable = Me.frmTskLst.dttask
+                    dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
+                    Me.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
+                End If
+            End If
+        End If
     End Sub
 
     Private Sub rpvMain_MouseClick(sender As Object, e As MouseEventArgs) Handles rpvMain.MouseClick
