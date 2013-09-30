@@ -43,6 +43,10 @@
             End If
         End If
     End Sub
+    Public Sub Viewall_Wo()
+        dgvWo.DataSource = dtWo
+        dgvWo.BestFitColumns()
+    End Sub
 
     Private Sub dgvWo_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvWo.CellDoubleClick
         'FormMain.RadDockMain.DockWindow(FormMain.ToolWindowWo, Telerik.WinControls.UI.Docking.DockPosition.Left)
