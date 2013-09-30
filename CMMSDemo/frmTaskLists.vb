@@ -37,7 +37,7 @@
         'dgvTasks.Columns("ProjectNo").IsVisible = False
 
     End Sub
-    Public Sub Viewall_tasks()
+    Public Sub ViewAllTasks()
         dgvTasks.DataSource = dttask
         dgvTasks.BestFitColumns()
         dttask.DefaultView.RowFilter = ""
