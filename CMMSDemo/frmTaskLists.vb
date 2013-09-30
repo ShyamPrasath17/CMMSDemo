@@ -40,6 +40,7 @@
     Public Sub Viewall_tasks()
         dgvTasks.DataSource = dttask
         dgvTasks.BestFitColumns()
+        dttask.DefaultView.RowFilter = ""
     End Sub
     Private Sub dgvTasks_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvTasks.CurrentRowChanged
         If (frmloaded) Then

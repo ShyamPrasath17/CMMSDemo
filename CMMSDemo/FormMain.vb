@@ -182,6 +182,6 @@
     End Sub
 
     Private Sub btnViewTasks_Click(sender As Object, e As EventArgs) Handles btnViewTasks.Click
-        frmTskLst.Viewall_tasks()
+        frmTskLst.ViewAllTasks()
     End Sub
 End Class
