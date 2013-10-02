@@ -44,7 +44,6 @@ Partial Class frmTasks
         Me.radOutsourced = New System.Windows.Forms.RadioButton()
         Me.radInternal = New System.Windows.Forms.RadioButton()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.txtTaskID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -57,8 +56,6 @@ Partial Class frmTasks
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtwono = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtstatus = New System.Windows.Forms.TextBox()
@@ -75,6 +72,10 @@ Partial Class frmTasks
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -128,11 +129,12 @@ Partial Class frmTasks
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Button5)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
         Me.SplitContainer1.Size = New System.Drawing.Size(730, 778)
-        Me.SplitContainer1.SplitterDistance = 723
+        Me.SplitContainer1.SplitterDistance = 730
         Me.SplitContainer1.TabIndex = 95
         '
         'grpSite
@@ -328,15 +330,6 @@ Partial Class frmTasks
         Me.Label9.TabIndex = 105
         Me.Label9.Text = "Task ID"
         '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(29, 542)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(111, 23)
-        Me.Button7.TabIndex = 78
-        Me.Button7.Text = "File Attachments >>"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
         'TextBox6
         '
         Me.TextBox6.Location = New System.Drawing.Point(116, 179)
@@ -385,7 +378,7 @@ Partial Class frmTasks
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(106, 23)
+        Me.TextBox4.Location = New System.Drawing.Point(87, 25)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(185, 20)
         Me.TextBox4.TabIndex = 97
@@ -442,24 +435,6 @@ Partial Class frmTasks
         Me.Label14.Size = New System.Drawing.Size(40, 13)
         Me.Label14.TabIndex = 93
         Me.Label14.Text = "Project"
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(26, 579)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(60, 13)
-        Me.Label12.TabIndex = 89
-        Me.Label12.Text = "Description"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(29, 595)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(641, 103)
-        Me.TextBox3.TabIndex = 88
         '
         'txtwono
         '
@@ -587,7 +562,7 @@ Partial Class frmTasks
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 32
-        Me.Button1.Text = "Finish"
+        Me.Button1.Text = "Hold"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
@@ -600,6 +575,44 @@ Partial Class frmTasks
         Me.Button2.TabIndex = 33
         Me.Button2.Text = "Drop"
         Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.Enabled = False
+        Me.Button5.Location = New System.Drawing.Point(400, 3)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 110
+        Me.Button5.Text = "Finish"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(29, 595)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox3.Size = New System.Drawing.Size(641, 117)
+        Me.TextBox3.TabIndex = 88
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(26, 579)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(60, 13)
+        Me.Label12.TabIndex = 89
+        Me.Label12.Text = "Description"
+        '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(29, 542)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(111, 23)
+        Me.Button7.TabIndex = 78
+        Me.Button7.Text = "File Attachments >>"
+        Me.Button7.UseVisualStyleBackColor = True
         '
         'frmTasks
         '
@@ -635,8 +648,6 @@ Partial Class frmTasks
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents txtwono As System.Windows.Forms.TextBox
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents txtstatus As System.Windows.Forms.TextBox
@@ -652,7 +663,6 @@ Partial Class frmTasks
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
@@ -681,4 +691,8 @@ Partial Class frmTasks
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents Button7 As System.Windows.Forms.Button
+    Friend WithEvents Label12 As System.Windows.Forms.Label
+    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
 End Class

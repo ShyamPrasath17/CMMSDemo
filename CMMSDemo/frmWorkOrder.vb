@@ -1,7 +1,7 @@
 ﻿Public Class frmWorkOrder
 
     Private Sub WorkOrder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        chkBillable.Checked = True
     End Sub
 
     Public Sub fillworkorder(ByRef dr As DataRow, ByRef dt As DataTable)
@@ -16,18 +16,10 @@
 
     Private Sub chkBillable_CheckedChanged(sender As Object, e As EventArgs) Handles chkBillable.CheckedChanged
         If chkBillable.Checked Then
-            lblCust.Enabled = True
-            txtcust.Enabled = True
-            Sercust.Enabled = True
+            grpBillable.Visible = True
         Else
-            lblCust.Enabled = False
-            txtcust.Enabled = False
-            Sercust.Enabled = False
+            grpBillable.Visible = False
         End If
-    End Sub
-
-    Private Sub SplitContainer1_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer1.Panel1.Paint
-
     End Sub
 
 End Class
