@@ -184,4 +184,17 @@
     Private Sub btnViewTasks_Click(sender As Object, e As EventArgs) Handles btnViewTasks.Click
         frmTskLst.ViewAllTasks()
     End Sub
+
+    Private Sub twTask_Resize(sender As Object, e As EventArgs) Handles twTask.Resize
+        'twTask.
+    End Sub
+
+    Private Sub ToolTabStrip1_Resize(sender As Object, e As EventArgs) Handles ToolTabStrip1.Resize
+        'Dim s As System.Drawing.Size = New Size(200, 300)
+        'ToolTabStrip1.MinimumSize = s
+    End Sub
+
+    Private Sub btnScheduledMaintainance_Click(sender As Object, e As EventArgs) Handles btnScheduledMaintainance.Click
+
+    End Sub
 End Class
