@@ -176,7 +176,7 @@ Partial Class frmIndependentTask
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(742, 470)
+        Me.Button4.Location = New System.Drawing.Point(678, 470)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 123
@@ -187,7 +187,7 @@ Partial Class frmIndependentTask
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(661, 470)
+        Me.Button2.Location = New System.Drawing.Point(597, 470)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 122
@@ -224,7 +224,7 @@ Partial Class frmIndependentTask
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(829, 505)
+        Me.ClientSize = New System.Drawing.Size(765, 511)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox2)
