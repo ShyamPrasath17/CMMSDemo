@@ -43,9 +43,12 @@ Partial Class FormMain
         Me.btnViewWorkOrders = New System.Windows.Forms.Button()
         Me.btnCreateWorkOrder = New System.Windows.Forms.Button()
         Me.rpvpTasks = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.btnCreateTaskIndependent = New System.Windows.Forms.Button()
         Me.btnViewTasks = New System.Windows.Forms.Button()
         Me.btnCreateTaskInternal = New System.Windows.Forms.Button()
         Me.btnCreateTaskOutsourced = New System.Windows.Forms.Button()
+        Me.rpvpScheduledMaintenance = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.btnScheduledMaintainance = New System.Windows.Forms.Button()
         Me.rpvpScheduler = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpReportsCharts = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpSettings = New Telerik.WinControls.UI.RadPageViewPage()
@@ -56,9 +59,6 @@ Partial Class FormMain
         Me.ToolTabStrip3 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip6 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip7 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.rpvpScheduledMaintainance = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.btnCreateTaskIndependent = New System.Windows.Forms.Button()
-        Me.btnScheduledMaintainance = New System.Windows.Forms.Button()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,6 +71,7 @@ Partial Class FormMain
         Me.rpvpProjects.SuspendLayout()
         Me.rpvpWorkOrders.SuspendLayout()
         Me.rpvpTasks.SuspendLayout()
+        Me.rpvpScheduledMaintenance.SuspendLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -83,7 +84,6 @@ Partial Class FormMain
         CType(Me.ToolTabStrip3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip7, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.rpvpScheduledMaintainance.SuspendLayout()
         Me.SuspendLayout()
         '
         'RadDockMain
@@ -102,7 +102,7 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockMain.Size = New System.Drawing.Size(883, 771)
+        Me.RadDockMain.Size = New System.Drawing.Size(884, 771)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
@@ -113,7 +113,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(871, 711)
+        Me.twDashBoard.Size = New System.Drawing.Size(872, 711)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
@@ -133,7 +133,7 @@ Partial Class FormMain
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(873, 761)
+        Me.ToolTabStrip1.Size = New System.Drawing.Size(874, 761)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
@@ -245,7 +245,7 @@ Partial Class FormMain
         Me.rpvMain.Controls.Add(Me.rpvpProjects)
         Me.rpvMain.Controls.Add(Me.rpvpWorkOrders)
         Me.rpvMain.Controls.Add(Me.rpvpTasks)
-        Me.rpvMain.Controls.Add(Me.rpvpScheduledMaintainance)
+        Me.rpvMain.Controls.Add(Me.rpvpScheduledMaintenance)
         Me.rpvMain.Controls.Add(Me.rpvpScheduler)
         Me.rpvMain.Controls.Add(Me.rpvpReportsCharts)
         Me.rpvMain.Controls.Add(Me.rpvpSettings)
@@ -253,8 +253,8 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
-        Me.rpvMain.Size = New System.Drawing.Size(220, 804)
+        Me.rpvMain.SelectedPage = Me.rpvpScheduledMaintenance
+        Me.rpvMain.Size = New System.Drawing.Size(219, 804)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
@@ -264,7 +264,7 @@ Partial Class FormMain
         Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
         Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
         Me.rpvpDashBoard.Name = "rpvpDashBoard"
-        Me.rpvpDashBoard.Size = New System.Drawing.Size(210, 251)
+        Me.rpvpDashBoard.Size = New System.Drawing.Size(209, 251)
         Me.rpvpDashBoard.Text = "Dash Board"
         '
         'rpvpProjects
@@ -344,6 +344,21 @@ Partial Class FormMain
         Me.rpvpTasks.Size = New System.Drawing.Size(210, 251)
         Me.rpvpTasks.Text = "Tasks"
         '
+        'btnCreateTaskIndependent
+        '
+        Me.btnCreateTaskIndependent.BackColor = System.Drawing.Color.Transparent
+        Me.btnCreateTaskIndependent.BackgroundImage = CType(resources.GetObject("btnCreateTaskIndependent.BackgroundImage"), System.Drawing.Image)
+        Me.btnCreateTaskIndependent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnCreateTaskIndependent.FlatAppearance.BorderSize = 0
+        Me.btnCreateTaskIndependent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCreateTaskIndependent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCreateTaskIndependent.Location = New System.Drawing.Point(7, 126)
+        Me.btnCreateTaskIndependent.Name = "btnCreateTaskIndependent"
+        Me.btnCreateTaskIndependent.Size = New System.Drawing.Size(175, 50)
+        Me.btnCreateTaskIndependent.TabIndex = 8
+        Me.btnCreateTaskIndependent.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnCreateTaskIndependent.UseVisualStyleBackColor = False
+        '
         'btnViewTasks
         '
         Me.btnViewTasks.BackColor = System.Drawing.Color.Transparent
@@ -389,6 +404,30 @@ Partial Class FormMain
         Me.btnCreateTaskOutsourced.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnCreateTaskOutsourced.UseVisualStyleBackColor = False
         '
+        'rpvpScheduledMaintenance
+        '
+        Me.rpvpScheduledMaintenance.Controls.Add(Me.btnScheduledMaintainance)
+        Me.rpvpScheduledMaintenance.Image = CType(resources.GetObject("rpvpScheduledMaintenance.Image"), System.Drawing.Image)
+        Me.rpvpScheduledMaintenance.Location = New System.Drawing.Point(5, 29)
+        Me.rpvpScheduledMaintenance.Name = "rpvpScheduledMaintenance"
+        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(209, 251)
+        Me.rpvpScheduledMaintenance.Text = "Scheduled Maintenance"
+        '
+        'btnScheduledMaintainance
+        '
+        Me.btnScheduledMaintainance.BackColor = System.Drawing.Color.Transparent
+        Me.btnScheduledMaintainance.BackgroundImage = CType(resources.GetObject("btnScheduledMaintainance.BackgroundImage"), System.Drawing.Image)
+        Me.btnScheduledMaintainance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnScheduledMaintainance.FlatAppearance.BorderSize = 0
+        Me.btnScheduledMaintainance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnScheduledMaintainance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnScheduledMaintainance.Location = New System.Drawing.Point(5, 14)
+        Me.btnScheduledMaintainance.Name = "btnScheduledMaintainance"
+        Me.btnScheduledMaintainance.Size = New System.Drawing.Size(175, 50)
+        Me.btnScheduledMaintainance.TabIndex = 5
+        Me.btnScheduledMaintainance.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnScheduledMaintainance.UseVisualStyleBackColor = False
+        '
         'rpvpScheduler
         '
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
@@ -429,7 +468,7 @@ Partial Class FormMain
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
         Me.SplitContainer1.Size = New System.Drawing.Size(1107, 804)
-        Me.SplitContainer1.SplitterDistance = 220
+        Me.SplitContainer1.SplitterDistance = 219
         Me.SplitContainer1.TabIndex = 2
         '
         'SplitContainer2
@@ -443,7 +482,7 @@ Partial Class FormMain
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.RadDockMain)
-        Me.SplitContainer2.Size = New System.Drawing.Size(883, 804)
+        Me.SplitContainer2.Size = New System.Drawing.Size(884, 804)
         Me.SplitContainer2.SplitterDistance = 29
         Me.SplitContainer2.TabIndex = 1
         '
@@ -517,45 +556,6 @@ Partial Class FormMain
         Me.ToolTabStrip7.TabIndex = 0
         Me.ToolTabStrip7.TabStop = False
         '
-        'rpvpScheduledMaintainance
-        '
-        Me.rpvpScheduledMaintainance.Controls.Add(Me.btnScheduledMaintainance)
-        Me.rpvpScheduledMaintainance.Image = CType(resources.GetObject("rpvpScheduledMaintainance.Image"), System.Drawing.Image)
-        Me.rpvpScheduledMaintainance.Location = New System.Drawing.Point(5, 29)
-        Me.rpvpScheduledMaintainance.Name = "rpvpScheduledMaintainance"
-        Me.rpvpScheduledMaintainance.Size = New System.Drawing.Size(210, 251)
-        Me.rpvpScheduledMaintainance.Text = "Scheduled Maintainance"
-        '
-        'btnCreateTaskIndependent
-        '
-        Me.btnCreateTaskIndependent.BackColor = System.Drawing.Color.Transparent
-        Me.btnCreateTaskIndependent.BackgroundImage = CType(resources.GetObject("btnCreateTaskIndependent.BackgroundImage"), System.Drawing.Image)
-        Me.btnCreateTaskIndependent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnCreateTaskIndependent.FlatAppearance.BorderSize = 0
-        Me.btnCreateTaskIndependent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCreateTaskIndependent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnCreateTaskIndependent.Location = New System.Drawing.Point(7, 126)
-        Me.btnCreateTaskIndependent.Name = "btnCreateTaskIndependent"
-        Me.btnCreateTaskIndependent.Size = New System.Drawing.Size(175, 50)
-        Me.btnCreateTaskIndependent.TabIndex = 8
-        Me.btnCreateTaskIndependent.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnCreateTaskIndependent.UseVisualStyleBackColor = False
-        '
-        'btnScheduledMaintainance
-        '
-        Me.btnScheduledMaintainance.BackColor = System.Drawing.Color.Transparent
-        Me.btnScheduledMaintainance.BackgroundImage = CType(resources.GetObject("btnScheduledMaintainance.BackgroundImage"), System.Drawing.Image)
-        Me.btnScheduledMaintainance.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnScheduledMaintainance.FlatAppearance.BorderSize = 0
-        Me.btnScheduledMaintainance.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnScheduledMaintainance.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnScheduledMaintainance.Location = New System.Drawing.Point(5, 14)
-        Me.btnScheduledMaintainance.Name = "btnScheduledMaintainance"
-        Me.btnScheduledMaintainance.Size = New System.Drawing.Size(175, 50)
-        Me.btnScheduledMaintainance.TabIndex = 5
-        Me.btnScheduledMaintainance.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnScheduledMaintainance.UseVisualStyleBackColor = False
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -577,6 +577,7 @@ Partial Class FormMain
         Me.rpvpProjects.ResumeLayout(False)
         Me.rpvpWorkOrders.ResumeLayout(False)
         Me.rpvpTasks.ResumeLayout(False)
+        Me.rpvpScheduledMaintenance.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -589,10 +590,9 @@ Partial Class FormMain
         CType(Me.ToolTabStrip3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip7, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.rpvpScheduledMaintainance.ResumeLayout(False)
         Me.ResumeLayout(False)
 
-End Sub
+    End Sub
     Friend WithEvents RadDockMain As Telerik.WinControls.UI.Docking.RadDock
     Friend WithEvents DocumentContainer1 As Telerik.WinControls.UI.Docking.DocumentContainer
     Friend WithEvents ToolWindowWoLst As Telerik.WinControls.UI.Docking.ToolWindow
@@ -626,7 +626,7 @@ End Sub
     Friend WithEvents rpvpDashBoard As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents btnViewWorkOrders As System.Windows.Forms.Button
     Friend WithEvents btnViewTasks As System.Windows.Forms.Button
-    Friend WithEvents rpvpScheduledMaintainance As Telerik.WinControls.UI.RadPageViewPage
+    Friend WithEvents rpvpScheduledMaintenance As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents btnCreateTaskIndependent As System.Windows.Forms.Button
     Friend WithEvents btnScheduledMaintainance As System.Windows.Forms.Button
 End Class
