@@ -24,6 +24,8 @@ Partial Class frmTasks
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTasks))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.grpSite = New System.Windows.Forms.GroupBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -76,9 +78,6 @@ Partial Class frmTasks
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label17 = New System.Windows.Forms.Label()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -140,6 +139,23 @@ Partial Class frmTasks
         Me.SplitContainer1.Size = New System.Drawing.Size(730, 778)
         Me.SplitContainer1.SplitterDistance = 730
         Me.SplitContainer1.TabIndex = 95
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(144, 184)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox2.TabIndex = 114
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(26, 187)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(97, 13)
+        Me.Label17.TabIndex = 113
+        Me.Label17.Text = "Task Service Type"
         '
         'grpSite
         '
@@ -618,23 +634,6 @@ Partial Class frmTasks
         Me.Button2.Text = "Drop"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(144, 184)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(185, 21)
-        Me.ComboBox2.TabIndex = 114
-        '
-        'Label17
-        '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(26, 187)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(97, 13)
-        Me.Label17.TabIndex = 113
-        Me.Label17.Text = "Task Service Type"
-        '
         'frmTasks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -648,7 +647,6 @@ Partial Class frmTasks
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.grpSite.ResumeLayout(False)
         Me.grpSite.PerformLayout()

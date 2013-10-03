@@ -223,7 +223,7 @@ Partial Class frmOutsource
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(277, 362)
+        Me.Button1.Location = New System.Drawing.Point(282, 368)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(84, 23)
         Me.Button1.TabIndex = 156
@@ -233,7 +233,7 @@ Partial Class frmOutsource
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(370, 362)
+        Me.Button2.Location = New System.Drawing.Point(375, 368)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(84, 23)
         Me.Button2.TabIndex = 157
@@ -254,7 +254,7 @@ Partial Class frmOutsource
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(467, 397)
+        Me.ClientSize = New System.Drawing.Size(472, 403)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -274,6 +274,7 @@ Partial Class frmOutsource
         Me.Controls.Add(Me.txtOutSourceID)
         Me.Controls.Add(Me.DateTimePicker2)
         Me.Controls.Add(Me.Label5)
+        Me.MinimumSize = New System.Drawing.Size(488, 441)
         Me.Name = "frmOutsource"
         Me.Text = "Outsource"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()

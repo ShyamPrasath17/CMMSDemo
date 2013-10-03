@@ -43,6 +43,8 @@ Partial Class frmIndependentTask
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -57,14 +59,14 @@ Partial Class frmIndependentTask
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(112, 77)
+        Me.TextBox6.Location = New System.Drawing.Point(129, 77)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(185, 20)
         Me.TextBox6.TabIndex = 110
         '
         'txtTaskID
         '
-        Me.txtTaskID.Location = New System.Drawing.Point(112, 51)
+        Me.txtTaskID.Location = New System.Drawing.Point(129, 51)
         Me.txtTaskID.Name = "txtTaskID"
         Me.txtTaskID.ReadOnly = True
         Me.txtTaskID.Size = New System.Drawing.Size(185, 20)
@@ -81,7 +83,7 @@ Partial Class frmIndependentTask
         '
         'txtstatus
         '
-        Me.txtstatus.Location = New System.Drawing.Point(112, 27)
+        Me.txtstatus.Location = New System.Drawing.Point(129, 27)
         Me.txtstatus.Name = "txtstatus"
         Me.txtstatus.ReadOnly = True
         Me.txtstatus.Size = New System.Drawing.Size(185, 20)
@@ -99,15 +101,15 @@ Partial Class frmIndependentTask
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(22, 192)
+        Me.Label7.Location = New System.Drawing.Point(22, 218)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 13)
+        Me.Label7.Size = New System.Drawing.Size(96, 13)
         Me.Label7.TabIndex = 108
-        Me.Label7.Text = "Estimated Hours"
+        Me.Label7.Text = "Estimated Duration"
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(112, 190)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(129, 216)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(86, 20)
         Me.NumericUpDown1.TabIndex = 109
@@ -115,7 +117,7 @@ Partial Class frmIndependentTask
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(22, 134)
+        Me.Label5.Location = New System.Drawing.Point(22, 160)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 13)
         Me.Label5.TabIndex = 114
@@ -124,14 +126,14 @@ Partial Class frmIndependentTask
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(112, 133)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(129, 161)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 115
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(25, 283)
+        Me.Button7.Location = New System.Drawing.Point(25, 289)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(111, 23)
         Me.Button7.TabIndex = 118
@@ -141,7 +143,7 @@ Partial Class frmIndependentTask
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(24, 322)
+        Me.Label12.Location = New System.Drawing.Point(24, 328)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 13)
         Me.Label12.TabIndex = 117
@@ -149,7 +151,7 @@ Partial Class frmIndependentTask
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(25, 338)
+        Me.TextBox3.Location = New System.Drawing.Point(25, 344)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -159,7 +161,7 @@ Partial Class frmIndependentTask
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(111, 160)
+        Me.ComboBox2.Location = New System.Drawing.Point(129, 186)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(185, 21)
         Me.ComboBox2.TabIndex = 120
@@ -167,7 +169,7 @@ Partial Class frmIndependentTask
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(21, 163)
+        Me.Label13.Location = New System.Drawing.Point(21, 189)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(38, 13)
         Me.Label13.TabIndex = 119
@@ -176,7 +178,7 @@ Partial Class frmIndependentTask
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(678, 470)
+        Me.Button4.Location = New System.Drawing.Point(642, 472)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 123
@@ -187,7 +189,7 @@ Partial Class frmIndependentTask
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(597, 470)
+        Me.Button2.Location = New System.Drawing.Point(561, 472)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 122
@@ -197,7 +199,7 @@ Partial Class frmIndependentTask
         'Button6
         '
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(303, 101)
+        Me.Button6.Location = New System.Drawing.Point(320, 100)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(24, 24)
         Me.Button6.TabIndex = 126
@@ -214,17 +216,36 @@ Partial Class frmIndependentTask
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(112, 104)
+        Me.TextBox2.Location = New System.Drawing.Point(129, 104)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(185, 20)
         Me.TextBox2.TabIndex = 124
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(129, 134)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox1.TabIndex = 128
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(22, 137)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(97, 13)
+        Me.Label17.TabIndex = 127
+        Me.Label17.Text = "Task Service Type"
         '
         'frmIndependentTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(765, 511)
+        Me.ClientSize = New System.Drawing.Size(729, 507)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox2)
@@ -245,6 +266,7 @@ Partial Class frmIndependentTask
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.NumericUpDown1)
+        Me.MinimumSize = New System.Drawing.Size(745, 545)
         Me.Name = "frmIndependentTask"
         Me.Text = "IndependentTask"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -272,4 +294,6 @@ Partial Class frmIndependentTask
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class

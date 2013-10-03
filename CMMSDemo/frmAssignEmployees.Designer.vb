@@ -46,7 +46,6 @@ Partial Class frmAssignEmployees
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.radOutsourced = New System.Windows.Forms.RadioButton()
         Me.radInternal = New System.Windows.Forms.RadioButton()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -76,8 +75,8 @@ Partial Class frmAssignEmployees
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpOutSource)
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpInternalEmp)
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(829, 789)
-        Me.SplitContainer1.SplitterDistance = 401
+        Me.SplitContainer1.Size = New System.Drawing.Size(554, 618)
+        Me.SplitContainer1.SplitterDistance = 213
         Me.SplitContainer1.TabIndex = 0
         '
         'dgvEmployees
@@ -85,14 +84,14 @@ Partial Class frmAssignEmployees
         Me.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEmployees.Location = New System.Drawing.Point(0, 0)
         Me.dgvEmployees.Name = "dgvEmployees"
-        Me.dgvEmployees.Size = New System.Drawing.Size(829, 401)
+        Me.dgvEmployees.Size = New System.Drawing.Size(554, 213)
         Me.dgvEmployees.TabIndex = 0
         Me.dgvEmployees.Text = "RadGridView1"
         '
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(742, 339)
+        Me.Button4.Location = New System.Drawing.Point(467, 368)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 122
@@ -103,7 +102,7 @@ Partial Class frmAssignEmployees
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(661, 339)
+        Me.Button2.Location = New System.Drawing.Point(386, 368)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
@@ -145,7 +144,7 @@ Partial Class frmAssignEmployees
         Me.grpInternalEmp.Controls.Add(Me.Label5)
         Me.grpInternalEmp.Location = New System.Drawing.Point(15, 152)
         Me.grpInternalEmp.Name = "grpInternalEmp"
-        Me.grpInternalEmp.Size = New System.Drawing.Size(382, 229)
+        Me.grpInternalEmp.Size = New System.Drawing.Size(365, 215)
         Me.grpInternalEmp.TabIndex = 117
         Me.grpInternalEmp.TabStop = False
         '
@@ -161,7 +160,7 @@ Partial Class frmAssignEmployees
         'BtnAddemp
         '
         Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(18, 197)
+        Me.BtnAddemp.Location = New System.Drawing.Point(18, 183)
         Me.BtnAddemp.Name = "BtnAddemp"
         Me.BtnAddemp.Size = New System.Drawing.Size(105, 23)
         Me.BtnAddemp.TabIndex = 119
@@ -296,13 +295,14 @@ Partial Class frmAssignEmployees
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(829, 789)
+        Me.ClientSize = New System.Drawing.Size(554, 618)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.MaximizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(570, 656)
         Me.Name = "frmAssignEmployees"
         Me.Text = "Assign Employees"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.dgvEmployees.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).EndInit()

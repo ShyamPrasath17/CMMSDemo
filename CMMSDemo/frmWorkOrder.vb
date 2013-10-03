@@ -6,7 +6,7 @@
 
     Public Sub fillworkorder(ByRef dr As DataRow, ByRef dt As DataTable)
         txtwono.Text = dr("WorkOrderNo").ToString()
-        Cmbsertype.Text = dr("ServiceType").ToString()
+        'Cmbsertype.Text = dr("ServiceType").ToString()
         txtstatus.Text = dr("status").ToString()
     End Sub
 

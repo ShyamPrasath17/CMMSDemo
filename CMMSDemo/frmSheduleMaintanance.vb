@@ -1,15 +1,37 @@
 ﻿Public Class frmSheduleMaintanance
-
+    Dim dtType As DataTable
     Private Sub radTimeBased_CheckedChanged(sender As Object, e As EventArgs) Handles radTimeBased.CheckedChanged
-        grpSubType.Enabled = True
+        If radTimeBased.Checked Then
+            dtType.DefaultView.RowFilter = "Type= 'TimeBased'"
+        End If
     End Sub
 
     Private Sub radMeter_CheckedChanged(sender As Object, e As EventArgs) Handles radMeter.CheckedChanged
-        grpSubType.Enabled = False
+        If radMeter.Checked Then
+            dtType.DefaultView.RowFilter = "Type= 'MeterBased'"
+        End If
     End Sub
 
     Private Sub frmSheduleMaintanance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        createTypeTbl()
         radTimeBased.Checked = True
+        cmbrptUom.DataSource = dtType.DefaultView
+        cmbrptUom.DisplayMember = "UOM"
+        cmbEndUom.DataSource = dtType.DefaultView
+        cmbEndUom.DisplayMember = "UOM"
+    End Sub
+
+    Private Sub createTypeTbl()
+        dtType = New DataTable()
+        dtType.Columns.Add("Type", GetType(String))
+        dtType.Columns.Add("UOM", GetType(String))
+        dtType.Rows.Add("TimeBased", "Hours")
+        dtType.Rows.Add("TimeBased", "Days")
+        dtType.Rows.Add("TimeBased", "Months")
+        dtType.Rows.Add("TimeBased", "Years")
+        dtType.Rows.Add("MeterBased", "Kms")
+        dtType.Rows.Add("MeterBased", "Meters")
+        dtType.Rows.Add("MeterBased", "Cycles")
     End Sub
 
 End Class

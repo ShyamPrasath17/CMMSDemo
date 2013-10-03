@@ -12,7 +12,7 @@
     Public frmTsk As frmTasks
 
     Public frmSched As frmSheduleMaintanance
-    Public frmTskPool As frmTaskPool
+    Public frmScheduledTskPool As frmTaskPool
 
     Public frmindepttsk As frmIndependentTask
 
@@ -24,8 +24,8 @@
         addDashBoardFrm()
         addWoLst()
         addwofrm()
-        addfrmProj()
         addfrmProjLst()
+        addfrmProject()
         addfrmTsk()
         addfrmTskLst()
         addfrmTskPool()
@@ -42,7 +42,7 @@
         twProjectList.Controls.Add(frmProjLst)
         twTask.Controls.Add(frmTsk)
         twTaskList.Controls.Add(frmTskLst)
-        TwTaskPool.Controls.Add(frmTskPool)
+        TwSehedTaskPool.Controls.Add(frmScheduledTskPool)
         TwIndependentTask.Controls.Add(frmindepttsk)
         TwScheduledMaint.Controls.Add(frmSched)
         ToolWindowWo.Controls.Add(frmwo)
@@ -60,7 +60,7 @@
         AdjustSplitters()
         TwIndependentTask.Hide()
         TwScheduledMaint.Hide()
-        TwTaskPool.Hide()
+        TwSehedTaskPool.Hide()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -81,7 +81,7 @@
 
     End Sub
 
-    Private Sub addfrmProj()
+    Private Sub addfrmProject()
         frmProj = New frmProject()
         frmProj.Dock = DockStyle.Fill
         frmProj.TopLevel = False
@@ -141,11 +141,11 @@
         frmSched.Show()
     End Sub
     Private Sub addfrmTskPool()
-        frmTskPool = New frmTaskPool()
-        frmTskPool.Dock = DockStyle.Fill
-        frmTskPool.TopLevel = False
-        frmTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmTskPool.Show()
+        frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
+        frmScheduledTskPool.Dock = DockStyle.Fill
+        frmScheduledTskPool.TopLevel = False
+        frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmScheduledTskPool.Show()
     End Sub
     Private Sub addfrmIndeptTsk()
         frmindepttsk = New frmIndependentTask()
@@ -192,8 +192,8 @@
             twDashBoard.Show()
             twDashBoard.Select()
         ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
-            TwTaskPool.Show()
-            TwTaskPool.Select()
+            TwSehedTaskPool.Show()
+            TwSehedTaskPool.Select()
         End If
     End Sub
 
@@ -231,5 +231,9 @@
     Private Sub btnCreateTaskIndependent_Click(sender As Object, e As EventArgs) Handles btnCreateTaskIndependent.Click
         TwIndependentTask.Show()
         TwIndependentTask.Select()
+    End Sub
+
+    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles btnViewIndeptTasks.Click
+
     End Sub
 End Class
