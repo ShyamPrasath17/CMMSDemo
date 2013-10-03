@@ -33,6 +33,12 @@
         dgvWo.BestFitColumns()
     End Sub
 
+    Public Sub ViewAllWorkOrders()
+        dgvWo.DataSource = dtWo
+        dgvWo.BestFitColumns()
+        dtWo.DefaultView.RowFilter = ""
+    End Sub
+
     Private Sub dgvWo_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvWo.CurrentRowChanged
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then

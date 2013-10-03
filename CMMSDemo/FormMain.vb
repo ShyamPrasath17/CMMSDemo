@@ -12,7 +12,9 @@
     Public frmTsk As frmTasks
 
     Public frmSched As frmSheduleMaintanance
+
     Public frmScheduledTskPool As frmTaskPool
+    Public frmIndependentTskPool As frmTaskPool
 
     Public frmindepttsk As frmIndependentTask
 
@@ -28,10 +30,10 @@
         addfrmProject()
         addfrmTsk()
         addfrmTskLst()
-        addfrmTskPool()
+        addfrmSchedTskPool()
         addfrmSchedmaint()
         addfrmIndeptTsk()
-
+        addfrmIndeptTskPool()
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -43,6 +45,7 @@
         twTask.Controls.Add(frmTsk)
         twTaskList.Controls.Add(frmTskLst)
         TwSehedTaskPool.Controls.Add(frmScheduledTskPool)
+        TwIndeptTaskPool.Controls.Add(frmIndependentTskPool)
         TwIndependentTask.Controls.Add(frmindepttsk)
         TwScheduledMaint.Controls.Add(frmSched)
         ToolWindowWo.Controls.Add(frmwo)
@@ -61,6 +64,7 @@
         TwIndependentTask.Hide()
         TwScheduledMaint.Hide()
         TwSehedTaskPool.Hide()
+        TwIndeptTaskPool.Hide()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -140,13 +144,21 @@
         frmSched.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmSched.Show()
     End Sub
-    Private Sub addfrmTskPool()
+    Private Sub addfrmSchedTskPool()
         frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
         frmScheduledTskPool.Dock = DockStyle.Fill
         frmScheduledTskPool.TopLevel = False
         frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmScheduledTskPool.Show()
     End Sub
+    Private Sub addfrmIndeptTskPool()
+        frmIndependentTskPool = New frmTaskPool("Independent")
+        frmIndependentTskPool.Dock = DockStyle.Fill
+        frmIndependentTskPool.TopLevel = False
+        frmIndependentTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmIndependentTskPool.Show()
+    End Sub
+
     Private Sub addfrmIndeptTsk()
         frmindepttsk = New frmIndependentTask()
         frmindepttsk.Dock = DockStyle.Fill
@@ -233,7 +245,12 @@
         TwIndependentTask.Select()
     End Sub
 
-    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles twDashBoard.Click
+    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles btnViewIndeptTasks.Click
+        TwIndeptTaskPool.Show()
+        TwIndeptTaskPool.Select()
+    End Sub
 
+    Private Sub btnViewWorkOrders_Click(sender As Object, e As EventArgs) Handles btnViewWorkOrders.Click
+        frmwolst.ViewAllWorkOrders()
     End Sub
 End Class
