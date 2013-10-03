@@ -233,7 +233,7 @@
         TwIndependentTask.Select()
     End Sub
 
-    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles btnViewIndeptTasks.Click
+    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles twDashBoard.Click
 
     End Sub
 End Class
