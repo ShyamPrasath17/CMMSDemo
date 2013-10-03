@@ -59,6 +59,8 @@ Partial Class FormMain
         Me.ToolTabStrip3 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip6 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip7 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,7 +102,7 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockMain.Size = New System.Drawing.Size(818, 546)
+        Me.RadDockMain.Size = New System.Drawing.Size(818, 762)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
@@ -111,7 +113,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(806, 486)
+        Me.twDashBoard.Size = New System.Drawing.Size(806, 702)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
@@ -131,7 +133,7 @@ Partial Class FormMain
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(808, 536)
+        Me.ToolTabStrip1.Size = New System.Drawing.Size(808, 752)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
@@ -252,7 +254,7 @@ Partial Class FormMain
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
         Me.rpvMain.SelectedPage = Me.rpvpDashBoard
-        Me.rpvMain.Size = New System.Drawing.Size(202, 575)
+        Me.rpvMain.Size = New System.Drawing.Size(202, 794)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
@@ -262,17 +264,18 @@ Partial Class FormMain
         Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
         Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
         Me.rpvpDashBoard.Name = "rpvpDashBoard"
-        Me.rpvpDashBoard.Size = New System.Drawing.Size(192, 22)
+        Me.rpvpDashBoard.Size = New System.Drawing.Size(192, 241)
         Me.rpvpDashBoard.Text = "Dash Board"
         '
         'rpvpProjects
         '
         Me.rpvpProjects.BackColor = System.Drawing.Color.White
+        Me.rpvpProjects.Controls.Add(Me.Button1)
         Me.rpvpProjects.Controls.Add(Me.btnCreateProjects)
         Me.rpvpProjects.Image = CType(resources.GetObject("rpvpProjects.Image"), System.Drawing.Image)
         Me.rpvpProjects.Location = New System.Drawing.Point(5, 29)
         Me.rpvpProjects.Name = "rpvpProjects"
-        Me.rpvpProjects.Size = New System.Drawing.Size(183, 144)
+        Me.rpvpProjects.Size = New System.Drawing.Size(192, 241)
         Me.rpvpProjects.Text = "Projects"
         '
         'btnCreateProjects
@@ -297,7 +300,7 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(210, 251)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(192, 241)
         Me.rpvpWorkOrders.Text = "Work Orders"
         '
         'btnViewWorkOrders
@@ -308,7 +311,7 @@ Partial Class FormMain
         Me.btnViewWorkOrders.FlatAppearance.BorderSize = 0
         Me.btnViewWorkOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewWorkOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewWorkOrders.Location = New System.Drawing.Point(4, 66)
+        Me.btnViewWorkOrders.Location = New System.Drawing.Point(7, 70)
         Me.btnViewWorkOrders.Name = "btnViewWorkOrders"
         Me.btnViewWorkOrders.Size = New System.Drawing.Size(175, 50)
         Me.btnViewWorkOrders.TabIndex = 6
@@ -339,7 +342,7 @@ Partial Class FormMain
         Me.rpvpTasks.Image = CType(resources.GetObject("rpvpTasks.Image"), System.Drawing.Image)
         Me.rpvpTasks.Location = New System.Drawing.Point(5, 29)
         Me.rpvpTasks.Name = "rpvpTasks"
-        Me.rpvpTasks.Size = New System.Drawing.Size(210, 251)
+        Me.rpvpTasks.Size = New System.Drawing.Size(192, 241)
         Me.rpvpTasks.Text = "Tasks"
         '
         'btnCreateTaskIndependent
@@ -404,11 +407,12 @@ Partial Class FormMain
         '
         'rpvpScheduledMaintenance
         '
+        Me.rpvpScheduledMaintenance.Controls.Add(Me.Button2)
         Me.rpvpScheduledMaintenance.Controls.Add(Me.btnScheduledMaintainance)
         Me.rpvpScheduledMaintenance.Image = CType(resources.GetObject("rpvpScheduledMaintenance.Image"), System.Drawing.Image)
         Me.rpvpScheduledMaintenance.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduledMaintenance.Name = "rpvpScheduledMaintenance"
-        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(192, 22)
+        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(192, 241)
         Me.rpvpScheduledMaintenance.Text = "Scheduled Maintenance"
         '
         'btnScheduledMaintainance
@@ -431,7 +435,7 @@ Partial Class FormMain
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(183, 144)
+        Me.rpvpScheduler.Size = New System.Drawing.Size(192, 241)
         Me.rpvpScheduler.Text = "Scheduler"
         '
         'rpvpReportsCharts
@@ -439,7 +443,7 @@ Partial Class FormMain
         Me.rpvpReportsCharts.Image = CType(resources.GetObject("rpvpReportsCharts.Image"), System.Drawing.Image)
         Me.rpvpReportsCharts.Location = New System.Drawing.Point(5, 29)
         Me.rpvpReportsCharts.Name = "rpvpReportsCharts"
-        Me.rpvpReportsCharts.Size = New System.Drawing.Size(183, 144)
+        Me.rpvpReportsCharts.Size = New System.Drawing.Size(192, 241)
         Me.rpvpReportsCharts.Text = "Reports & Charts"
         '
         'rpvpSettings
@@ -447,7 +451,7 @@ Partial Class FormMain
         Me.rpvpSettings.Image = CType(resources.GetObject("rpvpSettings.Image"), System.Drawing.Image)
         Me.rpvpSettings.Location = New System.Drawing.Point(5, 29)
         Me.rpvpSettings.Name = "rpvpSettings"
-        Me.rpvpSettings.Size = New System.Drawing.Size(183, 144)
+        Me.rpvpSettings.Size = New System.Drawing.Size(192, 241)
         Me.rpvpSettings.Text = "Settings"
         '
         'SplitContainer1
@@ -465,7 +469,7 @@ Partial Class FormMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1024, 575)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1024, 794)
         Me.SplitContainer1.SplitterDistance = 202
         Me.SplitContainer1.TabIndex = 2
         '
@@ -480,8 +484,8 @@ Partial Class FormMain
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.RadDockMain)
-        Me.SplitContainer2.Size = New System.Drawing.Size(818, 575)
-        Me.SplitContainer2.SplitterDistance = 25
+        Me.SplitContainer2.Size = New System.Drawing.Size(818, 794)
+        Me.SplitContainer2.SplitterDistance = 28
         Me.SplitContainer2.TabIndex = 1
         '
         'ToolTabStrip5
@@ -554,11 +558,41 @@ Partial Class FormMain
         Me.ToolTabStrip7.TabIndex = 0
         Me.ToolTabStrip7.TabStop = False
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(7, 70)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(175, 50)
+        Me.Button1.TabIndex = 7
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Transparent
+        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(5, 70)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(175, 50)
+        Me.Button2.TabIndex = 8
+        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1024, 575)
+        Me.ClientSize = New System.Drawing.Size(1024, 794)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
@@ -625,4 +659,6 @@ Partial Class FormMain
     Friend WithEvents rpvpScheduledMaintenance As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents btnCreateTaskIndependent As System.Windows.Forms.Button
     Friend WithEvents btnScheduledMaintainance As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class
