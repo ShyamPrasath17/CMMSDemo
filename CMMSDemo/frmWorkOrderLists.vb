@@ -37,9 +37,9 @@
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
                 FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
-                Dim dt_task As DataTable = FormMain.frmTskLst.dttask
-                dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                FormMain.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
+                Dim dtTask As DataTable = FormMain.frmTskLst.dttask
+                dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
+                FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
             End If
         End If
     End Sub
@@ -49,7 +49,6 @@
     End Sub
 
     Private Sub dgvWo_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvWo.CellDoubleClick
-        'FormMain.RadDockMain.DockWindow(FormMain.ToolWindowWo, Telerik.WinControls.UI.Docking.DockPosition.Left)
         FormMain.ToolWindowWo.Show()
         FormMain.ToolWindowWo.Select()
     End Sub
@@ -58,10 +57,11 @@
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
                 FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
-                Dim dt_task As DataTable = FormMain.frmTskLst.dttask
-                dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                FormMain.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
+                Dim dtTask As DataTable = FormMain.frmTskLst.dttask
+                dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
+                FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
             End If
         End If
     End Sub
+
 End Class

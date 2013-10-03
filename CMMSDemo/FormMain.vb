@@ -11,6 +11,11 @@
     Public frmTskLst As frmTaskLists
     Public frmTsk As frmTasks
 
+    Public frmSched As frmSheduleMaintanance
+    Public frmScheduledTskPool As frmTaskPool
+
+    Public frmindepttsk As frmIndependentTask
+
 
 
     Dim frmDashBoard As frmDashBoard
@@ -19,10 +24,13 @@
         addDashBoardFrm()
         addWoLst()
         addwofrm()
-        addfrmProj()
         addfrmProjLst()
+        addfrmProject()
         addfrmTsk()
         addfrmTskLst()
+        addfrmTskPool()
+        addfrmSchedmaint()
+        addfrmIndeptTsk()
 
 
         ' This call is required by the designer.
@@ -34,6 +42,9 @@
         twProjectList.Controls.Add(frmProjLst)
         twTask.Controls.Add(frmTsk)
         twTaskList.Controls.Add(frmTskLst)
+        TwSehedTaskPool.Controls.Add(frmScheduledTskPool)
+        TwIndependentTask.Controls.Add(frmindepttsk)
+        TwScheduledMaint.Controls.Add(frmSched)
         ToolWindowWo.Controls.Add(frmwo)
         ToolWindowWoLst.Controls.Add(frmwolst)
 
@@ -47,6 +58,9 @@
         twTask.Hide()
         twTaskList.Hide()
         AdjustSplitters()
+        TwIndependentTask.Hide()
+        TwScheduledMaint.Hide()
+        TwSehedTaskPool.Hide()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -67,7 +81,7 @@
 
     End Sub
 
-    Private Sub addfrmProj()
+    Private Sub addfrmProject()
         frmProj = New frmProject()
         frmProj.Dock = DockStyle.Fill
         frmProj.TopLevel = False
@@ -119,6 +133,27 @@
         frmwolst.Show()
 
     End Sub
+    Private Sub addfrmSchedmaint()
+        frmSched = New frmSheduleMaintanance()
+        frmSched.Dock = DockStyle.Fill
+        frmSched.TopLevel = False
+        frmSched.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmSched.Show()
+    End Sub
+    Private Sub addfrmTskPool()
+        frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
+        frmScheduledTskPool.Dock = DockStyle.Fill
+        frmScheduledTskPool.TopLevel = False
+        frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmScheduledTskPool.Show()
+    End Sub
+    Private Sub addfrmIndeptTsk()
+        frmindepttsk = New frmIndependentTask()
+        frmindepttsk.Dock = DockStyle.Fill
+        frmindepttsk.TopLevel = False
+        frmindepttsk.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmindepttsk.Show()
+    End Sub
 
     Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
@@ -156,6 +191,9 @@
         ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
             twDashBoard.Show()
             twDashBoard.Select()
+        ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
+            TwSehedTaskPool.Show()
+            TwSehedTaskPool.Select()
         End If
     End Sub
 
@@ -185,5 +223,17 @@
         frmTskLst.ViewAllTasks()
     End Sub
 
-   
+    Private Sub btnScheduledMaintainance_Click(sender As Object, e As EventArgs) Handles btnScheduledMaintainance.Click
+        TwScheduledMaint.Show()
+        TwScheduledMaint.Select()
+    End Sub
+
+    Private Sub btnCreateTaskIndependent_Click(sender As Object, e As EventArgs) Handles btnCreateTaskIndependent.Click
+        TwIndependentTask.Show()
+        TwIndependentTask.Select()
+    End Sub
+
+    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles btnViewIndeptTasks.Click
+
+    End Sub
 End Class

@@ -25,6 +25,7 @@ Partial Class frmInventoryItems
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventoryItems))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.dgvEquipment = New Telerik.WinControls.UI.RadGridView()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.grpInternalEmp = New System.Windows.Forms.GroupBox()
@@ -45,8 +46,6 @@ Partial Class frmInventoryItems
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -72,8 +71,8 @@ Partial Class frmInventoryItems
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpInternalEmp)
-        Me.SplitContainer1.Size = New System.Drawing.Size(633, 645)
-        Me.SplitContainer1.SplitterDistance = 327
+        Me.SplitContainer1.Size = New System.Drawing.Size(638, 651)
+        Me.SplitContainer1.SplitterDistance = 330
         Me.SplitContainer1.TabIndex = 2
         '
         'dgvEquipment
@@ -81,14 +80,23 @@ Partial Class frmInventoryItems
         Me.dgvEquipment.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEquipment.Location = New System.Drawing.Point(0, 0)
         Me.dgvEquipment.Name = "dgvEquipment"
-        Me.dgvEquipment.Size = New System.Drawing.Size(633, 327)
+        Me.dgvEquipment.Size = New System.Drawing.Size(638, 330)
         Me.dgvEquipment.TabIndex = 0
         Me.dgvEquipment.Text = "RadGridView1"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(465, 27)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(156, 71)
+        Me.Button1.TabIndex = 123
+        Me.Button1.Text = "Issue Purchase Order >>"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(546, 279)
+        Me.Button4.Location = New System.Drawing.Point(551, 279)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 122
@@ -99,7 +107,7 @@ Partial Class frmInventoryItems
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(465, 279)
+        Me.Button2.Location = New System.Drawing.Point(470, 279)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
@@ -273,27 +281,18 @@ Partial Class frmInventoryItems
         Me.Label5.TabIndex = 108
         Me.Label5.Text = "Work assigned Date"
         '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(465, 27)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(156, 71)
-        Me.Button1.TabIndex = 123
-        Me.Button1.Text = "Issue Purchase Order >>"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'frmInventoryItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(633, 645)
+        Me.ClientSize = New System.Drawing.Size(638, 651)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.MinimumSize = New System.Drawing.Size(654, 689)
         Me.Name = "frmInventoryItems"
         Me.Text = "Inventory Items"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.dgvEquipment.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvEquipment, System.ComponentModel.ISupportInitialize).EndInit()

@@ -26,12 +26,15 @@ Partial Class FormMain
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
         Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.TwSehedTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwScheduledMaint = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwIndependentTask = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
@@ -59,8 +62,12 @@ Partial Class FormMain
         Me.ToolTabStrip3 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip6 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip7 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.ToolTabStrip12 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ToolTabStrip8 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ToolTabStrip10 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.btnViewIndeptTasks = New System.Windows.Forms.Button()
+        Me.TwIndeptTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolTabStrip13 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,6 +91,10 @@ Partial Class FormMain
         CType(Me.ToolTabStrip3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip7, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip12, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip8, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip10, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip13, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadDockMain
@@ -102,7 +113,7 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockMain.Size = New System.Drawing.Size(818, 762)
+        Me.RadDockMain.Size = New System.Drawing.Size(801, 697)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
@@ -113,7 +124,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(806, 702)
+        Me.twDashBoard.Size = New System.Drawing.Size(789, 637)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
@@ -126,6 +137,10 @@ Partial Class FormMain
         Me.ToolTabStrip1.Controls.Add(Me.twProjectList)
         Me.ToolTabStrip1.Controls.Add(Me.twTaskList)
         Me.ToolTabStrip1.Controls.Add(Me.twTask)
+        Me.ToolTabStrip1.Controls.Add(Me.TwScheduledMaint)
+        Me.ToolTabStrip1.Controls.Add(Me.TwIndependentTask)
+        Me.ToolTabStrip1.Controls.Add(Me.TwSehedTaskPool)
+        Me.ToolTabStrip1.Controls.Add(Me.TwIndeptTaskPool)
         Me.ToolTabStrip1.Location = New System.Drawing.Point(5, 5)
         Me.ToolTabStrip1.Name = "ToolTabStrip1"
         '
@@ -133,11 +148,20 @@ Partial Class FormMain
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(808, 752)
+        Me.ToolTabStrip1.Size = New System.Drawing.Size(791, 687)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
+        '
+        'TwSehedTaskPool
+        '
+        Me.TwSehedTaskPool.Caption = Nothing
+        Me.TwSehedTaskPool.Location = New System.Drawing.Point(1, 24)
+        Me.TwSehedTaskPool.Name = "TwSehedTaskPool"
+        Me.TwSehedTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwSehedTaskPool.Size = New System.Drawing.Size(870, 766)
+        Me.TwSehedTaskPool.Text = "Scheduled Task Pool"
         '
         'ToolWindowWo
         '
@@ -145,7 +169,7 @@ Partial Class FormMain
         Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
         Me.ToolWindowWo.Name = "ToolWindowWo"
         Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWo.Size = New System.Drawing.Size(762, 582)
+        Me.ToolWindowWo.Size = New System.Drawing.Size(870, 766)
         Me.ToolWindowWo.Text = "WorkOrder"
         '
         'twProject
@@ -190,8 +214,26 @@ Partial Class FormMain
         Me.twTask.Location = New System.Drawing.Point(1, 24)
         Me.twTask.Name = "twTask"
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTask.Size = New System.Drawing.Size(762, 582)
+        Me.twTask.Size = New System.Drawing.Size(872, 711)
         Me.twTask.Text = "Task"
+        '
+        'TwScheduledMaint
+        '
+        Me.TwScheduledMaint.Caption = Nothing
+        Me.TwScheduledMaint.Location = New System.Drawing.Point(1, 24)
+        Me.TwScheduledMaint.Name = "TwScheduledMaint"
+        Me.TwScheduledMaint.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwScheduledMaint.Size = New System.Drawing.Size(870, 766)
+        Me.TwScheduledMaint.Text = "Scheduled Maintanance"
+        '
+        'TwIndependentTask
+        '
+        Me.TwIndependentTask.Caption = Nothing
+        Me.TwIndependentTask.Location = New System.Drawing.Point(1, 24)
+        Me.TwIndependentTask.Name = "TwIndependentTask"
+        Me.TwIndependentTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwIndependentTask.Size = New System.Drawing.Size(870, 766)
+        Me.TwIndependentTask.Text = "Independent Task"
         '
         'DocumentContainer1
         '
@@ -254,7 +296,7 @@ Partial Class FormMain
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
         Me.rpvMain.SelectedPage = Me.rpvpDashBoard
-        Me.rpvMain.Size = New System.Drawing.Size(202, 794)
+        Me.rpvMain.Size = New System.Drawing.Size(198, 726)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
@@ -264,18 +306,17 @@ Partial Class FormMain
         Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
         Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
         Me.rpvpDashBoard.Name = "rpvpDashBoard"
-        Me.rpvpDashBoard.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpDashBoard.Size = New System.Drawing.Size(188, 173)
         Me.rpvpDashBoard.Text = "Dash Board"
         '
         'rpvpProjects
         '
         Me.rpvpProjects.BackColor = System.Drawing.Color.White
-        Me.rpvpProjects.Controls.Add(Me.Button1)
         Me.rpvpProjects.Controls.Add(Me.btnCreateProjects)
         Me.rpvpProjects.Image = CType(resources.GetObject("rpvpProjects.Image"), System.Drawing.Image)
         Me.rpvpProjects.Location = New System.Drawing.Point(5, 29)
         Me.rpvpProjects.Name = "rpvpProjects"
-        Me.rpvpProjects.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpProjects.Size = New System.Drawing.Size(209, 251)
         Me.rpvpProjects.Text = "Projects"
         '
         'btnCreateProjects
@@ -300,7 +341,7 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(209, 251)
         Me.rpvpWorkOrders.Text = "Work Orders"
         '
         'btnViewWorkOrders
@@ -311,7 +352,7 @@ Partial Class FormMain
         Me.btnViewWorkOrders.FlatAppearance.BorderSize = 0
         Me.btnViewWorkOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewWorkOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewWorkOrders.Location = New System.Drawing.Point(7, 70)
+        Me.btnViewWorkOrders.Location = New System.Drawing.Point(4, 66)
         Me.btnViewWorkOrders.Name = "btnViewWorkOrders"
         Me.btnViewWorkOrders.Size = New System.Drawing.Size(175, 50)
         Me.btnViewWorkOrders.TabIndex = 6
@@ -335,6 +376,7 @@ Partial Class FormMain
         '
         'rpvpTasks
         '
+        Me.rpvpTasks.Controls.Add(Me.btnViewIndeptTasks)
         Me.rpvpTasks.Controls.Add(Me.btnCreateTaskIndependent)
         Me.rpvpTasks.Controls.Add(Me.btnViewTasks)
         Me.rpvpTasks.Controls.Add(Me.btnCreateTaskInternal)
@@ -342,7 +384,7 @@ Partial Class FormMain
         Me.rpvpTasks.Image = CType(resources.GetObject("rpvpTasks.Image"), System.Drawing.Image)
         Me.rpvpTasks.Location = New System.Drawing.Point(5, 29)
         Me.rpvpTasks.Name = "rpvpTasks"
-        Me.rpvpTasks.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpTasks.Size = New System.Drawing.Size(188, 173)
         Me.rpvpTasks.Text = "Tasks"
         '
         'btnCreateTaskIndependent
@@ -368,7 +410,7 @@ Partial Class FormMain
         Me.btnViewTasks.FlatAppearance.BorderSize = 0
         Me.btnViewTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewTasks.Location = New System.Drawing.Point(7, 188)
+        Me.btnViewTasks.Location = New System.Drawing.Point(7, 182)
         Me.btnViewTasks.Name = "btnViewTasks"
         Me.btnViewTasks.Size = New System.Drawing.Size(175, 50)
         Me.btnViewTasks.TabIndex = 7
@@ -407,12 +449,11 @@ Partial Class FormMain
         '
         'rpvpScheduledMaintenance
         '
-        Me.rpvpScheduledMaintenance.Controls.Add(Me.Button2)
         Me.rpvpScheduledMaintenance.Controls.Add(Me.btnScheduledMaintainance)
         Me.rpvpScheduledMaintenance.Image = CType(resources.GetObject("rpvpScheduledMaintenance.Image"), System.Drawing.Image)
         Me.rpvpScheduledMaintenance.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduledMaintenance.Name = "rpvpScheduledMaintenance"
-        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(208, 185)
         Me.rpvpScheduledMaintenance.Text = "Scheduled Maintenance"
         '
         'btnScheduledMaintainance
@@ -435,7 +476,7 @@ Partial Class FormMain
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpScheduler.Size = New System.Drawing.Size(183, 144)
         Me.rpvpScheduler.Text = "Scheduler"
         '
         'rpvpReportsCharts
@@ -443,7 +484,7 @@ Partial Class FormMain
         Me.rpvpReportsCharts.Image = CType(resources.GetObject("rpvpReportsCharts.Image"), System.Drawing.Image)
         Me.rpvpReportsCharts.Location = New System.Drawing.Point(5, 29)
         Me.rpvpReportsCharts.Name = "rpvpReportsCharts"
-        Me.rpvpReportsCharts.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpReportsCharts.Size = New System.Drawing.Size(183, 144)
         Me.rpvpReportsCharts.Text = "Reports & Charts"
         '
         'rpvpSettings
@@ -451,7 +492,7 @@ Partial Class FormMain
         Me.rpvpSettings.Image = CType(resources.GetObject("rpvpSettings.Image"), System.Drawing.Image)
         Me.rpvpSettings.Location = New System.Drawing.Point(5, 29)
         Me.rpvpSettings.Name = "rpvpSettings"
-        Me.rpvpSettings.Size = New System.Drawing.Size(192, 241)
+        Me.rpvpSettings.Size = New System.Drawing.Size(183, 144)
         Me.rpvpSettings.Text = "Settings"
         '
         'SplitContainer1
@@ -469,8 +510,8 @@ Partial Class FormMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1024, 794)
-        Me.SplitContainer1.SplitterDistance = 202
+        Me.SplitContainer1.Size = New System.Drawing.Size(1003, 726)
+        Me.SplitContainer1.SplitterDistance = 198
         Me.SplitContainer1.TabIndex = 2
         '
         'SplitContainer2
@@ -484,8 +525,8 @@ Partial Class FormMain
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.RadDockMain)
-        Me.SplitContainer2.Size = New System.Drawing.Size(818, 794)
-        Me.SplitContainer2.SplitterDistance = 28
+        Me.SplitContainer2.Size = New System.Drawing.Size(801, 726)
+        Me.SplitContainer2.SplitterDistance = 25
         Me.SplitContainer2.TabIndex = 1
         '
         'ToolTabStrip5
@@ -558,41 +599,85 @@ Partial Class FormMain
         Me.ToolTabStrip7.TabIndex = 0
         Me.ToolTabStrip7.TabStop = False
         '
-        'Button1
+        'ToolTabStrip12
         '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = CType(resources.GetObject("Button1.BackgroundImage"), System.Drawing.Image)
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(7, 70)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(175, 50)
-        Me.Button1.TabIndex = 7
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.ToolTabStrip12.CanUpdateChildIndex = True
+        Me.ToolTabStrip12.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip12.Name = "ToolTabStrip12"
         '
-        'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.Transparent
-        Me.Button2.BackgroundImage = CType(resources.GetObject("Button2.BackgroundImage"), System.Drawing.Image)
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(5, 70)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(175, 50)
-        Me.Button2.TabIndex = 8
-        Me.Button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button2.UseVisualStyleBackColor = False
+        '
+        Me.ToolTabStrip12.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip12.SelectedIndex = 0
+        Me.ToolTabStrip12.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip12.TabIndex = 0
+        Me.ToolTabStrip12.TabStop = False
+        '
+        'ToolTabStrip8
+        '
+        Me.ToolTabStrip8.CanUpdateChildIndex = True
+        Me.ToolTabStrip8.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip8.Name = "ToolTabStrip8"
+        '
+        '
+        '
+        Me.ToolTabStrip8.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip8.SelectedIndex = 0
+        Me.ToolTabStrip8.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip8.TabIndex = 0
+        Me.ToolTabStrip8.TabStop = False
+        '
+        'ToolTabStrip10
+        '
+        Me.ToolTabStrip10.CanUpdateChildIndex = True
+        Me.ToolTabStrip10.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip10.Name = "ToolTabStrip10"
+        '
+        '
+        '
+        Me.ToolTabStrip10.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip10.SelectedIndex = 0
+        Me.ToolTabStrip10.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip10.TabIndex = 0
+        Me.ToolTabStrip10.TabStop = False
+        '
+        'btnViewIndeptTasks
+        '
+        Me.btnViewIndeptTasks.Location = New System.Drawing.Point(27, 238)
+        Me.btnViewIndeptTasks.Name = "btnViewIndeptTasks"
+        Me.btnViewIndeptTasks.Size = New System.Drawing.Size(141, 52)
+        Me.btnViewIndeptTasks.TabIndex = 9
+        Me.btnViewIndeptTasks.Text = "View Independent Task"
+        Me.btnViewIndeptTasks.UseVisualStyleBackColor = True
+        '
+        'TwIndeptTaskPool
+        '
+        Me.TwIndeptTaskPool.Caption = Nothing
+        Me.TwIndeptTaskPool.Location = New System.Drawing.Point(1, 24)
+        Me.TwIndeptTaskPool.Name = "TwIndeptTaskPool"
+        Me.TwIndeptTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwIndeptTaskPool.Size = New System.Drawing.Size(789, 637)
+        Me.TwIndeptTaskPool.Text = "Independent Task Pool"
+        '
+        'ToolTabStrip13
+        '
+        Me.ToolTabStrip13.CanUpdateChildIndex = True
+        Me.ToolTabStrip13.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip13.Name = "ToolTabStrip13"
+        '
+        '
+        '
+        Me.ToolTabStrip13.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip13.SelectedIndex = 0
+        Me.ToolTabStrip13.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip13.TabIndex = 0
+        Me.ToolTabStrip13.TabStop = False
         '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1024, 794)
+        Me.ClientSize = New System.Drawing.Size(1003, 726)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
@@ -620,6 +705,10 @@ Partial Class FormMain
         CType(Me.ToolTabStrip3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip7, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip12, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip8, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip10, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip13, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -659,6 +748,13 @@ Partial Class FormMain
     Friend WithEvents rpvpScheduledMaintenance As Telerik.WinControls.UI.RadPageViewPage
     Friend WithEvents btnCreateTaskIndependent As System.Windows.Forms.Button
     Friend WithEvents btnScheduledMaintainance As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents TwSehedTaskPool As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents TwScheduledMaint As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents TwIndependentTask As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents ToolTabStrip12 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents ToolTabStrip8 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents ToolTabStrip10 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents btnViewIndeptTasks As System.Windows.Forms.Button
+    Friend WithEvents TwIndeptTaskPool As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents ToolTabStrip13 As Telerik.WinControls.UI.Docking.ToolTabStrip
 End Class

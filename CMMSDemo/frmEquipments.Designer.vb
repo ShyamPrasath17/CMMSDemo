@@ -50,7 +50,6 @@ Partial Class frmAssignEquipments
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvEquipment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvEquipment.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -59,7 +58,7 @@ Partial Class frmAssignEquipments
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(763, 339)
+        Me.Button4.Location = New System.Drawing.Point(480, 339)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 122
@@ -70,7 +69,7 @@ Partial Class frmAssignEquipments
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(682, 339)
+        Me.Button2.Location = New System.Drawing.Point(399, 339)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
@@ -143,7 +142,7 @@ Partial Class frmAssignEquipments
         Me.grpInternalEmp.Controls.Add(Me.Label5)
         Me.grpInternalEmp.Location = New System.Drawing.Point(15, 152)
         Me.grpInternalEmp.Name = "grpInternalEmp"
-        Me.grpInternalEmp.Size = New System.Drawing.Size(382, 187)
+        Me.grpInternalEmp.Size = New System.Drawing.Size(382, 182)
         Me.grpInternalEmp.TabIndex = 117
         Me.grpInternalEmp.TabStop = False
         '
@@ -245,7 +244,7 @@ Partial Class frmAssignEquipments
         Me.dgvEquipment.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEquipment.Location = New System.Drawing.Point(0, 0)
         Me.dgvEquipment.Name = "dgvEquipment"
-        Me.dgvEquipment.Size = New System.Drawing.Size(850, 387)
+        Me.dgvEquipment.Size = New System.Drawing.Size(567, 386)
         Me.dgvEquipment.TabIndex = 0
         Me.dgvEquipment.Text = "RadGridView1"
         '
@@ -267,8 +266,8 @@ Partial Class frmAssignEquipments
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpOutSource)
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpInternalEmp)
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(850, 762)
-        Me.SplitContainer1.SplitterDistance = 387
+        Me.SplitContainer1.Size = New System.Drawing.Size(567, 761)
+        Me.SplitContainer1.SplitterDistance = 386
         Me.SplitContainer1.TabIndex = 1
         '
         'frmAssignEquipments
@@ -276,8 +275,9 @@ Partial Class frmAssignEquipments
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(850, 762)
+        Me.ClientSize = New System.Drawing.Size(567, 761)
         Me.Controls.Add(Me.SplitContainer1)
+        Me.MinimumSize = New System.Drawing.Size(583, 799)
         Me.Name = "frmAssignEquipments"
         Me.Text = "Equipments"
         Me.grpOutSource.ResumeLayout(False)
@@ -290,7 +290,6 @@ Partial Class frmAssignEquipments
         CType(Me.dgvEquipment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.ResumeLayout(False)
 

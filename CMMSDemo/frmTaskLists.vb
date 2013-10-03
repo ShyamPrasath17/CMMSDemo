@@ -4,10 +4,10 @@
     Private Sub frmTaskLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
         createtable()
-        frmloaded = True
         dgvTasks.AllowAddNewRow = False
         dgvTasks.AllowEditRow = False
         dgvTasks.AllowDeleteRow = False
+        frmloaded = True
     End Sub
     Private Sub createtable()
         dttask = New DataTable()

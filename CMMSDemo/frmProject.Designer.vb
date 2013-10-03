@@ -86,8 +86,8 @@ Partial Class frmProject
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button8)
-        Me.SplitContainer1.Size = New System.Drawing.Size(551, 445)
-        Me.SplitContainer1.SplitterDistance = 391
+        Me.SplitContainer1.Size = New System.Drawing.Size(549, 448)
+        Me.SplitContainer1.SplitterDistance = 393
         Me.SplitContainer1.TabIndex = 95
         '
         'txtstatus
@@ -262,7 +262,7 @@ Partial Class frmProject
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(353, 13)
+        Me.Button1.Location = New System.Drawing.Point(351, 13)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 23)
         Me.Button1.TabIndex = 111
@@ -272,7 +272,7 @@ Partial Class frmProject
         'Button8
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button8.Location = New System.Drawing.Point(464, 13)
+        Me.Button8.Location = New System.Drawing.Point(462, 13)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 110
@@ -284,7 +284,7 @@ Partial Class frmProject
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(551, 445)
+        Me.ClientSize = New System.Drawing.Size(549, 448)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "frmProject"
         Me.Text = "Project"
