@@ -44,6 +44,7 @@ Partial Class frmTasks
         Me.radOutsourced = New System.Windows.Forms.RadioButton()
         Me.radInternal = New System.Windows.Forms.RadioButton()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.txtTaskID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -56,6 +57,8 @@ Partial Class frmTasks
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtwono = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtstatus = New System.Windows.Forms.TextBox()
@@ -69,13 +72,12 @@ Partial Class frmTasks
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -98,6 +100,8 @@ Partial Class frmTasks
         '
         'SplitContainer1.Panel1
         '
+        Me.SplitContainer1.Panel1.Controls.Add(Me.ComboBox2)
+        Me.SplitContainer1.Panel1.Controls.Add(Me.Label17)
         Me.SplitContainer1.Panel1.Controls.Add(Me.grpSite)
         Me.SplitContainer1.Panel1.Controls.Add(Me.grpItems)
         Me.SplitContainer1.Panel1.Controls.Add(Me.grpOutSource)
@@ -290,7 +294,7 @@ Partial Class frmTasks
         '
         Me.GroupBox2.Controls.Add(Me.radOutsourced)
         Me.GroupBox2.Controls.Add(Me.radInternal)
-        Me.GroupBox2.Location = New System.Drawing.Point(24, 49)
+        Me.GroupBox2.Location = New System.Drawing.Point(29, 35)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(256, 62)
         Me.GroupBox2.TabIndex = 106
@@ -324,22 +328,31 @@ Partial Class frmTasks
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(26, 160)
+        Me.Label9.Location = New System.Drawing.Point(26, 134)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 13)
         Me.Label9.TabIndex = 105
         Me.Label9.Text = "Task ID"
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(29, 542)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(111, 23)
+        Me.Button7.TabIndex = 78
+        Me.Button7.Text = "File Attachments >>"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(116, 179)
+        Me.TextBox6.Location = New System.Drawing.Point(144, 153)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(185, 20)
         Me.TextBox6.TabIndex = 102
         '
         'txtTaskID
         '
-        Me.txtTaskID.Location = New System.Drawing.Point(116, 153)
+        Me.txtTaskID.Location = New System.Drawing.Point(144, 127)
         Me.txtTaskID.Name = "txtTaskID"
         Me.txtTaskID.ReadOnly = True
         Me.txtTaskID.Size = New System.Drawing.Size(185, 20)
@@ -348,7 +361,7 @@ Partial Class frmTasks
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(26, 182)
+        Me.Label10.Location = New System.Drawing.Point(26, 156)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(62, 13)
         Me.Label10.TabIndex = 103
@@ -412,7 +425,7 @@ Partial Class frmTasks
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(116, 314)
+        Me.TextBox2.Location = New System.Drawing.Point(144, 314)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ReadOnly = True
         Me.TextBox2.Size = New System.Drawing.Size(185, 20)
@@ -436,6 +449,24 @@ Partial Class frmTasks
         Me.Label14.TabIndex = 93
         Me.Label14.Text = "Project"
         '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(26, 579)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(60, 13)
+        Me.Label12.TabIndex = 89
+        Me.Label12.Text = "Description"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(29, 595)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox3.Size = New System.Drawing.Size(641, 117)
+        Me.TextBox3.TabIndex = 88
+        '
         'txtwono
         '
         Me.txtwono.Location = New System.Drawing.Point(500, 9)
@@ -454,7 +485,7 @@ Partial Class frmTasks
         '
         'txtstatus
         '
-        Me.txtstatus.Location = New System.Drawing.Point(116, 129)
+        Me.txtstatus.Location = New System.Drawing.Point(144, 103)
         Me.txtstatus.Name = "txtstatus"
         Me.txtstatus.ReadOnly = True
         Me.txtstatus.Size = New System.Drawing.Size(185, 20)
@@ -463,7 +494,7 @@ Partial Class frmTasks
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(26, 136)
+        Me.Label4.Location = New System.Drawing.Point(26, 110)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(37, 13)
         Me.Label4.TabIndex = 22
@@ -498,7 +529,7 @@ Partial Class frmTasks
         '
         'NumericUpDown2
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(116, 237)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(144, 237)
         Me.NumericUpDown2.Name = "NumericUpDown2"
         Me.NumericUpDown2.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown2.TabIndex = 87
@@ -514,7 +545,7 @@ Partial Class frmTasks
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(116, 211)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(144, 211)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown1.TabIndex = 85
@@ -522,7 +553,7 @@ Partial Class frmTasks
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(116, 288)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(144, 288)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker2.TabIndex = 81
@@ -539,10 +570,21 @@ Partial Class frmTasks
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(116, 263)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(144, 263)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 79
+        '
+        'Button5
+        '
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.Enabled = False
+        Me.Button5.Location = New System.Drawing.Point(400, 3)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 110
+        Me.Button5.Text = "Finish"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -576,43 +618,22 @@ Partial Class frmTasks
         Me.Button2.Text = "Drop"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button5
+        'ComboBox2
         '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Enabled = False
-        Me.Button5.Location = New System.Drawing.Point(400, 3)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 110
-        Me.Button5.Text = "Finish"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(144, 184)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox2.TabIndex = 114
         '
-        'TextBox3
+        'Label17
         '
-        Me.TextBox3.Location = New System.Drawing.Point(29, 595)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(641, 117)
-        Me.TextBox3.TabIndex = 88
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(26, 579)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(60, 13)
-        Me.Label12.TabIndex = 89
-        Me.Label12.Text = "Description"
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(29, 542)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(111, 23)
-        Me.Button7.TabIndex = 78
-        Me.Button7.Text = "File Attachments >>"
-        Me.Button7.UseVisualStyleBackColor = True
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(26, 187)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(97, 13)
+        Me.Label17.TabIndex = 113
+        Me.Label17.Text = "Task Service Type"
         '
         'frmTasks
         '
@@ -695,4 +716,6 @@ Partial Class frmTasks
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class

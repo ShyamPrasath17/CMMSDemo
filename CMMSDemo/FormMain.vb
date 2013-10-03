@@ -11,6 +11,11 @@
     Public frmTskLst As frmTaskLists
     Public frmTsk As frmTasks
 
+    Public frmSched As frmSheduleMaintanance
+    Public frmTskPool As frmTaskPool
+
+    Public frmindepttsk As frmIndependentTask
+
 
 
     Dim frmDashBoard As frmDashBoard
@@ -23,6 +28,9 @@
         addfrmProjLst()
         addfrmTsk()
         addfrmTskLst()
+        addfrmTskPool()
+        addfrmSchedmaint()
+        addfrmIndeptTsk()
 
 
         ' This call is required by the designer.
@@ -34,6 +42,9 @@
         twProjectList.Controls.Add(frmProjLst)
         twTask.Controls.Add(frmTsk)
         twTaskList.Controls.Add(frmTskLst)
+        TwTaskPool.Controls.Add(frmTskPool)
+        TwIndependentTask.Controls.Add(frmindepttsk)
+        TwScheduledMaint.Controls.Add(frmSched)
         ToolWindowWo.Controls.Add(frmwo)
         ToolWindowWoLst.Controls.Add(frmwolst)
 
@@ -47,6 +58,9 @@
         twTask.Hide()
         twTaskList.Hide()
         AdjustSplitters()
+        TwIndependentTask.Hide()
+        TwScheduledMaint.Hide()
+        TwTaskPool.Hide()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -119,6 +133,27 @@
         frmwolst.Show()
 
     End Sub
+    Private Sub addfrmSchedmaint()
+        frmSched = New frmSheduleMaintanance()
+        frmSched.Dock = DockStyle.Fill
+        frmSched.TopLevel = False
+        frmSched.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmSched.Show()
+    End Sub
+    Private Sub addfrmTskPool()
+        frmTskPool = New frmTaskPool()
+        frmTskPool.Dock = DockStyle.Fill
+        frmTskPool.TopLevel = False
+        frmTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmTskPool.Show()
+    End Sub
+    Private Sub addfrmIndeptTsk()
+        frmindepttsk = New frmIndependentTask()
+        frmindepttsk.Dock = DockStyle.Fill
+        frmindepttsk.TopLevel = False
+        frmindepttsk.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmindepttsk.Show()
+    End Sub
 
     Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
@@ -156,6 +191,9 @@
         ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
             twDashBoard.Show()
             twDashBoard.Select()
+        ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
+            TwTaskPool.Show()
+            TwTaskPool.Select()
         End If
     End Sub
 
@@ -185,16 +223,13 @@
         frmTskLst.ViewAllTasks()
     End Sub
 
-    Private Sub twTask_Resize(sender As Object, e As EventArgs) Handles twTask.Resize
-        'twTask.
-    End Sub
-
-    Private Sub ToolTabStrip1_Resize(sender As Object, e As EventArgs) Handles ToolTabStrip1.Resize
-        'Dim s As System.Drawing.Size = New Size(200, 300)
-        'ToolTabStrip1.MinimumSize = s
-    End Sub
-
     Private Sub btnScheduledMaintainance_Click(sender As Object, e As EventArgs) Handles btnScheduledMaintainance.Click
+        TwScheduledMaint.Show()
+        TwScheduledMaint.Select()
+    End Sub
 
+    Private Sub btnCreateTaskIndependent_Click(sender As Object, e As EventArgs) Handles btnCreateTaskIndependent.Click
+        TwIndependentTask.Show()
+        TwIndependentTask.Select()
     End Sub
 End Class

@@ -53,6 +53,8 @@ Partial Class frmSheduleMaintanance
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.GroupBox2.SuspendLayout()
         Me.grpSubType.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -179,7 +181,7 @@ Partial Class frmSheduleMaintanance
         '
         'Button4
         '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button4.Location = New System.Drawing.Point(685, 676)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
@@ -189,7 +191,7 @@ Partial Class frmSheduleMaintanance
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(604, 676)
         Me.Button2.Name = "Button2"
@@ -258,7 +260,7 @@ Partial Class frmSheduleMaintanance
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(21, 99)
+        Me.Label5.Location = New System.Drawing.Point(21, 125)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(114, 13)
         Me.Label5.TabIndex = 127
@@ -267,7 +269,7 @@ Partial Class frmSheduleMaintanance
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 96)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 122)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 128
@@ -298,7 +300,7 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox1.Size = New System.Drawing.Size(302, 50)
         Me.GroupBox1.TabIndex = 132
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Recurrence Limit"
+        Me.GroupBox1.Text = "Recurrence End Period"
         '
         'ComboBox1
         '
@@ -346,12 +348,31 @@ Partial Class frmSheduleMaintanance
         Me.TextBox4.Size = New System.Drawing.Size(74, 20)
         Me.TextBox4.TabIndex = 129
         '
+        'ComboBox3
+        '
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Location = New System.Drawing.Point(141, 94)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox3.TabIndex = 135
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Location = New System.Drawing.Point(21, 99)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(97, 13)
+        Me.Label17.TabIndex = 134
+        Me.Label17.Text = "Task Service Type"
+        '
         'frmSheduleMaintanance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(772, 704)
+        Me.Controls.Add(Me.ComboBox3)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
@@ -414,4 +435,6 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label17 As System.Windows.Forms.Label
 End Class
