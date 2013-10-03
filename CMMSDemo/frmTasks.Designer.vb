@@ -44,6 +44,7 @@ Partial Class frmTasks
         Me.radOutsourced = New System.Windows.Forms.RadioButton()
         Me.radInternal = New System.Windows.Forms.RadioButton()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.Button7 = New System.Windows.Forms.Button()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.txtTaskID = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
@@ -56,6 +57,8 @@ Partial Class frmTasks
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtwono = New System.Windows.Forms.TextBox()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtstatus = New System.Windows.Forms.TextBox()
@@ -69,14 +72,10 @@ Partial Class frmTasks
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Button7 = New System.Windows.Forms.Button()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -133,7 +132,7 @@ Partial Class frmTasks
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(730, 778)
+        Me.SplitContainer1.Size = New System.Drawing.Size(737, 778)
         Me.SplitContainer1.SplitterDistance = 730
         Me.SplitContainer1.TabIndex = 95
         '
@@ -330,6 +329,15 @@ Partial Class frmTasks
         Me.Label9.TabIndex = 105
         Me.Label9.Text = "Task ID"
         '
+        'Button7
+        '
+        Me.Button7.Location = New System.Drawing.Point(29, 542)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(111, 23)
+        Me.Button7.TabIndex = 78
+        Me.Button7.Text = "File Attachments >>"
+        Me.Button7.UseVisualStyleBackColor = True
+        '
         'TextBox6
         '
         Me.TextBox6.Location = New System.Drawing.Point(116, 179)
@@ -435,6 +443,24 @@ Partial Class frmTasks
         Me.Label14.Size = New System.Drawing.Size(40, 13)
         Me.Label14.TabIndex = 93
         Me.Label14.Text = "Project"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(26, 579)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(60, 13)
+        Me.Label12.TabIndex = 89
+        Me.Label12.Text = "Description"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(29, 595)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.TextBox3.Size = New System.Drawing.Size(641, 117)
+        Me.TextBox3.TabIndex = 88
         '
         'txtwono
         '
@@ -544,10 +570,21 @@ Partial Class frmTasks
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 79
         '
+        'Button5
+        '
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.Enabled = False
+        Me.Button5.Location = New System.Drawing.Point(407, 3)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(75, 23)
+        Me.Button5.TabIndex = 110
+        Me.Button5.Text = "Finish"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(643, 3)
+        Me.Button4.Location = New System.Drawing.Point(650, 3)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 109
@@ -558,7 +595,7 @@ Partial Class frmTasks
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(481, 3)
+        Me.Button1.Location = New System.Drawing.Point(488, 3)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 32
@@ -569,57 +606,19 @@ Partial Class frmTasks
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(562, 3)
+        Me.Button2.Location = New System.Drawing.Point(569, 3)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 33
         Me.Button2.Text = "Drop"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Enabled = False
-        Me.Button5.Location = New System.Drawing.Point(400, 3)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 110
-        Me.Button5.Text = "Finish"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Location = New System.Drawing.Point(29, 595)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(641, 117)
-        Me.TextBox3.TabIndex = 88
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(26, 579)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(60, 13)
-        Me.Label12.TabIndex = 89
-        Me.Label12.Text = "Description"
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(29, 542)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(111, 23)
-        Me.Button7.TabIndex = 78
-        Me.Button7.Text = "File Attachments >>"
-        Me.Button7.UseVisualStyleBackColor = True
-        '
         'frmTasks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(730, 778)
+        Me.ClientSize = New System.Drawing.Size(737, 778)
         Me.Controls.Add(Me.SplitContainer1)
         Me.MinimumSize = New System.Drawing.Size(746, 816)
         Me.Name = "frmTasks"
@@ -627,7 +626,6 @@ Partial Class frmTasks
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.grpSite.ResumeLayout(False)
         Me.grpSite.PerformLayout()

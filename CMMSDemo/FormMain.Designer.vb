@@ -72,11 +72,9 @@ Partial Class FormMain
         Me.rpvpWorkOrders.SuspendLayout()
         Me.rpvpTasks.SuspendLayout()
         Me.rpvpScheduledMaintenance.SuspendLayout()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
         CType(Me.ToolTabStrip5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,7 +100,7 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockMain.Size = New System.Drawing.Size(884, 771)
+        Me.RadDockMain.Size = New System.Drawing.Size(818, 546)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
@@ -113,7 +111,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(872, 711)
+        Me.twDashBoard.Size = New System.Drawing.Size(806, 486)
         Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
@@ -133,7 +131,7 @@ Partial Class FormMain
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(874, 761)
+        Me.ToolTabStrip1.Size = New System.Drawing.Size(808, 536)
         Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
         Me.ToolTabStrip1.TabIndex = 1
@@ -253,8 +251,8 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpScheduledMaintenance
-        Me.rpvMain.Size = New System.Drawing.Size(219, 804)
+        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.Size = New System.Drawing.Size(202, 575)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
@@ -264,7 +262,7 @@ Partial Class FormMain
         Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
         Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
         Me.rpvpDashBoard.Name = "rpvpDashBoard"
-        Me.rpvpDashBoard.Size = New System.Drawing.Size(209, 251)
+        Me.rpvpDashBoard.Size = New System.Drawing.Size(192, 22)
         Me.rpvpDashBoard.Text = "Dash Board"
         '
         'rpvpProjects
@@ -410,7 +408,7 @@ Partial Class FormMain
         Me.rpvpScheduledMaintenance.Image = CType(resources.GetObject("rpvpScheduledMaintenance.Image"), System.Drawing.Image)
         Me.rpvpScheduledMaintenance.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduledMaintenance.Name = "rpvpScheduledMaintenance"
-        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(209, 251)
+        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(192, 22)
         Me.rpvpScheduledMaintenance.Text = "Scheduled Maintenance"
         '
         'btnScheduledMaintainance
@@ -467,8 +465,8 @@ Partial Class FormMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1107, 804)
-        Me.SplitContainer1.SplitterDistance = 219
+        Me.SplitContainer1.Size = New System.Drawing.Size(1024, 575)
+        Me.SplitContainer1.SplitterDistance = 202
         Me.SplitContainer1.TabIndex = 2
         '
         'SplitContainer2
@@ -482,8 +480,8 @@ Partial Class FormMain
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.RadDockMain)
-        Me.SplitContainer2.Size = New System.Drawing.Size(884, 804)
-        Me.SplitContainer2.SplitterDistance = 29
+        Me.SplitContainer2.Size = New System.Drawing.Size(818, 575)
+        Me.SplitContainer2.SplitterDistance = 25
         Me.SplitContainer2.TabIndex = 1
         '
         'ToolTabStrip5
@@ -560,7 +558,7 @@ Partial Class FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1107, 804)
+        Me.ClientSize = New System.Drawing.Size(1024, 575)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
@@ -580,10 +578,8 @@ Partial Class FormMain
         Me.rpvpScheduledMaintenance.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.SplitContainer2.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.ResumeLayout(False)
         CType(Me.ToolTabStrip5, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip9, System.ComponentModel.ISupportInitialize).EndInit()

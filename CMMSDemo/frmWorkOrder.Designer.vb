@@ -55,6 +55,10 @@ Partial Class frmWorkOrder
         Me.Label14 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Cmbsertype = New System.Windows.Forms.ComboBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.TextBox11 = New System.Windows.Forms.TextBox()
         Me.TextBox12 = New System.Windows.Forms.TextBox()
@@ -80,13 +84,8 @@ Partial Class frmWorkOrder
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Cmbsertype = New System.Windows.Forms.ComboBox()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -149,7 +148,7 @@ Partial Class frmWorkOrder
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(345, 14)
+        Me.Button1.Location = New System.Drawing.Point(376, 14)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 32
@@ -160,7 +159,7 @@ Partial Class frmWorkOrder
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(426, 13)
+        Me.Button2.Location = New System.Drawing.Point(457, 13)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 33
@@ -171,7 +170,7 @@ Partial Class frmWorkOrder
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button3.Enabled = False
-        Me.Button3.Location = New System.Drawing.Point(507, 13)
+        Me.Button3.Location = New System.Drawing.Point(538, 13)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 34
@@ -419,9 +418,43 @@ Partial Class frmWorkOrder
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button3)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(675, 837)
+        Me.SplitContainer1.Size = New System.Drawing.Size(706, 837)
         Me.SplitContainer1.SplitterDistance = 786
         Me.SplitContainer1.TabIndex = 94
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(16, 127)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(67, 13)
+        Me.Label2.TabIndex = 109
+        Me.Label2.Text = "ServiceType"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(112, 151)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox2.TabIndex = 112
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(16, 154)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(38, 13)
+        Me.Label13.TabIndex = 111
+        Me.Label13.Text = "Priority"
+        '
+        'Cmbsertype
+        '
+        Me.Cmbsertype.FormattingEnabled = True
+        Me.Cmbsertype.Location = New System.Drawing.Point(112, 124)
+        Me.Cmbsertype.Name = "Cmbsertype"
+        Me.Cmbsertype.Size = New System.Drawing.Size(185, 21)
+        Me.Cmbsertype.TabIndex = 110
         '
         'GroupBox1
         '
@@ -648,53 +681,19 @@ Partial Class frmWorkOrder
         'Button8
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button8.Location = New System.Drawing.Point(588, 13)
+        Me.Button8.Location = New System.Drawing.Point(619, 13)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 110
         Me.Button8.Text = "Save"
         Me.Button8.UseVisualStyleBackColor = True
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(16, 127)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(67, 13)
-        Me.Label2.TabIndex = 109
-        Me.Label2.Text = "ServiceType"
-        '
-        'ComboBox2
-        '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(112, 151)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(185, 21)
-        Me.ComboBox2.TabIndex = 112
-        '
-        'Label13
-        '
-        Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(16, 154)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(38, 13)
-        Me.Label13.TabIndex = 111
-        Me.Label13.Text = "Priority"
-        '
-        'Cmbsertype
-        '
-        Me.Cmbsertype.FormattingEnabled = True
-        Me.Cmbsertype.Location = New System.Drawing.Point(112, 124)
-        Me.Cmbsertype.Name = "Cmbsertype"
-        Me.Cmbsertype.Size = New System.Drawing.Size(185, 21)
-        Me.Cmbsertype.TabIndex = 110
-        '
         'frmWorkOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(675, 837)
+        Me.ClientSize = New System.Drawing.Size(706, 837)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "frmWorkOrder"
         Me.Text = "WorkOrder"
@@ -703,7 +702,6 @@ Partial Class frmWorkOrder
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel1.PerformLayout()
         Me.SplitContainer1.Panel2.ResumeLayout(False)
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
