@@ -22,11 +22,11 @@
             If i < 4 Then
                 dtWo.Rows.Add("Project 1", "Wo " & i.ToString(), "service " + i.ToString(), "102" + i.ToString(), "Approved")
             ElseIf i >= 4 And i < 8 Then
-                dtWo.Rows.Add("Project 3", "Wo " & i.ToString(), "service " + i.ToString(), "105" + i.ToString(), "New")
+                dtWo.Rows.Add("Project 2", "Wo " & i.ToString(), "service " + i.ToString(), "105" + i.ToString(), "New")
             ElseIf i >= 8 And i < 12 Then
-                dtWo.Rows.Add("Project 5", "Wo " & i.ToString(), "service " + i.ToString(), "107" + i.ToString(), "Approved")
+                dtWo.Rows.Add("Project 3", "Wo " & i.ToString(), "service " + i.ToString(), "107" + i.ToString(), "Approved")
             Else
-                dtWo.Rows.Add("Project 8", "Wo " & i.ToString(), "service " + i.ToString(), "109" + i.ToString(), "New")
+                dtWo.Rows.Add("Project 6", "Wo " & i.ToString(), "service " + i.ToString(), "109" + i.ToString(), "New")
             End If
         Next
         dgvWo.DataSource = dtWo.Copy()

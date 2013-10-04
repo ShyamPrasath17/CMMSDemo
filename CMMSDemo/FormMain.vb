@@ -15,8 +15,14 @@
 
     Public frmScheduledTskPool As frmTaskPool
     Public frmIndependentTskPool As frmTaskPool
+    Public frmCommonTskPool As frmTaskPool
 
     Public frmindepttsk As frmIndependentTask
+
+    Public frmschedular As frmShedular
+
+    Public frmSettings_ As frmSettings
+
 
 
 
@@ -34,7 +40,9 @@
         addfrmSchedmaint()
         addfrmIndeptTsk()
         addfrmIndeptTskPool()
-
+        addfrmCommonTskPool()
+        addfrmschedular()
+        addfrmsettings()
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -46,10 +54,13 @@
         twTaskList.Controls.Add(frmTskLst)
         TwSehedTaskPool.Controls.Add(frmScheduledTskPool)
         TwIndeptTaskPool.Controls.Add(frmIndependentTskPool)
+        twCommonTaskPool.Controls.Add(frmCommonTskPool)
         TwIndependentTask.Controls.Add(frmindepttsk)
         TwScheduledMaint.Controls.Add(frmSched)
         ToolWindowWo.Controls.Add(frmwo)
         ToolWindowWoLst.Controls.Add(frmwolst)
+        twScheduler.Controls.Add(frmschedular)
+        twSettings.Controls.Add(frmSettings_)
 
     End Sub
 
@@ -65,6 +76,8 @@
         TwScheduledMaint.Hide()
         TwSehedTaskPool.Hide()
         TwIndeptTaskPool.Hide()
+        twCommonTaskPool.Hide()
+        twSettings.Hide()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -158,6 +171,27 @@
         frmIndependentTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmIndependentTskPool.Show()
     End Sub
+    Private Sub addfrmCommonTskPool()
+        frmCommonTskPool = New frmTaskPool("")
+        frmCommonTskPool.Dock = DockStyle.Fill
+        frmCommonTskPool.TopLevel = False
+        frmCommonTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmCommonTskPool.Show()
+    End Sub
+    Private Sub addfrmschedular()
+        frmschedular = New frmShedular
+        frmschedular.Dock = DockStyle.Fill
+        frmschedular.TopLevel = False
+        frmschedular.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmschedular.Show()
+    End Sub
+    Private Sub addfrmsettings()
+        frmSettings_ = New frmSettings
+        frmSettings_.Dock = DockStyle.Fill
+        frmSettings_.TopLevel = False
+        frmSettings_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmSettings_.Show()
+    End Sub
 
     Private Sub addfrmIndeptTsk()
         frmindepttsk = New frmIndependentTask()
@@ -206,6 +240,12 @@
         ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
             TwSehedTaskPool.Show()
             TwSehedTaskPool.Select()
+        ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
+            twScheduler.Show()
+            twScheduler.Select()
+        ElseIf rpvMain.SelectedPage Is rpvpSettings Then
+            twSettings.Show()
+            twSettings.Select()
         End If
     End Sub
 

@@ -38,8 +38,9 @@
         Dim frmItems As frmInventoryItems = New frmInventoryItems()
         frmItems.ShowDialog()
     End Sub
-    Public Sub filltask(ByRef dr As DataRow, ByRef dt As DataTable)
+    Public Sub filltask(ByRef dr As DataRow)
         txtTaskID.Text = dr("TaskNo").ToString()
+        txtTaskName.Text = dr("TaskName").ToString()
         txtstatus.Text = dr("status").ToString()
     End Sub
 
