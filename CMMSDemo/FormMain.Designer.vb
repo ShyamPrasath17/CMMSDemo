@@ -24,19 +24,21 @@ Partial Class FormMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.TwScheduledMaint = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.TwIndependentTask = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.TwSehedTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.TwIndeptTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
+        Me.ToolTabStrip11 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.twCommonTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwIndeptTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwSehedTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwIndependentTask = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwScheduledMaint = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twScheduler = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.rpvMain = New Telerik.WinControls.UI.RadPageView()
@@ -47,6 +49,7 @@ Partial Class FormMain
         Me.btnViewWorkOrders = New System.Windows.Forms.Button()
         Me.btnCreateWorkOrder = New System.Windows.Forms.Button()
         Me.rpvpTasks = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.btnViewIndeptTasks = New System.Windows.Forms.Button()
         Me.btnCreateTaskIndependent = New System.Windows.Forms.Button()
         Me.btnViewTasks = New System.Windows.Forms.Button()
         Me.btnCreateTaskInternal = New System.Windows.Forms.Button()
@@ -67,12 +70,16 @@ Partial Class FormMain
         Me.ToolTabStrip8 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip10 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip13 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.btnViewIndeptTasks = New System.Windows.Forms.Button()
+        Me.ToolTabStrip14 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ToolTabStrip15 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ToolTabStrip16 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.twSettings = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolTabStrip17 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
-        CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolTabStrip1.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip11, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolTabStrip11.SuspendLayout()
         CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.rpvMain, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -95,109 +102,33 @@ Partial Class FormMain
         CType(Me.ToolTabStrip8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip10, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip13, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip14, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip15, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip16, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip17, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.twDashBoard
-        Me.RadDockMain.Controls.Add(Me.ToolTabStrip1)
+        Me.RadDockMain.ActiveWindow = Me.twSettings
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
+        Me.RadDockMain.Controls.Add(Me.ToolTabStrip11)
         Me.RadDockMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadDockMain.IsCleanUpTarget = True
         Me.RadDockMain.Location = New System.Drawing.Point(0, 0)
         Me.RadDockMain.MainDocumentContainer = Me.DocumentContainer1
         Me.RadDockMain.MainDocumentContainerVisible = False
         Me.RadDockMain.Name = "RadDockMain"
+        Me.RadDockMain.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
         '
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockMain.Size = New System.Drawing.Size(801, 834)
+        Me.RadDockMain.Size = New System.Drawing.Size(850, 834)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
-        '
-        'twDashBoard
-        '
-        Me.twDashBoard.Caption = Nothing
-        Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
-        Me.twDashBoard.Name = "twDashBoard"
-        Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(789, 774)
-        Me.twDashBoard.Text = "DashBoard"
-        '
-        'ToolTabStrip1
-        '
-        Me.ToolTabStrip1.CanUpdateChildIndex = True
-        Me.ToolTabStrip1.Controls.Add(Me.twDashBoard)
-        Me.ToolTabStrip1.Controls.Add(Me.ToolWindowWo)
-        Me.ToolTabStrip1.Controls.Add(Me.twProject)
-        Me.ToolTabStrip1.Controls.Add(Me.ToolWindowWoLst)
-        Me.ToolTabStrip1.Controls.Add(Me.twProjectList)
-        Me.ToolTabStrip1.Controls.Add(Me.twTaskList)
-        Me.ToolTabStrip1.Controls.Add(Me.twTask)
-        Me.ToolTabStrip1.Controls.Add(Me.TwScheduledMaint)
-        Me.ToolTabStrip1.Controls.Add(Me.TwIndependentTask)
-        Me.ToolTabStrip1.Controls.Add(Me.TwSehedTaskPool)
-        Me.ToolTabStrip1.Controls.Add(Me.TwIndeptTaskPool)
-        Me.ToolTabStrip1.Location = New System.Drawing.Point(5, 5)
-        Me.ToolTabStrip1.Name = "ToolTabStrip1"
-        '
-        '
-        '
-        Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(791, 824)
-        Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
-        Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
-        Me.ToolTabStrip1.TabIndex = 1
-        Me.ToolTabStrip1.TabStop = False
-        '
-        'ToolWindowWo
-        '
-        Me.ToolWindowWo.Caption = Nothing
-        Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWo.Name = "ToolWindowWo"
-        Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWo.Size = New System.Drawing.Size(870, 766)
-        Me.ToolWindowWo.Text = "WorkOrder"
-        '
-        'twProject
-        '
-        Me.twProject.Caption = Nothing
-        Me.twProject.Location = New System.Drawing.Point(1, 24)
-        Me.twProject.Name = "twProject"
-        Me.twProject.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twProject.Size = New System.Drawing.Size(762, 582)
-        Me.twProject.Text = "Project"
-        '
-        'ToolWindowWoLst
-        '
-        Me.ToolWindowWoLst.Caption = Nothing
-        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
-        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWoLst.Size = New System.Drawing.Size(762, 582)
-        Me.ToolWindowWoLst.Text = "Work Order List"
-        '
-        'twProjectList
-        '
-        Me.twProjectList.Caption = Nothing
-        Me.twProjectList.Location = New System.Drawing.Point(1, 24)
-        Me.twProjectList.Name = "twProjectList"
-        Me.twProjectList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twProjectList.Size = New System.Drawing.Size(762, 582)
-        Me.twProjectList.Text = "Project List"
-        '
-        'twTaskList
-        '
-        Me.twTaskList.Caption = Nothing
-        Me.twTaskList.Location = New System.Drawing.Point(1, 24)
-        Me.twTaskList.Name = "twTaskList"
-        Me.twTaskList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTaskList.Size = New System.Drawing.Size(762, 582)
-        Me.twTaskList.Text = "Task List"
         '
         'twTask
         '
@@ -205,44 +136,8 @@ Partial Class FormMain
         Me.twTask.Location = New System.Drawing.Point(1, 24)
         Me.twTask.Name = "twTask"
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTask.Size = New System.Drawing.Size(872, 711)
+        Me.twTask.Size = New System.Drawing.Size(838, 774)
         Me.twTask.Text = "Task"
-        '
-        'TwScheduledMaint
-        '
-        Me.TwScheduledMaint.Caption = Nothing
-        Me.TwScheduledMaint.Location = New System.Drawing.Point(1, 24)
-        Me.TwScheduledMaint.Name = "TwScheduledMaint"
-        Me.TwScheduledMaint.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwScheduledMaint.Size = New System.Drawing.Size(870, 766)
-        Me.TwScheduledMaint.Text = "Scheduled Maintanance"
-        '
-        'TwIndependentTask
-        '
-        Me.TwIndependentTask.Caption = Nothing
-        Me.TwIndependentTask.Location = New System.Drawing.Point(1, 24)
-        Me.TwIndependentTask.Name = "TwIndependentTask"
-        Me.TwIndependentTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwIndependentTask.Size = New System.Drawing.Size(870, 766)
-        Me.TwIndependentTask.Text = "Independent Task"
-        '
-        'TwSehedTaskPool
-        '
-        Me.TwSehedTaskPool.Caption = Nothing
-        Me.TwSehedTaskPool.Location = New System.Drawing.Point(1, 24)
-        Me.TwSehedTaskPool.Name = "TwSehedTaskPool"
-        Me.TwSehedTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwSehedTaskPool.Size = New System.Drawing.Size(870, 766)
-        Me.TwSehedTaskPool.Text = "Scheduled Task Pool"
-        '
-        'TwIndeptTaskPool
-        '
-        Me.TwIndeptTaskPool.Caption = Nothing
-        Me.TwIndeptTaskPool.Location = New System.Drawing.Point(1, 24)
-        Me.TwIndeptTaskPool.Name = "TwIndeptTaskPool"
-        Me.TwIndeptTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwIndeptTaskPool.Size = New System.Drawing.Size(789, 637)
-        Me.TwIndeptTaskPool.Text = "Independent Task Pool"
         '
         'DocumentContainer1
         '
@@ -257,6 +152,142 @@ Partial Class FormMain
         Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
         Me.DocumentContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(-472, 0)
         Me.DocumentContainer1.TabIndex = 2
+        '
+        'ToolTabStrip11
+        '
+        Me.ToolTabStrip11.CanUpdateChildIndex = True
+        Me.ToolTabStrip11.Controls.Add(Me.twTask)
+        Me.ToolTabStrip11.Controls.Add(Me.twCommonTaskPool)
+        Me.ToolTabStrip11.Controls.Add(Me.TwIndeptTaskPool)
+        Me.ToolTabStrip11.Controls.Add(Me.TwSehedTaskPool)
+        Me.ToolTabStrip11.Controls.Add(Me.TwIndependentTask)
+        Me.ToolTabStrip11.Controls.Add(Me.TwScheduledMaint)
+        Me.ToolTabStrip11.Controls.Add(Me.twTaskList)
+        Me.ToolTabStrip11.Controls.Add(Me.twProjectList)
+        Me.ToolTabStrip11.Controls.Add(Me.ToolWindowWoLst)
+        Me.ToolTabStrip11.Controls.Add(Me.twSettings)
+        Me.ToolTabStrip11.Controls.Add(Me.twProject)
+        Me.ToolTabStrip11.Controls.Add(Me.ToolWindowWo)
+        Me.ToolTabStrip11.Controls.Add(Me.twDashBoard)
+        Me.ToolTabStrip11.Controls.Add(Me.twScheduler)
+        Me.ToolTabStrip11.Location = New System.Drawing.Point(5, 5)
+        Me.ToolTabStrip11.Name = "ToolTabStrip11"
+        '
+        '
+        '
+        Me.ToolTabStrip11.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip11.SelectedIndex = 9
+        Me.ToolTabStrip11.Size = New System.Drawing.Size(840, 824)
+        Me.ToolTabStrip11.TabIndex = 1
+        Me.ToolTabStrip11.TabStop = False
+        '
+        'twCommonTaskPool
+        '
+        Me.twCommonTaskPool.Caption = Nothing
+        Me.twCommonTaskPool.Location = New System.Drawing.Point(1, 24)
+        Me.twCommonTaskPool.Name = "twCommonTaskPool"
+        Me.twCommonTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twCommonTaskPool.Size = New System.Drawing.Size(838, 774)
+        Me.twCommonTaskPool.Text = "Common Task Pool"
+        '
+        'TwIndeptTaskPool
+        '
+        Me.TwIndeptTaskPool.Caption = Nothing
+        Me.TwIndeptTaskPool.Location = New System.Drawing.Point(1, 24)
+        Me.TwIndeptTaskPool.Name = "TwIndeptTaskPool"
+        Me.TwIndeptTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwIndeptTaskPool.Size = New System.Drawing.Size(838, 774)
+        Me.TwIndeptTaskPool.Text = "Independent Task Pool"
+        '
+        'TwSehedTaskPool
+        '
+        Me.TwSehedTaskPool.Caption = Nothing
+        Me.TwSehedTaskPool.Location = New System.Drawing.Point(1, 24)
+        Me.TwSehedTaskPool.Name = "TwSehedTaskPool"
+        Me.TwSehedTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwSehedTaskPool.Size = New System.Drawing.Size(838, 774)
+        Me.TwSehedTaskPool.Text = "Scheduled Task Pool"
+        '
+        'TwIndependentTask
+        '
+        Me.TwIndependentTask.Caption = Nothing
+        Me.TwIndependentTask.Location = New System.Drawing.Point(1, 24)
+        Me.TwIndependentTask.Name = "TwIndependentTask"
+        Me.TwIndependentTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwIndependentTask.Size = New System.Drawing.Size(838, 774)
+        Me.TwIndependentTask.Text = "Independent Task"
+        '
+        'TwScheduledMaint
+        '
+        Me.TwScheduledMaint.Caption = Nothing
+        Me.TwScheduledMaint.Location = New System.Drawing.Point(1, 24)
+        Me.TwScheduledMaint.Name = "TwScheduledMaint"
+        Me.TwScheduledMaint.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwScheduledMaint.Size = New System.Drawing.Size(838, 360)
+        Me.TwScheduledMaint.Text = "Scheduled Maintanance"
+        '
+        'twTaskList
+        '
+        Me.twTaskList.Caption = Nothing
+        Me.twTaskList.Location = New System.Drawing.Point(1, 24)
+        Me.twTaskList.Name = "twTaskList"
+        Me.twTaskList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twTaskList.Size = New System.Drawing.Size(838, 360)
+        Me.twTaskList.Text = "Task List"
+        '
+        'twProjectList
+        '
+        Me.twProjectList.Caption = Nothing
+        Me.twProjectList.Location = New System.Drawing.Point(1, 24)
+        Me.twProjectList.Name = "twProjectList"
+        Me.twProjectList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twProjectList.Size = New System.Drawing.Size(838, 174)
+        Me.twProjectList.Text = "Project List"
+        '
+        'ToolWindowWoLst
+        '
+        Me.ToolWindowWoLst.Caption = Nothing
+        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
+        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWoLst.Size = New System.Drawing.Size(838, 360)
+        Me.ToolWindowWoLst.Text = "Work Order List"
+        '
+        'twProject
+        '
+        Me.twProject.Caption = Nothing
+        Me.twProject.Location = New System.Drawing.Point(1, 24)
+        Me.twProject.Name = "twProject"
+        Me.twProject.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twProject.Size = New System.Drawing.Size(838, 174)
+        Me.twProject.Text = "Project"
+        '
+        'ToolWindowWo
+        '
+        Me.ToolWindowWo.Caption = Nothing
+        Me.ToolWindowWo.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWo.Name = "ToolWindowWo"
+        Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWo.Size = New System.Drawing.Size(838, 174)
+        Me.ToolWindowWo.Text = "WorkOrder"
+        '
+        'twDashBoard
+        '
+        Me.twDashBoard.Caption = Nothing
+        Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
+        Me.twDashBoard.Name = "twDashBoard"
+        Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twDashBoard.Size = New System.Drawing.Size(838, 174)
+        Me.twDashBoard.Text = "DashBoard"
+        '
+        'twScheduler
+        '
+        Me.twScheduler.Caption = Nothing
+        Me.twScheduler.Location = New System.Drawing.Point(1, 24)
+        Me.twScheduler.Name = "twScheduler"
+        Me.twScheduler.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twScheduler.Size = New System.Drawing.Size(838, 774)
+        Me.twScheduler.Text = "Scheduler"
         '
         'ToolTabStrip4
         '
@@ -304,8 +335,8 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpScheduledMaintenance
-        Me.rpvMain.Size = New System.Drawing.Size(198, 867)
+        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.Size = New System.Drawing.Size(209, 867)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
@@ -315,7 +346,7 @@ Partial Class FormMain
         Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
         Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
         Me.rpvpDashBoard.Name = "rpvpDashBoard"
-        Me.rpvpDashBoard.Size = New System.Drawing.Size(188, 173)
+        Me.rpvpDashBoard.Size = New System.Drawing.Size(199, 314)
         Me.rpvpDashBoard.Text = "Dash Board"
         '
         'rpvpProjects
@@ -350,7 +381,7 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(209, 251)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(188, 314)
         Me.rpvpWorkOrders.Text = "Work Orders"
         '
         'btnViewWorkOrders
@@ -395,6 +426,21 @@ Partial Class FormMain
         Me.rpvpTasks.Name = "rpvpTasks"
         Me.rpvpTasks.Size = New System.Drawing.Size(188, 314)
         Me.rpvpTasks.Text = "Tasks"
+        '
+        'btnViewIndeptTasks
+        '
+        Me.btnViewIndeptTasks.BackColor = System.Drawing.Color.Transparent
+        Me.btnViewIndeptTasks.BackgroundImage = CType(resources.GetObject("btnViewIndeptTasks.BackgroundImage"), System.Drawing.Image)
+        Me.btnViewIndeptTasks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnViewIndeptTasks.FlatAppearance.BorderSize = 0
+        Me.btnViewIndeptTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnViewIndeptTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnViewIndeptTasks.Location = New System.Drawing.Point(7, 238)
+        Me.btnViewIndeptTasks.Name = "btnViewIndeptTasks"
+        Me.btnViewIndeptTasks.Size = New System.Drawing.Size(175, 50)
+        Me.btnViewIndeptTasks.TabIndex = 9
+        Me.btnViewIndeptTasks.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnViewIndeptTasks.UseVisualStyleBackColor = False
         '
         'btnCreateTaskIndependent
         '
@@ -519,8 +565,8 @@ Partial Class FormMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1003, 867)
-        Me.SplitContainer1.SplitterDistance = 198
+        Me.SplitContainer1.Size = New System.Drawing.Size(1063, 867)
+        Me.SplitContainer1.SplitterDistance = 209
         Me.SplitContainer1.TabIndex = 2
         '
         'SplitContainer2
@@ -534,7 +580,7 @@ Partial Class FormMain
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.RadDockMain)
-        Me.SplitContainer2.Size = New System.Drawing.Size(801, 867)
+        Me.SplitContainer2.Size = New System.Drawing.Size(850, 867)
         Me.SplitContainer2.SplitterDistance = 29
         Me.SplitContainer2.TabIndex = 1
         '
@@ -664,35 +710,87 @@ Partial Class FormMain
         Me.ToolTabStrip13.TabIndex = 0
         Me.ToolTabStrip13.TabStop = False
         '
-        'btnViewIndeptTasks
+        'ToolTabStrip14
         '
-        Me.btnViewIndeptTasks.BackColor = System.Drawing.Color.Transparent
-        Me.btnViewIndeptTasks.BackgroundImage = CType(resources.GetObject("btnViewIndeptTasks.BackgroundImage"), System.Drawing.Image)
-        Me.btnViewIndeptTasks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnViewIndeptTasks.FlatAppearance.BorderSize = 0
-        Me.btnViewIndeptTasks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewIndeptTasks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewIndeptTasks.Location = New System.Drawing.Point(7, 238)
-        Me.btnViewIndeptTasks.Name = "btnViewIndeptTasks"
-        Me.btnViewIndeptTasks.Size = New System.Drawing.Size(175, 50)
-        Me.btnViewIndeptTasks.TabIndex = 9
-        Me.btnViewIndeptTasks.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnViewIndeptTasks.UseVisualStyleBackColor = False
+        Me.ToolTabStrip14.CanUpdateChildIndex = True
+        Me.ToolTabStrip14.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip14.Name = "ToolTabStrip14"
+        '
+        '
+        '
+        Me.ToolTabStrip14.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip14.SelectedIndex = 1
+        Me.ToolTabStrip14.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip14.SizeInfo.AbsoluteSize = New System.Drawing.Size(509, 200)
+        Me.ToolTabStrip14.SizeInfo.SplitterCorrection = New System.Drawing.Size(309, 0)
+        Me.ToolTabStrip14.TabIndex = 0
+        Me.ToolTabStrip14.TabStop = False
+        '
+        'ToolTabStrip15
+        '
+        Me.ToolTabStrip15.CanUpdateChildIndex = True
+        Me.ToolTabStrip15.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip15.Name = "ToolTabStrip15"
+        '
+        '
+        '
+        Me.ToolTabStrip15.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip15.SelectedIndex = 0
+        Me.ToolTabStrip15.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip15.TabIndex = 0
+        Me.ToolTabStrip15.TabStop = False
+        '
+        'ToolTabStrip16
+        '
+        Me.ToolTabStrip16.CanUpdateChildIndex = True
+        Me.ToolTabStrip16.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip16.Name = "ToolTabStrip16"
+        '
+        '
+        '
+        Me.ToolTabStrip16.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip16.SelectedIndex = 0
+        Me.ToolTabStrip16.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip16.TabIndex = 0
+        Me.ToolTabStrip16.TabStop = False
+        '
+        'twSettings
+        '
+        Me.twSettings.Caption = Nothing
+        Me.twSettings.Location = New System.Drawing.Point(1, 24)
+        Me.twSettings.Name = "twSettings"
+        Me.twSettings.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twSettings.Size = New System.Drawing.Size(838, 774)
+        Me.twSettings.Text = "Settings"
+        '
+        'ToolTabStrip17
+        '
+        Me.ToolTabStrip17.CanUpdateChildIndex = True
+        Me.ToolTabStrip17.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip17.Name = "ToolTabStrip17"
+        '
+        '
+        '
+        Me.ToolTabStrip17.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip17.SelectedIndex = 0
+        Me.ToolTabStrip17.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip17.TabIndex = 0
+        Me.ToolTabStrip17.TabStop = False
         '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1003, 867)
+        Me.ClientSize = New System.Drawing.Size(1063, 867)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadDockMain.ResumeLayout(False)
-        CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolTabStrip1.ResumeLayout(False)
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip11, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolTabStrip11.ResumeLayout(False)
         CType(Me.ToolTabStrip4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.rpvMain, System.ComponentModel.ISupportInitialize).EndInit()
@@ -715,13 +813,16 @@ Partial Class FormMain
         CType(Me.ToolTabStrip8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip10, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip13, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip14, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip15, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip16, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip17, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents RadDockMain As Telerik.WinControls.UI.Docking.RadDock
     Friend WithEvents DocumentContainer1 As Telerik.WinControls.UI.Docking.DocumentContainer
     Friend WithEvents ToolWindowWoLst As Telerik.WinControls.UI.Docking.ToolWindow
-    Friend WithEvents ToolTabStrip1 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolWindowWo As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip4 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolTabStrip2 As Telerik.WinControls.UI.Docking.ToolTabStrip
@@ -743,7 +844,6 @@ Partial Class FormMain
     Friend WithEvents twProjectList As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents twProject As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents twTaskList As Telerik.WinControls.UI.Docking.ToolWindow
-    Friend WithEvents twTask As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip9 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolTabStrip3 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolTabStrip6 As Telerik.WinControls.UI.Docking.ToolTabStrip
@@ -763,4 +863,13 @@ Partial Class FormMain
     Friend WithEvents TwIndeptTaskPool As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip13 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents btnViewIndeptTasks As System.Windows.Forms.Button
+    Friend WithEvents twScheduler As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents ToolTabStrip11 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents ToolTabStrip14 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents twCommonTaskPool As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents ToolTabStrip15 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents twTask As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents ToolTabStrip16 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents twSettings As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents ToolTabStrip17 As Telerik.WinControls.UI.Docking.ToolTabStrip
 End Class
