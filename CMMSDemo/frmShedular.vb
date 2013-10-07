@@ -65,8 +65,10 @@ Public Class frmShedular
 
     Private Sub Rshcmms_AppointmentSelected(sender As Object, e As SchedulerAppointmentEventArgs) Handles Rshcmms.AppointmentSelected
         FormMain.frmTsk.filltask(FormMain.frmTskLst.dttask.Select("TaskNo = '" & e.Appointment.Summary.ToString() & "'")(0))
-        FormMain.frmTsk.dtpStart.Value = e.Appointment.Start
-        FormMain.frmTsk.DtpEnd.Value = e.Appointment.End
+        FormMain.frmTsk.dtpStartDate.Value = e.Appointment.Start
+        FormMain.frmTsk.dtpStartTime.Value = e.Appointment.Start
+        FormMain.frmTsk.dtpEndDate.Value = e.Appointment.End
+        FormMain.frmTsk.dtpEndTime.Value = e.Appointment.End
     End Sub
 
     Private Sub BtnViewNonScheduled_Click(sender As Object, e As EventArgs) Handles BtnViewNonScheduled.Click
