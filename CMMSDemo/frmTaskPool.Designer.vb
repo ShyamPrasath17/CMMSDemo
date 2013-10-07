@@ -36,13 +36,13 @@ Partial Class frmTaskPool
         Me.dgvIndepSchedTaskList.TabIndex = 0
         Me.dgvIndepSchedTaskList.Text = "RadGridView1"
         '
-        'frmIndependentTaskPool
+        'frmTaskPool
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(802, 326)
         Me.Controls.Add(Me.dgvIndepSchedTaskList)
-        Me.Name = "frmIndependentTaskPool"
+        Me.Name = "frmTaskPool"
         Me.Text = "Task Pool"
         CType(Me.dgvIndepSchedTaskList.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvIndepSchedTaskList, System.ComponentModel.ISupportInitialize).EndInit()

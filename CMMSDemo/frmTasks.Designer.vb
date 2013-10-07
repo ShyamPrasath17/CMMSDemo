@@ -70,9 +70,9 @@ Partial Class frmTasks
         Me.NumericUpDown2 = New System.Windows.Forms.NumericUpDown()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.DtpEnd = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpStart = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -516,13 +516,13 @@ Partial Class frmTasks
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown1.TabIndex = 85
         '
-        'DateTimePicker2
+        'DtpEnd
         '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(131, 288)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
-        Me.DateTimePicker2.TabIndex = 81
+        Me.DtpEnd.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DtpEnd.Location = New System.Drawing.Point(131, 288)
+        Me.DtpEnd.Name = "DtpEnd"
+        Me.DtpEnd.Size = New System.Drawing.Size(185, 20)
+        Me.DtpEnd.TabIndex = 81
         '
         'Label3
         '
@@ -533,13 +533,13 @@ Partial Class frmTasks
         Me.Label3.TabIndex = 80
         Me.Label3.Text = "End Date"
         '
-        'DateTimePicker1
+        'dtpStart
         '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(131, 263)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
-        Me.DateTimePicker1.TabIndex = 79
+        Me.dtpStart.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpStart.Location = New System.Drawing.Point(131, 263)
+        Me.dtpStart.Name = "dtpStart"
+        Me.dtpStart.Size = New System.Drawing.Size(185, 20)
+        Me.dtpStart.TabIndex = 79
         '
         'Button5
         '
@@ -599,7 +599,7 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button7)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.DateTimePicker1)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpStart)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.ComboBox2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label11)
@@ -617,7 +617,7 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtTaskName)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtstatus)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button1)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.DateTimePicker2)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.DtpEnd)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.NumericUpDown1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label17)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox1)
@@ -676,9 +676,9 @@ Partial Class frmTasks
     Friend WithEvents NumericUpDown2 As System.Windows.Forms.NumericUpDown
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents NumericUpDown1 As System.Windows.Forms.NumericUpDown
-    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents DtpEnd As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpStart As System.Windows.Forms.DateTimePicker
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox

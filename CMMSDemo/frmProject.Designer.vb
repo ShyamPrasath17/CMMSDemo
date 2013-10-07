@@ -113,7 +113,7 @@ Partial Class frmProject
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(22, 18)
+        Me.Label14.Location = New System.Drawing.Point(20, 18)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(56, 13)
         Me.Label14.TabIndex = 93
@@ -223,7 +223,7 @@ Partial Class frmProject
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(367, 388)
+        Me.Button1.Location = New System.Drawing.Point(360, 388)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 23)
         Me.Button1.TabIndex = 111
@@ -233,7 +233,7 @@ Partial Class frmProject
         'Button8
         '
         Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button8.Location = New System.Drawing.Point(478, 388)
+        Me.Button8.Location = New System.Drawing.Point(471, 388)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(75, 23)
         Me.Button8.TabIndex = 110
@@ -270,12 +270,12 @@ Partial Class frmProject
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label9)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button7)
-        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(561, 428)
+        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(560, 416)
         '
         '
         '
         Me.RadScrollablePanel1.RootElement.Padding = New System.Windows.Forms.Padding(1)
-        Me.RadScrollablePanel1.Size = New System.Drawing.Size(563, 430)
+        Me.RadScrollablePanel1.Size = New System.Drawing.Size(562, 418)
         Me.RadScrollablePanel1.TabIndex = 112
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
         '
@@ -284,7 +284,7 @@ Partial Class frmProject
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(563, 430)
+        Me.ClientSize = New System.Drawing.Size(562, 418)
         Me.Controls.Add(Me.RadScrollablePanel1)
         Me.Name = "frmProject"
         Me.Text = "Project"

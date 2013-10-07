@@ -55,4 +55,12 @@ Public Class frmTaskPool
         Next
 
     End Sub
+
+    Private Sub dgvIndepSchedTaskList_CurrentRowChanged(sender As Object, e As CurrentRowChangedEventArgs) Handles dgvIndepSchedTaskList.CurrentRowChanged
+
+    End Sub
+
+    Private Sub dgvIndepSchedTaskList_CellDoubleClick(sender As Object, e As GridViewCellEventArgs) Handles dgvIndepSchedTaskList.CellDoubleClick
+
+    End Sub
 End Class
