@@ -20,5 +20,35 @@
 
     Private Sub frmAssignEquipments_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         radInternal.Checked = True
+        createData()
     End Sub
+
+    Private Sub btnViewSchedular_Click(sender As Object, e As EventArgs) Handles btnViewSchedular.Click
+        Dim schedular As frmResourceSchedular = New frmResourceSchedular("Equipment")
+        schedular.ShowDialog()
+    End Sub
+
+    Private Sub createData()
+        Dim dtequip As DataTable = New DataTable()
+        dtequip.Columns.Add("Name", GetType(String))
+        dtequip.Columns.Add("AssignedDate", GetType(String))
+        dtequip.Columns.Add("StartTime", GetType(String))
+        dtequip.Columns.Add("EndTime", GetType(String))
+        dtequip.Columns.Add("Type", GetType(String))
+
+        dtequip.Rows.Add("Equipment 1", System.DateTime.Now.Date.AddDays(1).Date.ToString(), "08.30", "16.30", "Internal")
+        dtequip.Rows.Add("Equipment 2", System.DateTime.Now.Date.AddDays(1).Date.ToString(), "10.15", "17.15", "Outsourced")
+        dtequip.Rows.Add("Equipment 3", System.DateTime.Now.Date.AddDays(1).Date.ToString(), "09.00", "15.00", "Internal")
+        dtequip.Rows.Add("Equipment 4", System.DateTime.Now.Date.AddDays(1).Date.ToString(), "8.00", "18.00", "Internal")
+        dtequip.Rows.Add("Equipment 5", System.DateTime.Now.Date.AddDays(1).Date.ToString(), "8.30", "16.30", "Outsourced")
+        dtequip.Rows.Add("Equipment 6", System.DateTime.Now.Date.AddDays(1).Date.ToString(), "11.00", "16.00", "Internal")
+
+        dgvEquipment.DataSource = dtequip
+        dgvEquipment.AllowAddNewRow = False
+        dgvEquipment.AllowDeleteRow = False
+        dgvEquipment.AllowEditRow = False
+        dgvEquipment.BestFitColumns()
+
+    End Sub
+
 End Class

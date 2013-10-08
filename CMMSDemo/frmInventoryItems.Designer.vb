@@ -46,6 +46,7 @@ Partial Class frmInventoryItems
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -67,6 +68,7 @@ Partial Class frmInventoryItems
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Button3)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
@@ -176,9 +178,9 @@ Partial Class frmInventoryItems
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(15, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(46, 13)
+        Me.Label2.Size = New System.Drawing.Size(69, 13)
         Me.Label2.TabIndex = 122
-        Me.Label2.Text = "Quantity"
+        Me.Label2.Text = "Required Qty"
         '
         'TextBox1
         '
@@ -281,6 +283,15 @@ Partial Class frmInventoryItems
         Me.Label5.TabIndex = 108
         Me.Label5.Text = "Work assigned Date"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(465, 104)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(156, 71)
+        Me.Button3.TabIndex = 124
+        Me.Button3.Text = "Issue Purchase requisition >>"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'frmInventoryItems
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -324,4 +335,5 @@ Partial Class frmInventoryItems
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class

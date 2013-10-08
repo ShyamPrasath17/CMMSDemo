@@ -19,7 +19,7 @@
 
     Public frmindepttsk As frmIndependentTask
 
-    Public frmschedular As frmShedular
+    Public frmschedular As frmTaskShedular
 
     Public frmSettings_ As frmSettings
 
@@ -179,7 +179,7 @@
         frmCommonTskPool.Show()
     End Sub
     Private Sub addfrmschedular()
-        frmschedular = New frmShedular
+        frmschedular = New frmTaskShedular()
         frmschedular.Dock = DockStyle.Fill
         frmschedular.TopLevel = False
         frmschedular.FormBorderStyle = Windows.Forms.FormBorderStyle.None

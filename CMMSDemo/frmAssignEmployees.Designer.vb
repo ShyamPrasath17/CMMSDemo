@@ -46,6 +46,9 @@ Partial Class frmAssignEmployees
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.radOutsourced = New System.Windows.Forms.RadioButton()
         Me.radInternal = New System.Windows.Forms.RadioButton()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
+        Me.btnViewSchedular = New System.Windows.Forms.Button()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -70,13 +73,20 @@ Partial Class frmAssignEmployees
         '
         'SplitContainer1.Panel2
         '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label4)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.btnViewSchedular)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker3)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpOutSource)
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpInternalEmp)
         Me.SplitContainer1.Panel2.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(554, 618)
-        Me.SplitContainer1.SplitterDistance = 213
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label5)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker2)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker1)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label3)
+        Me.SplitContainer1.Size = New System.Drawing.Size(554, 660)
+        Me.SplitContainer1.SplitterDistance = 227
         Me.SplitContainer1.TabIndex = 0
         '
         'dgvEmployees
@@ -84,14 +94,14 @@ Partial Class frmAssignEmployees
         Me.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEmployees.Location = New System.Drawing.Point(0, 0)
         Me.dgvEmployees.Name = "dgvEmployees"
-        Me.dgvEmployees.Size = New System.Drawing.Size(554, 213)
+        Me.dgvEmployees.Size = New System.Drawing.Size(554, 227)
         Me.dgvEmployees.TabIndex = 0
         Me.dgvEmployees.Text = "RadGridView1"
         '
         'Button4
         '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(467, 368)
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Location = New System.Drawing.Point(461, 394)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 122
@@ -100,19 +110,19 @@ Partial Class frmAssignEmployees
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(386, 368)
+        Me.Button2.Location = New System.Drawing.Point(380, 394)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
-        Me.Button2.Text = "Drop"
+        Me.Button2.Text = "Delete"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'grpOutSource
         '
         Me.grpOutSource.Controls.Add(Me.btnOutSource)
-        Me.grpOutSource.Location = New System.Drawing.Point(15, 84)
+        Me.grpOutSource.Location = New System.Drawing.Point(285, 16)
         Me.grpOutSource.Name = "grpOutSource"
         Me.grpOutSource.Size = New System.Drawing.Size(257, 62)
         Me.grpOutSource.TabIndex = 118
@@ -138,20 +148,16 @@ Partial Class frmAssignEmployees
         Me.grpInternalEmp.Controls.Add(Me.NumericUpDown1)
         Me.grpInternalEmp.Controls.Add(Me.txtEmpID)
         Me.grpInternalEmp.Controls.Add(Me.Label1)
-        Me.grpInternalEmp.Controls.Add(Me.Label3)
-        Me.grpInternalEmp.Controls.Add(Me.DateTimePicker1)
-        Me.grpInternalEmp.Controls.Add(Me.DateTimePicker2)
-        Me.grpInternalEmp.Controls.Add(Me.Label5)
-        Me.grpInternalEmp.Location = New System.Drawing.Point(15, 152)
+        Me.grpInternalEmp.Location = New System.Drawing.Point(12, 239)
         Me.grpInternalEmp.Name = "grpInternalEmp"
-        Me.grpInternalEmp.Size = New System.Drawing.Size(365, 215)
+        Me.grpInternalEmp.Size = New System.Drawing.Size(455, 145)
         Me.grpInternalEmp.TabIndex = 117
         Me.grpInternalEmp.TabStop = False
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(15, 25)
+        Me.Label6.Location = New System.Drawing.Point(18, 16)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(53, 13)
         Me.Label6.TabIndex = 86
@@ -160,7 +166,7 @@ Partial Class frmAssignEmployees
         'BtnAddemp
         '
         Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(18, 183)
+        Me.BtnAddemp.Location = New System.Drawing.Point(21, 118)
         Me.BtnAddemp.Name = "BtnAddemp"
         Me.BtnAddemp.Size = New System.Drawing.Size(105, 23)
         Me.BtnAddemp.TabIndex = 119
@@ -169,14 +175,14 @@ Partial Class frmAssignEmployees
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(135, 147)
+        Me.TextBox3.Location = New System.Drawing.Point(111, 80)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox3.Size = New System.Drawing.Size(112, 20)
         Me.TextBox3.TabIndex = 116
         '
         'txtEmpName
         '
-        Me.txtEmpName.Location = New System.Drawing.Point(135, 22)
+        Me.txtEmpName.Location = New System.Drawing.Point(172, 13)
         Me.txtEmpName.Name = "txtEmpName"
         Me.txtEmpName.ReadOnly = True
         Me.txtEmpName.Size = New System.Drawing.Size(185, 20)
@@ -185,7 +191,7 @@ Partial Class frmAssignEmployees
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(15, 155)
+        Me.Label2.Location = New System.Drawing.Point(18, 87)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(63, 13)
         Me.Label2.TabIndex = 115
@@ -194,7 +200,7 @@ Partial Class frmAssignEmployees
         'Button6
         '
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(326, 19)
+        Me.Button6.Location = New System.Drawing.Point(363, 9)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(24, 24)
         Me.Button6.TabIndex = 87
@@ -202,14 +208,14 @@ Partial Class frmAssignEmployees
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(135, 117)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(111, 42)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(55, 20)
         Me.NumericUpDown1.TabIndex = 114
         '
         'txtEmpID
         '
-        Me.txtEmpID.Location = New System.Drawing.Point(74, 22)
+        Me.txtEmpID.Location = New System.Drawing.Point(111, 13)
         Me.txtEmpID.Name = "txtEmpID"
         Me.txtEmpID.Size = New System.Drawing.Size(55, 20)
         Me.txtEmpID.TabIndex = 88
@@ -217,7 +223,7 @@ Partial Class frmAssignEmployees
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(15, 117)
+        Me.Label1.Location = New System.Drawing.Point(18, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(82, 13)
         Me.Label1.TabIndex = 113
@@ -226,16 +232,16 @@ Partial Class frmAssignEmployees
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(15, 88)
+        Me.Label3.Location = New System.Drawing.Point(12, 184)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(30, 13)
+        Me.Label3.Size = New System.Drawing.Size(55, 13)
         Me.Label3.TabIndex = 110
-        Me.Label3.Text = "Time"
+        Me.Label3.Text = "Start Time"
         '
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(135, 88)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(122, 184)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 112
@@ -243,7 +249,7 @@ Partial Class frmAssignEmployees
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(135, 56)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(122, 152)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker2.TabIndex = 111
@@ -251,7 +257,7 @@ Partial Class frmAssignEmployees
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(15, 63)
+        Me.Label5.Location = New System.Drawing.Point(12, 159)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(104, 13)
         Me.Label5.TabIndex = 108
@@ -290,19 +296,46 @@ Partial Class frmAssignEmployees
         Me.radInternal.Text = "Internal"
         Me.radInternal.UseVisualStyleBackColor = True
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(12, 213)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(52, 13)
+        Me.Label4.TabIndex = 120
+        Me.Label4.Text = "End Time"
+        '
+        'DateTimePicker3
+        '
+        Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePicker3.Location = New System.Drawing.Point(122, 213)
+        Me.DateTimePicker3.Name = "DateTimePicker3"
+        Me.DateTimePicker3.Size = New System.Drawing.Size(185, 20)
+        Me.DateTimePicker3.TabIndex = 121
+        '
+        'btnViewSchedular
+        '
+        Me.btnViewSchedular.Location = New System.Drawing.Point(12, 113)
+        Me.btnViewSchedular.Name = "btnViewSchedular"
+        Me.btnViewSchedular.Size = New System.Drawing.Size(173, 23)
+        Me.btnViewSchedular.TabIndex = 124
+        Me.btnViewSchedular.Text = "View Employee Schedular >>"
+        Me.btnViewSchedular.UseVisualStyleBackColor = True
+        '
         'frmAssignEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(554, 618)
+        Me.ClientSize = New System.Drawing.Size(554, 660)
         Me.Controls.Add(Me.SplitContainer1)
         Me.MaximizeBox = False
-        Me.MinimumSize = New System.Drawing.Size(570, 656)
+        Me.MinimumSize = New System.Drawing.Size(570, 698)
         Me.Name = "frmAssignEmployees"
         Me.Text = "Assign Employees"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.PerformLayout()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.dgvEmployees.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.dgvEmployees, System.ComponentModel.ISupportInitialize).EndInit()
@@ -338,4 +371,7 @@ Partial Class frmAssignEmployees
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents BtnAddemp As System.Windows.Forms.Button
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents btnViewSchedular As System.Windows.Forms.Button
 End Class

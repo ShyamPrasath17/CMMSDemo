@@ -78,8 +78,9 @@ Partial Class frmTasks
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.dtpStartTime = New System.Windows.Forms.DateTimePicker()
         Me.dtpEndTime = New System.Windows.Forms.DateTimePicker()
+        Me.dtpStartTime = New System.Windows.Forms.DateTimePicker()
+        Me.btnInstructions = New System.Windows.Forms.Button()
         Me.grpSite.SuspendLayout()
         Me.grpItems.SuspendLayout()
         Me.grpOutSource.SuspendLayout()
@@ -206,16 +207,16 @@ Partial Class frmTasks
         Me.grpItems.Controls.Add(Me.btnEquipments)
         Me.grpItems.Controls.Add(Me.btnInventory)
         Me.grpItems.Controls.Add(Me.btnEmployees)
-        Me.grpItems.Location = New System.Drawing.Point(408, 136)
+        Me.grpItems.Location = New System.Drawing.Point(408, 127)
         Me.grpItems.Name = "grpItems"
-        Me.grpItems.Size = New System.Drawing.Size(257, 179)
+        Me.grpItems.Size = New System.Drawing.Size(257, 188)
         Me.grpItems.TabIndex = 108
         Me.grpItems.TabStop = False
-        Me.grpItems.Text = "Assign"
+        Me.grpItems.Text = "Resource Allocation"
         '
         'btnEquipments
         '
-        Me.btnEquipments.Location = New System.Drawing.Point(6, 125)
+        Me.btnEquipments.Location = New System.Drawing.Point(6, 138)
         Me.btnEquipments.Name = "btnEquipments"
         Me.btnEquipments.Size = New System.Drawing.Size(245, 43)
         Me.btnEquipments.TabIndex = 2
@@ -224,7 +225,7 @@ Partial Class frmTasks
         '
         'btnInventory
         '
-        Me.btnInventory.Location = New System.Drawing.Point(6, 68)
+        Me.btnInventory.Location = New System.Drawing.Point(6, 81)
         Me.btnInventory.Name = "btnInventory"
         Me.btnInventory.Size = New System.Drawing.Size(245, 43)
         Me.btnInventory.TabIndex = 1
@@ -233,7 +234,7 @@ Partial Class frmTasks
         '
         'btnEmployees
         '
-        Me.btnEmployees.Location = New System.Drawing.Point(6, 13)
+        Me.btnEmployees.Location = New System.Drawing.Point(6, 26)
         Me.btnEmployees.Name = "btnEmployees"
         Me.btnEmployees.Size = New System.Drawing.Size(245, 43)
         Me.btnEmployees.TabIndex = 0
@@ -432,7 +433,7 @@ Partial Class frmTasks
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox3.Size = New System.Drawing.Size(641, 117)
+        Me.TextBox3.Size = New System.Drawing.Size(650, 117)
         Me.TextBox3.TabIndex = 88
         '
         'txtwono
@@ -545,19 +546,19 @@ Partial Class frmTasks
         '
         'Button5
         '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button5.Enabled = False
-        Me.Button5.Location = New System.Drawing.Point(417, 736)
+        Me.Button5.Location = New System.Drawing.Point(378, 733)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 110
-        Me.Button5.Text = "Finish"
+        Me.Button5.Text = "Complete"
         Me.Button5.UseVisualStyleBackColor = True
         '
         'Button4
         '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(643, 736)
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Location = New System.Drawing.Point(621, 733)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 109
@@ -566,9 +567,9 @@ Partial Class frmTasks
         '
         'Button1
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button1.Enabled = False
-        Me.Button1.Location = New System.Drawing.Point(498, 736)
+        Me.Button1.Location = New System.Drawing.Point(459, 733)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 32
@@ -577,13 +578,13 @@ Partial Class frmTasks
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Enabled = False
-        Me.Button2.Location = New System.Drawing.Point(562, 736)
+        Me.Button2.Location = New System.Drawing.Point(540, 733)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 33
-        Me.Button2.Text = "Drop"
+        Me.Button2.Text = "Suspend"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'RadScrollablePanel1
@@ -594,6 +595,7 @@ Partial Class frmTasks
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnInstructions)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpEndTime)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpStartTime)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label14)
@@ -630,22 +632,14 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.GroupBox2)
-        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(730, 776)
+        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(713, 767)
         '
         '
         '
         Me.RadScrollablePanel1.RootElement.Padding = New System.Windows.Forms.Padding(1)
-        Me.RadScrollablePanel1.Size = New System.Drawing.Size(732, 778)
+        Me.RadScrollablePanel1.Size = New System.Drawing.Size(715, 769)
         Me.RadScrollablePanel1.TabIndex = 115
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
-        '
-        'dtpStartTime
-        '
-        Me.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.dtpStartTime.Location = New System.Drawing.Point(257, 263)
-        Me.dtpStartTime.Name = "dtpStartTime"
-        Me.dtpStartTime.Size = New System.Drawing.Size(90, 20)
-        Me.dtpStartTime.TabIndex = 115
         '
         'dtpEndTime
         '
@@ -655,12 +649,29 @@ Partial Class frmTasks
         Me.dtpEndTime.Size = New System.Drawing.Size(90, 20)
         Me.dtpEndTime.TabIndex = 116
         '
+        'dtpStartTime
+        '
+        Me.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpStartTime.Location = New System.Drawing.Point(257, 263)
+        Me.dtpStartTime.Name = "dtpStartTime"
+        Me.dtpStartTime.Size = New System.Drawing.Size(90, 20)
+        Me.dtpStartTime.TabIndex = 115
+        '
+        'btnInstructions
+        '
+        Me.btnInstructions.Location = New System.Drawing.Point(140, 542)
+        Me.btnInstructions.Name = "btnInstructions"
+        Me.btnInstructions.Size = New System.Drawing.Size(176, 23)
+        Me.btnInstructions.TabIndex = 117
+        Me.btnInstructions.Text = "Instructions >>"
+        Me.btnInstructions.UseVisualStyleBackColor = True
+        '
         'frmTasks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(732, 778)
+        Me.ClientSize = New System.Drawing.Size(715, 769)
         Me.Controls.Add(Me.RadScrollablePanel1)
         Me.Name = "frmTasks"
         Me.Text = "Task"
@@ -738,4 +749,5 @@ Partial Class frmTasks
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
     Friend WithEvents dtpEndTime As System.Windows.Forms.DateTimePicker
     Friend WithEvents dtpStartTime As System.Windows.Forms.DateTimePicker
+    Friend WithEvents btnInstructions As System.Windows.Forms.Button
 End Class
