@@ -186,12 +186,11 @@ Partial Class frmSheduleMaintanance
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(604, 588)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 124
-        Me.Button2.Text = "Drop"
+        Me.Button2.Text = "Delete"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label5

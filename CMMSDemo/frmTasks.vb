@@ -48,4 +48,9 @@
         Dim frmoutsource As frmOutsource = New frmOutsource()
         frmoutsource.ShowDialog()
     End Sub
+
+    Private Sub btnInstructions_Click(sender As Object, e As EventArgs) Handles btnInstructions.Click
+        Dim frmins As frmInstructions = New frmInstructions()
+        frmins.ShowDialog()
+    End Sub
 End Class

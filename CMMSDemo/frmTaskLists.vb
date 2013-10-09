@@ -1,6 +1,9 @@
-﻿Public Class frmTaskLists
+﻿Imports Telerik.WinControls.UI
+
+Public Class frmTaskLists
     Public dttask As DataTable
     Dim frmloaded As Boolean = False
+
     Private Sub frmTaskLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
         createtable()
@@ -60,4 +63,21 @@
         FormMain.twTask.Show()
         FormMain.twTask.Select()
     End Sub
+
+    Private Sub dgvTasks_ContextMenuOpening(sender As Object, e As Telerik.WinControls.UI.ContextMenuOpeningEventArgs) Handles dgvTasks.ContextMenuOpening
+        Try
+            If TypeOf e.ContextMenuProvider Is GridHeaderCellElement Then
+                Dim BestFitAllMI As RadMenuItem = New RadMenuItem("BestFitAll")
+                AddHandler BestFitAllMI.Click, AddressOf BestFitAllMI_Click
+                e.ContextMenu.Items.Add(BestFitAllMI)
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub BestFitAllMI_Click(sender As Object, e As EventArgs)
+        dgvTasks.BestFitColumns()
+    End Sub
+
 End Class
