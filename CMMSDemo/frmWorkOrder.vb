@@ -22,4 +22,7 @@
         End If
     End Sub
 
+    Private Sub RadScrollablePanel1_PanelContainer_Paint(sender As Object, e As PaintEventArgs) Handles RadScrollablePanel1.PanelContainer.Paint
+
+    End Sub
 End Class

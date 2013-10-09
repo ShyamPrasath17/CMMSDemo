@@ -4,4 +4,5 @@
         lstUsers.SelectedIndex = 0
         LstItems.SelectedIndex = 0
     End Sub
+
 End Class

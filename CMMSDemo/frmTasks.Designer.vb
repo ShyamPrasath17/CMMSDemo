@@ -244,7 +244,7 @@ Partial Class frmTasks
         'grpOutSource
         '
         Me.grpOutSource.Controls.Add(Me.btnOutSource)
-        Me.grpOutSource.Location = New System.Drawing.Point(408, 49)
+        Me.grpOutSource.Location = New System.Drawing.Point(408, 35)
         Me.grpOutSource.Name = "grpOutSource"
         Me.grpOutSource.Size = New System.Drawing.Size(257, 62)
         Me.grpOutSource.TabIndex = 107
@@ -492,9 +492,9 @@ Partial Class frmTasks
         Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(13, 213)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(91, 13)
+        Me.Label7.Size = New System.Drawing.Size(106, 13)
         Me.Label7.TabIndex = 27
-        Me.Label7.Text = "Estimated Hours"
+        Me.Label7.Text = "Estimated Duration"
         '
         'NumericUpDown2
         '
@@ -508,9 +508,9 @@ Partial Class frmTasks
         Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(13, 239)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(73, 13)
+        Me.Label11.Size = New System.Drawing.Size(88, 13)
         Me.Label11.TabIndex = 86
-        Me.Label11.Text = "Actual Hours"
+        Me.Label11.Text = "Actual Duration"
         '
         'NumericUpDown1
         '
