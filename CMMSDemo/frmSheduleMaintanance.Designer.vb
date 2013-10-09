@@ -176,7 +176,7 @@ Partial Class frmSheduleMaintanance
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(685, 588)
+        Me.Button4.Location = New System.Drawing.Point(527, 588)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 125
@@ -186,7 +186,7 @@ Partial Class frmSheduleMaintanance
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(604, 588)
+        Me.Button2.Location = New System.Drawing.Point(446, 588)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 124
@@ -306,7 +306,7 @@ Partial Class frmSheduleMaintanance
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(772, 616)
+        Me.ClientSize = New System.Drawing.Size(614, 616)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.GroupBox3)
