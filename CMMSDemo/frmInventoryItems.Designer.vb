@@ -25,6 +25,7 @@ Partial Class frmInventoryItems
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInventoryItems))
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.dgvEquipment = New Telerik.WinControls.UI.RadGridView()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -46,7 +47,6 @@ Partial Class frmInventoryItems
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -86,6 +86,15 @@ Partial Class frmInventoryItems
         Me.dgvEquipment.TabIndex = 0
         Me.dgvEquipment.Text = "RadGridView1"
         '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(465, 104)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(156, 71)
+        Me.Button3.TabIndex = 124
+        Me.Button3.Text = "Issue Purchase requisition >>"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(465, 27)
@@ -97,7 +106,7 @@ Partial Class frmInventoryItems
         '
         'Button4
         '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button4.Location = New System.Drawing.Point(551, 279)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
@@ -107,13 +116,12 @@ Partial Class frmInventoryItems
         '
         'Button2
         '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Enabled = False
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button2.Location = New System.Drawing.Point(470, 279)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
-        Me.Button2.Text = "Drop"
+        Me.Button2.Text = "Delete"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'grpInternalEmp
@@ -282,15 +290,6 @@ Partial Class frmInventoryItems
         Me.Label5.Size = New System.Drawing.Size(104, 13)
         Me.Label5.TabIndex = 108
         Me.Label5.Text = "Work assigned Date"
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(465, 104)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(156, 71)
-        Me.Button3.TabIndex = 124
-        Me.Button3.Text = "Issue Purchase requisition >>"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'frmInventoryItems
         '

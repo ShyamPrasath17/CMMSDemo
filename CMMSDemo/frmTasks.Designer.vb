@@ -78,9 +78,9 @@ Partial Class frmTasks
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.btnInstructions = New System.Windows.Forms.Button()
         Me.dtpEndTime = New System.Windows.Forms.DateTimePicker()
         Me.dtpStartTime = New System.Windows.Forms.DateTimePicker()
-        Me.btnInstructions = New System.Windows.Forms.Button()
         Me.grpSite.SuspendLayout()
         Me.grpItems.SuspendLayout()
         Me.grpOutSource.SuspendLayout()
@@ -547,7 +547,6 @@ Partial Class frmTasks
         'Button5
         '
         Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Enabled = False
         Me.Button5.Location = New System.Drawing.Point(378, 733)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
@@ -568,7 +567,6 @@ Partial Class frmTasks
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Enabled = False
         Me.Button1.Location = New System.Drawing.Point(459, 733)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
@@ -579,7 +577,6 @@ Partial Class frmTasks
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(540, 733)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -641,6 +638,15 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.TabIndex = 115
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
         '
+        'btnInstructions
+        '
+        Me.btnInstructions.Location = New System.Drawing.Point(140, 542)
+        Me.btnInstructions.Name = "btnInstructions"
+        Me.btnInstructions.Size = New System.Drawing.Size(176, 23)
+        Me.btnInstructions.TabIndex = 117
+        Me.btnInstructions.Text = "Instructions >>"
+        Me.btnInstructions.UseVisualStyleBackColor = True
+        '
         'dtpEndTime
         '
         Me.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
@@ -656,15 +662,6 @@ Partial Class frmTasks
         Me.dtpStartTime.Name = "dtpStartTime"
         Me.dtpStartTime.Size = New System.Drawing.Size(90, 20)
         Me.dtpStartTime.TabIndex = 115
-        '
-        'btnInstructions
-        '
-        Me.btnInstructions.Location = New System.Drawing.Point(140, 542)
-        Me.btnInstructions.Name = "btnInstructions"
-        Me.btnInstructions.Size = New System.Drawing.Size(176, 23)
-        Me.btnInstructions.TabIndex = 117
-        Me.btnInstructions.Text = "Instructions >>"
-        Me.btnInstructions.UseVisualStyleBackColor = True
         '
         'frmTasks
         '

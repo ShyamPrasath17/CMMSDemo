@@ -43,10 +43,10 @@ Partial Class frmAssignEquipments
         Me.dgvEquipment = New Telerik.WinControls.UI.RadGridView()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.btnViewSchedular = New System.Windows.Forms.Button()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
-        Me.btnViewSchedular = New System.Windows.Forms.Button()
         Me.grpOutSource.SuspendLayout()
         Me.grpInternalEmp.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -71,12 +71,11 @@ Partial Class frmAssignEquipments
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(452, 373)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
-        Me.Button2.Text = "Drop"
+        Me.Button2.Text = "Delete"
         Me.Button2.UseVisualStyleBackColor = True
         '
         'Label6
@@ -268,6 +267,15 @@ Partial Class frmAssignEquipments
         Me.Label4.TabIndex = 124
         Me.Label4.Text = "End Time"
         '
+        'btnViewSchedular
+        '
+        Me.btnViewSchedular.Location = New System.Drawing.Point(15, 104)
+        Me.btnViewSchedular.Name = "btnViewSchedular"
+        Me.btnViewSchedular.Size = New System.Drawing.Size(173, 23)
+        Me.btnViewSchedular.TabIndex = 123
+        Me.btnViewSchedular.Text = "View Equipment Schedular >>"
+        Me.btnViewSchedular.UseVisualStyleBackColor = True
+        '
         'DateTimePicker3
         '
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time
@@ -292,15 +300,6 @@ Partial Class frmAssignEquipments
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker4.TabIndex = 123
-        '
-        'btnViewSchedular
-        '
-        Me.btnViewSchedular.Location = New System.Drawing.Point(15, 104)
-        Me.btnViewSchedular.Name = "btnViewSchedular"
-        Me.btnViewSchedular.Size = New System.Drawing.Size(173, 23)
-        Me.btnViewSchedular.TabIndex = 123
-        Me.btnViewSchedular.Text = "View Equipment Schedular >>"
-        Me.btnViewSchedular.UseVisualStyleBackColor = True
         '
         'frmAssignEquipments
         '

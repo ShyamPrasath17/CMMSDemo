@@ -87,11 +87,11 @@ Partial Class frmWorkOrder
         Me.Button8 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label24 = New System.Windows.Forms.Label()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -156,7 +156,6 @@ Partial Class frmWorkOrder
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Enabled = False
         Me.Button1.Location = New System.Drawing.Point(372, 802)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
@@ -167,7 +166,6 @@ Partial Class frmWorkOrder
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Enabled = False
         Me.Button2.Location = New System.Drawing.Point(451, 802)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
@@ -178,7 +176,6 @@ Partial Class frmWorkOrder
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Enabled = False
         Me.Button3.Location = New System.Drawing.Point(532, 802)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
@@ -730,6 +727,23 @@ Partial Class frmWorkOrder
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Inspection"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(106, 50)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBox1.TabIndex = 114
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(4, 53)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(96, 13)
+        Me.Label24.TabIndex = 113
+        Me.Label24.Text = "Inspection Status"
+        '
         'Button11
         '
         Me.Button11.Image = CType(resources.GetObject("Button11.Image"), System.Drawing.Image)
@@ -754,23 +768,6 @@ Partial Class frmWorkOrder
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(185, 20)
         Me.TextBox14.TabIndex = 68
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(106, 50)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(185, 21)
-        Me.ComboBox1.TabIndex = 114
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(4, 53)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(96, 13)
-        Me.Label24.TabIndex = 113
-        Me.Label24.Text = "Inspection Status"
         '
         'frmWorkOrder
         '
