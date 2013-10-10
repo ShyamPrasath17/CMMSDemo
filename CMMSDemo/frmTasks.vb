@@ -45,7 +45,7 @@
     End Sub
 
     Private Sub btnOutSource_Click(sender As Object, e As EventArgs) Handles btnOutSource.Click
-        Dim frmoutsource As frmOutsource = New frmOutsource()
+        Dim frmoutsource As frmOutsource = New frmOutsource("Task")
         frmoutsource.ShowDialog()
     End Sub
 

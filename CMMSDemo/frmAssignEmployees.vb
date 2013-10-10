@@ -20,15 +20,15 @@
     End Sub
 
     Private Sub btnOutSource_Click(sender As Object, e As EventArgs) Handles btnOutSource.Click
-        Dim frmou As frmOutsource = New frmOutsource()
+        Dim frmou As frmOutsource = New frmOutsource("Employee")
         frmou.ShowDialog()
     End Sub
 
     Private Sub btnViewSchedular_Click(sender As Object, e As EventArgs) Handles btnViewSchedular.Click
         Dim schedular As frmResourceSchedular = New frmResourceSchedular("Employee")
-        'twEmpSchedular.Controls.Add(schedular)
-        schedular.ShowDialog()
-        'Me.s
+        'schedular.ShowDialog()
+        Me.WindowState = FormWindowState.Maximized
+        RadDockEmp.DockControl(schedular, Telerik.WinControls.UI.Docking.DockPosition.Right)
     End Sub
 
     Private Sub createData()
