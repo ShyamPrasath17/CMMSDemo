@@ -33,6 +33,8 @@ Partial Class frmAssignEmployees
         Me.grpOutSource = New System.Windows.Forms.GroupBox()
         Me.btnOutSource = New System.Windows.Forms.Button()
         Me.grpInternalEmp = New System.Windows.Forms.GroupBox()
+        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -51,10 +53,8 @@ Partial Class frmAssignEmployees
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RadDockEmp = New Telerik.WinControls.UI.Docking.RadDock()
         Me.twEmp = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
-        Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -67,9 +67,9 @@ Partial Class frmAssignEmployees
         CType(Me.RadDockEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockEmp.SuspendLayout()
         Me.twEmp.SuspendLayout()
+        CType(Me.ToolTabStrip2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolTabStrip2.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.ToolTabStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -97,8 +97,8 @@ Partial Class frmAssignEmployees
         Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Label3)
-        Me.SplitContainer1.Size = New System.Drawing.Size(547, 693)
-        Me.SplitContainer1.SplitterDistance = 237
+        Me.SplitContainer1.Size = New System.Drawing.Size(557, 693)
+        Me.SplitContainer1.SplitterDistance = 226
         Me.SplitContainer1.TabIndex = 0
         '
         'dgvEmployees
@@ -106,14 +106,14 @@ Partial Class frmAssignEmployees
         Me.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEmployees.Location = New System.Drawing.Point(0, 0)
         Me.dgvEmployees.Name = "dgvEmployees"
-        Me.dgvEmployees.Size = New System.Drawing.Size(547, 237)
+        Me.dgvEmployees.Size = New System.Drawing.Size(557, 226)
         Me.dgvEmployees.TabIndex = 0
         Me.dgvEmployees.Text = "RadGridView1"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 213)
+        Me.Label4.Location = New System.Drawing.Point(14, 204)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 13)
         Me.Label4.TabIndex = 120
@@ -121,7 +121,7 @@ Partial Class frmAssignEmployees
         '
         'btnViewSchedular
         '
-        Me.btnViewSchedular.Location = New System.Drawing.Point(12, 113)
+        Me.btnViewSchedular.Location = New System.Drawing.Point(17, 100)
         Me.btnViewSchedular.Name = "btnViewSchedular"
         Me.btnViewSchedular.Size = New System.Drawing.Size(173, 23)
         Me.btnViewSchedular.TabIndex = 124
@@ -131,7 +131,7 @@ Partial Class frmAssignEmployees
         'DateTimePicker3
         '
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker3.Location = New System.Drawing.Point(122, 213)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(124, 204)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker3.TabIndex = 121
@@ -139,7 +139,7 @@ Partial Class frmAssignEmployees
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(459, 424)
+        Me.Button4.Location = New System.Drawing.Point(476, 426)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 122
@@ -149,7 +149,7 @@ Partial Class frmAssignEmployees
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(378, 424)
+        Me.Button2.Location = New System.Drawing.Point(395, 426)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
@@ -159,7 +159,7 @@ Partial Class frmAssignEmployees
         'grpOutSource
         '
         Me.grpOutSource.Controls.Add(Me.btnOutSource)
-        Me.grpOutSource.Location = New System.Drawing.Point(283, 16)
+        Me.grpOutSource.Location = New System.Drawing.Point(294, 16)
         Me.grpOutSource.Name = "grpOutSource"
         Me.grpOutSource.Size = New System.Drawing.Size(257, 62)
         Me.grpOutSource.TabIndex = 118
@@ -187,11 +187,29 @@ Partial Class frmAssignEmployees
         Me.grpInternalEmp.Controls.Add(Me.NumericUpDown1)
         Me.grpInternalEmp.Controls.Add(Me.txtEmpID)
         Me.grpInternalEmp.Controls.Add(Me.Label1)
-        Me.grpInternalEmp.Location = New System.Drawing.Point(12, 239)
+        Me.grpInternalEmp.Location = New System.Drawing.Point(17, 241)
         Me.grpInternalEmp.Name = "grpInternalEmp"
         Me.grpInternalEmp.Size = New System.Drawing.Size(455, 179)
         Me.grpInternalEmp.TabIndex = 117
         Me.grpInternalEmp.TabStop = False
+        '
+        'cmbrptUom
+        '
+        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbrptUom.FormattingEnabled = True
+        Me.cmbrptUom.Location = New System.Drawing.Point(111, 82)
+        Me.cmbrptUom.Name = "cmbrptUom"
+        Me.cmbrptUom.Size = New System.Drawing.Size(112, 21)
+        Me.cmbrptUom.TabIndex = 132
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(18, 85)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(56, 13)
+        Me.Label7.TabIndex = 120
+        Me.Label7.Text = "Rate Type"
         '
         'Label6
         '
@@ -272,7 +290,7 @@ Partial Class frmAssignEmployees
         '
         Me.GroupBox2.Controls.Add(Me.radOutsourced)
         Me.GroupBox2.Controls.Add(Me.radInternal)
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 16)
+        Me.GroupBox2.Location = New System.Drawing.Point(17, 16)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(256, 62)
         Me.GroupBox2.TabIndex = 107
@@ -304,7 +322,7 @@ Partial Class frmAssignEmployees
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 159)
+        Me.Label5.Location = New System.Drawing.Point(14, 150)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(111, 13)
         Me.Label5.TabIndex = 108
@@ -313,7 +331,7 @@ Partial Class frmAssignEmployees
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(122, 152)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(124, 143)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker2.TabIndex = 111
@@ -321,7 +339,7 @@ Partial Class frmAssignEmployees
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePicker1.Location = New System.Drawing.Point(122, 184)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(124, 175)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 112
@@ -329,7 +347,7 @@ Partial Class frmAssignEmployees
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 184)
+        Me.Label3.Location = New System.Drawing.Point(14, 175)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(57, 13)
         Me.Label3.TabIndex = 110
@@ -338,8 +356,8 @@ Partial Class frmAssignEmployees
         'RadDockEmp
         '
         Me.RadDockEmp.ActiveWindow = Me.twEmp
+        Me.RadDockEmp.Controls.Add(Me.ToolTabStrip2)
         Me.RadDockEmp.Controls.Add(Me.DocumentContainer1)
-        Me.RadDockEmp.Controls.Add(Me.ToolTabStrip1)
         Me.RadDockEmp.Dock = System.Windows.Forms.DockStyle.Fill
         Me.RadDockEmp.IsCleanUpTarget = True
         Me.RadDockEmp.Location = New System.Drawing.Point(0, 0)
@@ -352,7 +370,7 @@ Partial Class frmAssignEmployees
         '
         Me.RadDockEmp.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockEmp.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockEmp.Size = New System.Drawing.Size(559, 729)
+        Me.RadDockEmp.Size = New System.Drawing.Size(569, 729)
         Me.RadDockEmp.TabIndex = 1
         Me.RadDockEmp.TabStop = False
         Me.RadDockEmp.Text = "RadDock1"
@@ -364,8 +382,23 @@ Partial Class frmAssignEmployees
         Me.twEmp.Location = New System.Drawing.Point(1, 24)
         Me.twEmp.Name = "twEmp"
         Me.twEmp.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twEmp.Size = New System.Drawing.Size(547, 693)
+        Me.twEmp.Size = New System.Drawing.Size(557, 693)
         Me.twEmp.Text = "twEmp"
+        '
+        'ToolTabStrip2
+        '
+        Me.ToolTabStrip2.CanUpdateChildIndex = True
+        Me.ToolTabStrip2.Controls.Add(Me.twEmp)
+        Me.ToolTabStrip2.Location = New System.Drawing.Point(5, 5)
+        Me.ToolTabStrip2.Name = "ToolTabStrip2"
+        '
+        '
+        '
+        Me.ToolTabStrip2.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip2.SelectedIndex = 0
+        Me.ToolTabStrip2.Size = New System.Drawing.Size(559, 719)
+        Me.ToolTabStrip2.TabIndex = 2
+        Me.ToolTabStrip2.TabStop = False
         '
         'DocumentContainer1
         '
@@ -377,46 +410,14 @@ Partial Class frmAssignEmployees
         Me.DocumentContainer1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.DocumentContainer1.RootElement.Padding = New System.Windows.Forms.Padding(5)
         Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
-        '
-        'ToolTabStrip1
-        '
-        Me.ToolTabStrip1.CanUpdateChildIndex = True
-        Me.ToolTabStrip1.Controls.Add(Me.twEmp)
-        Me.ToolTabStrip1.Location = New System.Drawing.Point(5, 5)
-        Me.ToolTabStrip1.Name = "ToolTabStrip1"
-        '
-        '
-        '
-        Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(549, 719)
-        Me.ToolTabStrip1.TabIndex = 1
-        Me.ToolTabStrip1.TabStop = False
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(18, 85)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 13)
-        Me.Label7.TabIndex = 120
-        Me.Label7.Text = "Rate Type"
-        '
-        'cmbrptUom
-        '
-        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbrptUom.FormattingEnabled = True
-        Me.cmbrptUom.Location = New System.Drawing.Point(111, 82)
-        Me.cmbrptUom.Name = "cmbrptUom"
-        Me.cmbrptUom.Size = New System.Drawing.Size(112, 21)
-        Me.cmbrptUom.TabIndex = 132
+        Me.DocumentContainer1.TabIndex = 3
         '
         'frmAssignEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(559, 729)
+        Me.ClientSize = New System.Drawing.Size(569, 729)
         Me.Controls.Add(Me.RadDockEmp)
         Me.MinimumSize = New System.Drawing.Size(575, 730)
         Me.Name = "frmAssignEmployees"
@@ -436,9 +437,9 @@ Partial Class frmAssignEmployees
         CType(Me.RadDockEmp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadDockEmp.ResumeLayout(False)
         Me.twEmp.ResumeLayout(False)
+        CType(Me.ToolTabStrip2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolTabStrip2.ResumeLayout(False)
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.ToolTabStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -471,7 +472,7 @@ Partial Class frmAssignEmployees
     Friend WithEvents RadDockEmp As Telerik.WinControls.UI.Docking.RadDock
     Friend WithEvents twEmp As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents DocumentContainer1 As Telerik.WinControls.UI.Docking.DocumentContainer
-    Friend WithEvents ToolTabStrip1 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
+    Friend WithEvents ToolTabStrip2 As Telerik.WinControls.UI.Docking.ToolTabStrip
 End Class
