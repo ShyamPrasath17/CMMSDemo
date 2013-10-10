@@ -199,6 +199,21 @@ Partial Class frmSettings
         Me.RadioButton20 = New System.Windows.Forms.RadioButton()
         Me.RadioButton21 = New System.Windows.Forms.RadioButton()
         Me.ListBox7 = New System.Windows.Forms.ListBox()
+        Me.TabPage12 = New System.Windows.Forms.TabPage()
+        Me.GroupBox19 = New System.Windows.Forms.GroupBox()
+        Me.Button18 = New System.Windows.Forms.Button()
+        Me.Button19 = New System.Windows.Forms.Button()
+        Me.TextBox34 = New System.Windows.Forms.TextBox()
+        Me.Label37 = New System.Windows.Forms.Label()
+        Me.GroupBox20 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton22 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton23 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton24 = New System.Windows.Forms.RadioButton()
+        Me.ListBox8 = New System.Windows.Forms.ListBox()
+        Me.TextBox35 = New System.Windows.Forms.TextBox()
+        Me.Label38 = New System.Windows.Forms.Label()
+        Me.TextBox36 = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
         Me.TabPage11.SuspendLayout()
         Me.TabControl4.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -235,6 +250,9 @@ Partial Class frmSettings
         Me.TabPage15.SuspendLayout()
         Me.GroupBox17.SuspendLayout()
         Me.GroupBox18.SuspendLayout()
+        Me.TabPage12.SuspendLayout()
+        Me.GroupBox19.SuspendLayout()
+        Me.GroupBox20.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -592,6 +610,7 @@ Partial Class frmSettings
         'TabControl3
         '
         Me.TabControl3.Controls.Add(Me.TabPage13)
+        Me.TabControl3.Controls.Add(Me.TabPage12)
         Me.TabControl3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl3.Location = New System.Drawing.Point(3, 3)
         Me.TabControl3.Name = "TabControl3"
@@ -2000,6 +2019,154 @@ Partial Class frmSettings
         Me.ListBox7.Size = New System.Drawing.Size(146, 199)
         Me.ListBox7.TabIndex = 0
         '
+        'TabPage12
+        '
+        Me.TabPage12.Controls.Add(Me.TextBox35)
+        Me.TabPage12.Controls.Add(Me.Label38)
+        Me.TabPage12.Controls.Add(Me.TextBox36)
+        Me.TabPage12.Controls.Add(Me.Label39)
+        Me.TabPage12.Controls.Add(Me.GroupBox19)
+        Me.TabPage12.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage12.Name = "TabPage12"
+        Me.TabPage12.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage12.Size = New System.Drawing.Size(754, 438)
+        Me.TabPage12.TabIndex = 1
+        Me.TabPage12.Text = "Bill Rate Type"
+        Me.TabPage12.UseVisualStyleBackColor = True
+        '
+        'GroupBox19
+        '
+        Me.GroupBox19.Controls.Add(Me.Button18)
+        Me.GroupBox19.Controls.Add(Me.Button19)
+        Me.GroupBox19.Controls.Add(Me.TextBox34)
+        Me.GroupBox19.Controls.Add(Me.Label37)
+        Me.GroupBox19.Controls.Add(Me.GroupBox20)
+        Me.GroupBox19.Controls.Add(Me.ListBox8)
+        Me.GroupBox19.Location = New System.Drawing.Point(6, 4)
+        Me.GroupBox19.Name = "GroupBox19"
+        Me.GroupBox19.Size = New System.Drawing.Size(170, 428)
+        Me.GroupBox19.TabIndex = 9
+        Me.GroupBox19.TabStop = False
+        '
+        'Button18
+        '
+        Me.Button18.Location = New System.Drawing.Point(38, 397)
+        Me.Button18.Name = "Button18"
+        Me.Button18.Size = New System.Drawing.Size(75, 23)
+        Me.Button18.TabIndex = 5
+        Me.Button18.Text = "Print"
+        Me.Button18.UseVisualStyleBackColor = True
+        '
+        'Button19
+        '
+        Me.Button19.Location = New System.Drawing.Point(38, 368)
+        Me.Button19.Name = "Button19"
+        Me.Button19.Size = New System.Drawing.Size(75, 23)
+        Me.Button19.TabIndex = 4
+        Me.Button19.Text = "Add"
+        Me.Button19.UseVisualStyleBackColor = True
+        '
+        'TextBox34
+        '
+        Me.TextBox34.Location = New System.Drawing.Point(87, 342)
+        Me.TextBox34.Name = "TextBox34"
+        Me.TextBox34.Size = New System.Drawing.Size(63, 20)
+        Me.TextBox34.TabIndex = 3
+        '
+        'Label37
+        '
+        Me.Label37.AutoSize = True
+        Me.Label37.Location = New System.Drawing.Point(8, 345)
+        Me.Label37.Name = "Label37"
+        Me.Label37.Size = New System.Drawing.Size(69, 13)
+        Me.Label37.TabIndex = 2
+        Me.Label37.Text = "Search Code"
+        '
+        'GroupBox20
+        '
+        Me.GroupBox20.Controls.Add(Me.RadioButton22)
+        Me.GroupBox20.Controls.Add(Me.RadioButton23)
+        Me.GroupBox20.Controls.Add(Me.RadioButton24)
+        Me.GroupBox20.Location = New System.Drawing.Point(7, 225)
+        Me.GroupBox20.Name = "GroupBox20"
+        Me.GroupBox20.Size = New System.Drawing.Size(146, 104)
+        Me.GroupBox20.TabIndex = 1
+        Me.GroupBox20.TabStop = False
+        Me.GroupBox20.Text = "Active Type"
+        '
+        'RadioButton22
+        '
+        Me.RadioButton22.AutoSize = True
+        Me.RadioButton22.Location = New System.Drawing.Point(7, 68)
+        Me.RadioButton22.Name = "RadioButton22"
+        Me.RadioButton22.Size = New System.Drawing.Size(63, 17)
+        Me.RadioButton22.TabIndex = 2
+        Me.RadioButton22.TabStop = True
+        Me.RadioButton22.Text = "Inactive"
+        Me.RadioButton22.UseVisualStyleBackColor = True
+        '
+        'RadioButton23
+        '
+        Me.RadioButton23.AutoSize = True
+        Me.RadioButton23.Location = New System.Drawing.Point(7, 44)
+        Me.RadioButton23.Name = "RadioButton23"
+        Me.RadioButton23.Size = New System.Drawing.Size(55, 17)
+        Me.RadioButton23.TabIndex = 1
+        Me.RadioButton23.TabStop = True
+        Me.RadioButton23.Text = "Active"
+        Me.RadioButton23.UseVisualStyleBackColor = True
+        '
+        'RadioButton24
+        '
+        Me.RadioButton24.AutoSize = True
+        Me.RadioButton24.Location = New System.Drawing.Point(7, 20)
+        Me.RadioButton24.Name = "RadioButton24"
+        Me.RadioButton24.Size = New System.Drawing.Size(47, 17)
+        Me.RadioButton24.TabIndex = 0
+        Me.RadioButton24.TabStop = True
+        Me.RadioButton24.Text = "Both"
+        Me.RadioButton24.UseVisualStyleBackColor = True
+        '
+        'ListBox8
+        '
+        Me.ListBox8.FormattingEnabled = True
+        Me.ListBox8.Location = New System.Drawing.Point(7, 20)
+        Me.ListBox8.Name = "ListBox8"
+        Me.ListBox8.Size = New System.Drawing.Size(146, 199)
+        Me.ListBox8.TabIndex = 0
+        '
+        'TextBox35
+        '
+        Me.TextBox35.Location = New System.Drawing.Point(293, 63)
+        Me.TextBox35.Name = "TextBox35"
+        Me.TextBox35.Size = New System.Drawing.Size(302, 20)
+        Me.TextBox35.TabIndex = 20
+        '
+        'Label38
+        '
+        Me.Label38.AutoSize = True
+        Me.Label38.Location = New System.Drawing.Point(214, 66)
+        Me.Label38.Name = "Label38"
+        Me.Label38.Size = New System.Drawing.Size(60, 13)
+        Me.Label38.TabIndex = 19
+        Me.Label38.Text = "Description"
+        '
+        'TextBox36
+        '
+        Me.TextBox36.Location = New System.Drawing.Point(293, 24)
+        Me.TextBox36.Name = "TextBox36"
+        Me.TextBox36.Size = New System.Drawing.Size(174, 20)
+        Me.TextBox36.TabIndex = 18
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.Location = New System.Drawing.Point(214, 27)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(57, 13)
+        Me.Label39.TabIndex = 17
+        Me.Label39.Text = "Rate Type"
+        '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2072,6 +2239,12 @@ Partial Class frmSettings
         Me.GroupBox17.PerformLayout()
         Me.GroupBox18.ResumeLayout(False)
         Me.GroupBox18.PerformLayout()
+        Me.TabPage12.ResumeLayout(False)
+        Me.TabPage12.PerformLayout()
+        Me.GroupBox19.ResumeLayout(False)
+        Me.GroupBox19.PerformLayout()
+        Me.GroupBox20.ResumeLayout(False)
+        Me.GroupBox20.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2251,4 +2424,19 @@ Partial Class frmSettings
     Friend WithEvents RadioButton20 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton21 As System.Windows.Forms.RadioButton
     Friend WithEvents ListBox7 As System.Windows.Forms.ListBox
+    Friend WithEvents TabPage12 As System.Windows.Forms.TabPage
+    Friend WithEvents TextBox35 As System.Windows.Forms.TextBox
+    Friend WithEvents Label38 As System.Windows.Forms.Label
+    Friend WithEvents TextBox36 As System.Windows.Forms.TextBox
+    Friend WithEvents Label39 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox19 As System.Windows.Forms.GroupBox
+    Friend WithEvents Button18 As System.Windows.Forms.Button
+    Friend WithEvents Button19 As System.Windows.Forms.Button
+    Friend WithEvents TextBox34 As System.Windows.Forms.TextBox
+    Friend WithEvents Label37 As System.Windows.Forms.Label
+    Friend WithEvents GroupBox20 As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioButton22 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton23 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton24 As System.Windows.Forms.RadioButton
+    Friend WithEvents ListBox8 As System.Windows.Forms.ListBox
 End Class

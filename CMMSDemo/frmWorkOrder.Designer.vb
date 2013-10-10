@@ -85,17 +85,19 @@ Partial Class frmWorkOrder
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
+        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
+        Me.Label27 = New System.Windows.Forms.Label()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -103,9 +105,9 @@ Partial Class frmWorkOrder
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -525,6 +527,8 @@ Partial Class frmWorkOrder
         '
         'grpBillable
         '
+        Me.grpBillable.Controls.Add(Me.cmbrptUom)
+        Me.grpBillable.Controls.Add(Me.Label27)
         Me.grpBillable.Controls.Add(Me.TextBox9)
         Me.grpBillable.Controls.Add(Me.Label17)
         Me.grpBillable.Controls.Add(Me.TextBox8)
@@ -534,13 +538,13 @@ Partial Class frmWorkOrder
         Me.grpBillable.Controls.Add(Me.Sercust)
         Me.grpBillable.Location = New System.Drawing.Point(17, 440)
         Me.grpBillable.Name = "grpBillable"
-        Me.grpBillable.Size = New System.Drawing.Size(321, 113)
+        Me.grpBillable.Size = New System.Drawing.Size(321, 124)
         Me.grpBillable.TabIndex = 103
         Me.grpBillable.TabStop = False
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(94, 65)
+        Me.TextBox9.Location = New System.Drawing.Point(93, 93)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.ReadOnly = True
         Me.TextBox9.Size = New System.Drawing.Size(185, 20)
@@ -549,7 +553,7 @@ Partial Class frmWorkOrder
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(8, 72)
+        Me.Label17.Location = New System.Drawing.Point(7, 100)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(54, 13)
         Me.Label17.TabIndex = 104
@@ -557,7 +561,7 @@ Partial Class frmWorkOrder
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(94, 39)
+        Me.TextBox8.Location = New System.Drawing.Point(93, 67)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(185, 20)
         Me.TextBox8.TabIndex = 103
@@ -565,7 +569,7 @@ Partial Class frmWorkOrder
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(8, 46)
+        Me.Label16.Location = New System.Drawing.Point(7, 74)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(67, 13)
         Me.Label16.TabIndex = 102
@@ -714,6 +718,46 @@ Partial Class frmWorkOrder
         Me.RadScrollablePanel1.TabIndex = 95
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
         '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(108, 270)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox15.TabIndex = 124
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Location = New System.Drawing.Point(12, 277)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(83, 13)
+        Me.Label26.TabIndex = 123
+        Me.Label26.Text = "Estimated Cost"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Location = New System.Drawing.Point(109, 81)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox3.TabIndex = 121
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Location = New System.Drawing.Point(12, 84)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(97, 13)
+        Me.Label25.TabIndex = 122
+        Me.Label25.Text = "WorkOrder Name"
+        '
+        'RadGridView1
+        '
+        Me.RadGridView1.Location = New System.Drawing.Point(15, 697)
+        Me.RadGridView1.Name = "RadGridView1"
+        Me.RadGridView1.Size = New System.Drawing.Size(523, 96)
+        Me.RadGridView1.TabIndex = 120
+        Me.RadGridView1.Text = "RadGridView1"
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.ComboBox1)
@@ -770,45 +814,23 @@ Partial Class frmWorkOrder
         Me.TextBox14.Size = New System.Drawing.Size(185, 20)
         Me.TextBox14.TabIndex = 68
         '
-        'RadGridView1
+        'cmbrptUom
         '
-        Me.RadGridView1.Location = New System.Drawing.Point(15, 697)
-        Me.RadGridView1.Name = "RadGridView1"
-        Me.RadGridView1.Size = New System.Drawing.Size(523, 96)
-        Me.RadGridView1.TabIndex = 120
-        Me.RadGridView1.Text = "RadGridView1"
+        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbrptUom.FormattingEnabled = True
+        Me.cmbrptUom.Location = New System.Drawing.Point(94, 41)
+        Me.cmbrptUom.Name = "cmbrptUom"
+        Me.cmbrptUom.Size = New System.Drawing.Size(112, 21)
+        Me.cmbrptUom.TabIndex = 134
         '
-        'TextBox3
+        'Label27
         '
-        Me.TextBox3.Location = New System.Drawing.Point(109, 81)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox3.TabIndex = 121
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(12, 84)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(97, 13)
-        Me.Label25.TabIndex = 122
-        Me.Label25.Text = "WorkOrder Name"
-        '
-        'TextBox15
-        '
-        Me.TextBox15.Location = New System.Drawing.Point(108, 270)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox15.TabIndex = 124
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(12, 277)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(83, 13)
-        Me.Label26.TabIndex = 123
-        Me.Label26.Text = "Estimated Cost"
+        Me.Label27.AutoSize = True
+        Me.Label27.Location = New System.Drawing.Point(7, 46)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(75, 13)
+        Me.Label27.TabIndex = 133
+        Me.Label27.Text = "Bill Rate Type"
         '
         'frmWorkOrder
         '
@@ -829,10 +851,10 @@ Partial Class frmWorkOrder
         Me.RadScrollablePanel1.PanelContainer.PerformLayout()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadScrollablePanel1.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -909,4 +931,6 @@ Partial Class frmWorkOrder
     Friend WithEvents Label25 As System.Windows.Forms.Label
     Friend WithEvents TextBox15 As System.Windows.Forms.TextBox
     Friend WithEvents Label26 As System.Windows.Forms.Label
+    Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
+    Friend WithEvents Label27 As System.Windows.Forms.Label
 End Class

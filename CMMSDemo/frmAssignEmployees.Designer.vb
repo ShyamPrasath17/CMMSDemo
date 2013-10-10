@@ -50,9 +50,11 @@ Partial Class frmAssignEmployees
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RadDockEmp = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.twEmp = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -64,8 +66,8 @@ Partial Class frmAssignEmployees
         Me.GroupBox2.SuspendLayout()
         CType(Me.RadDockEmp, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockEmp.SuspendLayout()
-        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.twEmp.SuspendLayout()
+        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolTabStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -95,8 +97,8 @@ Partial Class frmAssignEmployees
         Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker1)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Label3)
-        Me.SplitContainer1.Size = New System.Drawing.Size(547, 656)
-        Me.SplitContainer1.SplitterDistance = 225
+        Me.SplitContainer1.Size = New System.Drawing.Size(547, 693)
+        Me.SplitContainer1.SplitterDistance = 237
         Me.SplitContainer1.TabIndex = 0
         '
         'dgvEmployees
@@ -104,7 +106,7 @@ Partial Class frmAssignEmployees
         Me.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dgvEmployees.Location = New System.Drawing.Point(0, 0)
         Me.dgvEmployees.Name = "dgvEmployees"
-        Me.dgvEmployees.Size = New System.Drawing.Size(547, 225)
+        Me.dgvEmployees.Size = New System.Drawing.Size(547, 237)
         Me.dgvEmployees.TabIndex = 0
         Me.dgvEmployees.Text = "RadGridView1"
         '
@@ -137,7 +139,7 @@ Partial Class frmAssignEmployees
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(454, 392)
+        Me.Button4.Location = New System.Drawing.Point(459, 424)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 122
@@ -147,7 +149,7 @@ Partial Class frmAssignEmployees
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(373, 392)
+        Me.Button2.Location = New System.Drawing.Point(378, 424)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 121
@@ -174,6 +176,8 @@ Partial Class frmAssignEmployees
         '
         'grpInternalEmp
         '
+        Me.grpInternalEmp.Controls.Add(Me.cmbrptUom)
+        Me.grpInternalEmp.Controls.Add(Me.Label7)
         Me.grpInternalEmp.Controls.Add(Me.Label6)
         Me.grpInternalEmp.Controls.Add(Me.BtnAddemp)
         Me.grpInternalEmp.Controls.Add(Me.TextBox3)
@@ -185,7 +189,7 @@ Partial Class frmAssignEmployees
         Me.grpInternalEmp.Controls.Add(Me.Label1)
         Me.grpInternalEmp.Location = New System.Drawing.Point(12, 239)
         Me.grpInternalEmp.Name = "grpInternalEmp"
-        Me.grpInternalEmp.Size = New System.Drawing.Size(455, 145)
+        Me.grpInternalEmp.Size = New System.Drawing.Size(455, 179)
         Me.grpInternalEmp.TabIndex = 117
         Me.grpInternalEmp.TabStop = False
         '
@@ -201,7 +205,7 @@ Partial Class frmAssignEmployees
         'BtnAddemp
         '
         Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(21, 118)
+        Me.BtnAddemp.Location = New System.Drawing.Point(21, 150)
         Me.BtnAddemp.Name = "BtnAddemp"
         Me.BtnAddemp.Size = New System.Drawing.Size(105, 23)
         Me.BtnAddemp.TabIndex = 119
@@ -210,7 +214,7 @@ Partial Class frmAssignEmployees
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(111, 80)
+        Me.TextBox3.Location = New System.Drawing.Point(110, 110)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(112, 20)
         Me.TextBox3.TabIndex = 116
@@ -226,7 +230,7 @@ Partial Class frmAssignEmployees
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(18, 87)
+        Me.Label2.Location = New System.Drawing.Point(18, 113)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(67, 13)
         Me.Label2.TabIndex = 115
@@ -243,7 +247,7 @@ Partial Class frmAssignEmployees
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(111, 42)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(111, 48)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(55, 20)
         Me.NumericUpDown1.TabIndex = 114
@@ -258,7 +262,7 @@ Partial Class frmAssignEmployees
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(18, 49)
+        Me.Label1.Location = New System.Drawing.Point(18, 55)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 13)
         Me.Label1.TabIndex = 113
@@ -337,6 +341,7 @@ Partial Class frmAssignEmployees
         Me.RadDockEmp.Controls.Add(Me.DocumentContainer1)
         Me.RadDockEmp.Controls.Add(Me.ToolTabStrip1)
         Me.RadDockEmp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadDockEmp.IsCleanUpTarget = True
         Me.RadDockEmp.Location = New System.Drawing.Point(0, 0)
         Me.RadDockEmp.MainDocumentContainer = Me.DocumentContainer1
         Me.RadDockEmp.MainDocumentContainerVisible = False
@@ -347,10 +352,20 @@ Partial Class frmAssignEmployees
         '
         Me.RadDockEmp.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockEmp.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockEmp.Size = New System.Drawing.Size(559, 692)
+        Me.RadDockEmp.Size = New System.Drawing.Size(559, 729)
         Me.RadDockEmp.TabIndex = 1
         Me.RadDockEmp.TabStop = False
         Me.RadDockEmp.Text = "RadDock1"
+        '
+        'twEmp
+        '
+        Me.twEmp.Caption = Nothing
+        Me.twEmp.Controls.Add(Me.SplitContainer1)
+        Me.twEmp.Location = New System.Drawing.Point(1, 24)
+        Me.twEmp.Name = "twEmp"
+        Me.twEmp.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twEmp.Size = New System.Drawing.Size(547, 693)
+        Me.twEmp.Text = "twEmp"
         '
         'DocumentContainer1
         '
@@ -363,15 +378,6 @@ Partial Class frmAssignEmployees
         Me.DocumentContainer1.RootElement.Padding = New System.Windows.Forms.Padding(5)
         Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
         '
-        'twEmp
-        '
-        Me.twEmp.Caption = Nothing
-        Me.twEmp.Controls.Add(Me.SplitContainer1)
-        Me.twEmp.Location = New System.Drawing.Point(1, 24)
-        Me.twEmp.Name = "twEmp"
-        Me.twEmp.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twEmp.Size = New System.Drawing.Size(547, 656)
-        '
         'ToolTabStrip1
         '
         Me.ToolTabStrip1.CanUpdateChildIndex = True
@@ -383,16 +389,34 @@ Partial Class frmAssignEmployees
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
-        Me.ToolTabStrip1.Size = New System.Drawing.Size(549, 682)
+        Me.ToolTabStrip1.Size = New System.Drawing.Size(549, 719)
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(18, 85)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(56, 13)
+        Me.Label7.TabIndex = 120
+        Me.Label7.Text = "Rate Type"
+        '
+        'cmbrptUom
+        '
+        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbrptUom.FormattingEnabled = True
+        Me.cmbrptUom.Location = New System.Drawing.Point(111, 82)
+        Me.cmbrptUom.Name = "cmbrptUom"
+        Me.cmbrptUom.Size = New System.Drawing.Size(112, 21)
+        Me.cmbrptUom.TabIndex = 132
         '
         'frmAssignEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(559, 692)
+        Me.ClientSize = New System.Drawing.Size(559, 729)
         Me.Controls.Add(Me.RadDockEmp)
         Me.MinimumSize = New System.Drawing.Size(575, 730)
         Me.Name = "frmAssignEmployees"
@@ -411,8 +435,8 @@ Partial Class frmAssignEmployees
         Me.GroupBox2.PerformLayout()
         CType(Me.RadDockEmp, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadDockEmp.ResumeLayout(False)
-        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.twEmp.ResumeLayout(False)
+        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolTabStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -448,4 +472,6 @@ Partial Class frmAssignEmployees
     Friend WithEvents twEmp As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents DocumentContainer1 As Telerik.WinControls.UI.Docking.DocumentContainer
     Friend WithEvents ToolTabStrip1 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
 End Class

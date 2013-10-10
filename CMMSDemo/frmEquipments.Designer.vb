@@ -48,9 +48,11 @@ Partial Class frmAssignEquipments
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker4 = New System.Windows.Forms.DateTimePicker()
         Me.RadDockequip = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.twEquipment = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.grpOutSource.SuspendLayout()
         Me.grpInternalEmp.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -62,8 +64,8 @@ Partial Class frmAssignEquipments
         Me.SplitContainer1.SuspendLayout()
         CType(Me.RadDockequip, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockequip.SuspendLayout()
-        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.twEquipment.SuspendLayout()
+        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolTabStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -141,6 +143,8 @@ Partial Class frmAssignEquipments
         '
         'grpInternalEmp
         '
+        Me.grpInternalEmp.Controls.Add(Me.cmbrptUom)
+        Me.grpInternalEmp.Controls.Add(Me.Label7)
         Me.grpInternalEmp.Controls.Add(Me.Label6)
         Me.grpInternalEmp.Controls.Add(Me.BtnAddemp)
         Me.grpInternalEmp.Controls.Add(Me.txtEmpName)
@@ -150,14 +154,14 @@ Partial Class frmAssignEquipments
         Me.grpInternalEmp.Controls.Add(Me.Label1)
         Me.grpInternalEmp.Location = New System.Drawing.Point(15, 243)
         Me.grpInternalEmp.Name = "grpInternalEmp"
-        Me.grpInternalEmp.Size = New System.Drawing.Size(429, 117)
+        Me.grpInternalEmp.Size = New System.Drawing.Size(429, 155)
         Me.grpInternalEmp.TabIndex = 117
         Me.grpInternalEmp.TabStop = False
         '
         'BtnAddemp
         '
         Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(18, 88)
+        Me.BtnAddemp.Location = New System.Drawing.Point(18, 126)
         Me.BtnAddemp.Name = "BtnAddemp"
         Me.BtnAddemp.Size = New System.Drawing.Size(105, 23)
         Me.BtnAddemp.TabIndex = 119
@@ -168,7 +172,7 @@ Partial Class frmAssignEquipments
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(125, 54)
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(55, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(78, 20)
         Me.NumericUpDown1.TabIndex = 114
         '
         'Label1
@@ -316,6 +320,7 @@ Partial Class frmAssignEquipments
         Me.RadDockequip.Controls.Add(Me.DocumentContainer1)
         Me.RadDockequip.Controls.Add(Me.ToolTabStrip1)
         Me.RadDockequip.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadDockequip.IsCleanUpTarget = True
         Me.RadDockequip.Location = New System.Drawing.Point(0, 0)
         Me.RadDockequip.MainDocumentContainer = Me.DocumentContainer1
         Me.RadDockequip.MainDocumentContainerVisible = False
@@ -331,6 +336,15 @@ Partial Class frmAssignEquipments
         Me.RadDockequip.TabStop = False
         Me.RadDockequip.Text = "RadDock1"
         '
+        'twEquipment
+        '
+        Me.twEquipment.Caption = Nothing
+        Me.twEquipment.Controls.Add(Me.SplitContainer1)
+        Me.twEquipment.Location = New System.Drawing.Point(1, 24)
+        Me.twEquipment.Name = "twEquipment"
+        Me.twEquipment.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twEquipment.Size = New System.Drawing.Size(625, 675)
+        '
         'DocumentContainer1
         '
         Me.DocumentContainer1.Collapsed = True
@@ -344,15 +358,6 @@ Partial Class frmAssignEquipments
         Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
         Me.DocumentContainer1.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, -473)
         '
-        'twEquipment
-        '
-        Me.twEquipment.Caption = Nothing
-        Me.twEquipment.Controls.Add(Me.SplitContainer1)
-        Me.twEquipment.Location = New System.Drawing.Point(1, 24)
-        Me.twEquipment.Name = "twEquipment"
-        Me.twEquipment.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twEquipment.Size = New System.Drawing.Size(625, 675)
-        '
         'ToolTabStrip1
         '
         Me.ToolTabStrip1.CanUpdateChildIndex = True
@@ -365,10 +370,28 @@ Partial Class frmAssignEquipments
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.ToolTabStrip1.SelectedIndex = 0
         Me.ToolTabStrip1.Size = New System.Drawing.Size(627, 701)
-        Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 673)
+        Me.ToolTabStrip1.SizeInfo.AbsoluteSize = New System.Drawing.Size(200, 672)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 473)
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
+        '
+        'cmbrptUom
+        '
+        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbrptUom.FormattingEnabled = True
+        Me.cmbrptUom.Location = New System.Drawing.Point(125, 89)
+        Me.cmbrptUom.Name = "cmbrptUom"
+        Me.cmbrptUom.Size = New System.Drawing.Size(112, 21)
+        Me.cmbrptUom.TabIndex = 134
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(15, 97)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(56, 13)
+        Me.Label7.TabIndex = 133
+        Me.Label7.Text = "Rate Type"
         '
         'frmAssignEquipments
         '
@@ -394,8 +417,8 @@ Partial Class frmAssignEquipments
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.RadDockequip, System.ComponentModel.ISupportInitialize).EndInit()
         Me.RadDockequip.ResumeLayout(False)
-        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.twEquipment.ResumeLayout(False)
+        CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolTabStrip1.ResumeLayout(False)
         Me.ResumeLayout(False)
@@ -429,4 +452,6 @@ Partial Class frmAssignEquipments
     Friend WithEvents twEquipment As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents DocumentContainer1 As Telerik.WinControls.UI.Docking.DocumentContainer
     Friend WithEvents ToolTabStrip1 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
+    Friend WithEvents Label7 As System.Windows.Forms.Label
 End Class
