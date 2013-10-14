@@ -24,7 +24,7 @@ Partial Class FormMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.twSettings = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twImportSchedule = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip11 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
@@ -36,6 +36,7 @@ Partial Class FormMain
         Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twSettings = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
@@ -78,7 +79,6 @@ Partial Class FormMain
         Me.ToolTabStrip17 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.DocumentWindow1 = New Telerik.WinControls.UI.Docking.DocumentWindow()
         Me.DocumentWindow2 = New Telerik.WinControls.UI.Docking.DocumentWindow()
-        Me.twImportSchedule = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip18 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
@@ -137,14 +137,14 @@ Partial Class FormMain
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
         '
-        'twSettings
+        'twImportSchedule
         '
-        Me.twSettings.Caption = Nothing
-        Me.twSettings.Location = New System.Drawing.Point(1, 24)
-        Me.twSettings.Name = "twSettings"
-        Me.twSettings.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twSettings.Size = New System.Drawing.Size(838, 776)
-        Me.twSettings.Text = "Settings"
+        Me.twImportSchedule.Caption = Nothing
+        Me.twImportSchedule.Location = New System.Drawing.Point(1, 24)
+        Me.twImportSchedule.Name = "twImportSchedule"
+        Me.twImportSchedule.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twImportSchedule.Size = New System.Drawing.Size(818, 700)
+        Me.twImportSchedule.Text = "Import Schedule"
         '
         'DocumentContainer1
         '
@@ -270,6 +270,15 @@ Partial Class FormMain
         Me.ToolWindowWoLst.Size = New System.Drawing.Size(838, 360)
         Me.ToolWindowWoLst.Text = "Work Order List"
         '
+        'twSettings
+        '
+        Me.twSettings.Caption = Nothing
+        Me.twSettings.Location = New System.Drawing.Point(1, 24)
+        Me.twSettings.Name = "twSettings"
+        Me.twSettings.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twSettings.Size = New System.Drawing.Size(838, 776)
+        Me.twSettings.Text = "Settings"
+        '
         'twProject
         '
         Me.twProject.Caption = Nothing
@@ -352,7 +361,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.SelectedPage = Me.rpvpScheduler
         Me.rpvMain.Size = New System.Drawing.Size(203, 788)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -525,7 +534,7 @@ Partial Class FormMain
         Me.rpvpScheduledMaintenance.Image = CType(resources.GetObject("rpvpScheduledMaintenance.Image"), System.Drawing.Image)
         Me.rpvpScheduledMaintenance.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduledMaintenance.Name = "rpvpScheduledMaintenance"
-        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(199, 314)
+        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(193, 235)
         Me.rpvpScheduledMaintenance.Text = "Scheduled Maintenance"
         '
         'btnScheduledMaintainance
@@ -816,15 +825,6 @@ Partial Class FormMain
         Me.DocumentWindow2.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
         Me.DocumentWindow2.Size = New System.Drawing.Size(200, 200)
         Me.DocumentWindow2.Text = "DocumentWindow2"
-        '
-        'twImportSchedule
-        '
-        Me.twImportSchedule.Caption = Nothing
-        Me.twImportSchedule.Location = New System.Drawing.Point(1, 24)
-        Me.twImportSchedule.Name = "twImportSchedule"
-        Me.twImportSchedule.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twImportSchedule.Size = New System.Drawing.Size(818, 698)
-        Me.twImportSchedule.Text = "Import Schedule"
         '
         'ToolTabStrip18
         '
