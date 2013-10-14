@@ -98,6 +98,12 @@
     <Compile Include="frmEquipments.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmImportSchedule.Designer.vb">
+      <DependentUpon>FrmImportSchedule.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportSchedule.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmIndependentTask.Designer.vb">
       <DependentUpon>frmIndependentTask.vb</DependentUpon>
     </Compile>
@@ -219,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEquipments.resx">
       <DependentUpon>frmEquipments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportSchedule.resx">
+      <DependentUpon>FrmImportSchedule.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIndependentTask.resx">
       <DependentUpon>frmIndependentTask.vb</DependentUpon>
