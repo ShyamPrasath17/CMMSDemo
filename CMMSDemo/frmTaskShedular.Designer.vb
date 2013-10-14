@@ -30,12 +30,7 @@ Partial Class frmTaskShedular
         Me.Rcal = New Telerik.WinControls.UI.RadCalendar()
         Me.BtnViewNonScheduled = New System.Windows.Forms.Button()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
-        Me.ChkAllAreas = New System.Windows.Forms.CheckBox()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.btnExport = New System.Windows.Forms.Button()
         Me.grpSite = New System.Windows.Forms.GroupBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -46,6 +41,12 @@ Partial Class frmTaskShedular
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
+        Me.ChkAllAreas = New System.Windows.Forms.CheckBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         CType(Me.Rshcmms, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -54,8 +55,8 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
-        Me.GroupBox2.SuspendLayout()
         Me.grpSite.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Rshcmms
@@ -73,12 +74,12 @@ Partial Class frmTaskShedular
         Me.Rshcmms.Location = New System.Drawing.Point(0, 0)
         Me.Rshcmms.Name = "Rshcmms"
         SchedulerDailyPrintStyle1.AppointmentFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        SchedulerDailyPrintStyle1.DateEndRange = New Date(2013, 10, 9, 0, 0, 0, 0)
+        SchedulerDailyPrintStyle1.DateEndRange = New Date(2013, 10, 14, 0, 0, 0, 0)
         SchedulerDailyPrintStyle1.DateHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         SchedulerDailyPrintStyle1.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
         SchedulerDailyPrintStyle1.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
         Me.Rshcmms.PrintStyle = SchedulerDailyPrintStyle1
-        Me.Rshcmms.Size = New System.Drawing.Size(1054, 610)
+        Me.Rshcmms.Size = New System.Drawing.Size(1054, 602)
         Me.Rshcmms.TabIndex = 0
         Me.Rshcmms.Text = "RadScheduler1"
         '
@@ -95,7 +96,7 @@ Partial Class frmTaskShedular
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Rcal)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1262, 610)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1262, 602)
         Me.SplitContainer1.SplitterDistance = 1054
         Me.SplitContainer1.TabIndex = 1
         '
@@ -106,16 +107,16 @@ Partial Class frmTaskShedular
         Me.Rcal.Location = New System.Drawing.Point(0, 0)
         Me.Rcal.MultiViewRows = 2
         Me.Rcal.Name = "Rcal"
-        Me.Rcal.Size = New System.Drawing.Size(204, 610)
+        Me.Rcal.Size = New System.Drawing.Size(204, 602)
         Me.Rcal.TabIndex = 0
         Me.Rcal.Text = "RadCalendar1"
         '
         'BtnViewNonScheduled
         '
         Me.BtnViewNonScheduled.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnViewNonScheduled.Location = New System.Drawing.Point(1061, 6)
+        Me.BtnViewNonScheduled.Location = New System.Drawing.Point(1140, 9)
         Me.BtnViewNonScheduled.Name = "BtnViewNonScheduled"
-        Me.BtnViewNonScheduled.Size = New System.Drawing.Size(201, 48)
+        Me.BtnViewNonScheduled.Size = New System.Drawing.Size(119, 48)
         Me.BtnViewNonScheduled.TabIndex = 0
         Me.BtnViewNonScheduled.Text = "View Non Scheduled Tasks"
         Me.BtnViewNonScheduled.UseVisualStyleBackColor = True
@@ -129,6 +130,7 @@ Partial Class frmTaskShedular
         '
         'SplitContainer2.Panel1
         '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.btnExport)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpSite)
         Me.SplitContainer2.Panel1.Controls.Add(Me.ChkAllAreas)
         Me.SplitContainer2.Panel1.Controls.Add(Me.GroupBox2)
@@ -138,65 +140,18 @@ Partial Class frmTaskShedular
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer1)
         Me.SplitContainer2.Size = New System.Drawing.Size(1262, 671)
-        Me.SplitContainer2.SplitterDistance = 57
+        Me.SplitContainer2.SplitterDistance = 65
         Me.SplitContainer2.TabIndex = 2
         '
-        'ChkAllAreas
+        'btnExport
         '
-        Me.ChkAllAreas.AutoSize = True
-        Me.ChkAllAreas.Location = New System.Drawing.Point(334, 32)
-        Me.ChkAllAreas.Name = "ChkAllAreas"
-        Me.ChkAllAreas.Size = New System.Drawing.Size(67, 17)
-        Me.ChkAllAreas.TabIndex = 7
-        Me.ChkAllAreas.Text = "All Areas"
-        Me.ChkAllAreas.UseVisualStyleBackColor = True
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 9)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(292, 46)
-        Me.GroupBox2.TabIndex = 6
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Date Range"
-        '
-        'DateTimePicker2
-        '
-        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(182, 20)
-        Me.DateTimePicker2.Name = "DateTimePicker2"
-        Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker2.TabIndex = 4
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(6, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(30, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "From"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(156, 24)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(20, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "To"
-        '
-        'DateTimePicker1
-        '
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(42, 20)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
-        Me.DateTimePicker1.TabIndex = 3
+        Me.btnExport.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnExport.Location = New System.Drawing.Point(1058, 9)
+        Me.btnExport.Name = "btnExport"
+        Me.btnExport.Size = New System.Drawing.Size(79, 48)
+        Me.btnExport.TabIndex = 112
+        Me.btnExport.Text = "Export Schedule"
+        Me.btnExport.UseVisualStyleBackColor = True
         '
         'grpSite
         '
@@ -290,6 +245,63 @@ Partial Class frmTaskShedular
         Me.TextBox10.Size = New System.Drawing.Size(111, 20)
         Me.TextBox10.TabIndex = 91
         '
+        'ChkAllAreas
+        '
+        Me.ChkAllAreas.AutoSize = True
+        Me.ChkAllAreas.Location = New System.Drawing.Point(334, 32)
+        Me.ChkAllAreas.Name = "ChkAllAreas"
+        Me.ChkAllAreas.Size = New System.Drawing.Size(67, 17)
+        Me.ChkAllAreas.TabIndex = 7
+        Me.ChkAllAreas.Text = "All Areas"
+        Me.ChkAllAreas.UseVisualStyleBackColor = True
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 9)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(292, 46)
+        Me.GroupBox2.TabIndex = 6
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Date Range"
+        '
+        'DateTimePicker2
+        '
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(182, 20)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
+        Me.DateTimePicker2.TabIndex = 4
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(30, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "From"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(156, 24)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "To"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(42, 20)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
+        Me.DateTimePicker1.TabIndex = 3
+        '
         'frmTaskShedular
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -308,10 +320,10 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.ResumeLayout(False)
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
         Me.grpSite.ResumeLayout(False)
         Me.grpSite.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -336,4 +348,5 @@ Partial Class frmTaskShedular
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
+    Friend WithEvents btnExport As System.Windows.Forms.Button
 End Class

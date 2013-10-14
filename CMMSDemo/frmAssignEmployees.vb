@@ -1,5 +1,6 @@
-﻿Public Class frmAssignEmployees
-
+﻿Imports Telerik.WinControls.UI.Docking
+Public Class frmAssignEmployees
+    Dim schedular As frmResourceSchedular
     Private Sub frmAssignEmployees_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         radInternal.Checked = True
         createData()
@@ -25,10 +26,14 @@
     End Sub
 
     Private Sub btnViewSchedular_Click(sender As Object, e As EventArgs) Handles btnViewSchedular.Click
-        Dim schedular As frmResourceSchedular = New frmResourceSchedular("Employee")
-        'schedular.ShowDialog()
-        Me.WindowState = FormWindowState.Maximized
-        RadDockEmp.DockControl(schedular, Telerik.WinControls.UI.Docking.DockPosition.Right)
+        RadDockEmp.DockWindow(twEmp, DockPosition.Left)
+        If Not RadDockEmp.Contains(schedular) Then
+            schedular = New frmResourceSchedular("Employee")
+            Me.WindowState = FormWindowState.Maximized
+            RadDockEmp.DockControl(schedular, Telerik.WinControls.UI.Docking.DockPosition.Right)
+            twEmp.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
+            twEmp.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(700, 0)
+        End If
     End Sub
 
     Private Sub createData()

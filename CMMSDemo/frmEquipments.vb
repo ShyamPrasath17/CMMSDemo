@@ -1,4 +1,6 @@
-﻿Public Class frmAssignEquipments
+﻿Imports Telerik.WinControls.UI.Docking
+Public Class frmAssignEquipments
+    Dim schedular As frmResourceSchedular
     Private Sub radInternal_CheckedChanged(sender As Object, e As EventArgs) Handles radInternal.CheckedChanged
         If radInternal.Checked Then
             grpInternalEmp.Visible = True
@@ -24,10 +26,14 @@
     End Sub
 
     Private Sub btnViewSchedular_Click(sender As Object, e As EventArgs) Handles btnViewSchedular.Click
-        Dim schedular As frmResourceSchedular = New frmResourceSchedular("Equipment")
-        'schedular.ShowDialog()
-        Me.WindowState = FormWindowState.Maximized
-        RadDockequip.DockControl(schedular, Telerik.WinControls.UI.Docking.DockPosition.Right)
+        RadDockequip.DockWindow(twEquipment, DockPosition.Left)
+        If Not RadDockequip.Contains(schedular) Then
+            schedular = New frmResourceSchedular("Equipment")
+            Me.WindowState = FormWindowState.Maximized
+            RadDockequip.DockControl(schedular, Telerik.WinControls.UI.Docking.DockPosition.Right)
+            twEquipment.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
+            twEquipment.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(700, 0)
+        End If
     End Sub
 
     Private Sub createData()
