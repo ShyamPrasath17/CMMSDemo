@@ -25,6 +25,7 @@ Public Class frmTaskPool
     Sub New(PoolType As String)
         InitializeComponent()
         PoolType_ = PoolType
+        Me.dgvIndepSchedTaskList.GridBehavior = New MyGridBehavior()
     End Sub
     Private Sub frmIndependentTaskPool_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
@@ -133,9 +134,9 @@ Public Class frmTaskPool
                 If cell IsNot Nothing AndAlso cell Is Me.GridViewElement.CurrentCell Then
                     Dim dragObject As New DragObject()
 
-                    dragObject.Values.Add(AppointmentFields.Summary, cell.RowInfo.Cells("Summary").Value)
-                    dragObject.Values.Add(AppointmentFields.Start, cell.RowInfo.Cells("Start").Value)
-                    dragObject.Values.Add(AppointmentFields.End, cell.RowInfo.Cells("End").Value)
+                    dragObject.Values.Add(AppointmentFields.Summary, "")
+                    dragObject.Values.Add(AppointmentFields.Start, "")
+                    dragObject.Values.Add(AppointmentFields.End, "")
                     dragObject.Values.Add(AppointmentFields.Description, "")
                     'dragObject.Values.Add(AppointmentFields.Background, cell.RowInfo.Cells("BackgroundID").Value)
                     'dragObject.Values.Add(AppointmentFields.Status, cell.RowInfo.Cells("StatusID").Value)
