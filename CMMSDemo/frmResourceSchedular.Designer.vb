@@ -36,7 +36,6 @@ Partial Class frmResourceSchedular
         Me.ChkAll = New System.Windows.Forms.CheckBox()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.btnExport = New System.Windows.Forms.Button()
-        Me.btnImport = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Rshcmms = New Telerik.WinControls.UI.RadScheduler()
@@ -144,7 +143,6 @@ Partial Class frmResourceSchedular
         '
         Me.SplitContainer2.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.SplitContainer2.Panel1.Controls.Add(Me.btnExport)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.btnImport)
         Me.SplitContainer2.Panel1.Controls.Add(Me.ChkAll)
         Me.SplitContainer2.Panel1.Controls.Add(Me.GroupBox2)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpSelect)
@@ -153,27 +151,17 @@ Partial Class frmResourceSchedular
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer1)
         Me.SplitContainer2.Size = New System.Drawing.Size(1079, 747)
-        Me.SplitContainer2.SplitterDistance = 72
+        Me.SplitContainer2.SplitterDistance = 63
         Me.SplitContainer2.TabIndex = 3
         '
         'btnExport
         '
-        Me.btnExport.Location = New System.Drawing.Point(960, 7)
+        Me.btnExport.Location = New System.Drawing.Point(845, 12)
         Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(79, 48)
+        Me.btnExport.Size = New System.Drawing.Size(97, 48)
         Me.btnExport.TabIndex = 114
         Me.btnExport.Text = "Export Schedule"
         Me.btnExport.UseVisualStyleBackColor = True
-        '
-        'btnImport
-        '
-        Me.btnImport.Location = New System.Drawing.Point(873, 7)
-        Me.btnImport.Name = "btnImport"
-        Me.btnImport.Size = New System.Drawing.Size(81, 48)
-        Me.btnImport.TabIndex = 113
-        Me.btnImport.Text = "Import Schedule"
-        Me.btnImport.UseVisualStyleBackColor = True
-        Me.btnImport.Visible = False
         '
         'GroupBox2
         '
@@ -201,7 +189,7 @@ Partial Class frmResourceSchedular
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Rcal)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1079, 671)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1079, 680)
         Me.SplitContainer1.SplitterDistance = 881
         Me.SplitContainer1.TabIndex = 1
         '
@@ -225,7 +213,7 @@ Partial Class frmResourceSchedular
         SchedulerDailyPrintStyle1.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
         SchedulerDailyPrintStyle1.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
         Me.Rshcmms.PrintStyle = SchedulerDailyPrintStyle1
-        Me.Rshcmms.Size = New System.Drawing.Size(881, 671)
+        Me.Rshcmms.Size = New System.Drawing.Size(881, 680)
         Me.Rshcmms.TabIndex = 0
         Me.Rshcmms.Text = "RadScheduler1"
         '
@@ -236,7 +224,7 @@ Partial Class frmResourceSchedular
         Me.Rcal.Location = New System.Drawing.Point(0, 0)
         Me.Rcal.MultiViewRows = 2
         Me.Rcal.Name = "Rcal"
-        Me.Rcal.Size = New System.Drawing.Size(194, 671)
+        Me.Rcal.Size = New System.Drawing.Size(194, 680)
         Me.Rcal.TabIndex = 0
         Me.Rcal.Text = "RadCalendar1"
         '
@@ -279,5 +267,4 @@ Partial Class frmResourceSchedular
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents btnExport As System.Windows.Forms.Button
-    Friend WithEvents btnImport As System.Windows.Forms.Button
 End Class

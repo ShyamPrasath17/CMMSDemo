@@ -97,7 +97,7 @@ Public Class frmResourceSchedular
             grpSelect.Enabled = True
         End If
     End Sub
-    Private Sub btnImport_Click(sender As Object, e As EventArgs) Handles btnImport.Click
+    Private Sub btnImport_Click(sender As Object, e As EventArgs)
         Dim openFileDialog As New OpenFileDialog()
         openFileDialog.AddExtension = True
         openFileDialog.DefaultExt = ".ics"
