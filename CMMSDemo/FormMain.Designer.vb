@@ -75,6 +75,7 @@ Partial Class FormMain
         Me.ToolTabStrip15 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip16 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip17 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.btnExportSchedule = New System.Windows.Forms.Button()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -88,6 +89,7 @@ Partial Class FormMain
         Me.rpvpWorkOrders.SuspendLayout()
         Me.rpvpTasks.SuspendLayout()
         Me.rpvpScheduledMaintenance.SuspendLayout()
+        Me.rpvpScheduler.SuspendLayout()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -344,7 +346,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.SelectedPage = Me.rpvpScheduler
         Me.rpvMain.Size = New System.Drawing.Size(209, 867)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -433,7 +435,7 @@ Partial Class FormMain
         Me.rpvpTasks.Image = CType(resources.GetObject("rpvpTasks.Image"), System.Drawing.Image)
         Me.rpvpTasks.Location = New System.Drawing.Point(5, 29)
         Me.rpvpTasks.Name = "rpvpTasks"
-        Me.rpvpTasks.Size = New System.Drawing.Size(188, 314)
+        Me.rpvpTasks.Size = New System.Drawing.Size(199, 314)
         Me.rpvpTasks.Text = "Tasks"
         '
         'btnViewIndeptTasks
@@ -517,7 +519,7 @@ Partial Class FormMain
         Me.rpvpScheduledMaintenance.Image = CType(resources.GetObject("rpvpScheduledMaintenance.Image"), System.Drawing.Image)
         Me.rpvpScheduledMaintenance.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduledMaintenance.Name = "rpvpScheduledMaintenance"
-        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(188, 314)
+        Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(199, 314)
         Me.rpvpScheduledMaintenance.Text = "Scheduled Maintenance"
         '
         'btnScheduledMaintainance
@@ -537,10 +539,11 @@ Partial Class FormMain
         '
         'rpvpScheduler
         '
+        Me.rpvpScheduler.Controls.Add(Me.btnExportSchedule)
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(188, 173)
+        Me.rpvpScheduler.Size = New System.Drawing.Size(199, 314)
         Me.rpvpScheduler.Text = "Scheduler"
         '
         'rpvpReportsCharts
@@ -777,6 +780,21 @@ Partial Class FormMain
         Me.ToolTabStrip17.TabIndex = 0
         Me.ToolTabStrip17.TabStop = False
         '
+        'btnExportSchedule
+        '
+        Me.btnExportSchedule.BackColor = System.Drawing.Color.Transparent
+        Me.btnExportSchedule.BackgroundImage = CType(resources.GetObject("btnExportSchedule.BackgroundImage"), System.Drawing.Image)
+        Me.btnExportSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnExportSchedule.FlatAppearance.BorderSize = 0
+        Me.btnExportSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExportSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnExportSchedule.Location = New System.Drawing.Point(5, 14)
+        Me.btnExportSchedule.Name = "btnExportSchedule"
+        Me.btnExportSchedule.Size = New System.Drawing.Size(175, 50)
+        Me.btnExportSchedule.TabIndex = 7
+        Me.btnExportSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnExportSchedule.UseVisualStyleBackColor = False
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -799,6 +817,7 @@ Partial Class FormMain
         Me.rpvpWorkOrders.ResumeLayout(False)
         Me.rpvpTasks.ResumeLayout(False)
         Me.rpvpScheduledMaintenance.ResumeLayout(False)
+        Me.rpvpScheduler.ResumeLayout(False)
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         Me.SplitContainer1.Panel2.ResumeLayout(False)
         Me.SplitContainer1.ResumeLayout(False)
@@ -872,4 +891,5 @@ Partial Class FormMain
     Friend WithEvents ToolTabStrip16 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents twSettings As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip17 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents btnExportSchedule As System.Windows.Forms.Button
 End Class
