@@ -17,4 +17,13 @@ Public Class frmImportSchedule
         End If
     End Sub
 
+    Private Sub frmImportSchedule_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Rcal_SelectionChanged(sender As Object, e As EventArgs) Handles Rcal.SelectionChanged
+        If Me.Rcal.SelectedDates.Count > 0 Then
+            Me.RshImport.ActiveView.StartDate = Me.Rcal.SelectedDate
+        End If
+    End Sub
 End Class
