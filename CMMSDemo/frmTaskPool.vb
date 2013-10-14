@@ -5,7 +5,6 @@ Imports System.Collections.Generic
 Imports System.Data
 Imports System.Drawing
 Imports System.Windows.Forms
-Imports Telerik.QuickStart.WinControls
 Imports Telerik.WinControls
 Imports Telerik.WinControls.UI
 

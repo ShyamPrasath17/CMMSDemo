@@ -3,7 +3,9 @@ Imports System
 Imports System.ComponentModel
 Imports System.Drawing
 Imports System.Windows.Forms
+Imports System.IO
 Imports Telerik.WinControls.UI
+Imports Telerik.WinControls.UI.Scheduler.ICalendar
 Imports Telerik.WinControls
 Imports System.Collections.Generic
 Imports Telerik.WinControls.UI.Scheduler.Dialogs
@@ -48,11 +50,13 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub Rshcmms_AppointmentSelected(sender As Object, e As SchedulerAppointmentEventArgs) Handles Rshcmms.AppointmentSelected
-        FormMain.frmTsk.filltask(FormMain.frmTskLst.dttask.Select("TaskNo = '" & e.Appointment.Summary.ToString() & "'")(0))
-        FormMain.frmTsk.dtpStartDate.Value = e.Appointment.Start
-        FormMain.frmTsk.dtpStartTime.Value = e.Appointment.Start
-        FormMain.frmTsk.dtpEndDate.Value = e.Appointment.End
-        FormMain.frmTsk.dtpEndTime.Value = e.Appointment.End
+        If FormMain.frmTskLst.dttask.Select("TaskNo = '" & e.Appointment.Summary.ToString() & "'").Length > 0 Then
+            FormMain.frmTsk.filltask(FormMain.frmTskLst.dttask.Select("TaskNo = '" & e.Appointment.Summary.ToString() & "'")(0))
+            FormMain.frmTsk.dtpStartDate.Value = e.Appointment.Start
+            FormMain.frmTsk.dtpStartTime.Value = e.Appointment.Start
+            FormMain.frmTsk.dtpEndDate.Value = e.Appointment.End
+            FormMain.frmTsk.dtpEndTime.Value = e.Appointment.End
+        End If
     End Sub
 
     Private Sub BtnViewNonScheduled_Click(sender As Object, e As EventArgs) Handles BtnViewNonScheduled.Click
@@ -89,6 +93,33 @@ Public Class frmTaskShedular
             appointment.StatusId = CInt(Fix(statuses(i)))
             Me.Rshcmms.Appointments.Add(appointment)
         Next i
+    End Sub
+
+    'Private Sub btnImport_Click(sender As Object, e As EventArgs) Handles btnImport.Click
+    '    Dim openFileDialog As New OpenFileDialog()
+    '    openFileDialog.AddExtension = True
+    '    openFileDialog.DefaultExt = ".ics"
+    '    openFileDialog.Filter = "iCal files (*.ics)|*.ics|All files (*.*)|*.*"
+    '    openFileDialog.Multiselect = False
+
+    '    If openFileDialog.ShowDialog() = DialogResult.OK Then
+
+    '        Using fileStream As FileStream = File.OpenRead(openFileDialog.FileName)
+    '            Me.Rshcmms.Import(fileStream, New SchedulerICalendarImporter())
+    '        End Using
+    '    End If
+    'End Sub
+
+    Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
+        Dim saveFileDialog As New SaveFileDialog()
+        saveFileDialog.AddExtension = True
+        saveFileDialog.DefaultExt = ".xml"
+        saveFileDialog.Filter = "iCal files (*.ics)|*.ics|All files (*.*)|*.*"
+        If saveFileDialog.ShowDialog() = DialogResult.OK Then
+            Using fileStream As FileStream = File.Create(saveFileDialog.FileName)
+                Me.Rshcmms.Export(fileStream, New SchedulerICalendarExporter())
+            End Using
+        End If
     End Sub
 
 End Class
