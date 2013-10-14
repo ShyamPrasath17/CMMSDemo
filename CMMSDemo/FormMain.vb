@@ -305,7 +305,7 @@
         frmwolst.ViewAllWorkOrders()
     End Sub
 
-    Private Sub btnImportSchedule_Click(sender As Object, e As EventArgs) Handles btnImportSchedule.Click
+    Private Sub btnImportSchedule_Click(sender As Object, e As EventArgs) Handles btnImportEvents.Click
         twImportSchedule.Show()
         twImportSchedule.Select()
     End Sub

@@ -59,7 +59,7 @@ Partial Class FormMain
         Me.rpvpScheduledMaintenance = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnScheduledMaintainance = New System.Windows.Forms.Button()
         Me.rpvpScheduler = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.btnImportSchedule = New System.Windows.Forms.Button()
+        Me.btnImportEvents = New System.Windows.Forms.Button()
         Me.rpvpReportsCharts = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpSettings = New Telerik.WinControls.UI.RadPageViewPage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
@@ -450,7 +450,7 @@ Partial Class FormMain
         Me.rpvpTasks.Image = CType(resources.GetObject("rpvpTasks.Image"), System.Drawing.Image)
         Me.rpvpTasks.Location = New System.Drawing.Point(5, 29)
         Me.rpvpTasks.Name = "rpvpTasks"
-        Me.rpvpTasks.Size = New System.Drawing.Size(199, 314)
+        Me.rpvpTasks.Size = New System.Drawing.Size(193, 235)
         Me.rpvpTasks.Text = "Tasks"
         '
         'btnViewIndeptTasks
@@ -554,27 +554,27 @@ Partial Class FormMain
         '
         'rpvpScheduler
         '
-        Me.rpvpScheduler.Controls.Add(Me.btnImportSchedule)
+        Me.rpvpScheduler.Controls.Add(Me.btnImportEvents)
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduler.Name = "rpvpScheduler"
         Me.rpvpScheduler.Size = New System.Drawing.Size(193, 235)
         Me.rpvpScheduler.Text = "Scheduler"
         '
-        'btnImportSchedule
+        'btnImportEvents
         '
-        Me.btnImportSchedule.BackColor = System.Drawing.Color.Transparent
-        Me.btnImportSchedule.BackgroundImage = CType(resources.GetObject("btnImportSchedule.BackgroundImage"), System.Drawing.Image)
-        Me.btnImportSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnImportSchedule.FlatAppearance.BorderSize = 0
-        Me.btnImportSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnImportSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnImportSchedule.Location = New System.Drawing.Point(5, 14)
-        Me.btnImportSchedule.Name = "btnImportSchedule"
-        Me.btnImportSchedule.Size = New System.Drawing.Size(175, 50)
-        Me.btnImportSchedule.TabIndex = 7
-        Me.btnImportSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnImportSchedule.UseVisualStyleBackColor = False
+        Me.btnImportEvents.BackColor = System.Drawing.Color.Transparent
+        Me.btnImportEvents.BackgroundImage = CType(resources.GetObject("btnImportEvents.BackgroundImage"), System.Drawing.Image)
+        Me.btnImportEvents.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnImportEvents.FlatAppearance.BorderSize = 0
+        Me.btnImportEvents.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImportEvents.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImportEvents.Location = New System.Drawing.Point(5, 14)
+        Me.btnImportEvents.Name = "btnImportEvents"
+        Me.btnImportEvents.Size = New System.Drawing.Size(175, 50)
+        Me.btnImportEvents.TabIndex = 7
+        Me.btnImportEvents.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnImportEvents.UseVisualStyleBackColor = False
         '
         'rpvpReportsCharts
         '
@@ -937,7 +937,7 @@ Partial Class FormMain
     Friend WithEvents ToolTabStrip16 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents twSettings As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip17 As Telerik.WinControls.UI.Docking.ToolTabStrip
-    Friend WithEvents btnImportSchedule As System.Windows.Forms.Button
+    Friend WithEvents btnImportEvents As System.Windows.Forms.Button
     Friend WithEvents twImportSchedule As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents DocumentWindow1 As Telerik.WinControls.UI.Docking.DocumentWindow
     Friend WithEvents DocumentWindow2 As Telerik.WinControls.UI.Docking.DocumentWindow
