@@ -58,6 +58,7 @@ Partial Class FormMain
         Me.rpvpScheduledMaintenance = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnScheduledMaintainance = New System.Windows.Forms.Button()
         Me.rpvpScheduler = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.btnImportSchedule = New System.Windows.Forms.Button()
         Me.rpvpReportsCharts = New Telerik.WinControls.UI.RadPageViewPage()
         Me.rpvpSettings = New Telerik.WinControls.UI.RadPageViewPage()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
@@ -75,7 +76,10 @@ Partial Class FormMain
         Me.ToolTabStrip15 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip16 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip17 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.btnExportSchedule = New System.Windows.Forms.Button()
+        Me.DocumentWindow1 = New Telerik.WinControls.UI.Docking.DocumentWindow()
+        Me.DocumentWindow2 = New Telerik.WinControls.UI.Docking.DocumentWindow()
+        Me.twImportSchedule = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolTabStrip18 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,11 +112,12 @@ Partial Class FormMain
         CType(Me.ToolTabStrip15, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip17, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip18, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.twSettings
+        Me.RadDockMain.ActiveWindow = Me.twImportSchedule
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
         Me.RadDockMain.Controls.Add(Me.ToolTabStrip11)
         Me.RadDockMain.Dock = System.Windows.Forms.DockStyle.Fill
@@ -127,7 +132,7 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        Me.RadDockMain.Size = New System.Drawing.Size(850, 834)
+        Me.RadDockMain.Size = New System.Drawing.Size(830, 758)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
@@ -172,14 +177,15 @@ Partial Class FormMain
         Me.ToolTabStrip11.Controls.Add(Me.ToolWindowWo)
         Me.ToolTabStrip11.Controls.Add(Me.twDashBoard)
         Me.ToolTabStrip11.Controls.Add(Me.twScheduler)
+        Me.ToolTabStrip11.Controls.Add(Me.twImportSchedule)
         Me.ToolTabStrip11.Location = New System.Drawing.Point(5, 5)
         Me.ToolTabStrip11.Name = "ToolTabStrip11"
         '
         '
         '
         Me.ToolTabStrip11.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip11.SelectedIndex = 9
-        Me.ToolTabStrip11.Size = New System.Drawing.Size(840, 824)
+        Me.ToolTabStrip11.SelectedIndex = 14
+        Me.ToolTabStrip11.Size = New System.Drawing.Size(820, 748)
         Me.ToolTabStrip11.TabIndex = 1
         Me.ToolTabStrip11.TabStop = False
         '
@@ -189,7 +195,7 @@ Partial Class FormMain
         Me.twTask.Location = New System.Drawing.Point(1, 24)
         Me.twTask.Name = "twTask"
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTask.Size = New System.Drawing.Size(838, 774)
+        Me.twTask.Size = New System.Drawing.Size(818, 698)
         Me.twTask.Text = "Task"
         '
         'twCommonTaskPool
@@ -297,7 +303,7 @@ Partial Class FormMain
         Me.twScheduler.Location = New System.Drawing.Point(1, 24)
         Me.twScheduler.Name = "twScheduler"
         Me.twScheduler.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twScheduler.Size = New System.Drawing.Size(838, 774)
+        Me.twScheduler.Size = New System.Drawing.Size(818, 698)
         Me.twScheduler.Text = "Scheduler"
         '
         'ToolTabStrip4
@@ -346,8 +352,8 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpScheduler
-        Me.rpvMain.Size = New System.Drawing.Size(209, 867)
+        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.Size = New System.Drawing.Size(203, 788)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
         Me.rpvMain.ViewMode = Telerik.WinControls.UI.PageViewMode.Stack
@@ -357,7 +363,7 @@ Partial Class FormMain
         Me.rpvpDashBoard.Image = CType(resources.GetObject("rpvpDashBoard.Image"), System.Drawing.Image)
         Me.rpvpDashBoard.Location = New System.Drawing.Point(5, 29)
         Me.rpvpDashBoard.Name = "rpvpDashBoard"
-        Me.rpvpDashBoard.Size = New System.Drawing.Size(199, 314)
+        Me.rpvpDashBoard.Size = New System.Drawing.Size(193, 235)
         Me.rpvpDashBoard.Text = "Dash Board"
         '
         'rpvpProjects
@@ -539,12 +545,27 @@ Partial Class FormMain
         '
         'rpvpScheduler
         '
-        Me.rpvpScheduler.Controls.Add(Me.btnExportSchedule)
+        Me.rpvpScheduler.Controls.Add(Me.btnImportSchedule)
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 29)
         Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(199, 314)
+        Me.rpvpScheduler.Size = New System.Drawing.Size(193, 235)
         Me.rpvpScheduler.Text = "Scheduler"
+        '
+        'btnImportSchedule
+        '
+        Me.btnImportSchedule.BackColor = System.Drawing.Color.Transparent
+        Me.btnImportSchedule.BackgroundImage = CType(resources.GetObject("btnImportSchedule.BackgroundImage"), System.Drawing.Image)
+        Me.btnImportSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnImportSchedule.FlatAppearance.BorderSize = 0
+        Me.btnImportSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnImportSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnImportSchedule.Location = New System.Drawing.Point(5, 14)
+        Me.btnImportSchedule.Name = "btnImportSchedule"
+        Me.btnImportSchedule.Size = New System.Drawing.Size(175, 50)
+        Me.btnImportSchedule.TabIndex = 7
+        Me.btnImportSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnImportSchedule.UseVisualStyleBackColor = False
         '
         'rpvpReportsCharts
         '
@@ -577,8 +598,8 @@ Partial Class FormMain
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.SplitContainer2)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1063, 867)
-        Me.SplitContainer1.SplitterDistance = 209
+        Me.SplitContainer1.Size = New System.Drawing.Size(1037, 788)
+        Me.SplitContainer1.SplitterDistance = 203
         Me.SplitContainer1.TabIndex = 2
         '
         'SplitContainer2
@@ -592,8 +613,8 @@ Partial Class FormMain
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.RadDockMain)
-        Me.SplitContainer2.Size = New System.Drawing.Size(850, 867)
-        Me.SplitContainer2.SplitterDistance = 29
+        Me.SplitContainer2.Size = New System.Drawing.Size(830, 788)
+        Me.SplitContainer2.SplitterDistance = 26
         Me.SplitContainer2.TabIndex = 1
         '
         'ToolTabStrip5
@@ -780,26 +801,50 @@ Partial Class FormMain
         Me.ToolTabStrip17.TabIndex = 0
         Me.ToolTabStrip17.TabStop = False
         '
-        'btnExportSchedule
+        'DocumentWindow1
         '
-        Me.btnExportSchedule.BackColor = System.Drawing.Color.Transparent
-        Me.btnExportSchedule.BackgroundImage = CType(resources.GetObject("btnExportSchedule.BackgroundImage"), System.Drawing.Image)
-        Me.btnExportSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnExportSchedule.FlatAppearance.BorderSize = 0
-        Me.btnExportSchedule.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExportSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnExportSchedule.Location = New System.Drawing.Point(5, 14)
-        Me.btnExportSchedule.Name = "btnExportSchedule"
-        Me.btnExportSchedule.Size = New System.Drawing.Size(175, 50)
-        Me.btnExportSchedule.TabIndex = 7
-        Me.btnExportSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnExportSchedule.UseVisualStyleBackColor = False
+        Me.DocumentWindow1.Location = New System.Drawing.Point(0, 0)
+        Me.DocumentWindow1.Name = "DocumentWindow1"
+        Me.DocumentWindow1.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
+        Me.DocumentWindow1.Size = New System.Drawing.Size(200, 200)
+        Me.DocumentWindow1.Text = "DocumentWindow1"
+        '
+        'DocumentWindow2
+        '
+        Me.DocumentWindow2.Location = New System.Drawing.Point(0, 0)
+        Me.DocumentWindow2.Name = "DocumentWindow2"
+        Me.DocumentWindow2.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.TabbedDocument
+        Me.DocumentWindow2.Size = New System.Drawing.Size(200, 200)
+        Me.DocumentWindow2.Text = "DocumentWindow2"
+        '
+        'twImportSchedule
+        '
+        Me.twImportSchedule.Caption = Nothing
+        Me.twImportSchedule.Location = New System.Drawing.Point(1, 24)
+        Me.twImportSchedule.Name = "twImportSchedule"
+        Me.twImportSchedule.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twImportSchedule.Size = New System.Drawing.Size(818, 698)
+        Me.twImportSchedule.Text = "Import Schedule"
+        '
+        'ToolTabStrip18
+        '
+        Me.ToolTabStrip18.CanUpdateChildIndex = True
+        Me.ToolTabStrip18.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip18.Name = "ToolTabStrip18"
+        '
+        '
+        '
+        Me.ToolTabStrip18.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip18.SelectedIndex = 0
+        Me.ToolTabStrip18.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip18.TabIndex = 0
+        Me.ToolTabStrip18.TabStop = False
         '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1063, 867)
+        Me.ClientSize = New System.Drawing.Size(1037, 788)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "FormMain"
         Me.Text = "FormMain"
@@ -836,6 +881,7 @@ Partial Class FormMain
         CType(Me.ToolTabStrip15, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip17, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip18, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -891,5 +937,9 @@ Partial Class FormMain
     Friend WithEvents ToolTabStrip16 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents twSettings As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip17 As Telerik.WinControls.UI.Docking.ToolTabStrip
-    Friend WithEvents btnExportSchedule As System.Windows.Forms.Button
+    Friend WithEvents btnImportSchedule As System.Windows.Forms.Button
+    Friend WithEvents twImportSchedule As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents DocumentWindow1 As Telerik.WinControls.UI.Docking.DocumentWindow
+    Friend WithEvents DocumentWindow2 As Telerik.WinControls.UI.Docking.DocumentWindow
+    Friend WithEvents ToolTabStrip18 As Telerik.WinControls.UI.Docking.ToolTabStrip
 End Class
