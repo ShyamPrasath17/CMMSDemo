@@ -23,7 +23,7 @@
 
     Public frmSettings_ As frmSettings
 
-
+    Public frmImportSchedule_ As frmImportSchedule
 
 
     Dim frmDashBoard As frmDashBoard
@@ -43,6 +43,7 @@
         addfrmCommonTskPool()
         addfrmschedular()
         addfrmsettings()
+        addfrmImportSchedule()
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -61,6 +62,7 @@
         ToolWindowWoLst.Controls.Add(frmwolst)
         twScheduler.Controls.Add(frmschedular)
         twSettings.Controls.Add(frmSettings_)
+        twImportSchedule.Controls.Add(frmImportSchedule_)
 
     End Sub
 
@@ -78,6 +80,7 @@
         TwIndeptTaskPool.Hide()
         twCommonTaskPool.Hide()
         twSettings.Hide()
+        twImportSchedule.Hide()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -193,6 +196,14 @@
         frmSettings_.Show()
     End Sub
 
+    Private Sub addfrmImportSchedule()
+        frmImportSchedule_ = New frmImportSchedule
+        frmImportSchedule_.Dock = DockStyle.Fill
+        frmImportSchedule_.TopLevel = False
+        frmImportSchedule_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmImportSchedule_.Show()
+    End Sub
+
     Private Sub addfrmIndeptTsk()
         frmindepttsk = New frmIndependentTask()
         frmindepttsk.Dock = DockStyle.Fill
@@ -292,5 +303,10 @@
 
     Private Sub btnViewWorkOrders_Click(sender As Object, e As EventArgs) Handles btnViewWorkOrders.Click
         frmwolst.ViewAllWorkOrders()
+    End Sub
+
+    Private Sub btnImportSchedule_Click(sender As Object, e As EventArgs) Handles btnImportSchedule.Click
+        twImportSchedule.Show()
+        twImportSchedule.Select()
     End Sub
 End Class
