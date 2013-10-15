@@ -122,4 +122,8 @@ Public Class frmTaskShedular
         End If
     End Sub
 
+    Private Sub Rshcmms_AppointmentFormatting(sender As Object, e As SchedulerAppointmentEventArgs) Handles Rshcmms.AppointmentFormatting
+        'e.AppointmentElement.ShowAppointmentDescription = True
+        'e.AppointmentElement.Location.
+    End Sub
 End Class

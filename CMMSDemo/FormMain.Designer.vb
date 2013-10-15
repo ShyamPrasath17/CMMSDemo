@@ -361,7 +361,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpScheduler
+        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
         Me.rpvMain.Size = New System.Drawing.Size(203, 788)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -382,7 +382,7 @@ Partial Class FormMain
         Me.rpvpProjects.Image = CType(resources.GetObject("rpvpProjects.Image"), System.Drawing.Image)
         Me.rpvpProjects.Location = New System.Drawing.Point(5, 29)
         Me.rpvpProjects.Name = "rpvpProjects"
-        Me.rpvpProjects.Size = New System.Drawing.Size(209, 251)
+        Me.rpvpProjects.Size = New System.Drawing.Size(193, 235)
         Me.rpvpProjects.Text = "Projects"
         '
         'btnCreateProjects
@@ -407,7 +407,7 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
         Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 29)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(199, 314)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(193, 235)
         Me.rpvpWorkOrders.Text = "Work Orders"
         '
         'btnViewWorkOrders

@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports Telerik.WinControls.UI
 Imports Telerik.WinControls.UI.Scheduler.ICalendar
 Public Class frmImportSchedule
 
@@ -25,5 +26,20 @@ Public Class frmImportSchedule
         If Me.Rcal.SelectedDates.Count > 0 Then
             Me.RshImport.ActiveView.StartDate = Me.Rcal.SelectedDate
         End If
+    End Sub
+
+    Private Sub RshImport_ContextMenuShowing(sender As Object, e As Telerik.WinControls.UI.SchedulerContextMenuShowingEventArgs) Handles RshImport.ContextMenuShowing
+        If TypeOf e.Element Is AppointmentElement Then
+            e.ContextMenu.Items.RemoveAt(0)
+        End If
+    End Sub
+
+    Private Sub RshImport_AppointmentElementDoubleClick(sender As Object, e As EventArgs) Handles RshImport.AppointmentElementDoubleClick
+        Dim frmattach As frmAttachToWorkOrder = New frmAttachToWorkOrder()
+        frmattach.ShowDialog()
+    End Sub
+
+    Private Sub RshImport_AppointmentEditDialogShowing(sender As Object, e As AppointmentEditDialogShowingEventArgs) Handles RshImport.AppointmentEditDialogShowing
+        e.Cancel = True
     End Sub
 End Class

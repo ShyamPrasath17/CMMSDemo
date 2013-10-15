@@ -263,23 +263,33 @@
     Private Sub btnCreateProjects_Click(sender As Object, e As EventArgs) Handles btnCreateProjects.Click
         twProject.Show()
         twProject.Select()
+        frmProj.txtprojectID.Text = ""
+        frmProj.txtstatus.Text = ""
     End Sub
 
     Private Sub btnCreateWorkOrder_Click(sender As Object, e As EventArgs) Handles btnCreateWorkOrder.Click
         ToolWindowWo.Show()
         ToolWindowWo.Select()
+        frmwo.txtwono.Text = ""
+        frmwo.txtstatus.Text = ""
     End Sub
 
     Private Sub btnCreateTaskInternal_Click(sender As Object, e As EventArgs) Handles btnCreateTaskInternal.Click
         twTask.Show()
         twTask.Select()
         frmTsk.radInternal.Checked = True
+        frmTsk.txtTaskID.Text = ""
+        frmTsk.txtTaskName.Text = ""
+        frmTsk.txtstatus.Text = ""
     End Sub
 
     Private Sub btnCreateTaskOutsourced_Click(sender As Object, e As EventArgs) Handles btnCreateTaskOutsourced.Click
         twTask.Show()
         twTask.Select()
         frmTsk.radOutsourced.Checked = True
+        frmTsk.txtTaskID.Text = ""
+        frmTsk.txtTaskName.Text = ""
+        frmTsk.txtstatus.Text = ""
     End Sub
 
     Private Sub btnViewTasks_Click(sender As Object, e As EventArgs) Handles btnViewTasks.Click
