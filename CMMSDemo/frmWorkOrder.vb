@@ -25,9 +25,9 @@
 
     Private Sub chkBillable_CheckedChanged(sender As Object, e As EventArgs) Handles chkBillable.CheckedChanged
         If chkBillable.Checked Then
-            grpBillable.Visible = True
+            grpBillable.Enabled = True
         Else
-            grpBillable.Visible = False
+            grpBillable.Enabled = False
         End If
     End Sub
 

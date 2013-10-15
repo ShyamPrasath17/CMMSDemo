@@ -74,7 +74,7 @@ Partial Class frmTaskShedular
         Me.Rshcmms.Location = New System.Drawing.Point(0, 0)
         Me.Rshcmms.Name = "Rshcmms"
         SchedulerDailyPrintStyle1.AppointmentFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        SchedulerDailyPrintStyle1.DateEndRange = New Date(2013, 10, 14, 0, 0, 0, 0)
+        SchedulerDailyPrintStyle1.DateEndRange = New Date(2013, 10, 15, 0, 0, 0, 0)
         SchedulerDailyPrintStyle1.DateHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
         SchedulerDailyPrintStyle1.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
         SchedulerDailyPrintStyle1.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
@@ -113,7 +113,6 @@ Partial Class frmTaskShedular
         '
         'BtnViewNonScheduled
         '
-        Me.BtnViewNonScheduled.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BtnViewNonScheduled.Location = New System.Drawing.Point(1140, 9)
         Me.BtnViewNonScheduled.Name = "BtnViewNonScheduled"
         Me.BtnViewNonScheduled.Size = New System.Drawing.Size(119, 48)
@@ -145,7 +144,6 @@ Partial Class frmTaskShedular
         '
         'btnExport
         '
-        Me.btnExport.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnExport.Location = New System.Drawing.Point(1058, 9)
         Me.btnExport.Name = "btnExport"
         Me.btnExport.Size = New System.Drawing.Size(79, 48)
