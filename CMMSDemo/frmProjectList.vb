@@ -40,6 +40,7 @@
             dtProject.Rows.Add("Project " & i.ToString(), "Approved")
         Next
         dgvProjectList.DataSource = dtProject
+        dgvProjectList.BestFitColumns()
 
     End Sub
 

@@ -1,7 +1,16 @@
 ﻿Public Class frmWorkOrder
+    Dim dtcomment As DataTable
 
     Private Sub WorkOrder_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         chkBillable.Checked = True
+
+        dtcomment = New DataTable()
+        dtcomment.Columns.Add("UserID", GetType(String))
+        dtcomment.Columns.Add("Date", GetType(DateTime))
+        dtcomment.Columns.Add("Comment", GetType(String))
+
+        dgvComment.DataSource = dtcomment
+        dgvComment.BestFitColumns()
     End Sub
 
     Public Sub fillworkorder(ByRef dr As DataRow, ByRef dt As DataTable)

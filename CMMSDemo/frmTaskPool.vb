@@ -161,4 +161,10 @@ Public Class frmTaskPool
     End Class
 #End Region
 
+    Private Sub dgvIndepSchedTaskList_CommandCellClick(sender As Object, e As EventArgs) Handles dgvIndepSchedTaskList.CommandCellClick
+        If dgvIndepSchedTaskList.CurrentColumn.Name = "btncol" Then
+            Dim frmattach As frmAttachToWorkOrder = New frmAttachToWorkOrder()
+            frmattach.ShowDialog()
+        End If
+    End Sub
 End Class
