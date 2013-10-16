@@ -32,6 +32,8 @@ Partial Class frmAssignEquipments
         Me.btnOutSource = New System.Windows.Forms.Button()
         Me.grpOutSource = New System.Windows.Forms.GroupBox()
         Me.grpInternalEmp = New System.Windows.Forms.GroupBox()
+        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -51,8 +53,6 @@ Partial Class frmAssignEquipments
         Me.twEquipment = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.grpOutSource.SuspendLayout()
         Me.grpInternalEmp.SuspendLayout()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -135,9 +135,10 @@ Partial Class frmAssignEquipments
         'grpOutSource
         '
         Me.grpOutSource.Controls.Add(Me.btnOutSource)
+        Me.grpOutSource.Controls.Add(Me.BtnAddemp)
         Me.grpOutSource.Location = New System.Drawing.Point(351, 16)
         Me.grpOutSource.Name = "grpOutSource"
-        Me.grpOutSource.Size = New System.Drawing.Size(257, 62)
+        Me.grpOutSource.Size = New System.Drawing.Size(257, 120)
         Me.grpOutSource.TabIndex = 118
         Me.grpOutSource.TabStop = False
         '
@@ -146,7 +147,6 @@ Partial Class frmAssignEquipments
         Me.grpInternalEmp.Controls.Add(Me.cmbrptUom)
         Me.grpInternalEmp.Controls.Add(Me.Label7)
         Me.grpInternalEmp.Controls.Add(Me.Label6)
-        Me.grpInternalEmp.Controls.Add(Me.BtnAddemp)
         Me.grpInternalEmp.Controls.Add(Me.txtEmpName)
         Me.grpInternalEmp.Controls.Add(Me.Button6)
         Me.grpInternalEmp.Controls.Add(Me.NumericUpDown1)
@@ -158,14 +158,32 @@ Partial Class frmAssignEquipments
         Me.grpInternalEmp.TabIndex = 117
         Me.grpInternalEmp.TabStop = False
         '
+        'cmbrptUom
+        '
+        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbrptUom.FormattingEnabled = True
+        Me.cmbrptUom.Location = New System.Drawing.Point(125, 89)
+        Me.cmbrptUom.Name = "cmbrptUom"
+        Me.cmbrptUom.Size = New System.Drawing.Size(112, 21)
+        Me.cmbrptUom.TabIndex = 134
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(15, 97)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(56, 13)
+        Me.Label7.TabIndex = 133
+        Me.Label7.Text = "Rate Type"
+        '
         'BtnAddemp
         '
         Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(18, 126)
+        Me.BtnAddemp.Location = New System.Drawing.Point(0, 65)
         Me.BtnAddemp.Name = "BtnAddemp"
-        Me.BtnAddemp.Size = New System.Drawing.Size(105, 23)
+        Me.BtnAddemp.Size = New System.Drawing.Size(245, 49)
         Me.BtnAddemp.TabIndex = 119
-        Me.BtnAddemp.Text = "Add New"
+        Me.BtnAddemp.Text = "Add Internal Equpiment"
         Me.BtnAddemp.UseVisualStyleBackColor = True
         '
         'NumericUpDown1
@@ -344,6 +362,7 @@ Partial Class frmAssignEquipments
         Me.twEquipment.Name = "twEquipment"
         Me.twEquipment.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.twEquipment.Size = New System.Drawing.Size(625, 675)
+        Me.twEquipment.Text = "twEquipment"
         '
         'DocumentContainer1
         '
@@ -374,24 +393,6 @@ Partial Class frmAssignEquipments
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 473)
         Me.ToolTabStrip1.TabIndex = 1
         Me.ToolTabStrip1.TabStop = False
-        '
-        'cmbrptUom
-        '
-        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbrptUom.FormattingEnabled = True
-        Me.cmbrptUom.Location = New System.Drawing.Point(125, 89)
-        Me.cmbrptUom.Name = "cmbrptUom"
-        Me.cmbrptUom.Size = New System.Drawing.Size(112, 21)
-        Me.cmbrptUom.TabIndex = 134
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(15, 97)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(56, 13)
-        Me.Label7.TabIndex = 133
-        Me.Label7.Text = "Rate Type"
         '
         'frmAssignEquipments
         '
