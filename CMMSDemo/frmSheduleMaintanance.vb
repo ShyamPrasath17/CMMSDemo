@@ -19,6 +19,8 @@
         cmbrptUom.DisplayMember = "UOM"
         cmbEndUom.DataSource = dtType.DefaultView
         cmbEndUom.DisplayMember = "UOM"
+        cmbThreshold.DataSource = dtType.DefaultView
+        cmbThreshold.DisplayMember = "UOM"
     End Sub
 
     Private Sub createTypeTbl()
@@ -27,6 +29,7 @@
         dtType.Columns.Add("UOM", GetType(String))
         dtType.Rows.Add("TimeBased", "Hours")
         dtType.Rows.Add("TimeBased", "Days")
+        dtType.Rows.Add("TimeBased", "Weeks")
         dtType.Rows.Add("TimeBased", "Months")
         dtType.Rows.Add("TimeBased", "Years")
         dtType.Rows.Add("MeterBased", "Kms")
@@ -41,4 +44,16 @@
             grpAttachToWo.Enabled = True
         End If
     End Sub
+
+    Sub fillSched(dataRow As DataRow)
+        txtMaintID.Text = dataRow("MaintananceID").ToString()
+        txtName.Text = dataRow("Name").ToString()
+        txtStatus.Text = dataRow("Status").ToString()
+        If dataRow("RecurrenceType").ToString() = "TimeBased" Then
+            radTimeBased.Checked = True
+        Else
+            radMeter.Checked = True
+        End If
+    End Sub
+
 End Class

@@ -16,17 +16,18 @@
         dtWo.Columns.Add("ProjectNo", GetType(String))
         dtWo.Columns.Add("WorkOrderNo", GetType(String))
         dtWo.Columns.Add("WorkOrderName", GetType(String))
-        dtWo.Columns.Add("ServiceType", GetType(String))
+        dtWo.Columns.Add("Symptoms", GetType(String))
+        dtWo.Columns.Add("Leader", GetType(String))
         dtWo.Columns.Add("status", GetType(String))
         For i As Integer = 1 To 15
             If i < 4 Then
-                dtWo.Rows.Add("Project 1", "Wo " & i.ToString(), "service " + i.ToString(), "102" + i.ToString(), "Approved")
+                dtWo.Rows.Add("Project 1", "Wo " & i.ToString(), "service " + i.ToString(), "Perfomance issues", "Tom", "Approved")
             ElseIf i >= 4 And i < 8 Then
-                dtWo.Rows.Add("Project 2", "Wo " & i.ToString(), "service " + i.ToString(), "105" + i.ToString(), "New")
+                dtWo.Rows.Add("Project 2", "Wo " & i.ToString(), "service " + i.ToString(), "Low Output Quality", "Raj", "New")
             ElseIf i >= 8 And i < 12 Then
-                dtWo.Rows.Add("Project 3", "Wo " & i.ToString(), "service " + i.ToString(), "107" + i.ToString(), "Approved")
+                dtWo.Rows.Add("Project 3", "Wo " & i.ToString(), "service " + i.ToString(), "Damages Found", "Xyz", "Approved")
             Else
-                dtWo.Rows.Add("Project 6", "Wo " & i.ToString(), "service " + i.ToString(), "109" + i.ToString(), "New")
+                dtWo.Rows.Add("Project 6", "Wo " & i.ToString(), "service " + i.ToString(), "Unusual Noise in machine", "Abc", "New")
             End If
         Next
         dgvWo.DataSource = dtWo.Copy()

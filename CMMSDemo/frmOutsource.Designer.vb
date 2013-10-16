@@ -40,6 +40,14 @@ Partial Class frmOutsource
         Me.txtQty = New System.Windows.Forms.TextBox()
         Me.lblQty = New System.Windows.Forms.Label()
         Me.grpDurationBased = New System.Windows.Forms.GroupBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -49,15 +57,7 @@ Partial Class frmOutsource
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.chkDurationBasedCost = New System.Windows.Forms.CheckBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.NumericUpDown3 = New System.Windows.Forms.NumericUpDown()
         Me.grpDurationBased.SuspendLayout()
         CType(Me.NumericUpDown3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -178,7 +178,7 @@ Partial Class frmOutsource
         Me.cmbOutSourceType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbOutSourceType.Enabled = False
         Me.cmbOutSourceType.FormattingEnabled = True
-        Me.cmbOutSourceType.Items.AddRange(New Object() {"Employee", "Equipment", "Task"})
+        Me.cmbOutSourceType.Items.AddRange(New Object() {"Labour", "Equipment", "Task"})
         Me.cmbOutSourceType.Location = New System.Drawing.Point(132, 99)
         Me.cmbOutSourceType.Name = "cmbOutSourceType"
         Me.cmbOutSourceType.Size = New System.Drawing.Size(185, 21)
@@ -218,6 +218,72 @@ Partial Class frmOutsource
         Me.grpDurationBased.Size = New System.Drawing.Size(267, 159)
         Me.grpDurationBased.TabIndex = 151
         Me.grpDurationBased.TabStop = False
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Location = New System.Drawing.Point(6, 78)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(73, 13)
+        Me.Label18.TabIndex = 164
+        Me.Label18.Text = "Hours per day"
+        '
+        'NumericUpDown3
+        '
+        Me.NumericUpDown3.Location = New System.Drawing.Point(85, 76)
+        Me.NumericUpDown3.Name = "NumericUpDown3"
+        Me.NumericUpDown3.Size = New System.Drawing.Size(94, 20)
+        Me.NumericUpDown3.TabIndex = 165
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Location = New System.Drawing.Point(85, 50)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.Size = New System.Drawing.Size(95, 20)
+        Me.TextBox7.TabIndex = 157
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(85, 19)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(95, 20)
+        Me.TextBox8.TabIndex = 156
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Hours", "Days"})
+        Me.ComboBox1.Location = New System.Drawing.Point(186, 19)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(73, 21)
+        Me.ComboBox1.TabIndex = 151
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(6, 53)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(30, 13)
+        Me.Label9.TabIndex = 131
+        Me.Label9.Text = "Rate"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(85, 100)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.ReadOnly = True
+        Me.TextBox2.Size = New System.Drawing.Size(95, 20)
+        Me.TextBox2.TabIndex = 130
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(6, 107)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(62, 13)
+        Me.Label7.TabIndex = 129
+        Me.Label7.Text = "Total Hours"
         '
         'TextBox4
         '
@@ -298,56 +364,6 @@ Partial Class frmOutsource
         Me.Label12.TabIndex = 162
         Me.Label12.Text = "Description"
         '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(6, 107)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(62, 13)
-        Me.Label7.TabIndex = 129
-        Me.Label7.Text = "Total Hours"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(85, 100)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = True
-        Me.TextBox2.Size = New System.Drawing.Size(95, 20)
-        Me.TextBox2.TabIndex = 130
-        '
-        'Label9
-        '
-        Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(6, 53)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(30, 13)
-        Me.Label9.TabIndex = 131
-        Me.Label9.Text = "Rate"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Hours", "Days"})
-        Me.ComboBox1.Location = New System.Drawing.Point(186, 19)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(73, 21)
-        Me.ComboBox1.TabIndex = 151
-        '
-        'TextBox8
-        '
-        Me.TextBox8.Location = New System.Drawing.Point(85, 19)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(95, 20)
-        Me.TextBox8.TabIndex = 156
-        '
-        'TextBox7
-        '
-        Me.TextBox7.Location = New System.Drawing.Point(85, 50)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(95, 20)
-        Me.TextBox7.TabIndex = 157
-        '
         'chkDurationBasedCost
         '
         Me.chkDurationBasedCost.AutoSize = True
@@ -357,22 +373,6 @@ Partial Class frmOutsource
         Me.chkDurationBasedCost.TabIndex = 163
         Me.chkDurationBasedCost.Text = "Duration based costing"
         Me.chkDurationBasedCost.UseVisualStyleBackColor = True
-        '
-        'Label18
-        '
-        Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(6, 78)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(73, 13)
-        Me.Label18.TabIndex = 164
-        Me.Label18.Text = "Hours per day"
-        '
-        'NumericUpDown3
-        '
-        Me.NumericUpDown3.Location = New System.Drawing.Point(85, 76)
-        Me.NumericUpDown3.Name = "NumericUpDown3"
-        Me.NumericUpDown3.Size = New System.Drawing.Size(94, 20)
-        Me.NumericUpDown3.TabIndex = 165
         '
         'frmOutsource
         '

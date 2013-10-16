@@ -24,7 +24,7 @@ Partial Class FormMain
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.twImportSchedule = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twSchedMaintLst = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
         Me.ToolTabStrip11 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
@@ -41,6 +41,7 @@ Partial Class FormMain
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twScheduler = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twImportSchedule = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip4 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.rpvMain = New Telerik.WinControls.UI.RadPageView()
@@ -80,6 +81,7 @@ Partial Class FormMain
         Me.DocumentWindow1 = New Telerik.WinControls.UI.Docking.DocumentWindow()
         Me.DocumentWindow2 = New Telerik.WinControls.UI.Docking.DocumentWindow()
         Me.ToolTabStrip18 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.ToolTabStrip19 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,11 +115,12 @@ Partial Class FormMain
         CType(Me.ToolTabStrip16, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip17, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ToolTabStrip18, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ToolTabStrip19, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.twImportSchedule
+        Me.RadDockMain.ActiveWindow = Me.twSchedMaintLst
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
         Me.RadDockMain.Controls.Add(Me.ToolTabStrip11)
         Me.RadDockMain.Dock = System.Windows.Forms.DockStyle.Fill
@@ -137,14 +140,14 @@ Partial Class FormMain
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
         '
-        'twImportSchedule
+        'twSchedMaintLst
         '
-        Me.twImportSchedule.Caption = Nothing
-        Me.twImportSchedule.Location = New System.Drawing.Point(1, 24)
-        Me.twImportSchedule.Name = "twImportSchedule"
-        Me.twImportSchedule.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twImportSchedule.Size = New System.Drawing.Size(818, 700)
-        Me.twImportSchedule.Text = "Import Schedule"
+        Me.twSchedMaintLst.Caption = Nothing
+        Me.twSchedMaintLst.Location = New System.Drawing.Point(1, 24)
+        Me.twSchedMaintLst.Name = "twSchedMaintLst"
+        Me.twSchedMaintLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twSchedMaintLst.Size = New System.Drawing.Size(818, 698)
+        Me.twSchedMaintLst.Text = "Schedule Maintanance"
         '
         'DocumentContainer1
         '
@@ -178,13 +181,14 @@ Partial Class FormMain
         Me.ToolTabStrip11.Controls.Add(Me.twDashBoard)
         Me.ToolTabStrip11.Controls.Add(Me.twScheduler)
         Me.ToolTabStrip11.Controls.Add(Me.twImportSchedule)
+        Me.ToolTabStrip11.Controls.Add(Me.twSchedMaintLst)
         Me.ToolTabStrip11.Location = New System.Drawing.Point(5, 5)
         Me.ToolTabStrip11.Name = "ToolTabStrip11"
         '
         '
         '
         Me.ToolTabStrip11.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip11.SelectedIndex = 14
+        Me.ToolTabStrip11.SelectedIndex = 15
         Me.ToolTabStrip11.Size = New System.Drawing.Size(820, 748)
         Me.ToolTabStrip11.TabIndex = 1
         Me.ToolTabStrip11.TabStop = False
@@ -314,6 +318,15 @@ Partial Class FormMain
         Me.twScheduler.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.twScheduler.Size = New System.Drawing.Size(818, 698)
         Me.twScheduler.Text = "Scheduler"
+        '
+        'twImportSchedule
+        '
+        Me.twImportSchedule.Caption = Nothing
+        Me.twImportSchedule.Location = New System.Drawing.Point(1, 24)
+        Me.twImportSchedule.Name = "twImportSchedule"
+        Me.twImportSchedule.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twImportSchedule.Size = New System.Drawing.Size(818, 698)
+        Me.twImportSchedule.Text = "Import Schedule"
         '
         'ToolTabStrip4
         '
@@ -840,6 +853,20 @@ Partial Class FormMain
         Me.ToolTabStrip18.TabIndex = 0
         Me.ToolTabStrip18.TabStop = False
         '
+        'ToolTabStrip19
+        '
+        Me.ToolTabStrip19.CanUpdateChildIndex = True
+        Me.ToolTabStrip19.Location = New System.Drawing.Point(0, 0)
+        Me.ToolTabStrip19.Name = "ToolTabStrip19"
+        '
+        '
+        '
+        Me.ToolTabStrip19.RootElement.MinSize = New System.Drawing.Size(25, 25)
+        Me.ToolTabStrip19.SelectedIndex = 0
+        Me.ToolTabStrip19.Size = New System.Drawing.Size(200, 200)
+        Me.ToolTabStrip19.TabIndex = 0
+        Me.ToolTabStrip19.TabStop = False
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -882,6 +909,7 @@ Partial Class FormMain
         CType(Me.ToolTabStrip16, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip17, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ToolTabStrip18, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ToolTabStrip19, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -942,4 +970,6 @@ Partial Class FormMain
     Friend WithEvents DocumentWindow1 As Telerik.WinControls.UI.Docking.DocumentWindow
     Friend WithEvents DocumentWindow2 As Telerik.WinControls.UI.Docking.DocumentWindow
     Friend WithEvents ToolTabStrip18 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents twSchedMaintLst As Telerik.WinControls.UI.Docking.ToolWindow
+    Friend WithEvents ToolTabStrip19 As Telerik.WinControls.UI.Docking.ToolTabStrip
 End Class

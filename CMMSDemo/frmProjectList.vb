@@ -30,14 +30,15 @@
     End Sub
     Private Sub createtable()
         dtProject = New DataTable()
-        'dt.Columns.Add("Project", GetType(String))
-        'dt.Columns.Add("WorkOrder", GetType(String))
         dtProject.Columns.Add("ProjectNo", GetType(String))
-        'dt.Columns.Add("ServiceType", GetType(String))
         dtProject.Columns.Add("status", GetType(String))
+        dtProject.Columns.Add("Leader", GetType(String))
+        dtProject.Columns.Add("EstimatedCost", GetType(String))
+        dtProject.Columns.Add("StartDate", GetType(DateTime))
+        dtProject.Columns.Add("EndDate", GetType(DateTime))
 
         For i As Integer = 1 To 10
-            dtProject.Rows.Add("Project " & i.ToString(), "Approved")
+            dtProject.Rows.Add("Project " & i.ToString(), "Approved", "Tom", (i * 500).ToString(), System.DateTime.Now.AddMonths(i).AddDays(i + 2), System.DateTime.Now.AddMonths(i + 10).AddDays(i))
         Next
         dgvProjectList.DataSource = dtProject
         dgvProjectList.BestFitColumns()

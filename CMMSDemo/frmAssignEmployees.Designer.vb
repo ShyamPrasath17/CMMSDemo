@@ -32,11 +32,11 @@ Partial Class frmAssignEmployees
         Me.Button2 = New System.Windows.Forms.Button()
         Me.grpOutSource = New System.Windows.Forms.GroupBox()
         Me.btnOutSource = New System.Windows.Forms.Button()
+        Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.grpInternalEmp = New System.Windows.Forms.GroupBox()
         Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtEmpName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -172,8 +172,18 @@ Partial Class frmAssignEmployees
         Me.btnOutSource.Name = "btnOutSource"
         Me.btnOutSource.Size = New System.Drawing.Size(245, 43)
         Me.btnOutSource.TabIndex = 0
-        Me.btnOutSource.Text = "Out Source New People >>"
+        Me.btnOutSource.Text = "Out Source Labour >>"
         Me.btnOutSource.UseVisualStyleBackColor = True
+        '
+        'BtnAddemp
+        '
+        Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAddemp.Location = New System.Drawing.Point(6, 62)
+        Me.BtnAddemp.Name = "BtnAddemp"
+        Me.BtnAddemp.Size = New System.Drawing.Size(245, 39)
+        Me.BtnAddemp.TabIndex = 119
+        Me.BtnAddemp.Text = "Add Internal Employee"
+        Me.BtnAddemp.UseVisualStyleBackColor = True
         '
         'grpInternalEmp
         '
@@ -219,16 +229,6 @@ Partial Class frmAssignEmployees
         Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 86
         Me.Label6.Text = "Employee"
-        '
-        'BtnAddemp
-        '
-        Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(6, 62)
-        Me.BtnAddemp.Name = "BtnAddemp"
-        Me.BtnAddemp.Size = New System.Drawing.Size(245, 39)
-        Me.BtnAddemp.TabIndex = 119
-        Me.BtnAddemp.Text = "Add Internal Employee"
-        Me.BtnAddemp.UseVisualStyleBackColor = True
         '
         'TextBox3
         '

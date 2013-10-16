@@ -7,7 +7,7 @@
     End Sub
     Private Sub frmOutsource_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If Type_ = "Employee" Then
-            Me.Text = "Outsource Employee"
+            Me.Text = "Outsource Labour"
             chkDurationBasedCost.Checked = True
             chkDurationBasedCost.Enabled = False
             'txtQty.ReadOnly = True

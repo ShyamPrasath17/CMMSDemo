@@ -25,6 +25,8 @@
 
     Public frmImportSchedule_ As frmImportSchedule
 
+    Public frmSchedMaintList_ As frmSchedMaintList
+
 
     Dim frmDashBoard As frmDashBoard
 
@@ -42,6 +44,7 @@
         addfrmIndeptTskPool()
         addfrmCommonTskPool()
         addfrmschedular()
+        addfrmSchedMaintList()
         addfrmsettings()
         addfrmImportSchedule()
         ' This call is required by the designer.
@@ -63,6 +66,7 @@
         twScheduler.Controls.Add(frmschedular)
         twSettings.Controls.Add(frmSettings_)
         twImportSchedule.Controls.Add(frmImportSchedule_)
+        twSchedMaintLst.Controls.Add(frmSchedMaintList_)
 
     End Sub
 
@@ -81,6 +85,7 @@
         twCommonTaskPool.Hide()
         twSettings.Hide()
         twImportSchedule.Hide()
+        TwScheduledMaint.Hide()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -188,6 +193,13 @@
         frmschedular.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmschedular.Show()
     End Sub
+    Private Sub addfrmSchedMaintList()
+        frmSchedMaintList_ = New frmSchedMaintList()
+        frmSchedMaintList_.Dock = DockStyle.Fill
+        frmSchedMaintList_.TopLevel = False
+        frmSchedMaintList_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmSchedMaintList_.Show()
+    End Sub
     Private Sub addfrmsettings()
         frmSettings_ = New frmSettings
         frmSettings_.Dock = DockStyle.Fill
@@ -249,8 +261,10 @@
             twDashBoard.Show()
             twDashBoard.Select()
         ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
-            TwSehedTaskPool.Show()
-            TwSehedTaskPool.Select()
+            'TwSehedTaskPool.Show()
+            'TwSehedTaskPool.Select()
+            twSchedMaintLst.Show()
+            twSchedMaintLst.Select()
         ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
             twScheduler.Show()
             twScheduler.Select()
