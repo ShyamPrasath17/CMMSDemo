@@ -73,7 +73,6 @@
         twProjectList.Hide()
         twTask.Hide()
         twTaskList.Hide()
-        AdjustSplitters()
         TwIndependentTask.Hide()
         TwScheduledMaint.Hide()
         TwSehedTaskPool.Hide()
@@ -81,15 +80,6 @@
         twCommonTaskPool.Hide()
         twSettings.Hide()
         twImportSchedule.Hide()
-    End Sub
-
-    Private Sub AdjustSplitters()
-        'Set Fixed size for Split Panels
-        SplitContainer1.SplitterDistance = SplitContainer1.Height - 800
-        SplitContainer1.FixedPanel = FixedPanel.Panel1
-
-        SplitContainer2.SplitterDistance = SplitContainer2.Height - 1000
-        SplitContainer2.FixedPanel = FixedPanel.Panel1
     End Sub
 
     Private Sub addDashBoardFrm()
