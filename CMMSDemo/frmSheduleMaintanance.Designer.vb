@@ -50,9 +50,15 @@ Partial Class frmSheduleMaintanance
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.ComboBox3 = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.grpAttachToWo = New System.Windows.Forms.GroupBox()
+        Me.chkCreatenewWo = New System.Windows.Forms.CheckBox()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.grpAttachToWo.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button6
@@ -176,7 +182,7 @@ Partial Class frmSheduleMaintanance
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(527, 588)
+        Me.Button4.Location = New System.Drawing.Point(610, 588)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 125
@@ -186,7 +192,7 @@ Partial Class frmSheduleMaintanance
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(446, 588)
+        Me.Button2.Location = New System.Drawing.Point(529, 588)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 124
@@ -242,6 +248,7 @@ Partial Class frmSheduleMaintanance
         '
         Me.cmbEndUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbEndUom.FormattingEnabled = True
+        Me.cmbEndUom.Items.AddRange(New Object() {"Day", "Week", "Month", "Year"})
         Me.cmbEndUom.Location = New System.Drawing.Point(224, 22)
         Me.cmbEndUom.Name = "cmbEndUom"
         Me.cmbEndUom.Size = New System.Drawing.Size(72, 21)
@@ -263,6 +270,7 @@ Partial Class frmSheduleMaintanance
         '
         Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbrptUom.FormattingEnabled = True
+        Me.cmbrptUom.Items.AddRange(New Object() {"Day", "Week", "Month", "Year"})
         Me.cmbrptUom.Location = New System.Drawing.Point(224, 22)
         Me.cmbrptUom.Name = "cmbrptUom"
         Me.cmbrptUom.Size = New System.Drawing.Size(72, 21)
@@ -301,12 +309,61 @@ Partial Class frmSheduleMaintanance
         Me.Label17.TabIndex = 134
         Me.Label17.Text = "Task Service Type"
         '
+        'Button1
+        '
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.Location = New System.Drawing.Point(270, 24)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(24, 24)
+        Me.Button1.TabIndex = 138
+        Me.Button1.Tag = "DISABLE"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(13, 29)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(59, 13)
+        Me.Label3.TabIndex = 137
+        Me.Label3.Text = "WorkOrder"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(78, 26)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(185, 20)
+        Me.TextBox5.TabIndex = 136
+        '
+        'grpAttachToWo
+        '
+        Me.grpAttachToWo.Controls.Add(Me.Button1)
+        Me.grpAttachToWo.Controls.Add(Me.TextBox5)
+        Me.grpAttachToWo.Controls.Add(Me.Label3)
+        Me.grpAttachToWo.Location = New System.Drawing.Point(381, 45)
+        Me.grpAttachToWo.Name = "grpAttachToWo"
+        Me.grpAttachToWo.Size = New System.Drawing.Size(304, 54)
+        Me.grpAttachToWo.TabIndex = 139
+        Me.grpAttachToWo.TabStop = False
+        Me.grpAttachToWo.Text = "Attache to Work Order"
+        '
+        'chkCreatenewWo
+        '
+        Me.chkCreatenewWo.AutoSize = True
+        Me.chkCreatenewWo.Location = New System.Drawing.Point(381, 13)
+        Me.chkCreatenewWo.Name = "chkCreatenewWo"
+        Me.chkCreatenewWo.Size = New System.Drawing.Size(234, 17)
+        Me.chkCreatenewWo.TabIndex = 140
+        Me.chkCreatenewWo.Text = "Create New Work order for each recurrence"
+        Me.chkCreatenewWo.UseVisualStyleBackColor = True
+        '
         'frmSheduleMaintanance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(614, 616)
+        Me.ClientSize = New System.Drawing.Size(697, 616)
+        Me.Controls.Add(Me.chkCreatenewWo)
+        Me.Controls.Add(Me.grpAttachToWo)
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.GroupBox3)
@@ -334,6 +391,8 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox1.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.grpAttachToWo.ResumeLayout(False)
+        Me.grpAttachToWo.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -365,4 +424,9 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents grpAttachToWo As System.Windows.Forms.GroupBox
+    Friend WithEvents chkCreatenewWo As System.Windows.Forms.CheckBox
 End Class
