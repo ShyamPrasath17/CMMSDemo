@@ -225,28 +225,30 @@
     End Sub
 
     Private Sub rpvMain_MouseClick(sender As Object, e As MouseEventArgs) Handles rpvMain.MouseClick
-        If rpvMain.SelectedPage Is rpvpWorkOrders Then
-            ToolWindowWoLst.Show()
-            ToolWindowWoLst.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpProjects Then
-            twProjectList.Show()
-            twProjectList.Select()
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            If rpvMain.SelectedPage Is rpvpWorkOrders Then
+                ToolWindowWoLst.Show()
+                ToolWindowWoLst.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpProjects Then
+                twProjectList.Show()
+                twProjectList.Select()
 
-        ElseIf rpvMain.SelectedPage Is rpvpTasks Then
-            twTaskList.Show()
-            twTaskList.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
-            twDashBoard.Show()
-            twDashBoard.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
-            TwSehedTaskPool.Show()
-            TwSehedTaskPool.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
-            twScheduler.Show()
-            twScheduler.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpSettings Then
-            twSettings.Show()
-            twSettings.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpTasks Then
+                twTaskList.Show()
+                twTaskList.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
+                twDashBoard.Show()
+                twDashBoard.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
+                TwSehedTaskPool.Show()
+                TwSehedTaskPool.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
+                twScheduler.Show()
+                twScheduler.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpSettings Then
+                twSettings.Show()
+                twSettings.Select()
+            End If
         End If
     End Sub
 
