@@ -159,9 +159,10 @@ Partial Class frmAssignEmployees
         'grpOutSource
         '
         Me.grpOutSource.Controls.Add(Me.btnOutSource)
+        Me.grpOutSource.Controls.Add(Me.BtnAddemp)
         Me.grpOutSource.Location = New System.Drawing.Point(294, 16)
         Me.grpOutSource.Name = "grpOutSource"
-        Me.grpOutSource.Size = New System.Drawing.Size(257, 62)
+        Me.grpOutSource.Size = New System.Drawing.Size(257, 107)
         Me.grpOutSource.TabIndex = 118
         Me.grpOutSource.TabStop = False
         '
@@ -171,7 +172,7 @@ Partial Class frmAssignEmployees
         Me.btnOutSource.Name = "btnOutSource"
         Me.btnOutSource.Size = New System.Drawing.Size(245, 43)
         Me.btnOutSource.TabIndex = 0
-        Me.btnOutSource.Text = "Out Source New Employee >>"
+        Me.btnOutSource.Text = "Out Source New People >>"
         Me.btnOutSource.UseVisualStyleBackColor = True
         '
         'grpInternalEmp
@@ -179,7 +180,6 @@ Partial Class frmAssignEmployees
         Me.grpInternalEmp.Controls.Add(Me.cmbrptUom)
         Me.grpInternalEmp.Controls.Add(Me.Label7)
         Me.grpInternalEmp.Controls.Add(Me.Label6)
-        Me.grpInternalEmp.Controls.Add(Me.BtnAddemp)
         Me.grpInternalEmp.Controls.Add(Me.TextBox3)
         Me.grpInternalEmp.Controls.Add(Me.txtEmpName)
         Me.grpInternalEmp.Controls.Add(Me.Label2)
@@ -223,11 +223,11 @@ Partial Class frmAssignEmployees
         'BtnAddemp
         '
         Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(21, 150)
+        Me.BtnAddemp.Location = New System.Drawing.Point(6, 62)
         Me.BtnAddemp.Name = "BtnAddemp"
-        Me.BtnAddemp.Size = New System.Drawing.Size(105, 23)
+        Me.BtnAddemp.Size = New System.Drawing.Size(245, 39)
         Me.BtnAddemp.TabIndex = 119
-        Me.BtnAddemp.Text = "Add New"
+        Me.BtnAddemp.Text = "Add Internal Employee"
         Me.BtnAddemp.UseVisualStyleBackColor = True
         '
         'TextBox3

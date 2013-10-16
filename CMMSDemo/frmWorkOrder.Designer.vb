@@ -138,7 +138,7 @@ Partial Class frmWorkOrder
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(13, 362)
+        Me.Label5.Location = New System.Drawing.Point(11, 336)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 13)
         Me.Label5.TabIndex = 25
@@ -147,7 +147,7 @@ Partial Class frmWorkOrder
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(13, 311)
+        Me.Label7.Location = New System.Drawing.Point(12, 314)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(106, 13)
         Me.Label7.TabIndex = 27
@@ -269,7 +269,7 @@ Partial Class frmWorkOrder
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(143, 359)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 333)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 79
@@ -277,7 +277,7 @@ Partial Class frmWorkOrder
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(143, 385)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(141, 359)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker2.TabIndex = 81
@@ -285,7 +285,7 @@ Partial Class frmWorkOrder
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 387)
+        Me.Label3.Location = New System.Drawing.Point(11, 361)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 13)
         Me.Label3.TabIndex = 80
@@ -318,14 +318,14 @@ Partial Class frmWorkOrder
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(143, 309)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(141, 307)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown1.TabIndex = 85
         '
         'NumericUpDown2
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(143, 335)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(467, 307)
         Me.NumericUpDown2.Name = "NumericUpDown2"
         Me.NumericUpDown2.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown2.TabIndex = 87
@@ -333,7 +333,7 @@ Partial Class frmWorkOrder
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(13, 332)
+        Me.Label11.Location = New System.Drawing.Point(371, 314)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(88, 13)
         Me.Label11.TabIndex = 86
@@ -386,7 +386,7 @@ Partial Class frmWorkOrder
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(373, 362)
+        Me.Label22.Location = New System.Drawing.Point(371, 336)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(93, 13)
         Me.Label22.TabIndex = 113
@@ -395,7 +395,7 @@ Partial Class frmWorkOrder
         'DateTimePicker4
         '
         Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker4.Location = New System.Drawing.Point(467, 385)
+        Me.DateTimePicker4.Location = New System.Drawing.Point(467, 359)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(170, 20)
         Me.DateTimePicker4.TabIndex = 116
@@ -403,7 +403,7 @@ Partial Class frmWorkOrder
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(371, 387)
+        Me.Label23.Location = New System.Drawing.Point(371, 361)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(89, 13)
         Me.Label23.TabIndex = 115
@@ -412,7 +412,7 @@ Partial Class frmWorkOrder
         'DateTimePicker5
         '
         Me.DateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker5.Location = New System.Drawing.Point(467, 359)
+        Me.DateTimePicker5.Location = New System.Drawing.Point(467, 333)
         Me.DateTimePicker5.Name = "DateTimePicker5"
         Me.DateTimePicker5.Size = New System.Drawing.Size(170, 20)
         Me.DateTimePicker5.TabIndex = 114
@@ -623,9 +623,9 @@ Partial Class frmWorkOrder
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(374, 514)
+        Me.Button7.Location = New System.Drawing.Point(374, 541)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(117, 23)
+        Me.Button7.Size = New System.Drawing.Size(130, 23)
         Me.Button7.TabIndex = 102
         Me.Button7.Text = "File Attachments >>"
         Me.Button7.UseVisualStyleBackColor = True
@@ -642,7 +642,7 @@ Partial Class frmWorkOrder
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(422, 274)
+        Me.TextBox7.Location = New System.Drawing.Point(467, 282)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(184, 20)
@@ -651,7 +651,7 @@ Partial Class frmWorkOrder
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(358, 277)
+        Me.Label15.Location = New System.Drawing.Point(371, 289)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(58, 13)
         Me.Label15.TabIndex = 96
@@ -741,7 +741,7 @@ Partial Class frmWorkOrder
         '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(108, 270)
+        Me.TextBox15.Location = New System.Drawing.Point(141, 282)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(185, 20)
         Me.TextBox15.TabIndex = 124
@@ -749,7 +749,7 @@ Partial Class frmWorkOrder
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(12, 277)
+        Me.Label26.Location = New System.Drawing.Point(12, 289)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(83, 13)
         Me.Label26.TabIndex = 123
