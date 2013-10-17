@@ -71,21 +71,9 @@
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ToolWindowWo.Hide()
-        ToolWindowWoLst.Hide()
-        twProject.Hide()
-        twProjectList.Hide()
-        twTask.Hide()
-        twTaskList.Hide()
-        AdjustSplitters()
-        TwIndependentTask.Hide()
-        TwScheduledMaint.Hide()
-        TwSehedTaskPool.Hide()
-        TwIndeptTaskPool.Hide()
-        twCommonTaskPool.Hide()
-        twSettings.Hide()
-        twImportSchedule.Hide()
-        TwScheduledMaint.Hide()
+        HideAllWindows()
+        twDashBoard.Show()
+        twDashBoard.Select()
     End Sub
 
     Private Sub AdjustSplitters()
@@ -247,6 +235,7 @@
     End Sub
 
     Private Sub rpvMain_MouseClick(sender As Object, e As MouseEventArgs) Handles rpvMain.MouseClick
+        'HideAllWindows()
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
             ToolWindowWoLst.Show()
             ToolWindowWoLst.Select()
@@ -333,4 +322,25 @@
         twImportSchedule.Show()
         twImportSchedule.Select()
     End Sub
+
+    Private Sub HideAllWindows()
+        twDashBoard.Hide()
+        ToolWindowWo.Hide()
+        ToolWindowWoLst.Hide()
+        twProject.Hide()
+        twProjectList.Hide()
+        twTask.Hide()
+        twTaskList.Hide()
+        AdjustSplitters()
+        TwIndependentTask.Hide()
+        TwSehedTaskPool.Hide()
+        TwIndeptTaskPool.Hide()
+        twCommonTaskPool.Hide()
+        twSettings.Hide()
+        twImportSchedule.Hide()
+        TwScheduledMaint.Hide()
+        twScheduler.Hide()
+        twSchedMaintLst.Hide()
+    End Sub
+
 End Class

@@ -52,7 +52,6 @@ Partial Class frmOutsource
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -321,15 +320,6 @@ Partial Class frmOutsource
         Me.Button2.Text = "Cancel"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(15, 588)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(111, 33)
-        Me.Button3.TabIndex = 158
-        Me.Button3.Text = "Issue AP Invoice >>"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(133, 127)
@@ -385,7 +375,6 @@ Partial Class frmOutsource
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox4)
@@ -435,7 +424,6 @@ Partial Class frmOutsource
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox

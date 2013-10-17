@@ -11,4 +11,15 @@
     Private Sub BtnAddWo_Click(sender As Object, e As EventArgs)
 
     End Sub
+
+    Private Sub btnViewWo_Click(sender As Object, e As EventArgs) Handles btnViewWo.Click
+        If btnViewWo.Text = "View WorkOrders" Then
+            FormMain.RadDockMain.DockWindow(FormMain.ToolWindowWoLst, Telerik.WinControls.UI.Docking.DockPosition.Bottom)
+            btnViewWo.Text = "Hide WorkOrders"
+        Else
+            FormMain.ToolWindowWoLst.Hide()
+            btnViewWo.Text = "View WorkOrders"
+        End If
+
+    End Sub
 End Class

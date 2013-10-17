@@ -120,7 +120,7 @@ Partial Class FormMain
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.twSchedMaintLst
+        Me.RadDockMain.ActiveWindow = Me.twDashBoard
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
         Me.RadDockMain.Controls.Add(Me.ToolTabStrip11)
         Me.RadDockMain.Dock = System.Windows.Forms.DockStyle.Fill
@@ -146,7 +146,7 @@ Partial Class FormMain
         Me.twSchedMaintLst.Location = New System.Drawing.Point(1, 24)
         Me.twSchedMaintLst.Name = "twSchedMaintLst"
         Me.twSchedMaintLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twSchedMaintLst.Size = New System.Drawing.Size(818, 698)
+        Me.twSchedMaintLst.Size = New System.Drawing.Size(818, 700)
         Me.twSchedMaintLst.Text = "Schedule Maintanance"
         '
         'DocumentContainer1
@@ -188,7 +188,7 @@ Partial Class FormMain
         '
         '
         Me.ToolTabStrip11.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip11.SelectedIndex = 15
+        Me.ToolTabStrip11.SelectedIndex = 12
         Me.ToolTabStrip11.Size = New System.Drawing.Size(820, 748)
         Me.ToolTabStrip11.TabIndex = 1
         Me.ToolTabStrip11.TabStop = False
@@ -307,7 +307,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(838, 174)
+        Me.twDashBoard.Size = New System.Drawing.Size(818, 698)
         Me.twDashBoard.Text = "DashBoard"
         '
         'twScheduler

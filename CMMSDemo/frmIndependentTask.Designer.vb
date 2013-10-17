@@ -45,6 +45,12 @@ Partial Class frmIndependentTask
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Label17 = New System.Windows.Forms.Label()
+        Me.dtpEndTime = New System.Windows.Forms.DateTimePicker()
+        Me.dtpStartTime = New System.Windows.Forms.DateTimePicker()
+        Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dtpEndDate = New System.Windows.Forms.DateTimePicker()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -53,9 +59,9 @@ Partial Class frmIndependentTask
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(22, 58)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 13)
+        Me.Label9.Size = New System.Drawing.Size(61, 13)
         Me.Label9.TabIndex = 113
-        Me.Label9.Text = "Task ID"
+        Me.Label9.Text = "Request ID"
         '
         'TextBox6
         '
@@ -77,9 +83,9 @@ Partial Class frmIndependentTask
         Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(22, 80)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(62, 13)
+        Me.Label10.Size = New System.Drawing.Size(35, 13)
         Me.Label10.TabIndex = 111
-        Me.Label10.Text = "Task Name"
+        Me.Label10.Text = "Name"
         '
         'txtstatus
         '
@@ -133,7 +139,7 @@ Partial Class frmIndependentTask
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(25, 289)
+        Me.Button7.Location = New System.Drawing.Point(24, 372)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(111, 23)
         Me.Button7.TabIndex = 118
@@ -143,7 +149,7 @@ Partial Class frmIndependentTask
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(24, 328)
+        Me.Label12.Location = New System.Drawing.Point(23, 411)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 13)
         Me.Label12.TabIndex = 117
@@ -151,7 +157,7 @@ Partial Class frmIndependentTask
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(25, 344)
+        Me.TextBox3.Location = New System.Drawing.Point(24, 427)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
@@ -178,7 +184,7 @@ Partial Class frmIndependentTask
         'Button4
         '
         Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(642, 472)
+        Me.Button4.Location = New System.Drawing.Point(665, 559)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(75, 23)
         Me.Button4.TabIndex = 123
@@ -188,7 +194,7 @@ Partial Class frmIndependentTask
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(561, 472)
+        Me.Button2.Location = New System.Drawing.Point(584, 559)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 122
@@ -237,12 +243,68 @@ Partial Class frmIndependentTask
         Me.Label17.TabIndex = 127
         Me.Label17.Text = "Task Service Type"
         '
+        'dtpEndTime
+        '
+        Me.dtpEndTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpEndTime.Location = New System.Drawing.Point(265, 271)
+        Me.dtpEndTime.Name = "dtpEndTime"
+        Me.dtpEndTime.Size = New System.Drawing.Size(90, 20)
+        Me.dtpEndTime.TabIndex = 134
+        '
+        'dtpStartTime
+        '
+        Me.dtpStartTime.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.dtpStartTime.Location = New System.Drawing.Point(265, 246)
+        Me.dtpStartTime.Name = "dtpStartTime"
+        Me.dtpStartTime.Size = New System.Drawing.Size(90, 20)
+        Me.dtpStartTime.TabIndex = 133
+        '
+        'dtpStartDate
+        '
+        Me.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpStartDate.Location = New System.Drawing.Point(139, 246)
+        Me.dtpStartDate.Name = "dtpStartDate"
+        Me.dtpStartDate.Size = New System.Drawing.Size(120, 20)
+        Me.dtpStartDate.TabIndex = 130
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(21, 272)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.TabIndex = 131
+        Me.Label3.Text = "End Date Time"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(21, 247)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(81, 13)
+        Me.Label1.TabIndex = 129
+        Me.Label1.Text = "Start Date Time"
+        '
+        'dtpEndDate
+        '
+        Me.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpEndDate.Location = New System.Drawing.Point(139, 271)
+        Me.dtpEndDate.Name = "dtpEndDate"
+        Me.dtpEndDate.Size = New System.Drawing.Size(120, 20)
+        Me.dtpEndDate.TabIndex = 132
+        '
         'frmIndependentTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(729, 507)
+        Me.ClientSize = New System.Drawing.Size(752, 594)
+        Me.Controls.Add(Me.dtpEndTime)
+        Me.Controls.Add(Me.dtpStartTime)
+        Me.Controls.Add(Me.dtpStartDate)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.dtpEndDate)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Button6)
@@ -295,4 +357,10 @@ Partial Class frmIndependentTask
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
     Friend WithEvents Label17 As System.Windows.Forms.Label
+    Friend WithEvents dtpEndTime As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpStartTime As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dtpStartDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents dtpEndDate As System.Windows.Forms.DateTimePicker
 End Class

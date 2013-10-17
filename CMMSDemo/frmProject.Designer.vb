@@ -46,6 +46,8 @@ Partial Class frmProject
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.btnViewWo = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -248,6 +250,8 @@ Partial Class frmProject
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button3)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnViewWo)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtprojectID)
@@ -278,6 +282,25 @@ Partial Class frmProject
         Me.RadScrollablePanel1.Size = New System.Drawing.Size(562, 418)
         Me.RadScrollablePanel1.TabIndex = 112
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
+        '
+        'btnViewWo
+        '
+        Me.btnViewWo.Location = New System.Drawing.Point(375, 8)
+        Me.btnViewWo.Name = "btnViewWo"
+        Me.btnViewWo.Size = New System.Drawing.Size(171, 23)
+        Me.btnViewWo.TabIndex = 112
+        Me.btnViewWo.Text = "View WorkOrders"
+        Me.btnViewWo.UseVisualStyleBackColor = True
+        Me.btnViewWo.Visible = False
+        '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(309, 8)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(24, 24)
+        Me.Button3.TabIndex = 113
+        Me.Button3.Tag = "DISABLE"
         '
         'frmProject
         '
@@ -318,4 +341,6 @@ Partial Class frmProject
     Friend WithEvents txtstatus As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnViewWo As System.Windows.Forms.Button
 End Class
