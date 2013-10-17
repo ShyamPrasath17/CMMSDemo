@@ -13,9 +13,9 @@
 
     Public frmSched As frmSheduleMaintanance
 
-    Public frmScheduledTskPool As frmTaskPool
-    Public frmIndependentTskPool As frmTaskPool
-    Public frmCommonTskPool As frmTaskPool
+    Public frmScheduledTskPool As frmWorkrequestList
+    Public frmIndependentTskPool As frmWorkrequestList
+    Public frmCommonTskPool As frmWorkrequestList
 
     Public frmindepttsk As frmIndependentTask
 
@@ -24,7 +24,7 @@
     Public frmSettings_ As frmSettings
 
     Public frmImportSchedule_ As frmImportSchedule
-
+    Public frmSchedMaintList_ As frmSchedMaintList
 
     Dim frmDashBoard As frmDashBoard
 
@@ -36,14 +36,15 @@
         addfrmProject()
         addfrmTsk()
         addfrmTskLst()
-        addfrmSchedTskPool()
+        'addfrmSchedTskPool()
         addfrmSchedmaint()
         addfrmIndeptTsk()
-        addfrmIndeptTskPool()
-        addfrmCommonTskPool()
+        'addfrmIndeptTskPool()
+        'addfrmCommonTskPool()
         addfrmschedular()
         addfrmsettings()
         addfrmImportSchedule()
+        addfrmSchedMaintList()
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -63,10 +64,15 @@
         twScheduler.Controls.Add(frmschedular)
         twSettings.Controls.Add(frmSettings_)
         twImportSchedule.Controls.Add(frmImportSchedule_)
+        twSchedMaintLst.Controls.Add(frmSchedMaintList_)
 
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        HideAllWindows()
+    End Sub
+
+    Private Sub HideAllWindows()
         ToolWindowWo.Hide()
         ToolWindowWoLst.Hide()
         twProject.Hide()
@@ -80,6 +86,9 @@
         twCommonTaskPool.Hide()
         twSettings.Hide()
         twImportSchedule.Hide()
+        TwScheduledMaint.Hide()
+        twScheduler.Hide()
+        twSchedMaintLst.Hide()
     End Sub
 
     Private Sub addDashBoardFrm()
@@ -150,27 +159,27 @@
         frmSched.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmSched.Show()
     End Sub
-    Private Sub addfrmSchedTskPool()
-        frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
-        frmScheduledTskPool.Dock = DockStyle.Fill
-        frmScheduledTskPool.TopLevel = False
-        frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmScheduledTskPool.Show()
-    End Sub
-    Private Sub addfrmIndeptTskPool()
-        frmIndependentTskPool = New frmTaskPool("Independent")
-        frmIndependentTskPool.Dock = DockStyle.Fill
-        frmIndependentTskPool.TopLevel = False
-        frmIndependentTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmIndependentTskPool.Show()
-    End Sub
-    Private Sub addfrmCommonTskPool()
-        frmCommonTskPool = New frmTaskPool("")
-        frmCommonTskPool.Dock = DockStyle.Fill
-        frmCommonTskPool.TopLevel = False
-        frmCommonTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmCommonTskPool.Show()
-    End Sub
+    'Private Sub addfrmSchedTskPool()
+    '    frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
+    '    frmScheduledTskPool.Dock = DockStyle.Fill
+    '    frmScheduledTskPool.TopLevel = False
+    '    frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+    '    frmScheduledTskPool.Show()
+    'End Sub
+    'Private Sub addfrmIndeptTskPool()
+    '    frmIndependentTskPool = New frmTaskPool("Independent")
+    '    frmIndependentTskPool.Dock = DockStyle.Fill
+    '    frmIndependentTskPool.TopLevel = False
+    '    frmIndependentTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+    '    frmIndependentTskPool.Show()
+    'End Sub
+    'Private Sub addfrmCommonTskPool()
+    '    frmCommonTskPool = New frmTaskPool("")
+    '    frmCommonTskPool.Dock = DockStyle.Fill
+    '    frmCommonTskPool.TopLevel = False
+    '    frmCommonTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+    '    frmCommonTskPool.Show()
+    'End Sub
     Private Sub addfrmschedular()
         frmschedular = New frmTaskShedular()
         frmschedular.Dock = DockStyle.Fill
@@ -232,7 +241,6 @@
             ElseIf rpvMain.SelectedPage Is rpvpProjects Then
                 twProjectList.Show()
                 twProjectList.Select()
-
             ElseIf rpvMain.SelectedPage Is rpvpTasks Then
                 twTaskList.Show()
                 twTaskList.Select()
@@ -240,8 +248,10 @@
                 twDashBoard.Show()
                 twDashBoard.Select()
             ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
-                TwSehedTaskPool.Show()
-                TwSehedTaskPool.Select()
+                'TwSehedTaskPool.Show()
+                'TwSehedTaskPool.Select()
+                twSchedMaintLst.Show()
+                twSchedMaintLst.Select()
             ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
                 twScheduler.Show()
                 twScheduler.Select()
@@ -311,4 +321,12 @@
         twImportSchedule.Show()
         twImportSchedule.Select()
     End Sub
+    Private Sub addfrmSchedMaintList()
+        frmSchedMaintList_ = New frmSchedMaintList()
+        frmSchedMaintList_.Dock = DockStyle.Fill
+        frmSchedMaintList_.TopLevel = False
+        frmSchedMaintList_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmSchedMaintList_.Show()
+    End Sub
+
 End Class

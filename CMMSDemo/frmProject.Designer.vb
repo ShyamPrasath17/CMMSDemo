@@ -44,10 +44,9 @@ Partial Class frmProject
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
-        Me.btnViewWo = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnViewWo = New System.Windows.Forms.Button()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -225,22 +224,12 @@ Partial Class frmProject
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(360, 388)
+        Me.Button1.Location = New System.Drawing.Point(441, 382)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(105, 23)
         Me.Button1.TabIndex = 111
         Me.Button1.Text = "Close Project"
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button8.Location = New System.Drawing.Point(471, 388)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 23)
-        Me.Button8.TabIndex = 110
-        Me.Button8.Text = "Save"
-        Me.Button8.UseVisualStyleBackColor = True
         '
         'RadScrollablePanel1
         '
@@ -259,7 +248,6 @@ Partial Class frmProject
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label14)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtpname)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button8)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label12)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.DateTimePicker1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label4)
@@ -283,16 +271,6 @@ Partial Class frmProject
         Me.RadScrollablePanel1.TabIndex = 112
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
         '
-        'btnViewWo
-        '
-        Me.btnViewWo.Location = New System.Drawing.Point(375, 8)
-        Me.btnViewWo.Name = "btnViewWo"
-        Me.btnViewWo.Size = New System.Drawing.Size(171, 23)
-        Me.btnViewWo.TabIndex = 112
-        Me.btnViewWo.Text = "View WorkOrders"
-        Me.btnViewWo.UseVisualStyleBackColor = True
-        Me.btnViewWo.Visible = False
-        '
         'Button3
         '
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
@@ -301,6 +279,15 @@ Partial Class frmProject
         Me.Button3.Size = New System.Drawing.Size(24, 24)
         Me.Button3.TabIndex = 113
         Me.Button3.Tag = "DISABLE"
+        '
+        'btnViewWo
+        '
+        Me.btnViewWo.Location = New System.Drawing.Point(375, 8)
+        Me.btnViewWo.Name = "btnViewWo"
+        Me.btnViewWo.Size = New System.Drawing.Size(171, 23)
+        Me.btnViewWo.TabIndex = 112
+        Me.btnViewWo.Text = "View WorkOrders"
+        Me.btnViewWo.UseVisualStyleBackColor = True
         '
         'frmProject
         '
@@ -334,7 +321,6 @@ Partial Class frmProject
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button

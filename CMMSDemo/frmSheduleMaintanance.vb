@@ -17,10 +17,8 @@
         radTimeBased.Checked = True
         cmbrptUom.DataSource = dtType.DefaultView
         cmbrptUom.DisplayMember = "UOM"
-        cmbEndUom.DataSource = dtType.DefaultView
-        cmbEndUom.DisplayMember = "UOM"
-        cmbThreshold.DataSource = dtType.DefaultView
-        cmbThreshold.DisplayMember = "UOM"
+        'cmbThreshold.DataSource = dtType.DefaultView
+        'cmbThreshold.DisplayMember = "UOM"
     End Sub
 
     Private Sub createTypeTbl()

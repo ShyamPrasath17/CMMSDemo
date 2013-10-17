@@ -36,7 +36,6 @@ Partial Class frmSheduleMaintanance
         Me.Button7 = New System.Windows.Forms.Button()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
@@ -51,10 +50,6 @@ Partial Class frmSheduleMaintanance
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.grpAttachToWo = New System.Windows.Forms.GroupBox()
         Me.chkCreatenewWo = New System.Windows.Forms.CheckBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.cmbEndUom = New System.Windows.Forms.ComboBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox4 = New System.Windows.Forms.GroupBox()
         Me.cmbThreshold = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -65,7 +60,6 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.grpAttachToWo.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -162,7 +156,7 @@ Partial Class frmSheduleMaintanance
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(24, 459)
+        Me.Button7.Location = New System.Drawing.Point(24, 398)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(111, 23)
         Me.Button7.TabIndex = 111
@@ -172,7 +166,7 @@ Partial Class frmSheduleMaintanance
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(21, 496)
+        Me.Label12.Location = New System.Drawing.Point(21, 435)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(60, 13)
         Me.Label12.TabIndex = 113
@@ -180,27 +174,17 @@ Partial Class frmSheduleMaintanance
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(24, 512)
+        Me.TextBox3.Location = New System.Drawing.Point(24, 451)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox3.Size = New System.Drawing.Size(583, 135)
         Me.TextBox3.TabIndex = 112
         '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(648, 673)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 125
-        Me.Button4.Text = "Save"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(567, 673)
+        Me.Button2.Location = New System.Drawing.Point(636, 609)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 124
@@ -210,7 +194,7 @@ Partial Class frmSheduleMaintanance
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(21, 427)
+        Me.Label5.Location = New System.Drawing.Point(21, 366)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(114, 13)
         Me.Label5.TabIndex = 127
@@ -219,7 +203,7 @@ Partial Class frmSheduleMaintanance
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 421)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 360)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 128
@@ -328,49 +312,12 @@ Partial Class frmSheduleMaintanance
         Me.chkCreatenewWo.UseVisualStyleBackColor = True
         Me.chkCreatenewWo.Visible = False
         '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(127, 23)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(74, 20)
-        Me.TextBox1.TabIndex = 129
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 26)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 13)
-        Me.Label1.TabIndex = 130
-        Me.Label1.Text = "Stop Recurrence after"
-        '
-        'cmbEndUom
-        '
-        Me.cmbEndUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbEndUom.FormattingEnabled = True
-        Me.cmbEndUom.Location = New System.Drawing.Point(224, 22)
-        Me.cmbEndUom.Name = "cmbEndUom"
-        Me.cmbEndUom.Size = New System.Drawing.Size(72, 21)
-        Me.cmbEndUom.TabIndex = 131
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Controls.Add(Me.cmbEndUom)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 295)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(302, 50)
-        Me.GroupBox1.TabIndex = 132
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Recurrence End Period"
-        '
         'GroupBox4
         '
         Me.GroupBox4.Controls.Add(Me.cmbThreshold)
         Me.GroupBox4.Controls.Add(Me.Label4)
         Me.GroupBox4.Controls.Add(Me.TextBox7)
-        Me.GroupBox4.Location = New System.Drawing.Point(24, 351)
+        Me.GroupBox4.Location = New System.Drawing.Point(24, 292)
         Me.GroupBox4.Name = "GroupBox4"
         Me.GroupBox4.Size = New System.Drawing.Size(302, 50)
         Me.GroupBox4.TabIndex = 133
@@ -381,6 +328,7 @@ Partial Class frmSheduleMaintanance
         '
         Me.cmbThreshold.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbThreshold.FormattingEnabled = True
+        Me.cmbThreshold.Items.AddRange(New Object() {"Days", "Months"})
         Me.cmbThreshold.Location = New System.Drawing.Point(224, 22)
         Me.cmbThreshold.Name = "cmbThreshold"
         Me.cmbThreshold.Size = New System.Drawing.Size(72, 21)
@@ -422,7 +370,7 @@ Partial Class frmSheduleMaintanance
         'Button3
         '
         Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(486, 673)
+        Me.Button3.Location = New System.Drawing.Point(555, 609)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(75, 23)
         Me.Button3.TabIndex = 143
@@ -434,7 +382,7 @@ Partial Class frmSheduleMaintanance
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(735, 701)
+        Me.ClientSize = New System.Drawing.Size(724, 634)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtStatus)
@@ -444,10 +392,8 @@ Partial Class frmSheduleMaintanance
         Me.Controls.Add(Me.ComboBox3)
         Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.GroupBox3)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button7)
         Me.Controls.Add(Me.Label12)
@@ -468,8 +414,6 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox3.PerformLayout()
         Me.grpAttachToWo.ResumeLayout(False)
         Me.grpAttachToWo.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
         Me.ResumeLayout(False)
@@ -489,7 +433,6 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
@@ -504,10 +447,6 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents grpAttachToWo As System.Windows.Forms.GroupBox
     Friend WithEvents chkCreatenewWo As System.Windows.Forms.CheckBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents cmbEndUom As System.Windows.Forms.ComboBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox4 As System.Windows.Forms.GroupBox
     Friend WithEvents cmbThreshold As System.Windows.Forms.ComboBox
     Friend WithEvents Label4 As System.Windows.Forms.Label

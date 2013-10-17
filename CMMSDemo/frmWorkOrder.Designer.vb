@@ -31,7 +31,6 @@ Partial Class frmWorkOrder
         Me.txtstatus = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.DeptSearch = New System.Windows.Forms.Button()
@@ -85,7 +84,6 @@ Partial Class frmWorkOrder
         Me.chkBillable = New System.Windows.Forms.CheckBox()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
@@ -164,7 +162,7 @@ Partial Class frmWorkOrder
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(350, 844)
+        Me.Button1.Location = New System.Drawing.Point(512, 844)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 27)
         Me.Button1.TabIndex = 32
@@ -174,22 +172,12 @@ Partial Class frmWorkOrder
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(429, 844)
+        Me.Button2.Location = New System.Drawing.Point(591, 844)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 27)
         Me.Button2.TabIndex = 33
         Me.Button2.Text = "Complete"
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button3.Location = New System.Drawing.Point(510, 844)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 27)
-        Me.Button3.TabIndex = 34
-        Me.Button3.Text = "Cancel"
-        Me.Button3.UseVisualStyleBackColor = True
         '
         'Label8
         '
@@ -657,16 +645,6 @@ Partial Class frmWorkOrder
         Me.Label15.TabIndex = 96
         Me.Label15.Text = "Total Cost"
         '
-        'Button8
-        '
-        Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button8.Location = New System.Drawing.Point(591, 844)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(75, 27)
-        Me.Button8.TabIndex = 110
-        Me.Button8.Text = "Save"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
         'RadScrollablePanel1
         '
         Me.RadScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -681,8 +659,6 @@ Partial Class frmWorkOrder
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label25)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dgvComment)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.GroupBox2)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button8)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label14)
@@ -871,7 +847,6 @@ Partial Class frmWorkOrder
     Friend WithEvents txtstatus As System.Windows.Forms.TextBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents DeptSearch As System.Windows.Forms.Button
@@ -900,7 +875,6 @@ Partial Class frmWorkOrder
     Friend WithEvents txtcust As System.Windows.Forms.TextBox
     Friend WithEvents chkBillable As System.Windows.Forms.CheckBox
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents grpBillable As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox9 As System.Windows.Forms.TextBox
     Friend WithEvents Label17 As System.Windows.Forms.Label

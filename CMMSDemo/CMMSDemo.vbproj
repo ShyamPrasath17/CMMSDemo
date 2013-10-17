@@ -164,6 +164,12 @@
     <Compile Include="frmResourceSchedular.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSchedMaintList.Designer.vb">
+      <DependentUpon>frmSchedMaintList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSchedMaintList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSelectListNG2.designer.vb">
       <DependentUpon>frmSelectListNG2.vb</DependentUpon>
     </Compile>
@@ -176,10 +182,10 @@
     <Compile Include="frmSettings.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmTaskPool.Designer.vb">
-      <DependentUpon>frmTaskPool.vb</DependentUpon>
+    <Compile Include="frmWorkrequestList.Designer.vb">
+      <DependentUpon>frmWorkrequestList.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmTaskPool.vb">
+    <Compile Include="frmWorkrequestList.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmTaskShedular.Designer.vb">
@@ -283,14 +289,17 @@
     <EmbeddedResource Include="frmResourceSchedular.resx">
       <DependentUpon>frmResourceSchedular.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSchedMaintList.resx">
+      <DependentUpon>frmSchedMaintList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSelectListNG2.resx">
       <DependentUpon>frmSelectListNG2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmTaskPool.resx">
-      <DependentUpon>frmTaskPool.vb</DependentUpon>
+    <EmbeddedResource Include="frmWorkrequestList.resx">
+      <DependentUpon>frmWorkrequestList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaskShedular.resx">
       <DependentUpon>frmTaskShedular.vb</DependentUpon>

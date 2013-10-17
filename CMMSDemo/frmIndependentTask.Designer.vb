@@ -38,8 +38,6 @@ Partial Class frmIndependentTask
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.Label13 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
@@ -51,7 +49,12 @@ Partial Class frmIndependentTask
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dtpEndDate = New System.Windows.Forms.DateTimePicker()
+        Me.grpItems = New System.Windows.Forms.GroupBox()
+        Me.btnEquipments = New System.Windows.Forms.Button()
+        Me.btnInventory = New System.Windows.Forms.Button()
+        Me.btnEmployees = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpItems.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label9
@@ -181,26 +184,6 @@ Partial Class frmIndependentTask
         Me.Label13.TabIndex = 119
         Me.Label13.Text = "Priority"
         '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(665, 559)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 123
-        Me.Button4.Text = "Save"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(584, 559)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 122
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Button6
         '
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
@@ -293,12 +276,52 @@ Partial Class frmIndependentTask
         Me.dtpEndDate.Size = New System.Drawing.Size(120, 20)
         Me.dtpEndDate.TabIndex = 132
         '
+        'grpItems
+        '
+        Me.grpItems.Controls.Add(Me.btnEquipments)
+        Me.grpItems.Controls.Add(Me.btnInventory)
+        Me.grpItems.Controls.Add(Me.btnEmployees)
+        Me.grpItems.Location = New System.Drawing.Point(438, 27)
+        Me.grpItems.Name = "grpItems"
+        Me.grpItems.Size = New System.Drawing.Size(258, 188)
+        Me.grpItems.TabIndex = 145
+        Me.grpItems.TabStop = False
+        Me.grpItems.Text = "Resource Allocation"
+        '
+        'btnEquipments
+        '
+        Me.btnEquipments.Location = New System.Drawing.Point(6, 138)
+        Me.btnEquipments.Name = "btnEquipments"
+        Me.btnEquipments.Size = New System.Drawing.Size(245, 43)
+        Me.btnEquipments.TabIndex = 2
+        Me.btnEquipments.Text = "Equipments >>"
+        Me.btnEquipments.UseVisualStyleBackColor = True
+        '
+        'btnInventory
+        '
+        Me.btnInventory.Location = New System.Drawing.Point(6, 81)
+        Me.btnInventory.Name = "btnInventory"
+        Me.btnInventory.Size = New System.Drawing.Size(245, 43)
+        Me.btnInventory.TabIndex = 1
+        Me.btnInventory.Text = "Inventory >>"
+        Me.btnInventory.UseVisualStyleBackColor = True
+        '
+        'btnEmployees
+        '
+        Me.btnEmployees.Location = New System.Drawing.Point(6, 26)
+        Me.btnEmployees.Name = "btnEmployees"
+        Me.btnEmployees.Size = New System.Drawing.Size(245, 43)
+        Me.btnEmployees.TabIndex = 0
+        Me.btnEmployees.Text = "Employees >>"
+        Me.btnEmployees.UseVisualStyleBackColor = True
+        '
         'frmIndependentTask
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(752, 594)
+        Me.ClientSize = New System.Drawing.Size(752, 602)
+        Me.Controls.Add(Me.grpItems)
         Me.Controls.Add(Me.dtpEndTime)
         Me.Controls.Add(Me.dtpStartTime)
         Me.Controls.Add(Me.dtpStartDate)
@@ -310,8 +333,6 @@ Partial Class frmIndependentTask
         Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label13)
         Me.Controls.Add(Me.Button7)
@@ -331,6 +352,7 @@ Partial Class frmIndependentTask
         Me.Name = "frmIndependentTask"
         Me.Text = "IndependentTask"
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpItems.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -350,8 +372,6 @@ Partial Class frmIndependentTask
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
     Friend WithEvents Label13 As System.Windows.Forms.Label
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
@@ -363,4 +383,8 @@ Partial Class frmIndependentTask
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents dtpEndDate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents grpItems As System.Windows.Forms.GroupBox
+    Friend WithEvents btnEquipments As System.Windows.Forms.Button
+    Friend WithEvents btnInventory As System.Windows.Forms.Button
+    Friend WithEvents btnEmployees As System.Windows.Forms.Button
 End Class
