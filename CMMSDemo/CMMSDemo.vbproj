@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CtlRadGridAdvanceFilterCommon.designer.vb">
+      <DependentUpon>CtlRadGridAdvanceFilterCommon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CtlRadGridAdvanceFilterCommon.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="ctlRadGridAdvanceFilterControl.designer.vb">
       <DependentUpon>ctlRadGridAdvanceFilterControl.vb</DependentUpon>
     </Compile>
@@ -235,6 +241,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CtlRadGridAdvanceFilterCommon.resx">
+      <DependentUpon>CtlRadGridAdvanceFilterCommon.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ctlRadGridAdvanceFilterControl.resx">
       <DependentUpon>ctlRadGridAdvanceFilterControl.vb</DependentUpon>
     </EmbeddedResource>
