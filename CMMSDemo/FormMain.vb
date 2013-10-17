@@ -25,8 +25,6 @@
 
     Public frmImportSchedule_ As frmImportSchedule
 
-    Public frmSchedMaintList_ As frmSchedMaintList
-
 
     Dim frmDashBoard As frmDashBoard
 
@@ -44,7 +42,6 @@
         addfrmIndeptTskPool()
         addfrmCommonTskPool()
         addfrmschedular()
-        addfrmSchedMaintList()
         addfrmsettings()
         addfrmImportSchedule()
         ' This call is required by the designer.
@@ -66,23 +63,23 @@
         twScheduler.Controls.Add(frmschedular)
         twSettings.Controls.Add(frmSettings_)
         twImportSchedule.Controls.Add(frmImportSchedule_)
-        twSchedMaintLst.Controls.Add(frmSchedMaintList_)
 
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        HideAllWindows()
-        twDashBoard.Show()
-        twDashBoard.Select()
-    End Sub
-
-    Private Sub AdjustSplitters()
-        'Set Fixed size for Split Panels
-        SplitContainer1.SplitterDistance = SplitContainer1.Height - 800
-        SplitContainer1.FixedPanel = FixedPanel.Panel1
-
-        SplitContainer2.SplitterDistance = SplitContainer2.Height - 1000
-        SplitContainer2.FixedPanel = FixedPanel.Panel1
+        ToolWindowWo.Hide()
+        ToolWindowWoLst.Hide()
+        twProject.Hide()
+        twProjectList.Hide()
+        twTask.Hide()
+        twTaskList.Hide()
+        TwIndependentTask.Hide()
+        TwScheduledMaint.Hide()
+        TwSehedTaskPool.Hide()
+        TwIndeptTaskPool.Hide()
+        twCommonTaskPool.Hide()
+        twSettings.Hide()
+        twImportSchedule.Hide()
     End Sub
 
     Private Sub addDashBoardFrm()
@@ -181,13 +178,6 @@
         frmschedular.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmschedular.Show()
     End Sub
-    Private Sub addfrmSchedMaintList()
-        frmSchedMaintList_ = New frmSchedMaintList()
-        frmSchedMaintList_.Dock = DockStyle.Fill
-        frmSchedMaintList_.TopLevel = False
-        frmSchedMaintList_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmSchedMaintList_.Show()
-    End Sub
     Private Sub addfrmsettings()
         frmSettings_ = New frmSettings
         frmSettings_.Dock = DockStyle.Fill
@@ -235,31 +225,30 @@
     End Sub
 
     Private Sub rpvMain_MouseClick(sender As Object, e As MouseEventArgs) Handles rpvMain.MouseClick
-        'HideAllWindows()
-        If rpvMain.SelectedPage Is rpvpWorkOrders Then
-            ToolWindowWoLst.Show()
-            ToolWindowWoLst.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpProjects Then
-            twProjectList.Show()
-            twProjectList.Select()
+        If e.Button = Windows.Forms.MouseButtons.Left Then
+            If rpvMain.SelectedPage Is rpvpWorkOrders Then
+                ToolWindowWoLst.Show()
+                ToolWindowWoLst.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpProjects Then
+                twProjectList.Show()
+                twProjectList.Select()
 
-        ElseIf rpvMain.SelectedPage Is rpvpTasks Then
-            twTaskList.Show()
-            twTaskList.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
-            twDashBoard.Show()
-            twDashBoard.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
-            'TwSehedTaskPool.Show()
-            'TwSehedTaskPool.Select()
-            twSchedMaintLst.Show()
-            twSchedMaintLst.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
-            twScheduler.Show()
-            twScheduler.Select()
-        ElseIf rpvMain.SelectedPage Is rpvpSettings Then
-            twSettings.Show()
-            twSettings.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpTasks Then
+                twTaskList.Show()
+                twTaskList.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpDashBoard Then
+                twDashBoard.Show()
+                twDashBoard.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
+                TwSehedTaskPool.Show()
+                TwSehedTaskPool.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
+                twScheduler.Show()
+                twScheduler.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpSettings Then
+                twSettings.Show()
+                twSettings.Select()
+            End If
         End If
     End Sub
 
@@ -322,25 +311,4 @@
         twImportSchedule.Show()
         twImportSchedule.Select()
     End Sub
-
-    Private Sub HideAllWindows()
-        twDashBoard.Hide()
-        ToolWindowWo.Hide()
-        ToolWindowWoLst.Hide()
-        twProject.Hide()
-        twProjectList.Hide()
-        twTask.Hide()
-        twTaskList.Hide()
-        AdjustSplitters()
-        TwIndependentTask.Hide()
-        TwSehedTaskPool.Hide()
-        TwIndeptTaskPool.Hide()
-        twCommonTaskPool.Hide()
-        twSettings.Hide()
-        twImportSchedule.Hide()
-        TwScheduledMaint.Hide()
-        twScheduler.Hide()
-        twSchedMaintLst.Hide()
-    End Sub
-
 End Class
