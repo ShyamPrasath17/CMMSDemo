@@ -80,6 +80,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ctlRadGridAdvanceFilterControl.designer.vb">
+      <DependentUpon>ctlRadGridAdvanceFilterControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlRadGridAdvanceFilterControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="frmAssignEmployees.Designer.vb">
       <DependentUpon>frmAssignEmployees.vb</DependentUpon>
     </Compile>
@@ -150,6 +156,12 @@
       <DependentUpon>frmResourceSchedular.vb</DependentUpon>
     </Compile>
     <Compile Include="frmResourceSchedular.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectListNG2.designer.vb">
+      <DependentUpon>frmSelectListNG2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectListNG2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSettings.Designer.vb">
@@ -223,6 +235,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ctlRadGridAdvanceFilterControl.resx">
+      <DependentUpon>ctlRadGridAdvanceFilterControl.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAssignEmployees.resx">
       <DependentUpon>frmAssignEmployees.vb</DependentUpon>
     </EmbeddedResource>
@@ -258,6 +273,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmResourceSchedular.resx">
       <DependentUpon>frmResourceSchedular.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectListNG2.resx">
+      <DependentUpon>frmSelectListNG2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSettings.resx">
       <DependentUpon>frmSettings.vb</DependentUpon>
