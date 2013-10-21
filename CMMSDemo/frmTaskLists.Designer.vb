@@ -30,7 +30,13 @@ Partial Class frmTaskLists
         'dgvTasks
         '
         Me.dgvTasks.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvTasks.EnableCustomFiltering = True
         Me.dgvTasks.Location = New System.Drawing.Point(0, 0)
+        '
+        'dgvTasks
+        '
+        Me.dgvTasks.MasterTemplate.EnableCustomFiltering = True
+        Me.dgvTasks.MasterTemplate.EnableFiltering = True
         Me.dgvTasks.Name = "dgvTasks"
         Me.dgvTasks.Size = New System.Drawing.Size(551, 403)
         Me.dgvTasks.TabIndex = 1

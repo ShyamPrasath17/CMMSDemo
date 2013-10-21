@@ -30,7 +30,13 @@ Partial Class frmWorkOrderLists
         'dgvWo
         '
         Me.dgvWo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvWo.EnableCustomFiltering = True
         Me.dgvWo.Location = New System.Drawing.Point(0, 0)
+        '
+        'dgvWo
+        '
+        Me.dgvWo.MasterTemplate.EnableCustomFiltering = True
+        Me.dgvWo.MasterTemplate.EnableFiltering = True
         Me.dgvWo.Name = "dgvWo"
         Me.dgvWo.Size = New System.Drawing.Size(752, 365)
         Me.dgvWo.TabIndex = 0
