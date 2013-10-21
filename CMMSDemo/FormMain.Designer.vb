@@ -22,7 +22,7 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim AutoHideGroup2 As Telerik.WinControls.UI.Docking.AutoHideGroup = New Telerik.WinControls.UI.Docking.AutoHideGroup()
+        Dim AutoHideGroup1 As Telerik.WinControls.UI.Docking.AutoHideGroup = New Telerik.WinControls.UI.Docking.AutoHideGroup()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.DockWindowPlaceholder1 = New Telerik.WinControls.UI.Docking.DockWindowPlaceholder()
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
@@ -130,7 +130,7 @@ Partial Class FormMain
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.TwSehedTaskPool
+        Me.RadDockMain.ActiveWindow = Me.twDashBoard
         Me.RadDockMain.CausesValidation = False
         Me.RadDockMain.Controls.Add(Me.ToolTabStrip1)
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
@@ -147,8 +147,8 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        AutoHideGroup2.Windows.Add(Me.DockWindowPlaceholder1)
-        Me.RadDockMain.SerializableAutoHideContainer.BottomAutoHideGroups.Add(AutoHideGroup2)
+        AutoHideGroup1.Windows.Add(Me.DockWindowPlaceholder1)
+        Me.RadDockMain.SerializableAutoHideContainer.BottomAutoHideGroups.Add(AutoHideGroup1)
         Me.RadDockMain.Size = New System.Drawing.Size(832, 788)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
@@ -188,7 +188,7 @@ Partial Class FormMain
         '
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip1.SelectedIndex = 3
+        Me.ToolTabStrip1.SelectedIndex = 12
         Me.ToolTabStrip1.Size = New System.Drawing.Size(822, 666)
         Me.ToolTabStrip1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, 0.3604651!)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 279)
@@ -201,7 +201,7 @@ Partial Class FormMain
         Me.twTask.Location = New System.Drawing.Point(1, 24)
         Me.twTask.Name = "twTask"
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTask.Size = New System.Drawing.Size(825, 616)
+        Me.twTask.Size = New System.Drawing.Size(820, 616)
         Me.twTask.Text = "Task"
         '
         'twCommonTaskPool
@@ -300,7 +300,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(825, 728)
+        Me.twDashBoard.Size = New System.Drawing.Size(820, 616)
         Me.twDashBoard.Text = "DashBoard"
         '
         'twScheduler
@@ -635,9 +635,9 @@ Partial Class FormMain
         'rpvpSettings
         '
         Me.rpvpSettings.Image = CType(resources.GetObject("rpvpSettings.Image"), System.Drawing.Image)
-        Me.rpvpSettings.Location = New System.Drawing.Point(4, -583)
+        Me.rpvpSettings.Location = New System.Drawing.Point(5, 31)
         Me.rpvpSettings.Name = "rpvpSettings"
-        Me.rpvpSettings.Size = New System.Drawing.Size(174, 292)
+        Me.rpvpSettings.Size = New System.Drawing.Size(191, 188)
         Me.rpvpSettings.Text = "Settings"
         '
         'ToolTabStrip5
