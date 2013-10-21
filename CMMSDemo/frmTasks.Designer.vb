@@ -71,7 +71,6 @@ Partial Class frmTasks
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
@@ -535,27 +534,17 @@ Partial Class frmTasks
         'Button5
         '
         Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Location = New System.Drawing.Point(353, 766)
+        Me.Button5.Location = New System.Drawing.Point(434, 766)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(75, 23)
         Me.Button5.TabIndex = 110
         Me.Button5.Text = "Complete"
         Me.Button5.UseVisualStyleBackColor = True
         '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(596, 766)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 109
-        Me.Button4.Text = "Save"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(434, 766)
+        Me.Button1.Location = New System.Drawing.Point(515, 766)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 32
@@ -565,7 +554,7 @@ Partial Class frmTasks
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(515, 766)
+        Me.Button2.Location = New System.Drawing.Point(596, 766)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 33
@@ -598,7 +587,6 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label12)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label10)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpSite)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpOutSource)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label9)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox2)
@@ -840,7 +828,6 @@ Partial Class frmTasks
     Friend WithEvents btnEmployees As System.Windows.Forms.Button
     Friend WithEvents grpOutSource As System.Windows.Forms.GroupBox
     Friend WithEvents btnOutSource As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents grpSite As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
     Friend WithEvents Label13 As System.Windows.Forms.Label

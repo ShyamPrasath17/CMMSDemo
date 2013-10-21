@@ -23,18 +23,16 @@ Partial Class frmAssignEquipments
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmAssignEquipments))
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtEmpName = New System.Windows.Forms.TextBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.txtEmpID = New System.Windows.Forms.TextBox()
         Me.btnOutSource = New System.Windows.Forms.Button()
         Me.grpOutSource = New System.Windows.Forms.GroupBox()
+        Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.grpInternalEmp = New System.Windows.Forms.GroupBox()
         Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.NumericUpDown1 = New System.Windows.Forms.NumericUpDown()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
@@ -69,26 +67,6 @@ Partial Class frmAssignEquipments
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolTabStrip1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(535, 406)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 122
-        Me.Button4.Text = "Save"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(454, 406)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 121
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -142,6 +120,16 @@ Partial Class frmAssignEquipments
         Me.grpOutSource.TabIndex = 118
         Me.grpOutSource.TabStop = False
         '
+        'BtnAddemp
+        '
+        Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAddemp.Location = New System.Drawing.Point(0, 65)
+        Me.BtnAddemp.Name = "BtnAddemp"
+        Me.BtnAddemp.Size = New System.Drawing.Size(245, 49)
+        Me.BtnAddemp.TabIndex = 119
+        Me.BtnAddemp.Text = "Add Internal Equpiment"
+        Me.BtnAddemp.UseVisualStyleBackColor = True
+        '
         'grpInternalEmp
         '
         Me.grpInternalEmp.Controls.Add(Me.cmbrptUom)
@@ -175,16 +163,6 @@ Partial Class frmAssignEquipments
         Me.Label7.Size = New System.Drawing.Size(56, 13)
         Me.Label7.TabIndex = 133
         Me.Label7.Text = "Rate Type"
-        '
-        'BtnAddemp
-        '
-        Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(0, 65)
-        Me.BtnAddemp.Name = "BtnAddemp"
-        Me.BtnAddemp.Size = New System.Drawing.Size(245, 49)
-        Me.BtnAddemp.TabIndex = 119
-        Me.BtnAddemp.Text = "Add Internal Equpiment"
-        Me.BtnAddemp.UseVisualStyleBackColor = True
         '
         'NumericUpDown1
         '
@@ -275,8 +253,6 @@ Partial Class frmAssignEquipments
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Label4)
         Me.SplitContainer1.Panel2.Controls.Add(Me.btnViewSchedular)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Button4)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Button2)
         Me.SplitContainer1.Panel2.Controls.Add(Me.DateTimePicker3)
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpOutSource)
         Me.SplitContainer1.Panel2.Controls.Add(Me.grpInternalEmp)
@@ -425,8 +401,6 @@ Partial Class frmAssignEquipments
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents txtEmpName As System.Windows.Forms.TextBox
     Friend WithEvents Button6 As System.Windows.Forms.Button

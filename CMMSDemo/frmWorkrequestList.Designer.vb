@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmTaskPool
+Partial Class frmWorkrequestList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,32 +22,32 @@ Partial Class frmTaskPool
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.dgvIndepSchedTaskList = New Telerik.WinControls.UI.RadGridView()
-        CType(Me.dgvIndepSchedTaskList, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvIndepSchedTaskList.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dgvWorkReq = New Telerik.WinControls.UI.RadGridView()
+        CType(Me.dgvWorkReq, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvWorkReq.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'dgvIndepSchedTaskList
+        'dgvWorkReq
         '
-        Me.dgvIndepSchedTaskList.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dgvIndepSchedTaskList.Location = New System.Drawing.Point(0, 0)
-        Me.dgvIndepSchedTaskList.Name = "dgvIndepSchedTaskList"
-        Me.dgvIndepSchedTaskList.Size = New System.Drawing.Size(802, 326)
-        Me.dgvIndepSchedTaskList.TabIndex = 0
-        Me.dgvIndepSchedTaskList.Text = "RadGridView1"
+        Me.dgvWorkReq.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvWorkReq.Location = New System.Drawing.Point(0, 0)
+        Me.dgvWorkReq.Name = "dgvWorkReq"
+        Me.dgvWorkReq.Size = New System.Drawing.Size(802, 326)
+        Me.dgvWorkReq.TabIndex = 0
+        Me.dgvWorkReq.Text = "RadGridView1"
         '
-        'frmTaskPool
+        'frmWorkrequestList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(802, 326)
-        Me.Controls.Add(Me.dgvIndepSchedTaskList)
-        Me.Name = "frmTaskPool"
-        Me.Text = "Task Pool"
-        CType(Me.dgvIndepSchedTaskList.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvIndepSchedTaskList, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Controls.Add(Me.dgvWorkReq)
+        Me.Name = "frmWorkrequestList"
+        Me.Text = "Work Request List"
+        CType(Me.dgvWorkReq.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvWorkReq, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents dgvIndepSchedTaskList As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents dgvWorkReq As Telerik.WinControls.UI.RadGridView
 End Class

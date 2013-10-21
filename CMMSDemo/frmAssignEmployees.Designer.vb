@@ -28,15 +28,13 @@ Partial Class frmAssignEmployees
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnViewSchedular = New System.Windows.Forms.Button()
         Me.DateTimePicker3 = New System.Windows.Forms.DateTimePicker()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.grpOutSource = New System.Windows.Forms.GroupBox()
         Me.btnOutSource = New System.Windows.Forms.Button()
+        Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.grpInternalEmp = New System.Windows.Forms.GroupBox()
         Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.BtnAddemp = New System.Windows.Forms.Button()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtEmpName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -55,6 +53,8 @@ Partial Class frmAssignEmployees
         Me.twEmp = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -136,26 +136,6 @@ Partial Class frmAssignEmployees
         Me.DateTimePicker3.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker3.TabIndex = 121
         '
-        'Button4
-        '
-        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button4.Location = New System.Drawing.Point(476, 426)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(75, 23)
-        Me.Button4.TabIndex = 122
-        Me.Button4.Text = "Save"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(395, 426)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 121
-        Me.Button2.Text = "Delete"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'grpOutSource
         '
         Me.grpOutSource.Controls.Add(Me.btnOutSource)
@@ -172,8 +152,18 @@ Partial Class frmAssignEmployees
         Me.btnOutSource.Name = "btnOutSource"
         Me.btnOutSource.Size = New System.Drawing.Size(245, 43)
         Me.btnOutSource.TabIndex = 0
-        Me.btnOutSource.Text = "Out Source New People >>"
+        Me.btnOutSource.Text = "Out Source Labour >>"
         Me.btnOutSource.UseVisualStyleBackColor = True
+        '
+        'BtnAddemp
+        '
+        Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnAddemp.Location = New System.Drawing.Point(6, 62)
+        Me.BtnAddemp.Name = "BtnAddemp"
+        Me.BtnAddemp.Size = New System.Drawing.Size(245, 39)
+        Me.BtnAddemp.TabIndex = 119
+        Me.BtnAddemp.Text = "Add Internal Employee"
+        Me.BtnAddemp.UseVisualStyleBackColor = True
         '
         'grpInternalEmp
         '
@@ -219,16 +209,6 @@ Partial Class frmAssignEmployees
         Me.Label6.Size = New System.Drawing.Size(56, 13)
         Me.Label6.TabIndex = 86
         Me.Label6.Text = "Employee"
-        '
-        'BtnAddemp
-        '
-        Me.BtnAddemp.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BtnAddemp.Location = New System.Drawing.Point(6, 62)
-        Me.BtnAddemp.Name = "BtnAddemp"
-        Me.BtnAddemp.Size = New System.Drawing.Size(245, 39)
-        Me.BtnAddemp.TabIndex = 119
-        Me.BtnAddemp.Text = "Add Internal Employee"
-        Me.BtnAddemp.UseVisualStyleBackColor = True
         '
         'TextBox3
         '
@@ -412,6 +392,26 @@ Partial Class frmAssignEmployees
         Me.DocumentContainer1.SizeInfo.SizeMode = Telerik.WinControls.UI.Docking.SplitPanelSizeMode.Fill
         Me.DocumentContainer1.TabIndex = 3
         '
+        'Button2
+        '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.Location = New System.Drawing.Point(395, 426)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(75, 23)
+        Me.Button2.TabIndex = 121
+        Me.Button2.Text = "Delete"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button4.Location = New System.Drawing.Point(476, 426)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(75, 23)
+        Me.Button4.TabIndex = 122
+        Me.Button4.Text = "Save"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
         'frmAssignEmployees
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -463,8 +463,6 @@ Partial Class frmAssignEmployees
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents grpOutSource As System.Windows.Forms.GroupBox
     Friend WithEvents btnOutSource As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents BtnAddemp As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents DateTimePicker3 As System.Windows.Forms.DateTimePicker
@@ -475,4 +473,6 @@ Partial Class frmAssignEmployees
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
     Friend WithEvents ToolTabStrip2 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

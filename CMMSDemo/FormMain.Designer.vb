@@ -130,7 +130,7 @@ Partial Class FormMain
         '
         'RadDockMain
         '
-        Me.RadDockMain.ActiveWindow = Me.TwSehedTaskPool
+        Me.RadDockMain.ActiveWindow = Me.twDashBoard
         Me.RadDockMain.CausesValidation = False
         Me.RadDockMain.Controls.Add(Me.ToolTabStrip1)
         Me.RadDockMain.Controls.Add(Me.DocumentContainer1)
@@ -160,7 +160,7 @@ Partial Class FormMain
         Me.TwSehedTaskPool.Location = New System.Drawing.Point(1, 24)
         Me.TwSehedTaskPool.Name = "TwSehedTaskPool"
         Me.TwSehedTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwSehedTaskPool.Size = New System.Drawing.Size(820, 616)
+        Me.TwSehedTaskPool.Size = New System.Drawing.Size(820, 618)
         Me.TwSehedTaskPool.Text = "Scheduled Task Pool"
         '
         'ToolTabStrip1
@@ -188,7 +188,7 @@ Partial Class FormMain
         '
         '
         Me.ToolTabStrip1.RootElement.MinSize = New System.Drawing.Size(25, 25)
-        Me.ToolTabStrip1.SelectedIndex = 3
+        Me.ToolTabStrip1.SelectedIndex = 12
         Me.ToolTabStrip1.Size = New System.Drawing.Size(822, 666)
         Me.ToolTabStrip1.SizeInfo.AutoSizeScale = New System.Drawing.SizeF(0.0!, 0.3604651!)
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 279)
@@ -201,7 +201,7 @@ Partial Class FormMain
         Me.twTask.Location = New System.Drawing.Point(1, 24)
         Me.twTask.Name = "twTask"
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twTask.Size = New System.Drawing.Size(825, 616)
+        Me.twTask.Size = New System.Drawing.Size(820, 616)
         Me.twTask.Text = "Task"
         '
         'twCommonTaskPool
@@ -300,7 +300,7 @@ Partial Class FormMain
         Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
         Me.twDashBoard.Name = "twDashBoard"
         Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(825, 728)
+        Me.twDashBoard.Size = New System.Drawing.Size(820, 616)
         Me.twDashBoard.Text = "DashBoard"
         '
         'twScheduler
@@ -409,7 +409,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpReportsCharts
+        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
         Me.rpvMain.Size = New System.Drawing.Size(201, 788)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -453,9 +453,9 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Controls.Add(Me.btnViewWorkOrders)
         Me.rpvpWorkOrders.Controls.Add(Me.btnCreateWorkOrder)
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
-        Me.rpvpWorkOrders.Location = New System.Drawing.Point(4, 4)
+        Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 31)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(0, 0)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(191, 188)
         Me.rpvpWorkOrders.Text = "Work Orders"
         '
         'btnViewWorkOrders
@@ -635,9 +635,9 @@ Partial Class FormMain
         'rpvpSettings
         '
         Me.rpvpSettings.Image = CType(resources.GetObject("rpvpSettings.Image"), System.Drawing.Image)
-        Me.rpvpSettings.Location = New System.Drawing.Point(4, -583)
+        Me.rpvpSettings.Location = New System.Drawing.Point(5, 31)
         Me.rpvpSettings.Name = "rpvpSettings"
-        Me.rpvpSettings.Size = New System.Drawing.Size(174, 292)
+        Me.rpvpSettings.Size = New System.Drawing.Size(191, 188)
         Me.rpvpSettings.Text = "Settings"
         '
         'ToolTabStrip5

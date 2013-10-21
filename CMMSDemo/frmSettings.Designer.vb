@@ -23,7 +23,7 @@ Partial Class frmSettings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmSettings))
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.BtnSave = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TabPage11 = New System.Windows.Forms.TabPage()
         Me.TabControl4 = New System.Windows.Forms.TabControl()
@@ -214,6 +214,9 @@ Partial Class frmSettings
         Me.RadioButton20 = New System.Windows.Forms.RadioButton()
         Me.RadioButton21 = New System.Windows.Forms.RadioButton()
         Me.ListBox7 = New System.Windows.Forms.ListBox()
+        Me.TabPage14 = New System.Windows.Forms.TabPage()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.txtConn = New System.Windows.Forms.TextBox()
         Me.TabPage11.SuspendLayout()
         Me.TabControl4.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -253,17 +256,18 @@ Partial Class frmSettings
         Me.TabPage15.SuspendLayout()
         Me.GroupBox17.SuspendLayout()
         Me.GroupBox18.SuspendLayout()
+        Me.TabPage14.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button1
+        'BtnSave
         '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(623, 514)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Save"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.BtnSave.Location = New System.Drawing.Point(623, 514)
+        Me.BtnSave.Name = "BtnSave"
+        Me.BtnSave.Size = New System.Drawing.Size(75, 23)
+        Me.BtnSave.TabIndex = 1
+        Me.BtnSave.Text = "Save"
+        Me.BtnSave.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -1993,6 +1997,7 @@ Partial Class frmSettings
         Me.TabControl1.Controls.Add(Me.TabPage11)
         Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Controls.Add(Me.TabPage8)
+        Me.TabControl1.Controls.Add(Me.TabPage14)
         Me.TabControl1.Location = New System.Drawing.Point(3, 12)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -2168,6 +2173,34 @@ Partial Class frmSettings
         Me.ListBox7.Size = New System.Drawing.Size(146, 199)
         Me.ListBox7.TabIndex = 0
         '
+        'TabPage14
+        '
+        Me.TabPage14.Controls.Add(Me.txtConn)
+        Me.TabPage14.Controls.Add(Me.Label40)
+        Me.TabPage14.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage14.Name = "TabPage14"
+        Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage14.Size = New System.Drawing.Size(768, 470)
+        Me.TabPage14.TabIndex = 13
+        Me.TabPage14.Text = "Connection"
+        Me.TabPage14.UseVisualStyleBackColor = True
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.Location = New System.Drawing.Point(37, 33)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(91, 13)
+        Me.Label40.TabIndex = 0
+        Me.Label40.Text = "Connection String"
+        '
+        'txtConn
+        '
+        Me.txtConn.Location = New System.Drawing.Point(148, 26)
+        Me.txtConn.Name = "txtConn"
+        Me.txtConn.Size = New System.Drawing.Size(578, 20)
+        Me.txtConn.TabIndex = 1
+        '
         'frmSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -2175,7 +2208,7 @@ Partial Class frmSettings
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(791, 549)
         Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnSave)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "frmSettings"
         Me.Text = "System Settings"
@@ -2246,10 +2279,12 @@ Partial Class frmSettings
         Me.GroupBox17.PerformLayout()
         Me.GroupBox18.ResumeLayout(False)
         Me.GroupBox18.PerformLayout()
+        Me.TabPage14.ResumeLayout(False)
+        Me.TabPage14.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents BtnSave As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents TabPage11 As System.Windows.Forms.TabPage
     Friend WithEvents TabControl4 As System.Windows.Forms.TabControl
@@ -2440,4 +2475,7 @@ Partial Class frmSettings
     Friend WithEvents RadioButton23 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton24 As System.Windows.Forms.RadioButton
     Friend WithEvents ListBox8 As System.Windows.Forms.ListBox
+    Friend WithEvents TabPage14 As System.Windows.Forms.TabPage
+    Friend WithEvents txtConn As System.Windows.Forms.TextBox
+    Friend WithEvents Label40 As System.Windows.Forms.Label
 End Class

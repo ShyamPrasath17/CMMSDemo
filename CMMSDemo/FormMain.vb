@@ -15,9 +15,9 @@ Public Class FormMain
 
     Public frmSched As frmSheduleMaintanance
 
-    Public frmScheduledTskPool As frmTaskPool
-    Public frmIndependentTskPool As frmTaskPool
-    Public frmCommonTskPool As frmTaskPool
+    'Public frmScheduledTskPool As frmTaskPool
+    'Public frmIndependentTskPool As frmTaskPool
+    'Public frmCommonTskPool As frmTaskPool
 
     Public frmindepttsk As frmIndependentTask
 
@@ -57,9 +57,9 @@ Public Class FormMain
         twProjectList.Controls.Add(frmProjLst)
         twTask.Controls.Add(frmTsk)
         twTaskList.Controls.Add(frmTskLst)
-        TwSehedTaskPool.Controls.Add(frmScheduledTskPool)
-        TwIndeptTaskPool.Controls.Add(frmIndependentTskPool)
-        twCommonTaskPool.Controls.Add(frmCommonTskPool)
+        'TwSehedTaskPool.Controls.Add(frmScheduledTskPool)
+        'TwIndeptTaskPool.Controls.Add(frmIndependentTskPool)
+        'twCommonTaskPool.Controls.Add(frmCommonTskPool)
         TwIndependentTask.Controls.Add(frmindepttsk)
         TwScheduledMaint.Controls.Add(frmSched)
         ToolWindowWo.Controls.Add(frmwo)
@@ -161,25 +161,25 @@ Public Class FormMain
         frmSched.Show()
     End Sub
     Private Sub addfrmSchedTskPool()
-        frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
-        frmScheduledTskPool.Dock = DockStyle.Fill
-        frmScheduledTskPool.TopLevel = False
-        frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmScheduledTskPool.Show()
+        'frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
+        'frmScheduledTskPool.Dock = DockStyle.Fill
+        'frmScheduledTskPool.TopLevel = False
+        'frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        'frmScheduledTskPool.Show()
     End Sub
     Private Sub addfrmIndeptTskPool()
-        frmIndependentTskPool = New frmTaskPool("Independent")
-        frmIndependentTskPool.Dock = DockStyle.Fill
-        frmIndependentTskPool.TopLevel = False
-        frmIndependentTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmIndependentTskPool.Show()
+        'frmIndependentTskPool = New frmTaskPool("Independent")
+        'frmIndependentTskPool.Dock = DockStyle.Fill
+        'frmIndependentTskPool.TopLevel = False
+        'frmIndependentTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        'frmIndependentTskPool.Show()
     End Sub
     Private Sub addfrmCommonTskPool()
-        frmCommonTskPool = New frmTaskPool("")
-        frmCommonTskPool.Dock = DockStyle.Fill
-        frmCommonTskPool.TopLevel = False
-        frmCommonTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmCommonTskPool.Show()
+        'frmCommonTskPool = New frmTaskPool("")
+        'frmCommonTskPool.Dock = DockStyle.Fill
+        'frmCommonTskPool.TopLevel = False
+        'frmCommonTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        'frmCommonTskPool.Show()
     End Sub
     Private Sub addfrmschedular()
         frmschedular = New frmTaskShedular()
@@ -223,20 +223,31 @@ Public Class FormMain
     Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
             If Not frmProjLst.dgvProjectList.CurrentRow Is Nothing Then
-                Dim dt_wo As DataTable = Me.frmwolst.dtWo.Copy()
-                dt_wo.DefaultView.RowFilter = "ProjectNo = '" & Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectNo").Value.ToString() & "'"
-                Dim dttask_copy As DataTable = Me.frmTskLst.dttask.Copy()
-                dttask_copy.Clear()
-                Me.frmTskLst.dgvTasks.DataSource = dttask_copy
-                Me.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
+                'Dim dt_wo As DataTable = Me.frmwolst.dtWo.Copy()
+                'dt_wo.DefaultView.RowFilter = "ProjectID = '" & Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString() & "'"
+                'Dim dttask_copy As DataTable = Me.frmTskLst.dttask.Copy()
+                'dttask_copy.Clear()
+                'Me.frmTskLst.dgvTasks.DataSource = dttask_copy
+                'Me.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
+                Dim ArgArray As ArrayList
+                ArgArray = New ArrayList
+                ArgArray.Add("@ProjectID") : ArgArray.Add(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
+                Dim dt_wo As DataTable = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
+                Me.frmwolst.dgvWo.DataSource = dt_wo
             End If
         ElseIf rpvMain.SelectedPage Is rpvpTasks Then
             If Not frmwolst.dgvWo.CurrentRow Is Nothing Then
                 If (Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                    Me.frmwo.fillworkorder(frmwolst.dtWo.Select("WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), frmwolst.dtWo)
-                    Dim dt_task As DataTable = Me.frmTskLst.dttask
-                    dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                    Me.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
+                    '    Me.frmwo.fillworkorder(frmwolst.dtWo.Select("WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), frmwolst.dtWo)
+                    '    Dim dt_task As DataTable = Me.frmTskLst.dttask
+                    '    dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
+                    '    Me.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
+
+                    Dim ArgArray As ArrayList
+                    ArgArray = New ArrayList
+                    ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
+                    Dim dt_tsk As DataTable = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
+                    Me.frmTskLst.dgvTasks.DataSource = dt_tsk
                 End If
             End If
         End If
