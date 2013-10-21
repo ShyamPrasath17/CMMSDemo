@@ -30,7 +30,13 @@ Partial Class frmProjectList
         'dgvProjectList
         '
         Me.dgvProjectList.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dgvProjectList.EnableCustomFiltering = True
         Me.dgvProjectList.Location = New System.Drawing.Point(0, 0)
+        '
+        'dgvProjectList
+        '
+        Me.dgvProjectList.MasterTemplate.EnableCustomFiltering = True
+        Me.dgvProjectList.MasterTemplate.EnableFiltering = True
         Me.dgvProjectList.Name = "dgvProjectList"
         Me.dgvProjectList.Size = New System.Drawing.Size(620, 394)
         Me.dgvProjectList.TabIndex = 0

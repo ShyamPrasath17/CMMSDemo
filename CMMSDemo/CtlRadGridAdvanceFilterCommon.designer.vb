@@ -103,6 +103,7 @@ Imports System
         Me.chkAllCols.Size = New System.Drawing.Size(80, 18)
         Me.chkAllCols.TabIndex = 2
         Me.chkAllCols.Text = "All Columns"
+        Me.chkAllCols.ToggleState = Telerik.WinControls.Enumerations.ToggleState.[On]
         '
         'radLabelSearch
         '
