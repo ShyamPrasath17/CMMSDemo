@@ -6,7 +6,7 @@ Public Class frmTaskLists
 
     Private Sub frmTaskLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
-        createtable()
+        'createtable()
         dgvTasks.AllowAddNewRow = False
         dgvTasks.AllowEditRow = False
         dgvTasks.AllowDeleteRow = False
@@ -53,8 +53,8 @@ Public Class frmTaskLists
     End Sub
     Private Sub dgvTasks_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvTasks.CurrentRowChanged
         If (frmloaded) Then
-            If (Not dgvTasks.CurrentRow.Cells("TaskNo").Value Is Nothing) Then
-                FormMain.frmTsk.filltask(dttask.Select("TaskNo = '" & dgvTasks.CurrentRow.Cells("TaskNo").Value.ToString() & "'")(0))
+            If (Not dgvTasks.CurrentRow.Cells("TaskID").Value Is Nothing) Then
+                'FormMain.frmTsk.filltask(dttask.Select("TaskID = '" & dgvTasks.CurrentRow.Cells("TaskID").Value.ToString() & "'")(0))
             End If
         End If
     End Sub

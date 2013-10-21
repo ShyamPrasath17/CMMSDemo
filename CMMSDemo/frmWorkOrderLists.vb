@@ -4,7 +4,7 @@
 
     Private Sub frmWorkOrderLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
-        createtable()
+        'createtable()
         frmloaded = True
         dgvWo.AllowAddNewRow = False
         dgvWo.AllowEditRow = False
@@ -43,10 +43,17 @@
     Private Sub dgvWo_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvWo.CurrentRowChanged
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
-                Dim dtTask As DataTable = FormMain.frmTskLst.dttask
-                dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
+                'FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
+                'Dim dtTask As DataTable = FormMain.frmTskLst.dttask
+                'dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
+                'FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
+
+
+                Dim ArgArray As ArrayList
+                ArgArray = New ArrayList
+                ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
+                Dim dt_tsk As DataTable = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
+                FormMain.frmTskLst.dgvTasks.DataSource = dt_tsk
             End If
         End If
     End Sub
@@ -63,10 +70,11 @@
     Private Sub dgvWo_SelectionChanged(sender As Object, e As EventArgs) Handles dgvWo.SelectionChanged
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
-                Dim dtTask As DataTable = FormMain.frmTskLst.dttask
-                dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
+                'FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
+                'Dim dtTask As DataTable = FormMain.frmTskLst.dttask
+                'dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
+                'FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
+
             End If
         End If
     End Sub
