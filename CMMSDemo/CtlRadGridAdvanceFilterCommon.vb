@@ -176,20 +176,25 @@ Partial Public Class AdvanceFilterControl
     End Sub
 
     Private Sub radTextBoxSearch_TextChanged(ByVal sender As Object, ByVal e As EventArgs) Handles radTextBoxSearch.TextChanged
-        Dim tableElement As GridTableElement = Me.gridView_Renamed.TableElement
-        Dim masterTemplate As MasterGridViewTemplate = Me.gridView_Renamed.MasterTemplate
+        If GridView IsNot Nothing Then
 
-        tableElement.BeginUpdate()
-        Me.gridView_Renamed.EnableCustomFiltering = True
-        masterTemplate.DataView.Refresh()
-        tableElement.EndUpdate(False)
+            Dim tableElement As GridTableElement = Me.gridView_Renamed.TableElement
+            Dim masterTemplate As MasterGridViewTemplate = Me.gridView_Renamed.MasterTemplate
 
-        Dim viewChangedEventInfo As New GridViewEventInfo(KnownEvents.ViewChanged, GridEventType.UI, GridEventDispatchMode.Send)
-        Dim args As New DataViewChangedEventArgs(ViewChangedAction.FilteringChanged)
-        Dim viewChangedEvent As New GridViewEvent(masterTemplate, masterTemplate.DataView, New Object() {args}, viewChangedEventInfo)
-        Me.gridView_Renamed.MasterTemplate.SynchronizationService.DispatchEvent(viewChangedEvent)
+            tableElement.BeginUpdate()
+            Me.gridView_Renamed.EnableCustomFiltering = True
+            masterTemplate.DataView.Refresh()
+            tableElement.EndUpdate(False)
 
-        Me.gridView_Renamed.TableElement.Update(GridUINotifyAction.StateChanged)
+            Dim viewChangedEventInfo As New GridViewEventInfo(KnownEvents.ViewChanged, GridEventType.UI, GridEventDispatchMode.Send)
+            Dim args As New DataViewChangedEventArgs(ViewChangedAction.FilteringChanged)
+            Dim viewChangedEvent As New GridViewEvent(masterTemplate, masterTemplate.DataView, New Object() {args}, viewChangedEventInfo)
+            Me.gridView_Renamed.MasterTemplate.SynchronizationService.DispatchEvent(viewChangedEvent)
+
+            Me.gridView_Renamed.TableElement.Update(GridUINotifyAction.StateChanged)
+
+        End If
+
     End Sub
 
     Private Sub GridView_CustomFiltering(ByVal sender As Object, ByVal e As GridViewCustomFilteringEventArgs)

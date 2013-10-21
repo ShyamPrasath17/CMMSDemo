@@ -1,4 +1,6 @@
-﻿Public Class FormMain
+﻿Imports Telerik.WinControls.UI.Docking
+
+Public Class FormMain
 
 
 
@@ -25,7 +27,7 @@
 
     Public frmImportSchedule_ As frmImportSchedule
 
-
+    Public frmSearch As frmSearch
     Dim frmDashBoard As frmDashBoard
 
     Sub New()
@@ -44,6 +46,8 @@
         addfrmschedular()
         addfrmsettings()
         addfrmImportSchedule()
+        addfrmSearch()
+
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -63,6 +67,12 @@
         twScheduler.Controls.Add(frmschedular)
         twSettings.Controls.Add(frmSettings_)
         twImportSchedule.Controls.Add(frmImportSchedule_)
+        twSearch.Controls.Add(frmSearch)
+
+
+
+        DirectCast(twSearch.TabStrip, ToolTabStrip).AutoHidePosition = AutoHidePosition.Bottom
+        twSearch.AutoHide()
 
     End Sub
 
@@ -194,6 +204,14 @@
         frmImportSchedule_.Show()
     End Sub
 
+    Private Sub addfrmSearch()
+        frmSearch = New frmSearch
+        frmSearch.Dock = DockStyle.Fill
+        frmSearch.TopLevel = False
+        frmSearch.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmSearch.Show()
+    End Sub
+
     Private Sub addfrmIndeptTsk()
         frmindepttsk = New frmIndependentTask()
         frmindepttsk.Dock = DockStyle.Fill
@@ -310,5 +328,18 @@
     Private Sub btnImportSchedule_Click(sender As Object, e As EventArgs) Handles btnImportEvents.Click
         twImportSchedule.Show()
         twImportSchedule.Select()
+    End Sub
+
+    Private Sub twTaskList_Enter(sender As Object, e As EventArgs) Handles twTaskList.Enter
+        frmSearch.AdvanceFilterControl1.GridView = frmTskLst.dgvTasks
+    End Sub
+
+    Private Sub twProjectList_Enter(sender As Object, e As EventArgs) Handles twProjectList.Enter
+        frmSearch.AdvanceFilterControl1.GridView = frmProjLst.dgvProjectList
+
+    End Sub
+
+    Private Sub ToolWindowWoLst_Enter(sender As Object, e As EventArgs) Handles ToolWindowWoLst.Enter
+        frmSearch.AdvanceFilterControl1.GridView = frmwolst.dgvWo
     End Sub
 End Class
