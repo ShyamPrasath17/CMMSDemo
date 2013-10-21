@@ -26,11 +26,12 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.DockWindowPlaceholder1 = New Telerik.WinControls.UI.Docking.DockWindowPlaceholder()
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.TwSehedTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twCommonTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwIndeptTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwSehedTaskPool = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwIndependentTask = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwScheduledMaint = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
@@ -39,7 +40,6 @@ Partial Class FormMain
         Me.twSettings = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twScheduler = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twImportSchedule = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.DocumentContainer1 = New Telerik.WinControls.UI.Docking.DocumentContainer()
@@ -154,14 +154,14 @@ Partial Class FormMain
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
         '
-        'TwSehedTaskPool
+        'twDashBoard
         '
-        Me.TwSehedTaskPool.Caption = Nothing
-        Me.TwSehedTaskPool.Location = New System.Drawing.Point(1, 24)
-        Me.TwSehedTaskPool.Name = "TwSehedTaskPool"
-        Me.TwSehedTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwSehedTaskPool.Size = New System.Drawing.Size(820, 618)
-        Me.TwSehedTaskPool.Text = "Scheduled Task Pool"
+        Me.twDashBoard.Caption = Nothing
+        Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
+        Me.twDashBoard.Name = "twDashBoard"
+        Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twDashBoard.Size = New System.Drawing.Size(820, 618)
+        Me.twDashBoard.Text = "DashBoard"
         '
         'ToolTabStrip1
         '
@@ -221,6 +221,15 @@ Partial Class FormMain
         Me.TwIndeptTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.TwIndeptTaskPool.Size = New System.Drawing.Size(825, 728)
         Me.TwIndeptTaskPool.Text = "Independent Task Pool"
+        '
+        'TwSehedTaskPool
+        '
+        Me.TwSehedTaskPool.Caption = Nothing
+        Me.TwSehedTaskPool.Location = New System.Drawing.Point(1, 24)
+        Me.TwSehedTaskPool.Name = "TwSehedTaskPool"
+        Me.TwSehedTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwSehedTaskPool.Size = New System.Drawing.Size(820, 618)
+        Me.TwSehedTaskPool.Text = "Scheduled Task Pool"
         '
         'TwIndependentTask
         '
@@ -293,15 +302,6 @@ Partial Class FormMain
         Me.ToolWindowWo.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.ToolWindowWo.Size = New System.Drawing.Size(825, 728)
         Me.ToolWindowWo.Text = "WorkOrder"
-        '
-        'twDashBoard
-        '
-        Me.twDashBoard.Caption = Nothing
-        Me.twDashBoard.Location = New System.Drawing.Point(1, 24)
-        Me.twDashBoard.Name = "twDashBoard"
-        Me.twDashBoard.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twDashBoard.Size = New System.Drawing.Size(820, 616)
-        Me.twDashBoard.Text = "DashBoard"
         '
         'twScheduler
         '
