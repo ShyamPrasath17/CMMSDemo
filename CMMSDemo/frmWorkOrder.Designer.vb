@@ -69,7 +69,6 @@ Partial Class frmWorkOrder
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.grpBillable = New System.Windows.Forms.GroupBox()
         Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -96,6 +95,8 @@ Partial Class frmWorkOrder
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.ComboBox3 = New System.Windows.Forms.ComboBox()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -308,14 +309,14 @@ Partial Class frmWorkOrder
         '
         Me.NumericUpDown1.Location = New System.Drawing.Point(141, 307)
         Me.NumericUpDown1.Name = "NumericUpDown1"
-        Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
+        Me.NumericUpDown1.Size = New System.Drawing.Size(88, 20)
         Me.NumericUpDown1.TabIndex = 85
         '
         'NumericUpDown2
         '
         Me.NumericUpDown2.Location = New System.Drawing.Point(467, 307)
         Me.NumericUpDown2.Name = "NumericUpDown2"
-        Me.NumericUpDown2.Size = New System.Drawing.Size(120, 20)
+        Me.NumericUpDown2.Size = New System.Drawing.Size(87, 20)
         Me.NumericUpDown2.TabIndex = 87
         '
         'Label11
@@ -505,16 +506,6 @@ Partial Class frmWorkOrder
         Me.TextBox10.Size = New System.Drawing.Size(185, 20)
         Me.TextBox10.TabIndex = 105
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(116, 417)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(125, 17)
-        Me.CheckBox1.TabIndex = 104
-        Me.CheckBox1.Text = "Schedule Reminder"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'grpBillable
         '
         Me.grpBillable.Controls.Add(Me.cmbrptUom)
@@ -526,7 +517,7 @@ Partial Class frmWorkOrder
         Me.grpBillable.Controls.Add(Me.lblCust)
         Me.grpBillable.Controls.Add(Me.txtcust)
         Me.grpBillable.Controls.Add(Me.Sercust)
-        Me.grpBillable.Location = New System.Drawing.Point(17, 440)
+        Me.grpBillable.Location = New System.Drawing.Point(17, 425)
         Me.grpBillable.Name = "grpBillable"
         Me.grpBillable.Size = New System.Drawing.Size(321, 124)
         Me.grpBillable.TabIndex = 103
@@ -611,7 +602,7 @@ Partial Class frmWorkOrder
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(374, 541)
+        Me.Button7.Location = New System.Drawing.Point(374, 526)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(130, 23)
         Me.Button7.TabIndex = 102
@@ -621,7 +612,7 @@ Partial Class frmWorkOrder
         'chkBillable
         '
         Me.chkBillable.AutoSize = True
-        Me.chkBillable.Location = New System.Drawing.Point(21, 417)
+        Me.chkBillable.Location = New System.Drawing.Point(17, 402)
         Me.chkBillable.Name = "chkBillable"
         Me.chkBillable.Size = New System.Drawing.Size(64, 17)
         Me.chkBillable.TabIndex = 98
@@ -653,6 +644,8 @@ Partial Class frmWorkOrder
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.ComboBox4)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.ComboBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox15)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label26)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
@@ -685,7 +678,6 @@ Partial Class frmWorkOrder
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label9)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox10)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button6)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.CheckBox1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpBillable)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.NumericUpDown1)
@@ -813,6 +805,26 @@ Partial Class frmWorkOrder
         Me.TextBox14.Size = New System.Drawing.Size(185, 20)
         Me.TextBox14.TabIndex = 68
         '
+        'ComboBox3
+        '
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox3.FormattingEnabled = True
+        Me.ComboBox3.Items.AddRange(New Object() {"Hours", "Days"})
+        Me.ComboBox3.Location = New System.Drawing.Point(235, 306)
+        Me.ComboBox3.Name = "ComboBox3"
+        Me.ComboBox3.Size = New System.Drawing.Size(91, 21)
+        Me.ComboBox3.TabIndex = 167
+        '
+        'ComboBox4
+        '
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Hours", "Days"})
+        Me.ComboBox4.Location = New System.Drawing.Point(560, 306)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(91, 21)
+        Me.ComboBox4.TabIndex = 168
+        '
         'frmWorkOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -883,7 +895,6 @@ Partial Class frmWorkOrder
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
@@ -912,4 +923,6 @@ Partial Class frmWorkOrder
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
     Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
+    Friend WithEvents ComboBox3 As System.Windows.Forms.ComboBox
 End Class

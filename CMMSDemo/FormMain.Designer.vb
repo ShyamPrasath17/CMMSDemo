@@ -81,6 +81,9 @@ Partial Class FormMain
         Me.ToolTabStrip18 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.ToolTabStrip19 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.SqlSelectCommand1 = New System.Data.SqlClient.SqlCommand()
+        Me.SqlDataAdapter1 = New System.Data.SqlClient.SqlDataAdapter()
+        Me.SqlConnection1 = New System.Data.SqlClient.SqlConnection()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.DocumentContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -844,6 +847,24 @@ Partial Class FormMain
         Me.ToolTabStrip19.TabIndex = 0
         Me.ToolTabStrip19.TabStop = False
         '
+        'SqlSelectCommand1
+        '
+        Me.SqlSelectCommand1.CommandText = "dbo.CmmsTaskScmd"
+        Me.SqlSelectCommand1.CommandType = System.Data.CommandType.StoredProcedure
+        Me.SqlSelectCommand1.Connection = Me.SqlConnection1
+        Me.SqlSelectCommand1.Parameters.AddRange(New System.Data.SqlClient.SqlParameter() {New System.Data.SqlClient.SqlParameter("@RETURN_VALUE", System.Data.SqlDbType.[Variant], 0, System.Data.ParameterDirection.ReturnValue, False, CType(0, Byte), CType(0, Byte), "", System.Data.DataRowVersion.Current, Nothing), New System.Data.SqlClient.SqlParameter("@WorkOrderNo", System.Data.SqlDbType.VarChar, 25, "WorkOrderNo")})
+        '
+        'SqlDataAdapter1
+        '
+        Me.SqlDataAdapter1.SelectCommand = Me.SqlSelectCommand1
+        Me.SqlDataAdapter1.TableMappings.AddRange(New System.Data.Common.DataTableMapping() {New System.Data.Common.DataTableMapping("Table", "CmmsTaskScmd", New System.Data.Common.DataColumnMapping() {New System.Data.Common.DataColumnMapping("WorkOrderNo", "WorkOrderNo"), New System.Data.Common.DataColumnMapping("TaskID", "TaskID"), New System.Data.Common.DataColumnMapping("TaskName", "TaskName"), New System.Data.Common.DataColumnMapping("TaskServiceType", "TaskServiceType"), New System.Data.Common.DataColumnMapping("Description", "Description"), New System.Data.Common.DataColumnMapping("EstimatedDuration", "EstimatedDuration"), New System.Data.Common.DataColumnMapping("StartDateTime", "StartDateTime"), New System.Data.Common.DataColumnMapping("EndDateTime", "EndDateTime"), New System.Data.Common.DataColumnMapping("HrsPerDay", "HrsPerDay"), New System.Data.Common.DataColumnMapping("ActualDuration", "ActualDuration"), New System.Data.Common.DataColumnMapping("DurationUOM", "DurationUOM"), New System.Data.Common.DataColumnMapping("Status", "Status"), New System.Data.Common.DataColumnMapping("Cost", "Cost"), New System.Data.Common.DataColumnMapping("AdditionalCost", "AdditionalCost"), New System.Data.Common.DataColumnMapping("AdditionalCostDescription", "AdditionalCostDescription")})})
+        '
+        'SqlConnection1
+        '
+        Me.SqlConnection1.ConnectionString = "Data Source=SHYAM-PC\TOWNSUITE;Initial Catalog=DBCMMS;Persist Security Info=True;" & _
+    "User ID=sa;Password=Wheymu1"
+        Me.SqlConnection1.FireInfoMessageEventOnUserErrors = False
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -944,4 +965,7 @@ Partial Class FormMain
     Friend WithEvents TableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
     Friend WithEvents twSchedMaintLst As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip19 As Telerik.WinControls.UI.Docking.ToolTabStrip
+    Friend WithEvents SqlSelectCommand1 As System.Data.SqlClient.SqlCommand
+    Friend WithEvents SqlConnection1 As System.Data.SqlClient.SqlConnection
+    Friend WithEvents SqlDataAdapter1 As System.Data.SqlClient.SqlDataAdapter
 End Class

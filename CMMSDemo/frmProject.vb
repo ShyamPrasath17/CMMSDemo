@@ -4,7 +4,7 @@
     
     End Sub
     Public Sub fillProject(ByRef dr As DataRow, ByRef dt As DataTable)
-        txtprojectID.Text = dr("ProjectNo").ToString()
+        txtprojectID.Text = dr("ProjectID").ToString()
         txtstatus.Text = dr("status").ToString()
     End Sub
 
