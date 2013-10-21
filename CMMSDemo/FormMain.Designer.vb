@@ -22,7 +22,7 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim AutoHideGroup1 As Telerik.WinControls.UI.Docking.AutoHideGroup = New Telerik.WinControls.UI.Docking.AutoHideGroup()
+        Dim AutoHideGroup2 As Telerik.WinControls.UI.Docking.AutoHideGroup = New Telerik.WinControls.UI.Docking.AutoHideGroup()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.DockWindowPlaceholder1 = New Telerik.WinControls.UI.Docking.DockWindowPlaceholder()
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
@@ -147,8 +147,8 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        AutoHideGroup1.Windows.Add(Me.DockWindowPlaceholder1)
-        Me.RadDockMain.SerializableAutoHideContainer.BottomAutoHideGroups.Add(AutoHideGroup1)
+        AutoHideGroup2.Windows.Add(Me.DockWindowPlaceholder1)
+        Me.RadDockMain.SerializableAutoHideContainer.BottomAutoHideGroups.Add(AutoHideGroup2)
         Me.RadDockMain.Size = New System.Drawing.Size(832, 788)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
@@ -160,7 +160,7 @@ Partial Class FormMain
         Me.TwSehedTaskPool.Location = New System.Drawing.Point(1, 24)
         Me.TwSehedTaskPool.Name = "TwSehedTaskPool"
         Me.TwSehedTaskPool.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwSehedTaskPool.Size = New System.Drawing.Size(820, 616)
+        Me.TwSehedTaskPool.Size = New System.Drawing.Size(820, 618)
         Me.TwSehedTaskPool.Text = "Scheduled Task Pool"
         '
         'ToolTabStrip1
@@ -409,7 +409,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpReportsCharts
+        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
         Me.rpvMain.Size = New System.Drawing.Size(201, 788)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -453,9 +453,9 @@ Partial Class FormMain
         Me.rpvpWorkOrders.Controls.Add(Me.btnViewWorkOrders)
         Me.rpvpWorkOrders.Controls.Add(Me.btnCreateWorkOrder)
         Me.rpvpWorkOrders.Image = CType(resources.GetObject("rpvpWorkOrders.Image"), System.Drawing.Image)
-        Me.rpvpWorkOrders.Location = New System.Drawing.Point(4, 4)
+        Me.rpvpWorkOrders.Location = New System.Drawing.Point(5, 31)
         Me.rpvpWorkOrders.Name = "rpvpWorkOrders"
-        Me.rpvpWorkOrders.Size = New System.Drawing.Size(0, 0)
+        Me.rpvpWorkOrders.Size = New System.Drawing.Size(191, 188)
         Me.rpvpWorkOrders.Text = "Work Orders"
         '
         'btnViewWorkOrders
