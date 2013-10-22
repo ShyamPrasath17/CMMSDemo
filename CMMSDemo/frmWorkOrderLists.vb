@@ -1,7 +1,7 @@
 ﻿Public Class frmWorkOrderLists
-    Public dtWo As DataTable
+    Public dtWo_All As DataTable
     Dim frmloaded As Boolean = False
-    Dim dt_tsk As DataTable
+    Dim dt_wo As DataTable
     Dim ArgArray As ArrayList
 
     Private Sub frmWorkOrderLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -14,63 +14,62 @@
     End Sub
 
     Private Sub createtable()
-        dtWo = New DataTable()
-        dtWo.Columns.Add("ProjectNo", GetType(String))
-        dtWo.Columns.Add("WorkOrderNo", GetType(String))
-        dtWo.Columns.Add("WorkOrderName", GetType(String))
-        dtWo.Columns.Add("Symptoms", GetType(String))
-        dtWo.Columns.Add("Leader", GetType(String))
-        dtWo.Columns.Add("status", GetType(String))
+        dtWo_All = New DataTable()
+        dtWo_All.Columns.Add("ProjectNo", GetType(String))
+        dtWo_All.Columns.Add("WorkOrderNo", GetType(String))
+        dtWo_All.Columns.Add("WorkOrderName", GetType(String))
+        dtWo_All.Columns.Add("Symptoms", GetType(String))
+        dtWo_All.Columns.Add("Leader", GetType(String))
+        dtWo_All.Columns.Add("status", GetType(String))
         For i As Integer = 1 To 15
             If i < 4 Then
-                dtWo.Rows.Add("Project 1", "Wo " & i.ToString(), "service " + i.ToString(), "Perfomance issues", "Tom", "Approved")
+                dtWo_All.Rows.Add("Project 1", "Wo " & i.ToString(), "service " + i.ToString(), "Perfomance issues", "Tom", "Approved")
             ElseIf i >= 4 And i < 8 Then
-                dtWo.Rows.Add("Project 2", "Wo " & i.ToString(), "service " + i.ToString(), "Low Output Quality", "Raj", "New")
+                dtWo_All.Rows.Add("Project 2", "Wo " & i.ToString(), "service " + i.ToString(), "Low Output Quality", "Raj", "New")
             ElseIf i >= 8 And i < 12 Then
-                dtWo.Rows.Add("Project 3", "Wo " & i.ToString(), "service " + i.ToString(), "Damages Found", "Xyz", "Approved")
+                dtWo_All.Rows.Add("Project 3", "Wo " & i.ToString(), "service " + i.ToString(), "Damages Found", "Xyz", "Approved")
             Else
-                dtWo.Rows.Add("Project 6", "Wo " & i.ToString(), "service " + i.ToString(), "Unusual Noise in machine", "Abc", "New")
+                dtWo_All.Rows.Add("Project 6", "Wo " & i.ToString(), "service " + i.ToString(), "Unusual Noise in machine", "Abc", "New")
             End If
         Next
-        dgvWo.DataSource = dtWo.Copy()
+        dgvWo.DataSource = dtWo_All.Copy()
         dgvWo.BestFitColumns()
     End Sub
 
     Public Sub ViewAllWorkOrders()
-        dgvWo.DataSource = dtWo
-        dgvWo.BestFitColumns()
+       
+    End Sub
+
+    Public Sub SetWoData(ProjectID As String)
+        'If Not dt_wo Is Nothing Then
+        '    dt_wo.Clear()
+        '    dt_wo.Dispose()
+        '    GC.Collect()
+        'End If
+
+        If Not ArgArray Is Nothing Then
+            ArgArray.Clear()
+        End If
+
+        ArgArray = New ArrayList
+        ArgArray.Add("@ProjectID") : ArgArray.Add(ProjectID.ToString()) : ArgArray.Add(DbType.String)
+        dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
+        FormMain.frmwolst.dgvWo.DataSource = dt_wo
+
+        dt_wo.Dispose()
+        GC.Collect()
     End Sub
 
     Private Sub dgvWo_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvWo.CurrentRowChanged
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                'FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
-                'Dim dtTask As DataTable = FormMain.frmTskLst.dttask
-                'dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                'FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
-
-                'If Not dt_tsk Is Nothing Then
-                '    dt_tsk.Clear()
-                '    dt_tsk.Dispose()
-                '    GC.Collect()
-                'End If
-
-                If Not ArgArray Is Nothing Then
-                    ArgArray.Clear()
-                End If
-                ArgArray = New ArrayList
-                ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
-                dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
-                FormMain.frmTskLst.dgvTasks.DataSource = dt_tsk
-
-
-                dt_tsk.Dispose()
-                GC.Collect()
+                FormMain.frmwo.fillworkorder(dt_wo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0))
+                FormMain.frmTskLst.SetTaskData(dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString())
             End If
         End If
     End Sub
     Public Sub Viewall_Wo()
-        dgvWo.DataSource = dtWo
+        dgvWo.DataSource = dtWo_All
         dgvWo.BestFitColumns()
     End Sub
 
@@ -80,15 +79,15 @@
     End Sub
 
     Private Sub dgvWo_SelectionChanged(sender As Object, e As EventArgs) Handles dgvWo.SelectionChanged
-        If (frmloaded) Then
-            If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                'FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
-                'Dim dtTask As DataTable = FormMain.frmTskLst.dttask
-                'dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                'FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
+        'If (frmloaded) Then
+        '    If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
+        '        'FormMain.frmwo.fillworkorder(dtWo.Select("WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), dtWo)
+        '        'Dim dtTask As DataTable = FormMain.frmTskLst.dttask
+        '        'dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
+        '        'FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
 
-            End If
-        End If
+        '    End If
+        'End If
     End Sub
 
 End Class

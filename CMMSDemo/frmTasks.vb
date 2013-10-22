@@ -39,9 +39,9 @@
         frmItems.ShowDialog()
     End Sub
     Public Sub filltask(ByRef dr As DataRow)
-        txtTaskID.Text = dr("TaskNo").ToString()
+        txtTaskID.Text = dr("TaskID").ToString()
         txtTaskName.Text = dr("TaskName").ToString()
-        txtstatus.Text = dr("status").ToString()
+        txtstatus.Text = dr("Status").ToString()
     End Sub
 
     Private Sub btnOutSource_Click(sender As Object, e As EventArgs) Handles btnOutSource.Click

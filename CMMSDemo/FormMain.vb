@@ -71,8 +71,6 @@ Public Class FormMain
         twImportSchedule.Controls.Add(frmImportSchedule_)
         twSearch.Controls.Add(frmSearch)
 
-
-
         DirectCast(twSearch.TabStrip, ToolTabStrip).AutoHidePosition = AutoHidePosition.Bottom
         twSearch.AutoHide()
 
@@ -100,7 +98,6 @@ Public Class FormMain
         frmDashBoard.TopLevel = False
         frmDashBoard.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmDashBoard.Show()
-
     End Sub
 
     Private Sub addfrmProject()
@@ -225,46 +222,19 @@ Public Class FormMain
     Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
             If Not frmProjLst.dgvProjectList.CurrentRow Is Nothing Then
-                'Dim dt_wo As DataTable = Me.frmwolst.dtWo.Copy()
-                'dt_wo.DefaultView.RowFilter = "ProjectID = '" & Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString() & "'"
-                'Dim dttask_copy As DataTable = Me.frmTskLst.dttask.Copy()
-                'dttask_copy.Clear()
-                'Me.frmTskLst.dgvTasks.DataSource = dttask_copy
-                'Me.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
-                If Not dt_wo Is Nothing Then
-                    dt_wo.Clear()
-                    dt_wo.Dispose()
-                    GC.Collect()
+                If frmwolst.dgvWo.Rows.Count = 0 Then
+                    Me.frmwolst.SetWoData(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString())
                 End If
-                If Not frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID") Is Nothing Then
-                    Dim ArgArray As ArrayList
-                    ArgArray = New ArrayList
-                    ArgArray.Add("@ProjectID") : ArgArray.Add(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
-                    dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
-                    Me.frmwolst.dgvWo.DataSource = dt_wo
-                Else
-                    MessageBox.Show("Please Select a Project!")
-                End If
-
+            Else
+                MessageBox.Show("Please Select a Project!")
             End If
         ElseIf rpvMain.SelectedPage Is rpvpTasks Then
             If Not frmwolst.dgvWo.CurrentRow Is Nothing Then
                 If (Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo") Is Nothing AndAlso Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                    '    Me.frmwo.fillworkorder(frmwolst.dtWo.Select("WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), frmwolst.dtWo)
-                    '    Dim dt_task As DataTable = Me.frmTskLst.dttask
-                    '    dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                    '    Me.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
-                    If Not dt_tsk Is Nothing Then
-                        dt_tsk.Clear()
-                        dt_tsk.Dispose()
-                        GC.Collect()
+                    If frmTskLst.dgvTasks.Rows.Count = 0 Then
+                        Me.frmTskLst.SetTaskData(Me.frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString())
                     End If
 
-                    Dim ArgArray As ArrayList
-                    ArgArray = New ArrayList
-                    ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
-                    dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
-                    Me.frmTskLst.dgvTasks.DataSource = dt_tsk
                 Else
                     MessageBox.Show("Please Select a Work Order!")
                 End If
@@ -280,7 +250,6 @@ Public Class FormMain
             ElseIf rpvMain.SelectedPage Is rpvpProjects Then
                 twProjectList.Show()
                 twProjectList.Select()
-
             ElseIf rpvMain.SelectedPage Is rpvpTasks Then
                 twTaskList.Show()
                 twTaskList.Select()

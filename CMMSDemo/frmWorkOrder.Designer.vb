@@ -96,6 +96,7 @@ Partial Class frmWorkOrder
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.btnViewTasks = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -653,6 +654,7 @@ Partial Class frmWorkOrder
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnViewTasks)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox15)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label26)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
@@ -813,6 +815,15 @@ Partial Class frmWorkOrder
         Me.TextBox14.Size = New System.Drawing.Size(185, 20)
         Me.TextBox14.TabIndex = 68
         '
+        'btnViewTasks
+        '
+        Me.btnViewTasks.Location = New System.Drawing.Point(361, 26)
+        Me.btnViewTasks.Name = "btnViewTasks"
+        Me.btnViewTasks.Size = New System.Drawing.Size(171, 23)
+        Me.btnViewTasks.TabIndex = 125
+        Me.btnViewTasks.Text = "View Tasks"
+        Me.btnViewTasks.UseVisualStyleBackColor = True
+        '
         'frmWorkOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -912,4 +923,5 @@ Partial Class frmWorkOrder
     Friend WithEvents Label26 As System.Windows.Forms.Label
     Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
     Friend WithEvents Label27 As System.Windows.Forms.Label
+    Friend WithEvents btnViewTasks As System.Windows.Forms.Button
 End Class
