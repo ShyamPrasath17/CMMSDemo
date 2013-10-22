@@ -48,11 +48,12 @@
                 'Dim dtTask As DataTable = FormMain.frmTskLst.dttask
                 'dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
                 'FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
-                If Not dt_tsk Is Nothing Then
-                    dt_tsk.Clear()
-                    dt_tsk.Dispose()
-                    GC.Collect()
-                End If
+
+                'If Not dt_tsk Is Nothing Then
+                '    dt_tsk.Clear()
+                '    dt_tsk.Dispose()
+                '    GC.Collect()
+                'End If
 
                 If Not ArgArray Is Nothing Then
                     ArgArray.Clear()
@@ -61,6 +62,10 @@
                 ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
                 dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
                 FormMain.frmTskLst.dgvTasks.DataSource = dt_tsk
+
+
+                dt_tsk.Dispose()
+                GC.Collect()
             End If
         End If
     End Sub

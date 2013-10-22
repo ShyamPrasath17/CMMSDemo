@@ -236,15 +236,20 @@ Public Class FormMain
                     dt_wo.Dispose()
                     GC.Collect()
                 End If
-                Dim ArgArray As ArrayList
-                ArgArray = New ArrayList
-                ArgArray.Add("@ProjectID") : ArgArray.Add(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
-                dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
-                Me.frmwolst.dgvWo.DataSource = dt_wo
+                If Not frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID") Is Nothing Then
+                    Dim ArgArray As ArrayList
+                    ArgArray = New ArrayList
+                    ArgArray.Add("@ProjectID") : ArgArray.Add(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
+                    dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
+                    Me.frmwolst.dgvWo.DataSource = dt_wo
+                Else
+                    MessageBox.Show("Please Select a Project!")
+                End If
+
             End If
         ElseIf rpvMain.SelectedPage Is rpvpTasks Then
             If Not frmwolst.dgvWo.CurrentRow Is Nothing Then
-                If (Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
+                If (Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo") Is Nothing AndAlso Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
                     '    Me.frmwo.fillworkorder(frmwolst.dtWo.Select("WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), frmwolst.dtWo)
                     '    Dim dt_task As DataTable = Me.frmTskLst.dttask
                     '    dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
@@ -254,11 +259,14 @@ Public Class FormMain
                         dt_tsk.Dispose()
                         GC.Collect()
                     End If
+
                     Dim ArgArray As ArrayList
                     ArgArray = New ArrayList
                     ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
                     dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
                     Me.frmTskLst.dgvTasks.DataSource = dt_tsk
+                Else
+                    MessageBox.Show("Please Select a Work Order!")
                 End If
             End If
         End If

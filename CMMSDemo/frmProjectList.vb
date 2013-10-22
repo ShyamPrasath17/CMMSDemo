@@ -20,11 +20,12 @@
                 '    FormMain.frmTskLst.dgvTasks.DataSource = dttask_copy
                 '    FormMain.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
 
-                If Not dt_wo Is Nothing Then
-                    dt_wo.Clear()
-                    dt_wo.Dispose()
-                    GC.Collect()
-                End If
+                'If Not dt_wo Is Nothing Then
+                '    dt_wo.Clear()
+                '    dt_wo.Dispose()
+                '    GC.Collect()
+                'End If
+
                 If Not ArgArray Is Nothing Then
                     ArgArray.Clear()
                 End If
@@ -33,6 +34,9 @@
                 ArgArray.Add("@ProjectID") : ArgArray.Add(Me.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
                 dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
                 FormMain.frmwolst.dgvWo.DataSource = dt_wo
+
+                dt_wo.Dispose()
+                GC.Collect()
             End If
         End If
     End Sub
