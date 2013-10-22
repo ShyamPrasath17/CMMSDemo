@@ -1,6 +1,8 @@
 ﻿Public Class frmWorkOrderLists
     Public dtWo As DataTable
     Dim frmloaded As Boolean = False
+    Dim dt_tsk As DataTable
+    Dim ArgArray As ArrayList
 
     Private Sub frmWorkOrderLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
@@ -46,12 +48,18 @@
                 'Dim dtTask As DataTable = FormMain.frmTskLst.dttask
                 'dtTask.DefaultView.RowFilter = "WorkOrderNo = '" & dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
                 'FormMain.frmTskLst.dgvTasks.DataSource = dtTask.DefaultView
+                If Not dt_tsk Is Nothing Then
+                    dt_tsk.Clear()
+                    dt_tsk.Dispose()
+                    GC.Collect()
+                End If
 
-
-                Dim ArgArray As ArrayList
+                If Not ArgArray Is Nothing Then
+                    ArgArray.Clear()
+                End If
                 ArgArray = New ArrayList
                 ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
-                Dim dt_tsk As DataTable = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
+                dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
                 FormMain.frmTskLst.dgvTasks.DataSource = dt_tsk
             End If
         End If

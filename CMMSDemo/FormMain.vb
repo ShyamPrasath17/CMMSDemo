@@ -29,6 +29,8 @@ Public Class FormMain
 
     Public frmSearch As frmSearch
     Dim frmDashBoard As frmDashBoard
+    Dim dt_wo As DataTable
+    Dim dt_tsk As DataTable
 
     Sub New()
         addDashBoardFrm()
@@ -229,10 +231,15 @@ Public Class FormMain
                 'dttask_copy.Clear()
                 'Me.frmTskLst.dgvTasks.DataSource = dttask_copy
                 'Me.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
+                If Not dt_wo Is Nothing Then
+                    dt_wo.Clear()
+                    dt_wo.Dispose()
+                    GC.Collect()
+                End If
                 Dim ArgArray As ArrayList
                 ArgArray = New ArrayList
                 ArgArray.Add("@ProjectID") : ArgArray.Add(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
-                Dim dt_wo As DataTable = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
+                dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
                 Me.frmwolst.dgvWo.DataSource = dt_wo
             End If
         ElseIf rpvMain.SelectedPage Is rpvpTasks Then
@@ -242,11 +249,15 @@ Public Class FormMain
                     '    Dim dt_task As DataTable = Me.frmTskLst.dttask
                     '    dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
                     '    Me.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
-
+                    If Not dt_tsk Is Nothing Then
+                        dt_tsk.Clear()
+                        dt_tsk.Dispose()
+                        GC.Collect()
+                    End If
                     Dim ArgArray As ArrayList
                     ArgArray = New ArrayList
                     ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
-                    Dim dt_tsk As DataTable = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
+                    dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
                     Me.frmTskLst.dgvTasks.DataSource = dt_tsk
                 End If
             End If

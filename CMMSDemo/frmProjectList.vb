@@ -1,6 +1,8 @@
 ﻿Public Class frmProjectList
     Dim dtProject As DataTable
     Dim frmloaded As Boolean = False
+    Dim dt_wo As DataTable
+    Dim ArgArray As ArrayList
     Private Sub dgvProjectList_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvProjectList.CellDoubleClick
         FormMain.twProject.Show()
         FormMain.twProject.Select()
@@ -18,10 +20,18 @@
                 '    FormMain.frmTskLst.dgvTasks.DataSource = dttask_copy
                 '    FormMain.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
 
-                Dim ArgArray As ArrayList
+                If Not dt_wo Is Nothing Then
+                    dt_wo.Clear()
+                    dt_wo.Dispose()
+                    GC.Collect()
+                End If
+                If Not ArgArray Is Nothing Then
+                    ArgArray.Clear()
+                End If
+
                 ArgArray = New ArrayList
                 ArgArray.Add("@ProjectID") : ArgArray.Add(Me.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
-                Dim dt_wo As DataTable = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
+                dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
                 FormMain.frmwolst.dgvWo.DataSource = dt_wo
             End If
         End If
