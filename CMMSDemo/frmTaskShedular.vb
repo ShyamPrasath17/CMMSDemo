@@ -51,7 +51,7 @@ Public Class frmTaskShedular
 
     Private Sub Rshcmms_AppointmentSelected(sender As Object, e As SchedulerAppointmentEventArgs) Handles Rshcmms.AppointmentSelected
         If FormMain.frmTskLst.dttask.Select("TaskNo = '" & e.Appointment.Summary.ToString() & "'").Length > 0 Then
-            FormMain.frmTsk.filltask(FormMain.frmTskLst.dttask.Select("TaskNo = '" & e.Appointment.Summary.ToString() & "'")(0))
+            FormMain.frmTsk.filltask(FormMain.frmTskLst.dttask.Select("TaskID = '" & e.Appointment.Summary.ToString() & "'")(0))
             FormMain.frmTsk.dtpStartDate.Value = e.Appointment.Start
             FormMain.frmTsk.dtpStartTime.Value = e.Appointment.Start
             FormMain.frmTsk.dtpEndDate.Value = e.Appointment.End
