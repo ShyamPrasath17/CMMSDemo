@@ -52,15 +52,15 @@ Partial Class frmSheduleMaintanance
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtStatus = New System.Windows.Forms.TextBox()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
+        Me.dgvTriggers = New Telerik.WinControls.UI.RadGridView()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox6 = New System.Windows.Forms.GroupBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton4 = New System.Windows.Forms.RadioButton()
+        Me.txtOccurence = New System.Windows.Forms.TextBox()
+        Me.radEndAfter = New System.Windows.Forms.RadioButton()
+        Me.radNoEnd = New System.Windows.Forms.RadioButton()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
@@ -82,8 +82,8 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTriggers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvTriggers.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -359,13 +359,13 @@ Partial Class frmSheduleMaintanance
         Me.Button3.Text = "Approve"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'RadGridView1
+        'dgvTriggers
         '
-        Me.RadGridView1.Location = New System.Drawing.Point(6, 92)
-        Me.RadGridView1.Name = "RadGridView1"
-        Me.RadGridView1.Size = New System.Drawing.Size(547, 175)
-        Me.RadGridView1.TabIndex = 144
-        Me.RadGridView1.Text = "RadGridView1"
+        Me.dgvTriggers.Location = New System.Drawing.Point(6, 92)
+        Me.dgvTriggers.Name = "dgvTriggers"
+        Me.dgvTriggers.Size = New System.Drawing.Size(547, 175)
+        Me.dgvTriggers.TabIndex = 144
+        Me.dgvTriggers.Text = "RadGridView1"
         '
         'Button5
         '
@@ -389,7 +389,7 @@ Partial Class frmSheduleMaintanance
         '
         Me.GroupBox1.Controls.Add(Me.GroupBox6)
         Me.GroupBox1.Controls.Add(Me.GroupBox5)
-        Me.GroupBox1.Controls.Add(Me.RadGridView1)
+        Me.GroupBox1.Controls.Add(Me.dgvTriggers)
         Me.GroupBox1.Controls.Add(Me.Button8)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Button5)
@@ -407,9 +407,9 @@ Partial Class frmSheduleMaintanance
         'GroupBox6
         '
         Me.GroupBox6.Controls.Add(Me.Label1)
-        Me.GroupBox6.Controls.Add(Me.TextBox1)
-        Me.GroupBox6.Controls.Add(Me.RadioButton3)
-        Me.GroupBox6.Controls.Add(Me.RadioButton4)
+        Me.GroupBox6.Controls.Add(Me.txtOccurence)
+        Me.GroupBox6.Controls.Add(Me.radEndAfter)
+        Me.GroupBox6.Controls.Add(Me.radNoEnd)
         Me.GroupBox6.Location = New System.Drawing.Point(6, 430)
         Me.GroupBox6.Name = "GroupBox6"
         Me.GroupBox6.Size = New System.Drawing.Size(547, 53)
@@ -425,35 +425,35 @@ Partial Class frmSheduleMaintanance
         Me.Label1.TabIndex = 131
         Me.Label1.Text = "Occurence"
         '
-        'TextBox1
+        'txtOccurence
         '
-        Me.TextBox1.Enabled = False
-        Me.TextBox1.Location = New System.Drawing.Point(215, 16)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(74, 20)
-        Me.TextBox1.TabIndex = 130
+        Me.txtOccurence.Enabled = False
+        Me.txtOccurence.Location = New System.Drawing.Point(215, 16)
+        Me.txtOccurence.Name = "txtOccurence"
+        Me.txtOccurence.Size = New System.Drawing.Size(74, 20)
+        Me.txtOccurence.TabIndex = 130
         '
-        'RadioButton3
+        'radEndAfter
         '
-        Me.RadioButton3.AutoSize = True
-        Me.RadioButton3.Location = New System.Drawing.Point(140, 19)
-        Me.RadioButton3.Name = "RadioButton3"
-        Me.RadioButton3.Size = New System.Drawing.Size(69, 17)
-        Me.RadioButton3.TabIndex = 1
-        Me.RadioButton3.TabStop = True
-        Me.RadioButton3.Text = "End After"
-        Me.RadioButton3.UseVisualStyleBackColor = True
+        Me.radEndAfter.AutoSize = True
+        Me.radEndAfter.Location = New System.Drawing.Point(140, 19)
+        Me.radEndAfter.Name = "radEndAfter"
+        Me.radEndAfter.Size = New System.Drawing.Size(69, 17)
+        Me.radEndAfter.TabIndex = 1
+        Me.radEndAfter.TabStop = True
+        Me.radEndAfter.Text = "End After"
+        Me.radEndAfter.UseVisualStyleBackColor = True
         '
-        'RadioButton4
+        'radNoEnd
         '
-        Me.RadioButton4.AutoSize = True
-        Me.RadioButton4.Location = New System.Drawing.Point(10, 19)
-        Me.RadioButton4.Name = "RadioButton4"
-        Me.RadioButton4.Size = New System.Drawing.Size(61, 17)
-        Me.RadioButton4.TabIndex = 0
-        Me.RadioButton4.TabStop = True
-        Me.RadioButton4.Text = "No End"
-        Me.RadioButton4.UseVisualStyleBackColor = True
+        Me.radNoEnd.AutoSize = True
+        Me.radNoEnd.Location = New System.Drawing.Point(10, 19)
+        Me.radNoEnd.Name = "radNoEnd"
+        Me.radNoEnd.Size = New System.Drawing.Size(61, 17)
+        Me.radNoEnd.TabIndex = 0
+        Me.radNoEnd.TabStop = True
+        Me.radNoEnd.Text = "No End"
+        Me.radNoEnd.UseVisualStyleBackColor = True
         '
         'GroupBox5
         '
@@ -663,8 +663,8 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTriggers.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvTriggers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.GroupBox6.ResumeLayout(False)
@@ -712,7 +712,7 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents txtStatus As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents dgvTriggers As Telerik.WinControls.UI.RadGridView
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
@@ -721,9 +721,9 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents GroupBox6 As System.Windows.Forms.GroupBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
-    Friend WithEvents RadioButton4 As System.Windows.Forms.RadioButton
+    Friend WithEvents txtOccurence As System.Windows.Forms.TextBox
+    Friend WithEvents radEndAfter As System.Windows.Forms.RadioButton
+    Friend WithEvents radNoEnd As System.Windows.Forms.RadioButton
     Friend WithEvents RadGridView2 As Telerik.WinControls.UI.RadGridView
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label

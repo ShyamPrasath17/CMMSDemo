@@ -15,9 +15,11 @@ Public Class frmSheduleMaintanance
 
     Private Sub frmSheduleMaintanance_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         createTypeTbl()
+        CreateTriggertbl()
         radTimeBased.Checked = True
         cmbrptUom.DataSource = dtType.DefaultView
         cmbrptUom.DisplayMember = "UOM"
+        radNoEnd.Checked = True
         'cmbThreshold.DataSource = dtType.DefaultView
         'cmbThreshold.DisplayMember = "UOM"
     End Sub
@@ -52,4 +54,31 @@ Public Class frmSheduleMaintanance
         FormMain.TwUpComming.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
         FormMain.TwUpComming.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(500, 0)
     End Sub
+
+    Private Sub radNoEnd_CheckedChanged(sender As Object, e As EventArgs) Handles radNoEnd.CheckedChanged
+        If radNoEnd.Checked Then
+            txtOccurence.Enabled = False
+        End If
+    End Sub
+
+    Private Sub radEndAfter_CheckedChanged(sender As Object, e As EventArgs) Handles radEndAfter.CheckedChanged
+        If radEndAfter.Checked Then
+            txtOccurence.Enabled = True
+        End If
+    End Sub
+
+    Private Sub CreateTriggertbl()
+        Dim dttrigger As New DataTable()
+        dttrigger.Columns.Add("Trigger ID", GetType(String))
+        dttrigger.Columns.Add("Recurrence Type", GetType(String))
+        dttrigger.Columns.Add("Recurrence Period", GetType(String))
+        dttrigger.Columns.Add("Threshold Period", GetType(String))
+        dttrigger.Columns.Add("Start Date", GetType(String))
+        dttrigger.Columns.Add("End After", GetType(String))
+
+
+        dgvTriggers.DataSource = dttrigger
+        dgvTriggers.BestFitColumns()
+    End Sub
+
 End Class
