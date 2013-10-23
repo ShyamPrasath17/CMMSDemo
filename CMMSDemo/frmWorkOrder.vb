@@ -13,7 +13,7 @@
         dgvComment.BestFitColumns()
     End Sub
 
-    Public Sub fillworkorder(ByRef dr As DataRow, ByRef dt As DataTable)
+    Public Sub fillworkorder(ByRef dr As DataRow)
         txtwono.Text = dr("WorkOrderNo").ToString()
         'Cmbsertype.Text = dr("ServiceType").ToString()
         txtstatus.Text = dr("status").ToString()
@@ -35,4 +35,7 @@
 
     End Sub
 
+    Private Sub btnViewTasks_Click(sender As Object, e As EventArgs) Handles btnViewTasks.Click
+        FormMain.RadDockMain.DockWindow(FormMain.twTaskList, Telerik.WinControls.UI.Docking.DockPosition.Right)
+    End Sub
 End Class

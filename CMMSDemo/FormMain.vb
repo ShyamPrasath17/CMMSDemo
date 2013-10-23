@@ -15,11 +15,12 @@ Public Class FormMain
 
     Public frmSched As frmSheduleMaintanance
 
-    'Public frmScheduledTskPool As frmTaskPool
+    Public frmSchedMaintList_ As frmSchedMaintList
     'Public frmIndependentTskPool As frmTaskPool
     'Public frmCommonTskPool As frmTaskPool
 
-    Public frmindepttsk As frmIndependentTask
+    Public frmWorkRequest_ As frmWorkRequest
+    Public frmWorkRequestList_ As frmWorkrequestList
 
     Public frmschedular As frmTaskShedular
 
@@ -28,6 +29,7 @@ Public Class FormMain
     Public frmImportSchedule_ As frmImportSchedule
 
     Public frmSearch As frmSearch
+    Public frmUpcomming As frmUpCommingSchedule
     Dim frmDashBoard As frmDashBoard
     Dim dt_wo As DataTable
     Dim dt_tsk As DataTable
@@ -40,16 +42,18 @@ Public Class FormMain
         addfrmProject()
         addfrmTsk()
         addfrmTskLst()
-        addfrmSchedTskPool()
+        addfrmSchedMaintList()
         addfrmSchedmaint()
-        addfrmIndeptTsk()
+        addfrmUpcomming()
         addfrmIndeptTskPool()
         addfrmCommonTskPool()
         addfrmschedular()
         addfrmsettings()
         addfrmImportSchedule()
         addfrmSearch()
-
+        addfrmWorkRequestList()
+        addfrmUpcomming()
+        addfrmWorkRequest()
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -59,10 +63,8 @@ Public Class FormMain
         twProjectList.Controls.Add(frmProjLst)
         twTask.Controls.Add(frmTsk)
         twTaskList.Controls.Add(frmTskLst)
-        'TwSehedTaskPool.Controls.Add(frmScheduledTskPool)
-        'TwIndeptTaskPool.Controls.Add(frmIndependentTskPool)
-        'twCommonTaskPool.Controls.Add(frmCommonTskPool)
-        TwIndependentTask.Controls.Add(frmindepttsk)
+        TwSchedMaintList.Controls.Add(frmSchedMaintList_)
+        TwWorkReq.Controls.Add(frmWorkRequest_)
         TwScheduledMaint.Controls.Add(frmSched)
         ToolWindowWo.Controls.Add(frmwo)
         ToolWindowWoLst.Controls.Add(frmwolst)
@@ -70,9 +72,8 @@ Public Class FormMain
         twSettings.Controls.Add(frmSettings_)
         twImportSchedule.Controls.Add(frmImportSchedule_)
         twSearch.Controls.Add(frmSearch)
-
-
-
+        TwWorkReqList.Controls.Add(frmWorkRequestList_)
+        TwUpComming.Controls.Add(frmUpcomming)
         DirectCast(twSearch.TabStrip, ToolTabStrip).AutoHidePosition = AutoHidePosition.Bottom
         twSearch.AutoHide()
 
@@ -85,13 +86,16 @@ Public Class FormMain
         twProjectList.Hide()
         twTask.Hide()
         twTaskList.Hide()
-        TwIndependentTask.Hide()
+        TwWorkReq.Hide()
+        TwWorkReqList.Hide()
         TwScheduledMaint.Hide()
-        TwSehedTaskPool.Hide()
-        TwIndeptTaskPool.Hide()
-        twCommonTaskPool.Hide()
+        TwSchedMaintList.Hide()
         twSettings.Hide()
         twImportSchedule.Hide()
+        TwUpComming.Hide()
+        twScheduler.Hide()
+        twDashBoard.Hide()
+        BtnViewUpcomming_Click(Me, e)
     End Sub
 
     Private Sub addDashBoardFrm()
@@ -100,7 +104,6 @@ Public Class FormMain
         frmDashBoard.TopLevel = False
         frmDashBoard.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmDashBoard.Show()
-
     End Sub
 
     Private Sub addfrmProject()
@@ -144,7 +147,6 @@ Public Class FormMain
         frmwo.TopLevel = False
         frmwo.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmwo.Show()
-
     End Sub
 
     Private Sub addWoLst()
@@ -162,12 +164,12 @@ Public Class FormMain
         frmSched.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmSched.Show()
     End Sub
-    Private Sub addfrmSchedTskPool()
-        'frmScheduledTskPool = New frmTaskPool("ScheduledMaintanance")
-        'frmScheduledTskPool.Dock = DockStyle.Fill
-        'frmScheduledTskPool.TopLevel = False
-        'frmScheduledTskPool.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        'frmScheduledTskPool.Show()
+    Private Sub addfrmSchedMaintList()
+        frmSchedMaintList_ = New frmSchedMaintList()
+        frmSchedMaintList_.Dock = DockStyle.Fill
+        frmSchedMaintList_.TopLevel = False
+        frmSchedMaintList_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmSchedMaintList_.Show()
     End Sub
     Private Sub addfrmIndeptTskPool()
         'frmIndependentTskPool = New frmTaskPool("Independent")
@@ -214,51 +216,48 @@ Public Class FormMain
         frmSearch.Show()
     End Sub
 
-    Private Sub addfrmIndeptTsk()
-        frmindepttsk = New frmIndependentTask()
-        frmindepttsk.Dock = DockStyle.Fill
-        frmindepttsk.TopLevel = False
-        frmindepttsk.FormBorderStyle = Windows.Forms.FormBorderStyle.None
-        frmindepttsk.Show()
+    Private Sub addfrmWorkRequest()
+        frmWorkRequest_ = New frmWorkRequest()
+        frmWorkRequest_.Dock = DockStyle.Fill
+        frmWorkRequest_.TopLevel = False
+        frmWorkRequest_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmWorkRequest_.Show()
+    End Sub
+
+    Private Sub addfrmUpcomming()
+        frmUpcomming = New frmUpCommingSchedule()
+        frmUpcomming.Dock = DockStyle.Fill
+        frmUpcomming.TopLevel = False
+        frmUpcomming.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmUpcomming.Show()
+    End Sub
+
+    Private Sub addfrmWorkRequestList()
+        frmWorkRequestList_ = New frmWorkrequestList()
+        frmWorkRequestList_.Dock = DockStyle.Fill
+        frmWorkRequestList_.TopLevel = False
+        frmWorkRequestList_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmWorkRequestList_.Show()
     End Sub
 
     Private Sub rpvMain_SelectedPageChanged(sender As Object, e As EventArgs) Handles rpvMain.SelectedPageChanged
         If rpvMain.SelectedPage Is rpvpWorkOrders Then
             If Not frmProjLst.dgvProjectList.CurrentRow Is Nothing Then
-                'Dim dt_wo As DataTable = Me.frmwolst.dtWo.Copy()
-                'dt_wo.DefaultView.RowFilter = "ProjectID = '" & Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString() & "'"
-                'Dim dttask_copy As DataTable = Me.frmTskLst.dttask.Copy()
-                'dttask_copy.Clear()
-                'Me.frmTskLst.dgvTasks.DataSource = dttask_copy
-                'Me.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
-                If Not dt_wo Is Nothing Then
-                    dt_wo.Clear()
-                    dt_wo.Dispose()
-                    GC.Collect()
+                If frmwolst.dgvWo.Rows.Count = 0 Then
+                    Me.frmwolst.SetWoData(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString())
                 End If
-                Dim ArgArray As ArrayList
-                ArgArray = New ArrayList
-                ArgArray.Add("@ProjectID") : ArgArray.Add(Me.frmProjLst.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
-                dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
-                Me.frmwolst.dgvWo.DataSource = dt_wo
+            Else
+                MessageBox.Show("Please Select a Project!")
             End If
         ElseIf rpvMain.SelectedPage Is rpvpTasks Then
             If Not frmwolst.dgvWo.CurrentRow Is Nothing Then
-                If (Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
-                    '    Me.frmwo.fillworkorder(frmwolst.dtWo.Select("WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'")(0), frmwolst.dtWo)
-                    '    Dim dt_task As DataTable = Me.frmTskLst.dttask
-                    '    dt_task.DefaultView.RowFilter = "WorkOrderNo = '" & frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString() & "'"
-                    '    Me.frmTskLst.dgvTasks.DataSource = dt_task.DefaultView
-                    If Not dt_tsk Is Nothing Then
-                        dt_tsk.Clear()
-                        dt_tsk.Dispose()
-                        GC.Collect()
+                If (Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo") Is Nothing AndAlso Not frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
+                    If frmTskLst.dgvTasks.Rows.Count = 0 Then
+                        Me.frmTskLst.SetTaskData(Me.frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString())
                     End If
-                    Dim ArgArray As ArrayList
-                    ArgArray = New ArrayList
-                    ArgArray.Add("@WorkOrderNo") : ArgArray.Add(Me.frmwolst.dgvWo.CurrentRow.Cells("WorkOrderNo").Value.ToString()) : ArgArray.Add(DbType.String)
-                    dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
-                    Me.frmTskLst.dgvTasks.DataSource = dt_tsk
+
+                Else
+                    MessageBox.Show("Please Select a Work Order!")
                 End If
             End If
         End If
@@ -272,7 +271,9 @@ Public Class FormMain
             ElseIf rpvMain.SelectedPage Is rpvpProjects Then
                 twProjectList.Show()
                 twProjectList.Select()
-
+            ElseIf rpvMain.SelectedPage Is rpvpWoRequest Then
+                TwWorkReqList.Show()
+                TwWorkReqList.Select()
             ElseIf rpvMain.SelectedPage Is rpvpTasks Then
                 twTaskList.Show()
                 twTaskList.Select()
@@ -280,8 +281,8 @@ Public Class FormMain
                 twDashBoard.Show()
                 twDashBoard.Select()
             ElseIf rpvMain.SelectedPage Is rpvpScheduledMaintenance Then
-                TwSehedTaskPool.Show()
-                TwSehedTaskPool.Select()
+                TwSchedMaintList.Show()
+                TwSchedMaintList.Select()
             ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
                 twScheduler.Show()
                 twScheduler.Select()
@@ -333,14 +334,13 @@ Public Class FormMain
         TwScheduledMaint.Select()
     End Sub
 
-    Private Sub btnCreateTaskIndependent_Click(sender As Object, e As EventArgs) Handles btnCreateTaskIndependent.Click
-        TwIndependentTask.Show()
-        TwIndependentTask.Select()
+    Private Sub btnCreateTaskIndependent_Click(sender As Object, e As EventArgs) Handles btnCreateWorkReq.Click
+        TwWorkReq.Show()
+        TwWorkReq.Select()
     End Sub
 
-    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles btnViewIndeptTasks.Click
-        TwIndeptTaskPool.Show()
-        TwIndeptTaskPool.Select()
+    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles btnViewWorkReq.Click
+
     End Sub
 
     Private Sub btnViewWorkOrders_Click(sender As Object, e As EventArgs) Handles btnViewWorkOrders.Click
@@ -363,5 +363,13 @@ Public Class FormMain
 
     Private Sub ToolWindowWoLst_Enter(sender As Object, e As EventArgs) Handles ToolWindowWoLst.Enter
         frmSearch.AdvanceFilterControl1.GridView = frmwolst.dgvWo
+    End Sub
+
+    Private Sub BtnViewUpcomming_Click(sender As Object, e As EventArgs) Handles BtnViewUpcomming.Click
+        TwUpComming.Show()
+        TwUpComming.Select()
+        RadDockMain.DockWindow(TwWorkReqList, DockPosition.Right)
+        TwWorkReqList.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
+        TwWorkReqList.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(700, 0)
     End Sub
 End Class

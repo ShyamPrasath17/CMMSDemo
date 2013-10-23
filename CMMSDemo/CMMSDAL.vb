@@ -1,6 +1,10 @@
 ﻿Imports System.Data.SqlClient
 
 Public Class CMMSDAL
+    Private Shared MainDS As DataSet
+    Private Shared mySQLCommand As SqlClient.SqlCommand
+    Private Shared mySQLAdapter As SqlClient.SqlDataAdapter
+    Private Shared cn As SqlConnection
     Private Shared _DSCmms As New DSCmms
     Public Shared strConn As String = "Data Source=SHYAM-PC\TOWNSUITE;Initial Catalog=DBCMMS;Persist Security Info=True;" & _
     "User ID=sa;Password=Wheymu1"
@@ -18,18 +22,13 @@ Public Class CMMSDAL
     End Function
 
     Public Shared Function cls_EXE_STORED_PROCEDURE(ByVal storedProcedureName As String) As DataSet
+
+
         Try
-            Dim MainDS As DataSet
-
-            Dim mySQLCommand As SqlClient.SqlCommand
-            Dim mySQLAdapter As SqlClient.SqlDataAdapter
-            Dim cn As SqlConnection = New SqlClient.SqlConnection(strConn)
-            mySQLCommand = New SqlClient.SqlCommand
-
             MainDS = New DataSet
             MainDS.Clear()
-
-
+            mySQLCommand = New SqlClient.SqlCommand
+            cn = New SqlClient.SqlConnection(strConn)
             mySQLCommand.Connection = cn
             mySQLCommand.CommandText = storedProcedureName
             mySQLCommand.CommandType = CommandType.StoredProcedure
@@ -42,25 +41,22 @@ Public Class CMMSDAL
             Return MainDS
         Catch ex As Exception
             MessageBox.Show("Wrong Connection")
+        Finally
+            MainDS.Dispose()
+            mySQLCommand.Dispose()
+            mySQLAdapter.Dispose()
+            cn.Dispose()
         End Try
 
     End Function
 
 
     Public Shared Function cls_EXE_STORED_PROCEDURE_PRAM(ByRef argArray As ArrayList, ByVal storedProcedureName As String) As DataSet
+        Dim myEnumerator As System.Collections.IEnumerator = _
+                argArray.GetEnumerator
         Try
-            Dim MainDS As DataSet
-
-
-            Dim mySQLCommand As SqlClient.SqlCommand
-            Dim mySQLAdapter As SqlClient.SqlDataAdapter
             Dim mySQLParameter As SqlClient.SqlParameter
-            Dim cn As SqlConnection = New SqlClient.SqlConnection(strConn)
-
-            Dim myEnumerator As System.Collections.IEnumerator = _
-                    argArray.GetEnumerator
-
-
+            cn = New SqlClient.SqlConnection(strConn)
             mySQLCommand = New SqlClient.SqlCommand
 
             While myEnumerator.MoveNext()
@@ -90,8 +86,13 @@ Public Class CMMSDAL
             Return MainDS
         Catch ex As Exception
             MessageBox.Show("Wrong Connection")
+        Finally
+            MainDS.Dispose()
+            mySQLCommand.Dispose()
+            mySQLAdapter.Dispose()
+            cn.Dispose()
         End Try
-        
+
     End Function
 
 End Class

@@ -35,7 +35,7 @@ Public Class frmImportSchedule
     End Sub
 
     Private Sub RshImport_AppointmentElementDoubleClick(sender As Object, e As EventArgs) Handles RshImport.AppointmentElementDoubleClick
-        Dim frmattach As frmAttachToWorkOrder = New frmAttachToWorkOrder()
+        Dim frmattach As frmUpCommingSchedule = New frmUpCommingSchedule()
         frmattach.ShowDialog()
     End Sub
 

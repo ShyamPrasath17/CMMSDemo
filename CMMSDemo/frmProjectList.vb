@@ -1,8 +1,7 @@
 ﻿Public Class frmProjectList
     Dim dtProject As DataTable
     Dim frmloaded As Boolean = False
-    Dim dt_wo As DataTable
-    Dim ArgArray As ArrayList
+   
     Private Sub dgvProjectList_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvProjectList.CellDoubleClick
         FormMain.twProject.Show()
         FormMain.twProject.Select()
@@ -12,6 +11,7 @@
         If (frmloaded) Then
             If (Not dgvProjectList.CurrentRow.Cells("ProjectID").Value Is Nothing) Then
                 FormMain.frmProj.fillProject(dtProject.Select("ProjectID = '" & dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString() & "'")(0), dtProject)
+                FormMain.frmwolst.SetWoData(dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString())
 
                 '    Dim dt_wo As DataTable = FormMain.frmwolst.dtWo.Copy()
                 '    dt_wo.DefaultView.RowFilter = "ProjectNo = '" & dgvProjectList.CurrentRow.Cells("ProjectNo").Value.ToString() & "'"
@@ -19,20 +19,6 @@
                 '    dttask_copy.Clear()
                 '    FormMain.frmTskLst.dgvTasks.DataSource = dttask_copy
                 '    FormMain.frmwolst.dgvWo.DataSource = dt_wo.DefaultView
-
-                If Not dt_wo Is Nothing Then
-                    dt_wo.Clear()
-                    dt_wo.Dispose()
-                    GC.Collect()
-                End If
-                If Not ArgArray Is Nothing Then
-                    ArgArray.Clear()
-                End If
-
-                ArgArray = New ArrayList
-                ArgArray.Add("@ProjectID") : ArgArray.Add(Me.dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString()) : ArgArray.Add(DbType.String)
-                dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
-                FormMain.frmwolst.dgvWo.DataSource = dt_wo
             End If
         End If
     End Sub
