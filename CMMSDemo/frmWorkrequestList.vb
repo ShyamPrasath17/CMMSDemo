@@ -22,14 +22,23 @@ Public Class frmWorkrequestList
         dtSml.Columns.Add("Description", GetType(String))
         dtSml.Columns.Add("Assigned Date", GetType(DateTime))
 
-        dtSml.Rows.Add("Req 1", "Clean Snow in Road", "Car 001", "", System.DateTime.Now.AddDays(100))
-        dtSml.Rows.Add("Req 2", "TaskReq Name1", "Mechine 002", "", System.DateTime.Now.AddDays(26))
-        dtSml.Rows.Add("Req 3", "TaskReq Name2", "Asset A", "", System.DateTime.Now.AddDays(25))
-        dtSml.Rows.Add("Req 4", "TaskReq Name3", "Asset B", "", System.DateTime.Now.AddDays(56))
-        dtSml.Rows.Add("Req 5", "TaskReq Name3", "Asset C", "", System.DateTime.Now.AddDays(80))
+        dtSml.Rows.Add("Req 1", "Clean Snow in Road", "Car 001", "", System.DateTime.Now.AddDays(100).Date)
+        dtSml.Rows.Add("Req 2", "TaskReq Name1", "Mechine 002", "", System.DateTime.Now.AddDays(26).Date)
+        dtSml.Rows.Add("Req 3", "TaskReq Name2", "Asset A", "", System.DateTime.Now.AddDays(25).Date)
+        dtSml.Rows.Add("Req 4", "TaskReq Name3", "Asset B", "", System.DateTime.Now.AddDays(56).Date)
+        dtSml.Rows.Add("Req 5", "TaskReq Name3", "Asset C", "", System.DateTime.Now.AddDays(80).Date)
 
         dgvWorkReq.DataSource = dtSml.Copy()
         dgvWorkReq.BestFitColumns()
+
+        Dim btncol As GridViewCommandColumn = New GridViewCommandColumn()
+        btncol.Name = "CreateTask"
+        btncol.HeaderText = "Create Task"
+        btncol.DefaultText = "Create Task"
+        btncol.UseDefaultText = True
+        btncol.AutoEllipsis = True
+        btncol.Width = 80
+        dgvWorkReq.Columns.Insert(5, btncol)
 
         dgvWorkReq.AllowAddNewRow = False
         dgvWorkReq.AllowDeleteRow = False

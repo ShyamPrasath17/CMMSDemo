@@ -20,11 +20,11 @@
         dtSml.Columns.Add("Date", GetType(String))
         dtSml.Columns.Add("Description", GetType(String))
 
-        dtSml.Rows.Add("Maintanance 1", "Oil Change to car", System.DateTime.Now.AddDays(40), "")
-        dtSml.Rows.Add("Maintanance 2", "Clean Mechine 2", System.DateTime.Now.AddDays(40), "")
-        dtSml.Rows.Add("Maintanance 3", "Name 3", System.DateTime.Now.AddDays(40), "")
-        dtSml.Rows.Add("Maintanance 4", "Name 4", System.DateTime.Now.AddDays(40), "")
-        dtSml.Rows.Add("Maintanance 5", "Name 5", System.DateTime.Now.AddDays(40), "")
+        dtSml.Rows.Add("Maintanance 1", "Oil Change to car", System.DateTime.Now.AddDays(40).Date, "")
+        dtSml.Rows.Add("Maintanance 2", "Clean Mechine 2", System.DateTime.Now.AddDays(46).Date, "")
+        dtSml.Rows.Add("Maintanance 3", "Name 3", System.DateTime.Now.AddDays(62).Date, "")
+        dtSml.Rows.Add("Maintanance 4", "Name 4", System.DateTime.Now.AddDays(150).Date, "")
+        dtSml.Rows.Add("Maintanance 5", "Name 5", System.DateTime.Now.AddDays(115).Date, "")
 
         DgvUpComming.DataSource = dtSml
         DgvUpComming.BestFitColumns()

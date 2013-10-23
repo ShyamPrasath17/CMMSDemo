@@ -197,6 +197,33 @@ Partial Class frmSettings
         Me.LstItems = New System.Windows.Forms.ListBox()
         Me.lstUsers = New System.Windows.Forms.ListBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.TabPage16 = New System.Windows.Forms.TabPage()
+        Me.chkNotify = New System.Windows.Forms.CheckBox()
+        Me.TextBox43 = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.TextBox42 = New System.Windows.Forms.TextBox()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.TextBox41 = New System.Windows.Forms.TextBox()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton29 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton30 = New System.Windows.Forms.RadioButton()
+        Me.TextBox40 = New System.Windows.Forms.TextBox()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.TextBox38 = New System.Windows.Forms.TextBox()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.TextBox39 = New System.Windows.Forms.TextBox()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.GroupBox21 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button20 = New System.Windows.Forms.Button()
+        Me.TextBox37 = New System.Windows.Forms.TextBox()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.GroupBox22 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton25 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton26 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton27 = New System.Windows.Forms.RadioButton()
+        Me.ListBox9 = New System.Windows.Forms.ListBox()
         Me.TabPage8 = New System.Windows.Forms.TabPage()
         Me.TabControl5 = New System.Windows.Forms.TabControl()
         Me.TabPage15 = New System.Windows.Forms.TabPage()
@@ -217,33 +244,9 @@ Partial Class frmSettings
         Me.TabPage14 = New System.Windows.Forms.TabPage()
         Me.txtConn = New System.Windows.Forms.TextBox()
         Me.Label40 = New System.Windows.Forms.Label()
-        Me.TabPage16 = New System.Windows.Forms.TabPage()
-        Me.GroupBox21 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button20 = New System.Windows.Forms.Button()
-        Me.TextBox37 = New System.Windows.Forms.TextBox()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.GroupBox22 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton25 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton26 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton27 = New System.Windows.Forms.RadioButton()
-        Me.ListBox9 = New System.Windows.Forms.ListBox()
-        Me.TextBox38 = New System.Windows.Forms.TextBox()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.TextBox39 = New System.Windows.Forms.TextBox()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.TextBox40 = New System.Windows.Forms.TextBox()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.GroupBox23 = New System.Windows.Forms.GroupBox()
-        Me.RadioButton29 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton30 = New System.Windows.Forms.RadioButton()
-        Me.TextBox41 = New System.Windows.Forms.TextBox()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.TextBox42 = New System.Windows.Forms.TextBox()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.TextBox43 = New System.Windows.Forms.TextBox()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.CheckBox22 = New System.Windows.Forms.CheckBox()
+        Me.grpNotify = New System.Windows.Forms.GroupBox()
+        Me.RadioButton28 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton31 = New System.Windows.Forms.RadioButton()
         Me.TabPage11.SuspendLayout()
         Me.TabControl4.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -278,16 +281,17 @@ Partial Class frmSettings
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
+        Me.TabPage16.SuspendLayout()
+        Me.GroupBox23.SuspendLayout()
+        Me.GroupBox21.SuspendLayout()
+        Me.GroupBox22.SuspendLayout()
         Me.TabPage8.SuspendLayout()
         Me.TabControl5.SuspendLayout()
         Me.TabPage15.SuspendLayout()
         Me.GroupBox17.SuspendLayout()
         Me.GroupBox18.SuspendLayout()
         Me.TabPage14.SuspendLayout()
-        Me.TabPage16.SuspendLayout()
-        Me.GroupBox21.SuspendLayout()
-        Me.GroupBox22.SuspendLayout()
-        Me.GroupBox23.SuspendLayout()
+        Me.grpNotify.SuspendLayout()
         Me.SuspendLayout()
         '
         'BtnSave
@@ -316,7 +320,7 @@ Partial Class frmSettings
         Me.TabPage11.Location = New System.Drawing.Point(4, 22)
         Me.TabPage11.Name = "TabPage11"
         Me.TabPage11.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage11.Size = New System.Drawing.Size(768, 470)
+        Me.TabPage11.Size = New System.Drawing.Size(1002, 697)
         Me.TabPage11.TabIndex = 10
         Me.TabPage11.Text = "Task"
         Me.TabPage11.UseVisualStyleBackColor = True
@@ -329,7 +333,7 @@ Partial Class frmSettings
         Me.TabControl4.Location = New System.Drawing.Point(3, 3)
         Me.TabControl4.Name = "TabControl4"
         Me.TabControl4.SelectedIndex = 0
-        Me.TabControl4.Size = New System.Drawing.Size(762, 464)
+        Me.TabControl4.Size = New System.Drawing.Size(996, 691)
         Me.TabControl4.TabIndex = 0
         '
         'TabPage1
@@ -342,7 +346,7 @@ Partial Class frmSettings
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(754, 438)
+        Me.TabPage1.Size = New System.Drawing.Size(988, 665)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Task Service Type"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -956,7 +960,7 @@ Partial Class frmSettings
         Me.TabPage5.Controls.Add(Me.TabControl2)
         Me.TabPage5.Location = New System.Drawing.Point(4, 22)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(768, 470)
+        Me.TabPage5.Size = New System.Drawing.Size(1002, 697)
         Me.TabPage5.TabIndex = 7
         Me.TabPage5.Text = "Site"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -970,7 +974,7 @@ Partial Class frmSettings
         Me.TabControl2.Location = New System.Drawing.Point(0, 0)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(768, 470)
+        Me.TabControl2.Size = New System.Drawing.Size(1002, 697)
         Me.TabControl2.TabIndex = 0
         '
         'TabPage6
@@ -1002,7 +1006,7 @@ Partial Class frmSettings
         Me.TabPage6.Location = New System.Drawing.Point(4, 22)
         Me.TabPage6.Name = "TabPage6"
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage6.Size = New System.Drawing.Size(760, 444)
+        Me.TabPage6.Size = New System.Drawing.Size(994, 671)
         Me.TabPage6.TabIndex = 0
         Me.TabPage6.Text = "Site"
         Me.TabPage6.UseVisualStyleBackColor = True
@@ -2036,12 +2040,279 @@ Partial Class frmSettings
         Me.TabControl1.Size = New System.Drawing.Size(1010, 723)
         Me.TabControl1.TabIndex = 0
         '
+        'TabPage16
+        '
+        Me.TabPage16.Controls.Add(Me.grpNotify)
+        Me.TabPage16.Controls.Add(Me.chkNotify)
+        Me.TabPage16.Controls.Add(Me.TextBox43)
+        Me.TabPage16.Controls.Add(Me.Label47)
+        Me.TabPage16.Controls.Add(Me.TextBox42)
+        Me.TabPage16.Controls.Add(Me.Label46)
+        Me.TabPage16.Controls.Add(Me.TextBox41)
+        Me.TabPage16.Controls.Add(Me.Label45)
+        Me.TabPage16.Controls.Add(Me.GroupBox23)
+        Me.TabPage16.Controls.Add(Me.TextBox40)
+        Me.TabPage16.Controls.Add(Me.Label44)
+        Me.TabPage16.Controls.Add(Me.TextBox38)
+        Me.TabPage16.Controls.Add(Me.Label42)
+        Me.TabPage16.Controls.Add(Me.TextBox39)
+        Me.TabPage16.Controls.Add(Me.Label43)
+        Me.TabPage16.Controls.Add(Me.GroupBox21)
+        Me.TabPage16.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage16.Name = "TabPage16"
+        Me.TabPage16.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage16.Size = New System.Drawing.Size(1002, 697)
+        Me.TabPage16.TabIndex = 14
+        Me.TabPage16.Text = "User Set Up"
+        Me.TabPage16.UseVisualStyleBackColor = True
+        '
+        'chkNotify
+        '
+        Me.chkNotify.AutoSize = True
+        Me.chkNotify.Location = New System.Drawing.Point(227, 286)
+        Me.chkNotify.Name = "chkNotify"
+        Me.chkNotify.Size = New System.Drawing.Size(140, 17)
+        Me.chkNotify.TabIndex = 26
+        Me.chkNotify.Text = "Send Notification Emails"
+        Me.chkNotify.UseVisualStyleBackColor = True
+        '
+        'TextBox43
+        '
+        Me.TextBox43.Location = New System.Drawing.Point(303, 214)
+        Me.TextBox43.Name = "TextBox43"
+        Me.TextBox43.Size = New System.Drawing.Size(302, 20)
+        Me.TextBox43.TabIndex = 25
+        '
+        'Label47
+        '
+        Me.Label47.AutoSize = True
+        Me.Label47.Location = New System.Drawing.Point(224, 218)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(58, 13)
+        Me.Label47.TabIndex = 24
+        Me.Label47.Text = "Telephone"
+        '
+        'TextBox42
+        '
+        Me.TextBox42.Location = New System.Drawing.Point(303, 188)
+        Me.TextBox42.Name = "TextBox42"
+        Me.TextBox42.Size = New System.Drawing.Size(302, 20)
+        Me.TextBox42.TabIndex = 23
+        '
+        'Label46
+        '
+        Me.Label46.AutoSize = True
+        Me.Label46.Location = New System.Drawing.Point(224, 192)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(45, 13)
+        Me.Label46.TabIndex = 22
+        Me.Label46.Text = "Address"
+        '
+        'TextBox41
+        '
+        Me.TextBox41.Location = New System.Drawing.Point(303, 60)
+        Me.TextBox41.Name = "TextBox41"
+        Me.TextBox41.Size = New System.Drawing.Size(174, 20)
+        Me.TextBox41.TabIndex = 21
+        '
+        'Label45
+        '
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(224, 63)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(53, 13)
+        Me.Label45.TabIndex = 20
+        Me.Label45.Text = "Password"
+        '
+        'GroupBox23
+        '
+        Me.GroupBox23.Controls.Add(Me.RadioButton29)
+        Me.GroupBox23.Controls.Add(Me.RadioButton30)
+        Me.GroupBox23.Location = New System.Drawing.Point(227, 105)
+        Me.GroupBox23.Name = "GroupBox23"
+        Me.GroupBox23.Size = New System.Drawing.Size(250, 39)
+        Me.GroupBox23.TabIndex = 19
+        Me.GroupBox23.TabStop = False
+        Me.GroupBox23.Text = "Type"
+        '
+        'RadioButton29
+        '
+        Me.RadioButton29.AutoSize = True
+        Me.RadioButton29.Location = New System.Drawing.Point(110, 16)
+        Me.RadioButton29.Name = "RadioButton29"
+        Me.RadioButton29.Size = New System.Drawing.Size(83, 17)
+        Me.RadioButton29.TabIndex = 1
+        Me.RadioButton29.TabStop = True
+        Me.RadioButton29.Text = "Normal User"
+        Me.RadioButton29.UseVisualStyleBackColor = True
+        '
+        'RadioButton30
+        '
+        Me.RadioButton30.AutoSize = True
+        Me.RadioButton30.Location = New System.Drawing.Point(6, 16)
+        Me.RadioButton30.Name = "RadioButton30"
+        Me.RadioButton30.Size = New System.Drawing.Size(83, 17)
+        Me.RadioButton30.TabIndex = 0
+        Me.RadioButton30.TabStop = True
+        Me.RadioButton30.Text = "Admnistrator"
+        Me.RadioButton30.UseVisualStyleBackColor = True
+        '
+        'TextBox40
+        '
+        Me.TextBox40.Location = New System.Drawing.Point(303, 240)
+        Me.TextBox40.Name = "TextBox40"
+        Me.TextBox40.Size = New System.Drawing.Size(302, 20)
+        Me.TextBox40.TabIndex = 18
+        '
+        'Label44
+        '
+        Me.Label44.AutoSize = True
+        Me.Label44.Location = New System.Drawing.Point(224, 244)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(32, 13)
+        Me.Label44.TabIndex = 17
+        Me.Label44.Text = "Email"
+        '
+        'TextBox38
+        '
+        Me.TextBox38.Location = New System.Drawing.Point(303, 162)
+        Me.TextBox38.Name = "TextBox38"
+        Me.TextBox38.Size = New System.Drawing.Size(302, 20)
+        Me.TextBox38.TabIndex = 16
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(224, 165)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(60, 13)
+        Me.Label42.TabIndex = 15
+        Me.Label42.Text = "Description"
+        '
+        'TextBox39
+        '
+        Me.TextBox39.Location = New System.Drawing.Point(303, 26)
+        Me.TextBox39.Name = "TextBox39"
+        Me.TextBox39.Size = New System.Drawing.Size(174, 20)
+        Me.TextBox39.TabIndex = 14
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(224, 29)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(60, 13)
+        Me.Label43.TabIndex = 13
+        Me.Label43.Text = "User Name"
+        '
+        'GroupBox21
+        '
+        Me.GroupBox21.Controls.Add(Me.Button1)
+        Me.GroupBox21.Controls.Add(Me.Button20)
+        Me.GroupBox21.Controls.Add(Me.TextBox37)
+        Me.GroupBox21.Controls.Add(Me.Label41)
+        Me.GroupBox21.Controls.Add(Me.GroupBox22)
+        Me.GroupBox21.Controls.Add(Me.ListBox9)
+        Me.GroupBox21.Location = New System.Drawing.Point(6, 6)
+        Me.GroupBox21.Name = "GroupBox21"
+        Me.GroupBox21.Size = New System.Drawing.Size(170, 428)
+        Me.GroupBox21.TabIndex = 9
+        Me.GroupBox21.TabStop = False
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(38, 397)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 5
+        Me.Button1.Text = "Print"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button20
+        '
+        Me.Button20.Location = New System.Drawing.Point(38, 368)
+        Me.Button20.Name = "Button20"
+        Me.Button20.Size = New System.Drawing.Size(75, 23)
+        Me.Button20.TabIndex = 4
+        Me.Button20.Text = "Add"
+        Me.Button20.UseVisualStyleBackColor = True
+        '
+        'TextBox37
+        '
+        Me.TextBox37.Location = New System.Drawing.Point(87, 342)
+        Me.TextBox37.Name = "TextBox37"
+        Me.TextBox37.Size = New System.Drawing.Size(63, 20)
+        Me.TextBox37.TabIndex = 3
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(8, 345)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(69, 13)
+        Me.Label41.TabIndex = 2
+        Me.Label41.Text = "Search Code"
+        '
+        'GroupBox22
+        '
+        Me.GroupBox22.Controls.Add(Me.RadioButton25)
+        Me.GroupBox22.Controls.Add(Me.RadioButton26)
+        Me.GroupBox22.Controls.Add(Me.RadioButton27)
+        Me.GroupBox22.Location = New System.Drawing.Point(7, 225)
+        Me.GroupBox22.Name = "GroupBox22"
+        Me.GroupBox22.Size = New System.Drawing.Size(146, 104)
+        Me.GroupBox22.TabIndex = 1
+        Me.GroupBox22.TabStop = False
+        Me.GroupBox22.Text = "Active Type"
+        '
+        'RadioButton25
+        '
+        Me.RadioButton25.AutoSize = True
+        Me.RadioButton25.Location = New System.Drawing.Point(7, 68)
+        Me.RadioButton25.Name = "RadioButton25"
+        Me.RadioButton25.Size = New System.Drawing.Size(63, 17)
+        Me.RadioButton25.TabIndex = 2
+        Me.RadioButton25.TabStop = True
+        Me.RadioButton25.Text = "Inactive"
+        Me.RadioButton25.UseVisualStyleBackColor = True
+        '
+        'RadioButton26
+        '
+        Me.RadioButton26.AutoSize = True
+        Me.RadioButton26.Location = New System.Drawing.Point(7, 44)
+        Me.RadioButton26.Name = "RadioButton26"
+        Me.RadioButton26.Size = New System.Drawing.Size(55, 17)
+        Me.RadioButton26.TabIndex = 1
+        Me.RadioButton26.TabStop = True
+        Me.RadioButton26.Text = "Active"
+        Me.RadioButton26.UseVisualStyleBackColor = True
+        '
+        'RadioButton27
+        '
+        Me.RadioButton27.AutoSize = True
+        Me.RadioButton27.Location = New System.Drawing.Point(7, 20)
+        Me.RadioButton27.Name = "RadioButton27"
+        Me.RadioButton27.Size = New System.Drawing.Size(47, 17)
+        Me.RadioButton27.TabIndex = 0
+        Me.RadioButton27.TabStop = True
+        Me.RadioButton27.Text = "Both"
+        Me.RadioButton27.UseVisualStyleBackColor = True
+        '
+        'ListBox9
+        '
+        Me.ListBox9.FormattingEnabled = True
+        Me.ListBox9.Items.AddRange(New Object() {"Shyam", "Tharick", "User1", "User2"})
+        Me.ListBox9.Location = New System.Drawing.Point(7, 20)
+        Me.ListBox9.Name = "ListBox9"
+        Me.ListBox9.Size = New System.Drawing.Size(146, 199)
+        Me.ListBox9.TabIndex = 0
+        '
         'TabPage8
         '
         Me.TabPage8.Controls.Add(Me.TabControl5)
         Me.TabPage8.Location = New System.Drawing.Point(4, 22)
         Me.TabPage8.Name = "TabPage8"
-        Me.TabPage8.Size = New System.Drawing.Size(768, 470)
+        Me.TabPage8.Size = New System.Drawing.Size(1002, 697)
         Me.TabPage8.TabIndex = 12
         Me.TabPage8.Text = "Scheduled Maintanance"
         Me.TabPage8.UseVisualStyleBackColor = True
@@ -2053,7 +2324,7 @@ Partial Class frmSettings
         Me.TabControl5.Location = New System.Drawing.Point(0, 0)
         Me.TabControl5.Name = "TabControl5"
         Me.TabControl5.SelectedIndex = 0
-        Me.TabControl5.Size = New System.Drawing.Size(768, 470)
+        Me.TabControl5.Size = New System.Drawing.Size(1002, 697)
         Me.TabControl5.TabIndex = 0
         '
         'TabPage15
@@ -2066,7 +2337,7 @@ Partial Class frmSettings
         Me.TabPage15.Location = New System.Drawing.Point(4, 22)
         Me.TabPage15.Name = "TabPage15"
         Me.TabPage15.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage15.Size = New System.Drawing.Size(760, 444)
+        Me.TabPage15.Size = New System.Drawing.Size(994, 671)
         Me.TabPage15.TabIndex = 1
         Me.TabPage15.Text = "Recurrence UOM"
         Me.TabPage15.UseVisualStyleBackColor = True
@@ -2212,7 +2483,7 @@ Partial Class frmSettings
         Me.TabPage14.Location = New System.Drawing.Point(4, 22)
         Me.TabPage14.Name = "TabPage14"
         Me.TabPage14.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage14.Size = New System.Drawing.Size(768, 470)
+        Me.TabPage14.Size = New System.Drawing.Size(1002, 697)
         Me.TabPage14.TabIndex = 13
         Me.TabPage14.Text = "Connection"
         Me.TabPage14.UseVisualStyleBackColor = True
@@ -2233,271 +2504,38 @@ Partial Class frmSettings
         Me.Label40.TabIndex = 0
         Me.Label40.Text = "Connection String"
         '
-        'TabPage16
+        'grpNotify
         '
-        Me.TabPage16.Controls.Add(Me.CheckBox22)
-        Me.TabPage16.Controls.Add(Me.TextBox43)
-        Me.TabPage16.Controls.Add(Me.Label47)
-        Me.TabPage16.Controls.Add(Me.TextBox42)
-        Me.TabPage16.Controls.Add(Me.Label46)
-        Me.TabPage16.Controls.Add(Me.TextBox41)
-        Me.TabPage16.Controls.Add(Me.Label45)
-        Me.TabPage16.Controls.Add(Me.GroupBox23)
-        Me.TabPage16.Controls.Add(Me.TextBox40)
-        Me.TabPage16.Controls.Add(Me.Label44)
-        Me.TabPage16.Controls.Add(Me.TextBox38)
-        Me.TabPage16.Controls.Add(Me.Label42)
-        Me.TabPage16.Controls.Add(Me.TextBox39)
-        Me.TabPage16.Controls.Add(Me.Label43)
-        Me.TabPage16.Controls.Add(Me.GroupBox21)
-        Me.TabPage16.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage16.Name = "TabPage16"
-        Me.TabPage16.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage16.Size = New System.Drawing.Size(1002, 697)
-        Me.TabPage16.TabIndex = 14
-        Me.TabPage16.Text = "User Set Up"
-        Me.TabPage16.UseVisualStyleBackColor = True
+        Me.grpNotify.Controls.Add(Me.RadioButton28)
+        Me.grpNotify.Controls.Add(Me.RadioButton31)
+        Me.grpNotify.Enabled = False
+        Me.grpNotify.Location = New System.Drawing.Point(227, 309)
+        Me.grpNotify.Name = "grpNotify"
+        Me.grpNotify.Size = New System.Drawing.Size(378, 39)
+        Me.grpNotify.TabIndex = 27
+        Me.grpNotify.TabStop = False
         '
-        'GroupBox21
+        'RadioButton28
         '
-        Me.GroupBox21.Controls.Add(Me.Button1)
-        Me.GroupBox21.Controls.Add(Me.Button20)
-        Me.GroupBox21.Controls.Add(Me.TextBox37)
-        Me.GroupBox21.Controls.Add(Me.Label41)
-        Me.GroupBox21.Controls.Add(Me.GroupBox22)
-        Me.GroupBox21.Controls.Add(Me.ListBox9)
-        Me.GroupBox21.Location = New System.Drawing.Point(6, 6)
-        Me.GroupBox21.Name = "GroupBox21"
-        Me.GroupBox21.Size = New System.Drawing.Size(170, 428)
-        Me.GroupBox21.TabIndex = 9
-        Me.GroupBox21.TabStop = False
+        Me.RadioButton28.AutoSize = True
+        Me.RadioButton28.Location = New System.Drawing.Point(110, 16)
+        Me.RadioButton28.Name = "RadioButton28"
+        Me.RadioButton28.Size = New System.Drawing.Size(180, 17)
+        Me.RadioButton28.TabIndex = 1
+        Me.RadioButton28.TabStop = True
+        Me.RadioButton28.Text = "Only Tasks Assigned to this User"
+        Me.RadioButton28.UseVisualStyleBackColor = True
         '
-        'Button1
+        'RadioButton31
         '
-        Me.Button1.Location = New System.Drawing.Point(38, 397)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 5
-        Me.Button1.Text = "Print"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button20
-        '
-        Me.Button20.Location = New System.Drawing.Point(38, 368)
-        Me.Button20.Name = "Button20"
-        Me.Button20.Size = New System.Drawing.Size(75, 23)
-        Me.Button20.TabIndex = 4
-        Me.Button20.Text = "Add"
-        Me.Button20.UseVisualStyleBackColor = True
-        '
-        'TextBox37
-        '
-        Me.TextBox37.Location = New System.Drawing.Point(87, 342)
-        Me.TextBox37.Name = "TextBox37"
-        Me.TextBox37.Size = New System.Drawing.Size(63, 20)
-        Me.TextBox37.TabIndex = 3
-        '
-        'Label41
-        '
-        Me.Label41.AutoSize = True
-        Me.Label41.Location = New System.Drawing.Point(8, 345)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(69, 13)
-        Me.Label41.TabIndex = 2
-        Me.Label41.Text = "Search Code"
-        '
-        'GroupBox22
-        '
-        Me.GroupBox22.Controls.Add(Me.RadioButton25)
-        Me.GroupBox22.Controls.Add(Me.RadioButton26)
-        Me.GroupBox22.Controls.Add(Me.RadioButton27)
-        Me.GroupBox22.Location = New System.Drawing.Point(7, 225)
-        Me.GroupBox22.Name = "GroupBox22"
-        Me.GroupBox22.Size = New System.Drawing.Size(146, 104)
-        Me.GroupBox22.TabIndex = 1
-        Me.GroupBox22.TabStop = False
-        Me.GroupBox22.Text = "Active Type"
-        '
-        'RadioButton25
-        '
-        Me.RadioButton25.AutoSize = True
-        Me.RadioButton25.Location = New System.Drawing.Point(7, 68)
-        Me.RadioButton25.Name = "RadioButton25"
-        Me.RadioButton25.Size = New System.Drawing.Size(63, 17)
-        Me.RadioButton25.TabIndex = 2
-        Me.RadioButton25.TabStop = True
-        Me.RadioButton25.Text = "Inactive"
-        Me.RadioButton25.UseVisualStyleBackColor = True
-        '
-        'RadioButton26
-        '
-        Me.RadioButton26.AutoSize = True
-        Me.RadioButton26.Location = New System.Drawing.Point(7, 44)
-        Me.RadioButton26.Name = "RadioButton26"
-        Me.RadioButton26.Size = New System.Drawing.Size(55, 17)
-        Me.RadioButton26.TabIndex = 1
-        Me.RadioButton26.TabStop = True
-        Me.RadioButton26.Text = "Active"
-        Me.RadioButton26.UseVisualStyleBackColor = True
-        '
-        'RadioButton27
-        '
-        Me.RadioButton27.AutoSize = True
-        Me.RadioButton27.Location = New System.Drawing.Point(7, 20)
-        Me.RadioButton27.Name = "RadioButton27"
-        Me.RadioButton27.Size = New System.Drawing.Size(47, 17)
-        Me.RadioButton27.TabIndex = 0
-        Me.RadioButton27.TabStop = True
-        Me.RadioButton27.Text = "Both"
-        Me.RadioButton27.UseVisualStyleBackColor = True
-        '
-        'ListBox9
-        '
-        Me.ListBox9.FormattingEnabled = True
-        Me.ListBox9.Items.AddRange(New Object() {"Shyam", "Tharick", "User1", "User2"})
-        Me.ListBox9.Location = New System.Drawing.Point(7, 20)
-        Me.ListBox9.Name = "ListBox9"
-        Me.ListBox9.Size = New System.Drawing.Size(146, 199)
-        Me.ListBox9.TabIndex = 0
-        '
-        'TextBox38
-        '
-        Me.TextBox38.Location = New System.Drawing.Point(303, 162)
-        Me.TextBox38.Name = "TextBox38"
-        Me.TextBox38.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox38.TabIndex = 16
-        '
-        'Label42
-        '
-        Me.Label42.AutoSize = True
-        Me.Label42.Location = New System.Drawing.Point(224, 165)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(60, 13)
-        Me.Label42.TabIndex = 15
-        Me.Label42.Text = "Description"
-        '
-        'TextBox39
-        '
-        Me.TextBox39.Location = New System.Drawing.Point(303, 26)
-        Me.TextBox39.Name = "TextBox39"
-        Me.TextBox39.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox39.TabIndex = 14
-        '
-        'Label43
-        '
-        Me.Label43.AutoSize = True
-        Me.Label43.Location = New System.Drawing.Point(224, 29)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(60, 13)
-        Me.Label43.TabIndex = 13
-        Me.Label43.Text = "User Name"
-        '
-        'TextBox40
-        '
-        Me.TextBox40.Location = New System.Drawing.Point(303, 298)
-        Me.TextBox40.Name = "TextBox40"
-        Me.TextBox40.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox40.TabIndex = 18
-        '
-        'Label44
-        '
-        Me.Label44.AutoSize = True
-        Me.Label44.Location = New System.Drawing.Point(224, 302)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(32, 13)
-        Me.Label44.TabIndex = 17
-        Me.Label44.Text = "Email"
-        '
-        'GroupBox23
-        '
-        Me.GroupBox23.Controls.Add(Me.RadioButton29)
-        Me.GroupBox23.Controls.Add(Me.RadioButton30)
-        Me.GroupBox23.Location = New System.Drawing.Point(227, 105)
-        Me.GroupBox23.Name = "GroupBox23"
-        Me.GroupBox23.Size = New System.Drawing.Size(250, 39)
-        Me.GroupBox23.TabIndex = 19
-        Me.GroupBox23.TabStop = False
-        Me.GroupBox23.Text = "Type"
-        '
-        'RadioButton29
-        '
-        Me.RadioButton29.AutoSize = True
-        Me.RadioButton29.Location = New System.Drawing.Point(110, 16)
-        Me.RadioButton29.Name = "RadioButton29"
-        Me.RadioButton29.Size = New System.Drawing.Size(83, 17)
-        Me.RadioButton29.TabIndex = 1
-        Me.RadioButton29.TabStop = True
-        Me.RadioButton29.Text = "Normal User"
-        Me.RadioButton29.UseVisualStyleBackColor = True
-        '
-        'RadioButton30
-        '
-        Me.RadioButton30.AutoSize = True
-        Me.RadioButton30.Location = New System.Drawing.Point(6, 16)
-        Me.RadioButton30.Name = "RadioButton30"
-        Me.RadioButton30.Size = New System.Drawing.Size(83, 17)
-        Me.RadioButton30.TabIndex = 0
-        Me.RadioButton30.TabStop = True
-        Me.RadioButton30.Text = "Admnistrator"
-        Me.RadioButton30.UseVisualStyleBackColor = True
-        '
-        'TextBox41
-        '
-        Me.TextBox41.Location = New System.Drawing.Point(303, 60)
-        Me.TextBox41.Name = "TextBox41"
-        Me.TextBox41.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox41.TabIndex = 21
-        '
-        'Label45
-        '
-        Me.Label45.AutoSize = True
-        Me.Label45.Location = New System.Drawing.Point(224, 63)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(53, 13)
-        Me.Label45.TabIndex = 20
-        Me.Label45.Text = "Password"
-        '
-        'TextBox42
-        '
-        Me.TextBox42.Location = New System.Drawing.Point(303, 188)
-        Me.TextBox42.Name = "TextBox42"
-        Me.TextBox42.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox42.TabIndex = 23
-        '
-        'Label46
-        '
-        Me.Label46.AutoSize = True
-        Me.Label46.Location = New System.Drawing.Point(224, 192)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(45, 13)
-        Me.Label46.TabIndex = 22
-        Me.Label46.Text = "Address"
-        '
-        'TextBox43
-        '
-        Me.TextBox43.Location = New System.Drawing.Point(303, 214)
-        Me.TextBox43.Name = "TextBox43"
-        Me.TextBox43.Size = New System.Drawing.Size(302, 20)
-        Me.TextBox43.TabIndex = 25
-        '
-        'Label47
-        '
-        Me.Label47.AutoSize = True
-        Me.Label47.Location = New System.Drawing.Point(224, 218)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(58, 13)
-        Me.Label47.TabIndex = 24
-        Me.Label47.Text = "Telephone"
-        '
-        'CheckBox22
-        '
-        Me.CheckBox22.AutoSize = True
-        Me.CheckBox22.Location = New System.Drawing.Point(227, 276)
-        Me.CheckBox22.Name = "CheckBox22"
-        Me.CheckBox22.Size = New System.Drawing.Size(140, 17)
-        Me.CheckBox22.TabIndex = 26
-        Me.CheckBox22.Text = "Send Notification Emails"
-        Me.CheckBox22.UseVisualStyleBackColor = True
+        Me.RadioButton31.AutoSize = True
+        Me.RadioButton31.Location = New System.Drawing.Point(6, 16)
+        Me.RadioButton31.Name = "RadioButton31"
+        Me.RadioButton31.Size = New System.Drawing.Size(86, 17)
+        Me.RadioButton31.TabIndex = 0
+        Me.RadioButton31.TabStop = True
+        Me.RadioButton31.Text = "For All Tasks"
+        Me.RadioButton31.UseVisualStyleBackColor = True
         '
         'frmSettings
         '
@@ -2569,6 +2607,14 @@ Partial Class frmSettings
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
+        Me.TabPage16.ResumeLayout(False)
+        Me.TabPage16.PerformLayout()
+        Me.GroupBox23.ResumeLayout(False)
+        Me.GroupBox23.PerformLayout()
+        Me.GroupBox21.ResumeLayout(False)
+        Me.GroupBox21.PerformLayout()
+        Me.GroupBox22.ResumeLayout(False)
+        Me.GroupBox22.PerformLayout()
         Me.TabPage8.ResumeLayout(False)
         Me.TabControl5.ResumeLayout(False)
         Me.TabPage15.ResumeLayout(False)
@@ -2579,14 +2625,8 @@ Partial Class frmSettings
         Me.GroupBox18.PerformLayout()
         Me.TabPage14.ResumeLayout(False)
         Me.TabPage14.PerformLayout()
-        Me.TabPage16.ResumeLayout(False)
-        Me.TabPage16.PerformLayout()
-        Me.GroupBox21.ResumeLayout(False)
-        Me.GroupBox21.PerformLayout()
-        Me.GroupBox22.ResumeLayout(False)
-        Me.GroupBox22.PerformLayout()
-        Me.GroupBox23.ResumeLayout(False)
-        Me.GroupBox23.PerformLayout()
+        Me.grpNotify.ResumeLayout(False)
+        Me.grpNotify.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -2799,7 +2839,7 @@ Partial Class frmSettings
     Friend WithEvents RadioButton26 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton27 As System.Windows.Forms.RadioButton
     Friend WithEvents ListBox9 As System.Windows.Forms.ListBox
-    Friend WithEvents CheckBox22 As System.Windows.Forms.CheckBox
+    Friend WithEvents chkNotify As System.Windows.Forms.CheckBox
     Friend WithEvents TextBox43 As System.Windows.Forms.TextBox
     Friend WithEvents Label47 As System.Windows.Forms.Label
     Friend WithEvents TextBox42 As System.Windows.Forms.TextBox
@@ -2811,4 +2851,7 @@ Partial Class frmSettings
     Friend WithEvents RadioButton30 As System.Windows.Forms.RadioButton
     Friend WithEvents TextBox40 As System.Windows.Forms.TextBox
     Friend WithEvents Label44 As System.Windows.Forms.Label
+    Friend WithEvents grpNotify As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioButton28 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton31 As System.Windows.Forms.RadioButton
 End Class
