@@ -60,7 +60,7 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub BtnViewNonScheduled_Click(sender As Object, e As EventArgs) Handles BtnViewNonScheduled.Click
-        FormMain.RadDockMain.DockWindow(FormMain.twCommonTaskPool, Telerik.WinControls.UI.Docking.DockPosition.Bottom)
+
     End Sub
 
     Private Sub ChkAllAreas_CheckedChanged(sender As Object, e As EventArgs) Handles ChkAllAreas.CheckedChanged
