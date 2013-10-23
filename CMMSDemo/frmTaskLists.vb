@@ -27,8 +27,6 @@ Public Class frmTaskLists
         dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
         FormMain.frmTskLst.dgvTasks.DataSource = dt_tsk
 
-        dt_tsk.Dispose()
-        GC.Collect()
     End Sub
 
     Private Sub createtable()

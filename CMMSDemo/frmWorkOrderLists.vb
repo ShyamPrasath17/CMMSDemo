@@ -55,9 +55,7 @@
         ArgArray.Add("@ProjectID") : ArgArray.Add(ProjectID.ToString()) : ArgArray.Add(DbType.String)
         dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
         FormMain.frmwolst.dgvWo.DataSource = dt_wo
-
-        dt_wo.Dispose()
-        GC.Collect()
+        
     End Sub
 
     Private Sub dgvWo_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvWo.CurrentRowChanged
