@@ -35,14 +35,6 @@
         dtType.Rows.Add("MeterBased", "Cycles")
     End Sub
 
-    Private Sub chkCreatenewWo_CheckedChanged(sender As Object, e As EventArgs) Handles chkCreatenewWo.CheckedChanged
-        If chkCreatenewWo.Checked Then
-            grpAttachToWo.Enabled = False
-        Else
-            grpAttachToWo.Enabled = True
-        End If
-    End Sub
-
     Sub fillSched(dataRow As DataRow)
         txtMaintID.Text = dataRow("MaintananceID").ToString()
         txtName.Text = dataRow("Name").ToString()
