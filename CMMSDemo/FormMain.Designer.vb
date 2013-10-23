@@ -26,15 +26,17 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.DockWindowPlaceholder1 = New Telerik.WinControls.UI.Docking.DockWindowPlaceholder()
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.TwWorkReq = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwUpComming = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.TwWorkReqList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwSchedMaintList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTask = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwWorkReq = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwScheduledMaint = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twTaskList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProjectList = New Telerik.WinControls.UI.Docking.ToolWindow()
-        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twSettings = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.ToolWindowWoLst = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twProject = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolWindowWo = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.twDashBoard = New Telerik.WinControls.UI.Docking.ToolWindow()
@@ -47,8 +49,8 @@ Partial Class FormMain
         Me.ToolTabStrip2 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.rpvMain = New Telerik.WinControls.UI.RadPageView()
         Me.rpvpDashBoard = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.BtnViewUpcomming = New System.Windows.Forms.Button()
         Me.rpvpWoRequest = New Telerik.WinControls.UI.RadPageViewPage()
-        Me.btnViewWorkReq = New System.Windows.Forms.Button()
         Me.btnCreateWorkReq = New System.Windows.Forms.Button()
         Me.rpvpProjects = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnCreateProjects = New System.Windows.Forms.Button()
@@ -84,11 +86,8 @@ Partial Class FormMain
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.ToolTabStrip20 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip11 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.TwWorkReqList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip22 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.TwUpComming = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip23 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.BtnViewUpcomming = New System.Windows.Forms.Button()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
         CType(Me.ToolTabStrip1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -166,14 +165,14 @@ Partial Class FormMain
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
         '
-        'TwWorkReq
+        'TwUpComming
         '
-        Me.TwWorkReq.Caption = Nothing
-        Me.TwWorkReq.Location = New System.Drawing.Point(1, 24)
-        Me.TwWorkReq.Name = "TwWorkReq"
-        Me.TwWorkReq.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwWorkReq.Size = New System.Drawing.Size(866, 661)
-        Me.TwWorkReq.Text = "Work Request"
+        Me.TwUpComming.Caption = Nothing
+        Me.TwUpComming.Location = New System.Drawing.Point(1, 24)
+        Me.TwUpComming.Name = "TwUpComming"
+        Me.TwUpComming.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwUpComming.Size = New System.Drawing.Size(855, 663)
+        Me.TwUpComming.Text = "UpComming Tasks"
         '
         'ToolTabStrip1
         '
@@ -207,6 +206,15 @@ Partial Class FormMain
         Me.ToolTabStrip1.TabIndex = 0
         Me.ToolTabStrip1.TabStop = False
         '
+        'TwWorkReqList
+        '
+        Me.TwWorkReqList.Caption = Nothing
+        Me.TwWorkReqList.Location = New System.Drawing.Point(1, 24)
+        Me.TwWorkReqList.Name = "TwWorkReqList"
+        Me.TwWorkReqList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwWorkReqList.Size = New System.Drawing.Size(855, 489)
+        Me.TwWorkReqList.Text = "Work Request List"
+        '
         'TwSchedMaintList
         '
         Me.TwSchedMaintList.Caption = Nothing
@@ -224,6 +232,15 @@ Partial Class FormMain
         Me.twTask.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.twTask.Size = New System.Drawing.Size(820, 455)
         Me.twTask.Text = "Task"
+        '
+        'TwWorkReq
+        '
+        Me.TwWorkReq.Caption = Nothing
+        Me.TwWorkReq.Location = New System.Drawing.Point(1, 24)
+        Me.TwWorkReq.Name = "TwWorkReq"
+        Me.TwWorkReq.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwWorkReq.Size = New System.Drawing.Size(866, 661)
+        Me.TwWorkReq.Text = "Work Request"
         '
         'TwScheduledMaint
         '
@@ -252,15 +269,6 @@ Partial Class FormMain
         Me.twProjectList.Size = New System.Drawing.Size(820, 616)
         Me.twProjectList.Text = "Project List"
         '
-        'ToolWindowWoLst
-        '
-        Me.ToolWindowWoLst.Caption = Nothing
-        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
-        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
-        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.ToolWindowWoLst.Size = New System.Drawing.Size(855, 489)
-        Me.ToolWindowWoLst.Text = "Work Order List"
-        '
         'twSettings
         '
         Me.twSettings.Caption = Nothing
@@ -269,6 +277,15 @@ Partial Class FormMain
         Me.twSettings.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
         Me.twSettings.Size = New System.Drawing.Size(866, 661)
         Me.twSettings.Text = "Settings"
+        '
+        'ToolWindowWoLst
+        '
+        Me.ToolWindowWoLst.Caption = Nothing
+        Me.ToolWindowWoLst.Location = New System.Drawing.Point(1, 24)
+        Me.ToolWindowWoLst.Name = "ToolWindowWoLst"
+        Me.ToolWindowWoLst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.ToolWindowWoLst.Size = New System.Drawing.Size(855, 489)
+        Me.ToolWindowWoLst.Text = "Work Order List"
         '
         'twProject
         '
@@ -419,29 +436,29 @@ Partial Class FormMain
         Me.rpvpDashBoard.Size = New System.Drawing.Size(199, 175)
         Me.rpvpDashBoard.Text = "Dash Board"
         '
+        'BtnViewUpcomming
+        '
+        Me.BtnViewUpcomming.BackColor = System.Drawing.Color.Transparent
+        Me.BtnViewUpcomming.BackgroundImage = CType(resources.GetObject("BtnViewUpcomming.BackgroundImage"), System.Drawing.Image)
+        Me.BtnViewUpcomming.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnViewUpcomming.FlatAppearance.BorderSize = 0
+        Me.BtnViewUpcomming.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnViewUpcomming.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BtnViewUpcomming.Location = New System.Drawing.Point(7, 22)
+        Me.BtnViewUpcomming.Name = "BtnViewUpcomming"
+        Me.BtnViewUpcomming.Size = New System.Drawing.Size(175, 50)
+        Me.BtnViewUpcomming.TabIndex = 9
+        Me.BtnViewUpcomming.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BtnViewUpcomming.UseVisualStyleBackColor = False
+        '
         'rpvpWoRequest
         '
-        Me.rpvpWoRequest.Controls.Add(Me.btnViewWorkReq)
         Me.rpvpWoRequest.Controls.Add(Me.btnCreateWorkReq)
+        Me.rpvpWoRequest.Image = CType(resources.GetObject("rpvpWoRequest.Image"), System.Drawing.Image)
         Me.rpvpWoRequest.Location = New System.Drawing.Point(5, 31)
         Me.rpvpWoRequest.Name = "rpvpWoRequest"
         Me.rpvpWoRequest.Size = New System.Drawing.Size(199, 175)
         Me.rpvpWoRequest.Text = "Work Request"
-        '
-        'btnViewWorkReq
-        '
-        Me.btnViewWorkReq.BackColor = System.Drawing.Color.Transparent
-        Me.btnViewWorkReq.BackgroundImage = CType(resources.GetObject("btnViewWorkReq.BackgroundImage"), System.Drawing.Image)
-        Me.btnViewWorkReq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnViewWorkReq.FlatAppearance.BorderSize = 0
-        Me.btnViewWorkReq.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnViewWorkReq.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnViewWorkReq.Location = New System.Drawing.Point(7, 78)
-        Me.btnViewWorkReq.Name = "btnViewWorkReq"
-        Me.btnViewWorkReq.Size = New System.Drawing.Size(175, 50)
-        Me.btnViewWorkReq.TabIndex = 9
-        Me.btnViewWorkReq.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnViewWorkReq.UseVisualStyleBackColor = False
         '
         'btnCreateWorkReq
         '
@@ -465,7 +482,7 @@ Partial Class FormMain
         Me.rpvpProjects.Image = CType(resources.GetObject("rpvpProjects.Image"), System.Drawing.Image)
         Me.rpvpProjects.Location = New System.Drawing.Point(5, 31)
         Me.rpvpProjects.Name = "rpvpProjects"
-        Me.rpvpProjects.Size = New System.Drawing.Size(191, 123)
+        Me.rpvpProjects.Size = New System.Drawing.Size(199, 175)
         Me.rpvpProjects.Text = "Projects"
         '
         'btnCreateProjects
@@ -903,15 +920,6 @@ Partial Class FormMain
         Me.ToolTabStrip11.TabIndex = 0
         Me.ToolTabStrip11.TabStop = False
         '
-        'TwWorkReqList
-        '
-        Me.TwWorkReqList.Caption = Nothing
-        Me.TwWorkReqList.Location = New System.Drawing.Point(1, 24)
-        Me.TwWorkReqList.Name = "TwWorkReqList"
-        Me.TwWorkReqList.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwWorkReqList.Size = New System.Drawing.Size(855, 489)
-        Me.TwWorkReqList.Text = "Work Request List"
-        '
         'ToolTabStrip22
         '
         Me.ToolTabStrip22.CanUpdateChildIndex = True
@@ -926,15 +934,6 @@ Partial Class FormMain
         Me.ToolTabStrip22.TabIndex = 0
         Me.ToolTabStrip22.TabStop = False
         '
-        'TwUpComming
-        '
-        Me.TwUpComming.Caption = Nothing
-        Me.TwUpComming.Location = New System.Drawing.Point(1, 24)
-        Me.TwUpComming.Name = "TwUpComming"
-        Me.TwUpComming.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwUpComming.Size = New System.Drawing.Size(855, 661)
-        Me.TwUpComming.Text = "UpComming Tasks"
-        '
         'ToolTabStrip23
         '
         Me.ToolTabStrip23.CanUpdateChildIndex = True
@@ -948,15 +947,6 @@ Partial Class FormMain
         Me.ToolTabStrip23.Size = New System.Drawing.Size(200, 200)
         Me.ToolTabStrip23.TabIndex = 0
         Me.ToolTabStrip23.TabStop = False
-        '
-        'BtnViewUpcomming
-        '
-        Me.BtnViewUpcomming.Location = New System.Drawing.Point(7, 14)
-        Me.BtnViewUpcomming.Name = "BtnViewUpcomming"
-        Me.BtnViewUpcomming.Size = New System.Drawing.Size(189, 63)
-        Me.BtnViewUpcomming.TabIndex = 0
-        Me.BtnViewUpcomming.Text = "View Upcomming"
-        Me.BtnViewUpcomming.UseVisualStyleBackColor = True
         '
         'FormMain
         '
@@ -1048,7 +1038,6 @@ Partial Class FormMain
     Friend WithEvents ToolTabStrip8 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolTabStrip10 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolTabStrip13 As Telerik.WinControls.UI.Docking.ToolTabStrip
-    Friend WithEvents btnViewWorkReq As System.Windows.Forms.Button
     Friend WithEvents twScheduler As Telerik.WinControls.UI.Docking.ToolWindow
     Friend WithEvents ToolTabStrip14 As Telerik.WinControls.UI.Docking.ToolTabStrip
     Friend WithEvents ToolTabStrip15 As Telerik.WinControls.UI.Docking.ToolTabStrip

@@ -339,7 +339,7 @@ Public Class FormMain
         TwWorkReq.Select()
     End Sub
 
-    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs) Handles btnViewWorkReq.Click
+    Private Sub btnViewIndeptTasks_Click(sender As Object, e As EventArgs)
 
     End Sub
 
