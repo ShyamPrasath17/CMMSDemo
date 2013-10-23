@@ -1,4 +1,5 @@
-﻿Public Class frmSheduleMaintanance
+﻿Imports Telerik.WinControls.UI.Docking
+Public Class frmSheduleMaintanance
     Dim dtType As DataTable
     Private Sub radTimeBased_CheckedChanged(sender As Object, e As EventArgs) Handles radTimeBased.CheckedChanged
         If radTimeBased.Checked Then
@@ -46,4 +47,9 @@
         End If
     End Sub
 
+    Private Sub btnViewUpComming_Click(sender As Object, e As EventArgs) Handles btnViewUpComming.Click
+        FormMain.RadDockMain.DockWindow(FormMain.TwUpComming, DockPosition.Right)
+        FormMain.TwUpComming.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
+        FormMain.TwUpComming.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(500, 0)
+    End Sub
 End Class

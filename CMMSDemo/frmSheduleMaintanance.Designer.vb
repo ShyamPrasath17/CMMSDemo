@@ -78,6 +78,7 @@ Partial Class frmSheduleMaintanance
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button12 = New System.Windows.Forms.Button()
+        Me.btnViewUpComming = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -546,7 +547,7 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox7.Controls.Add(Me.Button9)
         Me.GroupBox7.Controls.Add(Me.Label3)
         Me.GroupBox7.Controls.Add(Me.Button1)
-        Me.GroupBox7.Location = New System.Drawing.Point(619, 21)
+        Me.GroupBox7.Location = New System.Drawing.Point(612, 64)
         Me.GroupBox7.Name = "GroupBox7"
         Me.GroupBox7.Size = New System.Drawing.Size(355, 235)
         Me.GroupBox7.TabIndex = 155
@@ -561,7 +562,7 @@ Partial Class frmSheduleMaintanance
         Me.GroupBox8.Controls.Add(Me.Button11)
         Me.GroupBox8.Controls.Add(Me.Label8)
         Me.GroupBox8.Controls.Add(Me.Button12)
-        Me.GroupBox8.Location = New System.Drawing.Point(619, 305)
+        Me.GroupBox8.Location = New System.Drawing.Point(612, 327)
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(355, 235)
         Me.GroupBox8.TabIndex = 156
@@ -619,12 +620,22 @@ Partial Class frmSheduleMaintanance
         Me.Button12.TabIndex = 152
         Me.Button12.Tag = "DISABLE"
         '
+        'btnViewUpComming
+        '
+        Me.btnViewUpComming.Location = New System.Drawing.Point(612, 15)
+        Me.btnViewUpComming.Name = "btnViewUpComming"
+        Me.btnViewUpComming.Size = New System.Drawing.Size(111, 23)
+        Me.btnViewUpComming.TabIndex = 157
+        Me.btnViewUpComming.Text = "View UpComming"
+        Me.btnViewUpComming.UseVisualStyleBackColor = True
+        '
         'frmSheduleMaintanance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(979, 854)
+        Me.Controls.Add(Me.btnViewUpComming)
         Me.Controls.Add(Me.GroupBox8)
         Me.Controls.Add(Me.GroupBox7)
         Me.Controls.Add(Me.GroupBox1)
@@ -727,4 +738,5 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents Button12 As System.Windows.Forms.Button
+    Friend WithEvents btnViewUpComming As System.Windows.Forms.Button
 End Class
