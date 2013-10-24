@@ -5,6 +5,7 @@ Public Class frmTaskLists
     Dim frmloaded As Boolean = False
     Dim dt_tsk As DataTable
     Dim ArgArray As ArrayList
+    Public connstring As String
     Private Sub frmTaskLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
         'createtable()
@@ -24,6 +25,7 @@ Public Class frmTaskLists
         End If
         ArgArray = New ArrayList
         ArgArray.Add("@WorkOrderNo") : ArgArray.Add(WoID.ToString()) : ArgArray.Add(DbType.String)
+        CMMSDAL.strConn = connstring
         dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
         FormMain.frmTskLst.dgvTasks.DataSource = dt_tsk
 

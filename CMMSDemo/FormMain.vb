@@ -34,7 +34,18 @@ Public Class FormMain
     Dim dt_wo As DataTable
     Dim dt_tsk As DataTable
 
+    Public connstr As String
+
     Sub New()
+
+        'CMMSDAL.strConn = connstr
+        Dim frm As New frmLogin()
+        frm.ShowDialog()
+        If frm.state = "Success" Then
+            connstr = frm.txtConn.Text.ToString()
+        Else
+            Me.Close()
+        End If
         addDashBoardFrm()
         addWoLst()
         addwofrm()
@@ -117,6 +128,7 @@ Public Class FormMain
 
     Private Sub addfrmProjLst()
         frmProjLst = New frmProjectList()
+        frmProjLst.connstring = connstr
         frmProjLst.Dock = DockStyle.Fill
         frmProjLst.TopLevel = False
         frmProjLst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
@@ -135,6 +147,7 @@ Public Class FormMain
 
     Private Sub addfrmTskLst()
         frmTskLst = New frmTaskLists()
+        frmTskLst.connstring = connstr
         frmTskLst.Dock = DockStyle.Fill
         frmTskLst.TopLevel = False
         frmTskLst.FormBorderStyle = Windows.Forms.FormBorderStyle.None
@@ -151,6 +164,7 @@ Public Class FormMain
 
     Private Sub addWoLst()
         frmwolst = New frmWorkOrderLists()
+        frmwolst.connstring = connstr
         frmwolst.Dock = DockStyle.Fill
         frmwolst.TopLevel = False
         frmwolst.FormBorderStyle = Windows.Forms.FormBorderStyle.None

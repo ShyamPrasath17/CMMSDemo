@@ -3,6 +3,7 @@
     Dim frmloaded As Boolean = False
     Dim dt_wo As DataTable
     Dim ArgArray As ArrayList
+    Public connstring As String
 
     Private Sub frmWorkOrderLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
@@ -53,6 +54,7 @@
 
         ArgArray = New ArrayList
         ArgArray.Add("@ProjectID") : ArgArray.Add(ProjectID.ToString()) : ArgArray.Add(DbType.String)
+        CMMSDAL.strConn = connstring
         dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
         FormMain.frmwolst.dgvWo.DataSource = dt_wo
         
