@@ -32,12 +32,12 @@ Public Class frmWorkrequestList
         dgvWorkReq.BestFitColumns()
 
         Dim btncol As GridViewCommandColumn = New GridViewCommandColumn()
-        btncol.Name = "CreateTask"
-        btncol.HeaderText = "Create Task"
-        btncol.DefaultText = "Create Task"
+        btncol.Name = "Create WorkOrder"
+        btncol.HeaderText = "Create WorkOrder"
+        btncol.DefaultText = "Create WorkOrder"
         btncol.UseDefaultText = True
         btncol.AutoEllipsis = True
-        btncol.Width = 80
+        btncol.Width = 120
         dgvWorkReq.Columns.Insert(5, btncol)
 
         dgvWorkReq.AllowAddNewRow = False
@@ -46,7 +46,19 @@ Public Class frmWorkrequestList
     End Sub
 
     Private Sub dgvWorkReq_CellDoubleClick(sender As Object, e As GridViewCellEventArgs) Handles dgvWorkReq.CellDoubleClick
-        FormMain.TwWorkReq.Show()
+        FormMain.TwWorkReq.DefaultFloatingSize = New Size(800, 900)
+        FormMain.RadDockMain.FloatWindow(FormMain.TwWorkReq)
+        'FormMain.TwWorkReq.Show()
         FormMain.TwWorkReq.Select()
+    End Sub
+
+    Private Sub dgvWorkReq_CommandCellClick(sender As Object, e As EventArgs) Handles dgvWorkReq.CommandCellClick
+        If Not dgvWorkReq.CurrentRow Is Nothing Then
+            FormMain.ToolWindowWo.DefaultFloatingSize = New Size(900, 1000)
+            FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWo)
+            FormMain.frmwo.txtReq.Text = dgvWorkReq.CurrentRow.Cells("RequestID").Value.ToString()
+            'FormMain.ToolWindowWo.Show()
+            FormMain.ToolWindowWo.Select()
+        End If
     End Sub
 End Class

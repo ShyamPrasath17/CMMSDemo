@@ -30,6 +30,7 @@ Public Class FormMain
 
     Public frmSearch As frmSearch
     Public frmUpcomming As frmUpCommingSchedule
+    Public frmrpt As frmReportList
     Dim frmDashBoard As frmDashBoard
     Dim dt_wo As DataTable
     Dim dt_tsk As DataTable
@@ -65,6 +66,7 @@ Public Class FormMain
         addfrmWorkRequestList()
         addfrmUpcomming()
         addfrmWorkRequest()
+        addfrmRpt()
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -85,6 +87,7 @@ Public Class FormMain
         twSearch.Controls.Add(frmSearch)
         TwWorkReqList.Controls.Add(frmWorkRequestList_)
         TwUpComming.Controls.Add(frmUpcomming)
+        twrptlst.Controls.Add(frmrpt)
         DirectCast(twSearch.TabStrip, ToolTabStrip).AutoHidePosition = AutoHidePosition.Bottom
         twSearch.AutoHide()
 
@@ -106,6 +109,7 @@ Public Class FormMain
         TwUpComming.Hide()
         twScheduler.Hide()
         twDashBoard.Hide()
+        twrptlst.Hide()
         BtnViewUpcomming_Click(Me, e)
     End Sub
 
@@ -237,7 +241,13 @@ Public Class FormMain
         frmWorkRequest_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmWorkRequest_.Show()
     End Sub
-
+    Private Sub addfrmRpt()
+        frmrpt = New frmReportList()
+        frmrpt.Dock = DockStyle.Fill
+        frmrpt.TopLevel = False
+        frmrpt.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmrpt.Show()
+    End Sub
     Private Sub addfrmUpcomming()
         frmUpcomming = New frmUpCommingSchedule()
         frmUpcomming.Dock = DockStyle.Fill
@@ -279,6 +289,7 @@ Public Class FormMain
 
     Private Sub rpvMain_MouseClick(sender As Object, e As MouseEventArgs) Handles rpvMain.MouseClick
         If e.Button = Windows.Forms.MouseButtons.Left Then
+            TwWorkReqList.Hide()
             If rpvMain.SelectedPage Is rpvpWorkOrders Then
                 ToolWindowWoLst.Show()
                 ToolWindowWoLst.Select()
@@ -303,6 +314,9 @@ Public Class FormMain
             ElseIf rpvMain.SelectedPage Is rpvpSettings Then
                 twSettings.Show()
                 twSettings.Select()
+            ElseIf rpvMain.SelectedPage Is rpvpReportsCharts Then
+                twrptlst.Show()
+                twrptlst.Select()
             End If
         End If
     End Sub
@@ -319,6 +333,8 @@ Public Class FormMain
         ToolWindowWo.Select()
         frmwo.txtwono.Text = ""
         frmwo.txtstatus.Text = ""
+        frmwo.txtProject.Text = ""
+        frmwo.txtReq.Text = ""
     End Sub
 
     Private Sub btnCreateTaskInternal_Click(sender As Object, e As EventArgs) Handles btnCreateTaskInternal.Click
@@ -328,6 +344,7 @@ Public Class FormMain
         frmTsk.txtTaskID.Text = ""
         frmTsk.txtTaskName.Text = ""
         frmTsk.txtstatus.Text = ""
+        frmTsk.txtwono.Text = ""
     End Sub
 
     Private Sub btnCreateTaskOutsourced_Click(sender As Object, e As EventArgs) Handles btnCreateTaskOutsourced.Click
@@ -337,6 +354,7 @@ Public Class FormMain
         frmTsk.txtTaskID.Text = ""
         frmTsk.txtTaskName.Text = ""
         frmTsk.txtstatus.Text = ""
+        frmTsk.txtwono.Text = ""
     End Sub
 
     Private Sub btnViewTasks_Click(sender As Object, e As EventArgs) Handles btnViewTasks.Click
@@ -382,8 +400,8 @@ Public Class FormMain
     Private Sub BtnViewUpcomming_Click(sender As Object, e As EventArgs) Handles BtnViewUpcomming.Click
         TwUpComming.Show()
         TwUpComming.Select()
-        RadDockMain.DockWindow(TwWorkReqList, DockPosition.Right)
-        TwWorkReqList.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
-        TwWorkReqList.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(700, 0)
+        RadDockMain.DockWindow(TwWorkReqList, TwUpComming, DockPosition.Right)
+        'TwWorkReqList.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
+        'TwWorkReqList.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(700, 0)
     End Sub
 End Class

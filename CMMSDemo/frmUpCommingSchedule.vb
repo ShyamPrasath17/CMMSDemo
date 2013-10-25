@@ -35,7 +35,9 @@
     End Sub
 
     Private Sub DgvUpComming_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles DgvUpComming.CellDoubleClick
-        FormMain.TwScheduledMaint.Show()
+        FormMain.TwScheduledMaint.DefaultFloatingSize = New Size(1000, 1000)
+        FormMain.RadDockMain.FloatWindow(FormMain.TwScheduledMaint)
+        'FormMain.TwScheduledMaint.Show()
         FormMain.TwScheduledMaint.Select()
     End Sub
 End Class

@@ -42,6 +42,7 @@
         txtTaskID.Text = dr("TaskID").ToString()
         txtTaskName.Text = dr("TaskName").ToString()
         txtstatus.Text = dr("Status").ToString()
+        txtwono.Text = dr("WorkOrderNo").ToString()
     End Sub
 
     Private Sub btnOutSource_Click(sender As Object, e As EventArgs) Handles btnOutSource.Click

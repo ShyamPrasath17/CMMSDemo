@@ -147,6 +147,18 @@
     <Compile Include="frmAssignEmployees.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmReportList.Designer.vb">
+      <DependentUpon>frmReportList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrigger.Designer.vb">
+      <DependentUpon>frmTrigger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrigger.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmUpCommingSchedule.Designer.vb">
       <DependentUpon>frmUpCommingSchedule.vb</DependentUpon>
     </Compile>
@@ -325,6 +337,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportList.resx">
+      <DependentUpon>frmReportList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrigger.resx">
+      <DependentUpon>frmTrigger.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpCommingSchedule.resx">
       <DependentUpon>frmUpCommingSchedule.vb</DependentUpon>

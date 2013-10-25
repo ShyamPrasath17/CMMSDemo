@@ -33,7 +33,6 @@ Partial Class frmWorkOrder
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.DeptSearch = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -51,7 +50,7 @@ Partial Class frmWorkOrder
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtProject = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -69,7 +68,6 @@ Partial Class frmWorkOrder
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.grpBillable = New System.Windows.Forms.GroupBox()
         Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.Label27 = New System.Windows.Forms.Label()
@@ -85,6 +83,7 @@ Partial Class frmWorkOrder
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.btnViewTasks = New System.Windows.Forms.Button()
         Me.TextBox15 = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -96,7 +95,13 @@ Partial Class frmWorkOrder
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
-        Me.btnViewTasks = New System.Windows.Forms.Button()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.txtReq = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnInstructions = New System.Windows.Forms.Button()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
         CType(Me.NumericUpDown1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NumericUpDown2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -107,12 +112,13 @@ Partial Class frmWorkOrder
         CType(Me.dgvComment, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvComment.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 58)
+        Me.Label1.Location = New System.Drawing.Point(14, 17)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(83, 13)
         Me.Label1.TabIndex = 19
@@ -121,7 +127,7 @@ Partial Class frmWorkOrder
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 36)
+        Me.Label4.Location = New System.Drawing.Point(13, 71)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 13)
         Me.Label4.TabIndex = 22
@@ -129,7 +135,7 @@ Partial Class frmWorkOrder
         '
         'txtwono
         '
-        Me.txtwono.Location = New System.Drawing.Point(110, 55)
+        Me.txtwono.Location = New System.Drawing.Point(111, 10)
         Me.txtwono.Name = "txtwono"
         Me.txtwono.Size = New System.Drawing.Size(185, 20)
         Me.txtwono.TabIndex = 18
@@ -137,7 +143,7 @@ Partial Class frmWorkOrder
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(11, 336)
+        Me.Label5.Location = New System.Drawing.Point(10, 473)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(96, 13)
         Me.Label5.TabIndex = 25
@@ -146,7 +152,7 @@ Partial Class frmWorkOrder
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 314)
+        Me.Label7.Location = New System.Drawing.Point(11, 451)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(106, 13)
         Me.Label7.TabIndex = 27
@@ -154,7 +160,7 @@ Partial Class frmWorkOrder
         '
         'txtstatus
         '
-        Me.txtstatus.Location = New System.Drawing.Point(109, 29)
+        Me.txtstatus.Location = New System.Drawing.Point(109, 64)
         Me.txtstatus.Name = "txtstatus"
         Me.txtstatus.ReadOnly = True
         Me.txtstatus.Size = New System.Drawing.Size(185, 20)
@@ -163,7 +169,7 @@ Partial Class frmWorkOrder
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(512, 844)
+        Me.Button1.Location = New System.Drawing.Point(642, 844)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 27)
         Me.Button1.TabIndex = 32
@@ -173,7 +179,7 @@ Partial Class frmWorkOrder
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(591, 844)
+        Me.Button2.Location = New System.Drawing.Point(721, 844)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 27)
         Me.Button2.TabIndex = 33
@@ -183,7 +189,7 @@ Partial Class frmWorkOrder
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(10, 189)
+        Me.Label8.Location = New System.Drawing.Point(1, 50)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(59, 13)
         Me.Label8.TabIndex = 36
@@ -191,24 +197,16 @@ Partial Class frmWorkOrder
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(107, 186)
+        Me.TextBox4.Location = New System.Drawing.Point(98, 47)
         Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.ReadOnly = True
         Me.TextBox4.Size = New System.Drawing.Size(185, 20)
         Me.TextBox4.TabIndex = 35
-        '
-        'DeptSearch
-        '
-        Me.DeptSearch.Image = CType(resources.GetObject("DeptSearch.Image"), System.Drawing.Image)
-        Me.DeptSearch.Location = New System.Drawing.Point(298, 183)
-        Me.DeptSearch.Name = "DeptSearch"
-        Me.DeptSearch.Size = New System.Drawing.Size(24, 24)
-        Me.DeptSearch.TabIndex = 67
-        Me.DeptSearch.Tag = "DISABLE"
         '
         'Button4
         '
         Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(298, 209)
+        Me.Button4.Location = New System.Drawing.Point(301, 195)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(24, 24)
         Me.Button4.TabIndex = 70
@@ -217,7 +215,7 @@ Partial Class frmWorkOrder
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(10, 215)
+        Me.Label9.Location = New System.Drawing.Point(14, 201)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(41, 13)
         Me.Label9.TabIndex = 69
@@ -225,7 +223,7 @@ Partial Class frmWorkOrder
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(107, 212)
+        Me.TextBox5.Location = New System.Drawing.Point(110, 198)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(185, 20)
         Me.TextBox5.TabIndex = 68
@@ -233,7 +231,7 @@ Partial Class frmWorkOrder
         'Button5
         '
         Me.Button5.Image = CType(resources.GetObject("Button5.Image"), System.Drawing.Image)
-        Me.Button5.Location = New System.Drawing.Point(298, 235)
+        Me.Button5.Location = New System.Drawing.Point(301, 221)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(24, 24)
         Me.Button5.TabIndex = 73
@@ -242,7 +240,7 @@ Partial Class frmWorkOrder
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(10, 241)
+        Me.Label10.Location = New System.Drawing.Point(14, 227)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(49, 13)
         Me.Label10.TabIndex = 72
@@ -250,7 +248,7 @@ Partial Class frmWorkOrder
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(107, 238)
+        Me.TextBox6.Location = New System.Drawing.Point(110, 224)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(185, 20)
         Me.TextBox6.TabIndex = 71
@@ -258,7 +256,7 @@ Partial Class frmWorkOrder
         'DateTimePicker1
         '
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(141, 333)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(140, 470)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 79
@@ -266,7 +264,7 @@ Partial Class frmWorkOrder
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(141, 359)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(140, 496)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker2.TabIndex = 81
@@ -274,7 +272,7 @@ Partial Class frmWorkOrder
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 361)
+        Me.Label3.Location = New System.Drawing.Point(10, 498)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 13)
         Me.Label3.TabIndex = 80
@@ -283,7 +281,7 @@ Partial Class frmWorkOrder
         'Button6
         '
         Me.Button6.Image = CType(resources.GetObject("Button6.Image"), System.Drawing.Image)
-        Me.Button6.Location = New System.Drawing.Point(299, 131)
+        Me.Button6.Location = New System.Drawing.Point(302, 143)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(24, 24)
         Me.Button6.TabIndex = 84
@@ -292,7 +290,7 @@ Partial Class frmWorkOrder
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(11, 137)
+        Me.Label6.Location = New System.Drawing.Point(14, 149)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(34, 13)
         Me.Label6.TabIndex = 83
@@ -300,21 +298,21 @@ Partial Class frmWorkOrder
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(108, 134)
+        Me.TextBox2.Location = New System.Drawing.Point(111, 146)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(185, 20)
         Me.TextBox2.TabIndex = 82
         '
         'NumericUpDown1
         '
-        Me.NumericUpDown1.Location = New System.Drawing.Point(141, 307)
+        Me.NumericUpDown1.Location = New System.Drawing.Point(140, 444)
         Me.NumericUpDown1.Name = "NumericUpDown1"
         Me.NumericUpDown1.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown1.TabIndex = 85
         '
         'NumericUpDown2
         '
-        Me.NumericUpDown2.Location = New System.Drawing.Point(467, 307)
+        Me.NumericUpDown2.Location = New System.Drawing.Point(492, 449)
         Me.NumericUpDown2.Name = "NumericUpDown2"
         Me.NumericUpDown2.Size = New System.Drawing.Size(120, 20)
         Me.NumericUpDown2.TabIndex = 87
@@ -322,7 +320,7 @@ Partial Class frmWorkOrder
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(371, 314)
+        Me.Label11.Location = New System.Drawing.Point(391, 456)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(88, 13)
         Me.Label11.TabIndex = 86
@@ -331,7 +329,7 @@ Partial Class frmWorkOrder
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(12, 681)
+        Me.Label12.Location = New System.Drawing.Point(16, 719)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(61, 13)
         Me.Label12.TabIndex = 89
@@ -340,24 +338,23 @@ Partial Class frmWorkOrder
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(13, 10)
+        Me.Label14.Location = New System.Drawing.Point(13, 45)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(42, 13)
         Me.Label14.TabIndex = 93
         Me.Label14.Text = "Project"
         '
-        'TextBox1
+        'txtProject
         '
-        Me.TextBox1.Location = New System.Drawing.Point(109, 3)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox1.TabIndex = 92
+        Me.txtProject.Location = New System.Drawing.Point(109, 38)
+        Me.txtProject.Name = "txtProject"
+        Me.txtProject.Size = New System.Drawing.Size(185, 20)
+        Me.txtProject.TabIndex = 92
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(14, 567)
+        Me.Label2.Location = New System.Drawing.Point(18, 605)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 13)
         Me.Label2.TabIndex = 118
@@ -365,17 +362,17 @@ Partial Class frmWorkOrder
         '
         'TextBox13
         '
-        Me.TextBox13.Location = New System.Drawing.Point(15, 583)
+        Me.TextBox13.Location = New System.Drawing.Point(19, 621)
         Me.TextBox13.Multiline = True
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.TextBox13.Size = New System.Drawing.Size(651, 83)
+        Me.TextBox13.Size = New System.Drawing.Size(613, 83)
         Me.TextBox13.TabIndex = 117
         '
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(371, 336)
+        Me.Label22.Location = New System.Drawing.Point(391, 481)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(93, 13)
         Me.Label22.TabIndex = 113
@@ -384,7 +381,7 @@ Partial Class frmWorkOrder
         'DateTimePicker4
         '
         Me.DateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker4.Location = New System.Drawing.Point(467, 359)
+        Me.DateTimePicker4.Location = New System.Drawing.Point(492, 501)
         Me.DateTimePicker4.Name = "DateTimePicker4"
         Me.DateTimePicker4.Size = New System.Drawing.Size(170, 20)
         Me.DateTimePicker4.TabIndex = 116
@@ -392,7 +389,7 @@ Partial Class frmWorkOrder
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(371, 361)
+        Me.Label23.Location = New System.Drawing.Point(391, 503)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(89, 13)
         Me.Label23.TabIndex = 115
@@ -401,7 +398,7 @@ Partial Class frmWorkOrder
         'DateTimePicker5
         '
         Me.DateTimePicker5.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker5.Location = New System.Drawing.Point(467, 333)
+        Me.DateTimePicker5.Location = New System.Drawing.Point(492, 475)
         Me.DateTimePicker5.Name = "DateTimePicker5"
         Me.DateTimePicker5.Size = New System.Drawing.Size(170, 20)
         Me.DateTimePicker5.TabIndex = 114
@@ -411,7 +408,7 @@ Partial Class frmWorkOrder
         Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Items.AddRange(New Object() {"High", "Medium", "Low"})
-        Me.ComboBox2.Location = New System.Drawing.Point(110, 107)
+        Me.ComboBox2.Location = New System.Drawing.Point(113, 119)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(185, 21)
         Me.ComboBox2.TabIndex = 112
@@ -419,7 +416,7 @@ Partial Class frmWorkOrder
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(13, 110)
+        Me.Label13.Location = New System.Drawing.Point(14, 122)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(43, 13)
         Me.Label13.TabIndex = 111
@@ -432,7 +429,7 @@ Partial Class frmWorkOrder
         Me.GroupBox1.Controls.Add(Me.Label20)
         Me.GroupBox1.Controls.Add(Me.Button10)
         Me.GroupBox1.Controls.Add(Me.Label21)
-        Me.GroupBox1.Location = New System.Drawing.Point(361, 76)
+        Me.GroupBox1.Location = New System.Drawing.Point(394, 121)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(305, 184)
         Me.GroupBox1.TabIndex = 108
@@ -484,7 +481,7 @@ Partial Class frmWorkOrder
         'Button9
         '
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(298, 157)
+        Me.Button9.Location = New System.Drawing.Point(301, 169)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(24, 24)
         Me.Button9.TabIndex = 107
@@ -493,7 +490,7 @@ Partial Class frmWorkOrder
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(10, 163)
+        Me.Label19.Location = New System.Drawing.Point(14, 175)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(59, 13)
         Me.Label19.TabIndex = 106
@@ -501,20 +498,10 @@ Partial Class frmWorkOrder
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(107, 160)
+        Me.TextBox10.Location = New System.Drawing.Point(110, 172)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(185, 20)
         Me.TextBox10.TabIndex = 105
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(116, 417)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(125, 17)
-        Me.CheckBox1.TabIndex = 104
-        Me.CheckBox1.Text = "Schedule Reminder"
-        Me.CheckBox1.UseVisualStyleBackColor = True
         '
         'grpBillable
         '
@@ -527,7 +514,7 @@ Partial Class frmWorkOrder
         Me.grpBillable.Controls.Add(Me.lblCust)
         Me.grpBillable.Controls.Add(Me.txtcust)
         Me.grpBillable.Controls.Add(Me.Sercust)
-        Me.grpBillable.Location = New System.Drawing.Point(17, 440)
+        Me.grpBillable.Location = New System.Drawing.Point(14, 274)
         Me.grpBillable.Name = "grpBillable"
         Me.grpBillable.Size = New System.Drawing.Size(321, 124)
         Me.grpBillable.TabIndex = 103
@@ -612,7 +599,7 @@ Partial Class frmWorkOrder
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(374, 541)
+        Me.Button7.Location = New System.Drawing.Point(13, 545)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(130, 23)
         Me.Button7.TabIndex = 102
@@ -622,7 +609,7 @@ Partial Class frmWorkOrder
         'chkBillable
         '
         Me.chkBillable.AutoSize = True
-        Me.chkBillable.Location = New System.Drawing.Point(21, 417)
+        Me.chkBillable.Location = New System.Drawing.Point(16, 260)
         Me.chkBillable.Name = "chkBillable"
         Me.chkBillable.Size = New System.Drawing.Size(64, 17)
         Me.chkBillable.TabIndex = 98
@@ -631,7 +618,7 @@ Partial Class frmWorkOrder
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(467, 282)
+        Me.TextBox7.Location = New System.Drawing.Point(492, 423)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.ReadOnly = True
         Me.TextBox7.Size = New System.Drawing.Size(184, 20)
@@ -640,7 +627,7 @@ Partial Class frmWorkOrder
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(371, 289)
+        Me.Label15.Location = New System.Drawing.Point(391, 430)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(58, 13)
         Me.Label15.TabIndex = 96
@@ -654,9 +641,14 @@ Partial Class frmWorkOrder
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button8)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button12)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnInstructions)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.GroupBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnViewTasks)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox15)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label26)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.GroupBox1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label25)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dgvComment)
@@ -679,7 +671,6 @@ Partial Class frmWorkOrder
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox6)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label13)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox2)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.GroupBox1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button9)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label6)
@@ -687,39 +678,44 @@ Partial Class frmWorkOrder
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label9)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox10)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button6)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.CheckBox1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpBillable)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.NumericUpDown1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button7)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.DeptSearch)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.chkBillable)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label11)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox7)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label8)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label15)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.NumericUpDown2)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label12)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label7)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtwono)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox1)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtProject)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtstatus)
-        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(678, 874)
+        Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(808, 874)
         '
         '
         '
         Me.RadScrollablePanel1.RootElement.Padding = New System.Windows.Forms.Padding(1)
-        Me.RadScrollablePanel1.Size = New System.Drawing.Size(680, 876)
+        Me.RadScrollablePanel1.Size = New System.Drawing.Size(810, 876)
         Me.RadScrollablePanel1.TabIndex = 95
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
         '
+        'btnViewTasks
+        '
+        Me.btnViewTasks.Location = New System.Drawing.Point(394, 86)
+        Me.btnViewTasks.Name = "btnViewTasks"
+        Me.btnViewTasks.Size = New System.Drawing.Size(230, 23)
+        Me.btnViewTasks.TabIndex = 125
+        Me.btnViewTasks.Text = "View Tasks >>"
+        Me.btnViewTasks.UseVisualStyleBackColor = True
+        '
         'TextBox15
         '
-        Me.TextBox15.Location = New System.Drawing.Point(141, 282)
+        Me.TextBox15.Location = New System.Drawing.Point(140, 419)
         Me.TextBox15.Name = "TextBox15"
         Me.TextBox15.Size = New System.Drawing.Size(185, 20)
         Me.TextBox15.TabIndex = 124
@@ -727,7 +723,7 @@ Partial Class frmWorkOrder
         'Label26
         '
         Me.Label26.AutoSize = True
-        Me.Label26.Location = New System.Drawing.Point(12, 289)
+        Me.Label26.Location = New System.Drawing.Point(11, 426)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(83, 13)
         Me.Label26.TabIndex = 123
@@ -735,7 +731,7 @@ Partial Class frmWorkOrder
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(109, 81)
+        Me.TextBox3.Location = New System.Drawing.Point(112, 93)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(185, 20)
         Me.TextBox3.TabIndex = 121
@@ -743,7 +739,7 @@ Partial Class frmWorkOrder
         'Label25
         '
         Me.Label25.AutoSize = True
-        Me.Label25.Location = New System.Drawing.Point(12, 84)
+        Me.Label25.Location = New System.Drawing.Point(14, 96)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(97, 13)
         Me.Label25.TabIndex = 122
@@ -751,9 +747,9 @@ Partial Class frmWorkOrder
         '
         'dgvComment
         '
-        Me.dgvComment.Location = New System.Drawing.Point(15, 697)
+        Me.dgvComment.Location = New System.Drawing.Point(19, 735)
         Me.dgvComment.Name = "dgvComment"
-        Me.dgvComment.Size = New System.Drawing.Size(651, 141)
+        Me.dgvComment.Size = New System.Drawing.Size(613, 105)
         Me.dgvComment.TabIndex = 120
         Me.dgvComment.Text = "RadGridView1"
         '
@@ -764,7 +760,7 @@ Partial Class frmWorkOrder
         Me.GroupBox2.Controls.Add(Me.Button11)
         Me.GroupBox2.Controls.Add(Me.Label18)
         Me.GroupBox2.Controls.Add(Me.TextBox14)
-        Me.GroupBox2.Location = New System.Drawing.Point(374, 414)
+        Me.GroupBox2.Location = New System.Drawing.Point(394, 320)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(300, 88)
         Me.GroupBox2.TabIndex = 119
@@ -815,21 +811,79 @@ Partial Class frmWorkOrder
         Me.TextBox14.Size = New System.Drawing.Size(185, 20)
         Me.TextBox14.TabIndex = 68
         '
-        'btnViewTasks
+        'GroupBox3
         '
-        Me.btnViewTasks.Location = New System.Drawing.Point(361, 26)
-        Me.btnViewTasks.Name = "btnViewTasks"
-        Me.btnViewTasks.Size = New System.Drawing.Size(171, 23)
-        Me.btnViewTasks.TabIndex = 125
-        Me.btnViewTasks.Text = "View Tasks"
-        Me.btnViewTasks.UseVisualStyleBackColor = True
+        Me.GroupBox3.Controls.Add(Me.txtReq)
+        Me.GroupBox3.Controls.Add(Me.Label28)
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.TextBox4)
+        Me.GroupBox3.Controls.Add(Me.Label8)
+        Me.GroupBox3.Location = New System.Drawing.Point(394, 11)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(337, 69)
+        Me.GroupBox3.TabIndex = 126
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Import From Work Request"
+        '
+        'txtReq
+        '
+        Me.txtReq.Location = New System.Drawing.Point(98, 21)
+        Me.txtReq.Name = "txtReq"
+        Me.txtReq.Size = New System.Drawing.Size(185, 20)
+        Me.txtReq.TabIndex = 68
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Location = New System.Drawing.Point(1, 24)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(60, 13)
+        Me.Label28.TabIndex = 69
+        Me.Label28.Text = "RequestID"
+        '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.Location = New System.Drawing.Point(289, 18)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(24, 24)
+        Me.Button3.TabIndex = 70
+        Me.Button3.Tag = "DISABLE"
+        '
+        'btnInstructions
+        '
+        Me.btnInstructions.Location = New System.Drawing.Point(150, 545)
+        Me.btnInstructions.Name = "btnInstructions"
+        Me.btnInstructions.Size = New System.Drawing.Size(176, 23)
+        Me.btnInstructions.TabIndex = 128
+        Me.btnInstructions.Text = "Instructions >>"
+        Me.btnInstructions.UseVisualStyleBackColor = True
+        '
+        'Button12
+        '
+        Me.Button12.Image = CType(resources.GetObject("Button12.Image"), System.Drawing.Image)
+        Me.Button12.Location = New System.Drawing.Point(299, 36)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(24, 24)
+        Me.Button12.TabIndex = 129
+        Me.Button12.Tag = "DISABLE"
+        '
+        'Button8
+        '
+        Me.Button8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button8.Location = New System.Drawing.Point(561, 846)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(75, 23)
+        Me.Button8.TabIndex = 175
+        Me.Button8.Text = "Save"
+        Me.Button8.UseVisualStyleBackColor = True
         '
         'frmWorkOrder
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(680, 876)
+        Me.ClientSize = New System.Drawing.Size(810, 876)
         Me.Controls.Add(Me.RadScrollablePanel1)
         Me.Name = "frmWorkOrder"
         Me.Text = "WorkOrder"
@@ -847,6 +901,8 @@ Partial Class frmWorkOrder
         CType(Me.dgvComment, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -860,7 +916,6 @@ Partial Class frmWorkOrder
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Label8 As System.Windows.Forms.Label
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents DeptSearch As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
@@ -878,7 +933,7 @@ Partial Class frmWorkOrder
     Friend WithEvents Label11 As System.Windows.Forms.Label
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents Label14 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents txtProject As System.Windows.Forms.TextBox
     Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
     Friend WithEvents Label15 As System.Windows.Forms.Label
     Friend WithEvents Sercust As System.Windows.Forms.Button
@@ -894,7 +949,6 @@ Partial Class frmWorkOrder
     Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox11 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
@@ -924,4 +978,11 @@ Partial Class frmWorkOrder
     Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
     Friend WithEvents Label27 As System.Windows.Forms.Label
     Friend WithEvents btnViewTasks As System.Windows.Forms.Button
+    Friend WithEvents GroupBox3 As System.Windows.Forms.GroupBox
+    Friend WithEvents txtReq As System.Windows.Forms.TextBox
+    Friend WithEvents Label28 As System.Windows.Forms.Label
+    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents btnInstructions As System.Windows.Forms.Button
+    Friend WithEvents Button12 As System.Windows.Forms.Button
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class
