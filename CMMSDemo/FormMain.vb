@@ -43,7 +43,7 @@ Public Class FormMain
         Dim frm As New frmLogin()
         frm.ShowDialog()
         If frm.state = "Success" Then
-            connstr = frm.txtConn.Text.ToString()
+            connstr = frm.strConn_
         Else
             Me.Close()
         End If

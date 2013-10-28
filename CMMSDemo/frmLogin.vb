@@ -21,8 +21,7 @@ Public Class frmLogin
             End If
 
         Catch ex As Exception
-            MessageBox.Show("Wrong Connection")
-
+            MessageBox.Show("Following Exception occured when connecting to database : " + ex.Message)
         End Try
 
     End Sub
