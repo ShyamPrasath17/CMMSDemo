@@ -29,6 +29,7 @@ Public Class FormMain
     Public frmImportSchedule_ As frmImportSchedule
 
     Public frmSearch As frmSearch
+    Public frmAsset As frmAssets
     Public frmUpcomming As frmUpCommingSchedule
     Public frmrpt As frmReportList
     Dim frmDashBoard As frmDashBoard
@@ -65,6 +66,7 @@ Public Class FormMain
         addfrmSearch()
         addfrmWorkRequestList()
         addfrmUpcomming()
+        addfrmAsset()
         addfrmWorkRequest()
         addfrmRpt()
         ' This call is required by the designer.
@@ -88,6 +90,7 @@ Public Class FormMain
         TwWorkReqList.Controls.Add(frmWorkRequestList_)
         TwUpComming.Controls.Add(frmUpcomming)
         twrptlst.Controls.Add(frmrpt)
+        TwAsset.Controls.Add(frmAsset)
         DirectCast(twSearch.TabStrip, ToolTabStrip).AutoHidePosition = AutoHidePosition.Bottom
         twSearch.AutoHide()
 
@@ -110,6 +113,7 @@ Public Class FormMain
         twScheduler.Hide()
         twDashBoard.Hide()
         twrptlst.Hide()
+        TwAsset.Hide()
         BtnViewUpcomming_Click(Me, e)
     End Sub
 
@@ -240,6 +244,13 @@ Public Class FormMain
         frmWorkRequest_.TopLevel = False
         frmWorkRequest_.FormBorderStyle = Windows.Forms.FormBorderStyle.None
         frmWorkRequest_.Show()
+    End Sub
+    Private Sub addfrmAsset()
+        frmAsset = New frmAssets()
+        frmAsset.Dock = DockStyle.Fill
+        frmAsset.TopLevel = False
+        frmAsset.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+        frmAsset.Show()
     End Sub
     Private Sub addfrmRpt()
         frmrpt = New frmReportList()
@@ -403,5 +414,10 @@ Public Class FormMain
         RadDockMain.DockWindow(TwWorkReqList, TwUpComming, DockPosition.Right)
         'TwWorkReqList.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
         'TwWorkReqList.TabStrip.SizeInfo.AbsoluteSize = New System.Drawing.Size(700, 0)
+    End Sub
+
+    Private Sub btmAssetReading_Click(sender As Object, e As EventArgs) Handles btmAssetReading.Click
+        TwAsset.DefaultFloatingSize = New Size(600, 800)
+        RadDockMain.FloatWindow(TwAsset)
     End Sub
 End Class

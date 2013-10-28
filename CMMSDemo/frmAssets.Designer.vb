@@ -27,22 +27,22 @@ Partial Class frmAssets
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.RadGridView1 = New Telerik.WinControls.UI.RadGridView()
+        Me.dgvmeter = New Telerik.WinControls.UI.RadGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.txtAddReading = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtAddReading = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
-        Me.RadGridView2 = New Telerik.WinControls.UI.RadGridView()
+        Me.dgvAssetmaint = New Telerik.WinControls.UI.RadGridView()
         Me.txtAddMaintanance = New System.Windows.Forms.Button()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvmeter, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvmeter.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.RadGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.RadGridView2.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvAssetmaint, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvAssetmaint.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox2
@@ -78,19 +78,19 @@ Partial Class frmAssets
         Me.TextBox1.Size = New System.Drawing.Size(107, 20)
         Me.TextBox1.TabIndex = 88
         '
-        'RadGridView1
+        'dgvmeter
         '
-        Me.RadGridView1.Location = New System.Drawing.Point(0, 30)
-        Me.RadGridView1.Name = "RadGridView1"
-        Me.RadGridView1.Size = New System.Drawing.Size(567, 187)
-        Me.RadGridView1.TabIndex = 89
-        Me.RadGridView1.Text = "RadGridView1"
+        Me.dgvmeter.Location = New System.Drawing.Point(0, 30)
+        Me.dgvmeter.Name = "dgvmeter"
+        Me.dgvmeter.Size = New System.Drawing.Size(567, 187)
+        Me.dgvmeter.TabIndex = 89
+        Me.dgvmeter.Text = "RadGridView1"
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
-        Me.GroupBox1.Controls.Add(Me.RadGridView1)
+        Me.GroupBox1.Controls.Add(Me.dgvmeter)
         Me.GroupBox1.Controls.Add(Me.txtAddReading)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 51)
         Me.GroupBox1.Name = "GroupBox1"
@@ -98,24 +98,6 @@ Partial Class frmAssets
         Me.GroupBox1.TabIndex = 90
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Asset Meter Reading History"
-        '
-        'txtAddReading
-        '
-        Me.txtAddReading.Location = New System.Drawing.Point(6, 236)
-        Me.txtAddReading.Name = "txtAddReading"
-        Me.txtAddReading.Size = New System.Drawing.Size(76, 23)
-        Me.txtAddReading.TabIndex = 138
-        Me.txtAddReading.Text = "Add"
-        Me.txtAddReading.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(170, 236)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(76, 23)
-        Me.Button1.TabIndex = 139
-        Me.Button1.Text = "Delete"
-        Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
@@ -126,11 +108,29 @@ Partial Class frmAssets
         Me.Button2.Text = "Edit"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(170, 236)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(76, 23)
+        Me.Button1.TabIndex = 139
+        Me.Button1.Text = "Delete"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txtAddReading
+        '
+        Me.txtAddReading.Location = New System.Drawing.Point(6, 236)
+        Me.txtAddReading.Name = "txtAddReading"
+        Me.txtAddReading.Size = New System.Drawing.Size(76, 23)
+        Me.txtAddReading.TabIndex = 138
+        Me.txtAddReading.Text = "Add"
+        Me.txtAddReading.UseVisualStyleBackColor = True
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.RadGridView2)
+        Me.GroupBox2.Controls.Add(Me.dgvAssetmaint)
         Me.GroupBox2.Controls.Add(Me.txtAddMaintanance)
         Me.GroupBox2.Location = New System.Drawing.Point(13, 346)
         Me.GroupBox2.Name = "GroupBox2"
@@ -157,13 +157,13 @@ Partial Class frmAssets
         Me.Button4.Text = "Delete"
         Me.Button4.UseVisualStyleBackColor = True
         '
-        'RadGridView2
+        'dgvAssetmaint
         '
-        Me.RadGridView2.Location = New System.Drawing.Point(0, 30)
-        Me.RadGridView2.Name = "RadGridView2"
-        Me.RadGridView2.Size = New System.Drawing.Size(567, 187)
-        Me.RadGridView2.TabIndex = 89
-        Me.RadGridView2.Text = "RadGridView2"
+        Me.dgvAssetmaint.Location = New System.Drawing.Point(0, 30)
+        Me.dgvAssetmaint.Name = "dgvAssetmaint"
+        Me.dgvAssetmaint.Size = New System.Drawing.Size(567, 187)
+        Me.dgvAssetmaint.TabIndex = 89
+        Me.dgvAssetmaint.Text = "RadGridView2"
         '
         'txtAddMaintanance
         '
@@ -188,12 +188,12 @@ Partial Class frmAssets
         Me.Controls.Add(Me.Button6)
         Me.Name = "frmAssets"
         Me.Text = "Assets"
-        CType(Me.RadGridView1.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvmeter.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvmeter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.RadGridView2.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.RadGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvAssetmaint.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvAssetmaint, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -202,7 +202,7 @@ Partial Class frmAssets
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents RadGridView1 As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents dgvmeter As Telerik.WinControls.UI.RadGridView
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents txtAddReading As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
@@ -210,6 +210,6 @@ Partial Class frmAssets
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents RadGridView2 As Telerik.WinControls.UI.RadGridView
+    Friend WithEvents dgvAssetmaint As Telerik.WinControls.UI.RadGridView
     Friend WithEvents txtAddMaintanance As System.Windows.Forms.Button
 End Class
