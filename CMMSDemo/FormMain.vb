@@ -320,6 +320,7 @@ Public Class FormMain
                 TwSchedMaintList.Show()
                 TwSchedMaintList.Select()
             ElseIf rpvMain.SelectedPage Is rpvpScheduler Then
+                frmschedular.RadTask.Checked = True
                 twScheduler.Show()
                 twScheduler.Select()
             ElseIf rpvMain.SelectedPage Is rpvpSettings Then

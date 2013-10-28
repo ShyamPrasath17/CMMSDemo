@@ -48,7 +48,7 @@ Partial Class frmLogin
         Me.txtDataSource.Name = "txtDataSource"
         Me.txtDataSource.Size = New System.Drawing.Size(173, 20)
         Me.txtDataSource.TabIndex = 5
-        Me.txtDataSource.Text = "THARIK-PC\TOWNSUITE"
+        Me.txtDataSource.Text = "SHYAM-PC\TOWNSUITE"
         '
         'txtInitialCatalog
         '

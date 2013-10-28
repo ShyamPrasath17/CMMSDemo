@@ -23,8 +23,8 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub frmShedular_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
-        addTaskAppointments()
+        Rshcmms.AllowAppointmentMove = False
+        Rshcmms.AllowAppointmentResize = False
         SplitContainer2.IsSplitterFixed = True
         SplitContainer1.IsSplitterFixed = True
         SplitContainer2.FixedPanel = FixedPanel.Panel1
@@ -34,10 +34,11 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub Rshcmms_AppointmentElementDoubleClick(sender As Object, e As EventArgs) Handles Rshcmms.AppointmentElementDoubleClick
-        'Dim frm As frmTasks = New frmTasks()
-        'frm.ShowDialog()
-        FormMain.twTask.Show()
-        FormMain.twTask.Select()
+        If RadTask.Checked = True Then
+            FormMain.twTask.DefaultFloatingSize = New Size(900, 1000)
+            FormMain.RadDockMain.FloatWindow(FormMain.twTask)
+            FormMain.twTask.Select()
+        End If
     End Sub
 
     Private Sub Rshcmms_AppointmentEditDialogShowing(sender As Object, e As AppointmentEditDialogShowingEventArgs) Handles Rshcmms.AppointmentEditDialogShowing
@@ -51,17 +52,11 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub Rshcmms_AppointmentSelected(sender As Object, e As SchedulerAppointmentEventArgs) Handles Rshcmms.AppointmentSelected
-        'If FormMain.frmTskLst.dttask.Select("TaskID = '" & e.Appointment.Summary.ToString() & "'").Length > 0 Then
-        '    FormMain.frmTsk.filltask(FormMain.frmTskLst.dttask.Select("TaskID = '" & e.Appointment.Summary.ToString() & "'")(0))
-        '    FormMain.frmTsk.dtpStartDate.Value = e.Appointment.Start
-        '    FormMain.frmTsk.dtpStartTime.Value = e.Appointment.Start
-        '    FormMain.frmTsk.dtpEndDate.Value = e.Appointment.End
-        '    FormMain.frmTsk.dtpEndTime.Value = e.Appointment.End
-        'End If
+       
     End Sub
 
-    Private Sub BtnViewResourceSchedular_Click(sender As Object, e As EventArgs) Handles BtnViewResourceSchedular.Click
-        'FormMain.tw
+    Private Sub BtnViewResourceSchedular_Click(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub ChkAllAreas_CheckedChanged(sender As Object, e As EventArgs) Handles ChkAllAreas.CheckedChanged
@@ -73,6 +68,7 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub addTaskAppointments()
+        Rshcmms.Appointments.Clear()
         Dim baseDate As DateTime = DateTime.Today
         Dim start() As DateTime = {baseDate.AddHours(14.0), baseDate.AddDays(1.0).AddHours(9.0), baseDate.AddDays(2.0).AddHours(13.0), baseDate.AddDays(-3.0).AddHours(13.0), baseDate.AddDays(-2.0).AddHours(10.0), baseDate.AddDays(-1.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(15.0), baseDate.AddDays(-4.0).AddHours(0.0)}
 
@@ -83,33 +79,105 @@ Public Class frmTaskShedular
             summaries(i) = "Tsk " & (i + 1).ToString()
         Next
         Dim descriptions() As String = {"", "", "", "", "", "", "", "", ""}
-        Dim locations() As String = {"", "", "", "", "", "", "", "", ""}
-        Dim backgrounds() As AppointmentBackground = {AppointmentBackground.Business, AppointmentBackground.MustAttend, AppointmentBackground.Personal, AppointmentBackground.Important, AppointmentBackground.NeedsPreparation, AppointmentBackground.Birthday, AppointmentBackground.TravelRequired, AppointmentBackground.NeedsPreparation, AppointmentBackground.Business}
-        Dim statuses() As AppointmentStatus = {AppointmentStatus.Busy, AppointmentStatus.Free, AppointmentStatus.Busy, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Free, AppointmentStatus.Free, AppointmentStatus.Busy}
+        Dim locations() As String = {"WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1"}
+        'Dim backgrounds() As AppointmentBackground = {AppointmentBackground.Important, AppointmentBackground.Important, AppointmentBackground.Important, AppointmentBackground.Important, AppointmentBackground.NeedsPreparation, AppointmentBackground.Birthday, AppointmentBackground.TravelRequired, AppointmentBackground.NeedsPreparation, AppointmentBackground.Business}
+        ' Dim statuses() As AppointmentStatus = {AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy}
+
+        Dim appointment As Appointment = Nothing
+        For i As Integer = 0 To summaries.Length - 1
+            appointment = New Appointment(start(i), [end](i), summaries(i), descriptions(i), locations(i))
+            appointment.BackgroundId = AppointmentBackground.MustAttend
+            'appointment.StatusId = CInt(Fix(statuses(i)))
+            Me.Rshcmms.Appointments.Add(appointment)
+        Next i
+    End Sub
+    Private Sub addWoAppointments()
+        Rshcmms.Appointments.Clear()
+        Dim baseDate As DateTime = DateTime.Today
+        Dim start() As DateTime = {baseDate, baseDate, baseDate, baseDate, baseDate, baseDate.AddDays(-1.0).AddHours(8.0), baseDate.AddDays(-4.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(15.0), baseDate.AddDays(-4.0).AddHours(0.0)}
+
+        Dim [end]() As DateTime = {baseDate.AddHours(16.0), baseDate.AddDays(1.0).AddHours(15.0), baseDate.AddDays(2.0).AddHours(17.0), baseDate.AddDays(-2.0).AddHours(14.0), baseDate.AddDays(-2.0).AddHours(13.0), baseDate.AddDays(-1.0).AddHours(13.0), baseDate.AddDays(-4.0).AddHours(14.0), baseDate.AddDays(-4.0).AddHours(16.0), baseDate.AddDays(-4.0).AddHours(32.0)}
+
+        Dim summaries(5) As String
+        'For i As Integer = 0 To 5
+        '    summaries(i) = "Equipment " & (i + 1).ToString()
+        'Next
+        summaries(0) = "WorkOrderNo " & (1).ToString()
+        summaries(1) = "WorkOrderNo " & (2).ToString()
+        summaries(2) = "WorkOrderNo " & (3).ToString()
+        summaries(3) = "WorkOrderNo " & (2).ToString()
+        summaries(4) = "WorkOrderNo " & (3).ToString()
+        summaries(5) = "WorkOrderNo " & (4).ToString()
+        Dim descriptions() As String = {"", "", "", "", "", ""}
+        Dim locations() As String = {"", "", "", "", "", ""}
+        Dim backgrounds() As AppointmentBackground = {AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired}
+        'Dim statuses() As AppointmentStatus = {AppointmentStatus.Busy, AppointmentStatus.Free, AppointmentStatus.Busy, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Free, AppointmentStatus.Free, AppointmentStatus.Busy}
 
         Dim appointment As Appointment = Nothing
         For i As Integer = 0 To summaries.Length - 1
             appointment = New Appointment(start(i), [end](i), summaries(i), descriptions(i), locations(i))
             appointment.BackgroundId = CInt(Fix(backgrounds(i)))
-            appointment.StatusId = CInt(Fix(statuses(i)))
+            'appointment.StatusId = CInt(Fix(statuses(i)))
+            Me.Rshcmms.Appointments.Add(appointment)
+        Next i
+    End Sub
+    Private Sub addEquipmentAppointments()
+        Rshcmms.Appointments.Clear()
+        Dim baseDate As DateTime = DateTime.Today
+        Dim start() As DateTime = {baseDate.AddHours(2.0), baseDate.AddHours(3.0), baseDate.AddHours(1.0), baseDate.AddDays(-2.0).AddHours(13.0), baseDate.AddDays(-2.0).AddHours(10.0), baseDate.AddDays(-1.0).AddHours(8.0), baseDate.AddDays(-4.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(15.0), baseDate.AddDays(-4.0).AddHours(0.0)}
+
+        Dim [end]() As DateTime = {baseDate.AddHours(6.0), baseDate.AddHours(5.0), baseDate.AddHours(5.0), baseDate.AddDays(-2.0).AddHours(14.0), baseDate.AddDays(-2.0).AddHours(13.0), baseDate.AddDays(-1.0).AddHours(13.0), baseDate.AddDays(-4.0).AddHours(14.0), baseDate.AddDays(-4.0).AddHours(16.0), baseDate.AddDays(-4.0).AddHours(32.0)}
+
+        Dim summaries(5) As String
+        'For i As Integer = 0 To 5
+        '    summaries(i) = "Equipment " & (i + 1).ToString()
+        'Next
+        summaries(0) = "Equipment " & (1).ToString()
+        summaries(1) = "Equipment " & (2).ToString()
+        summaries(2) = "Equipment " & (3).ToString()
+        summaries(3) = "Equipment " & (2).ToString()
+        summaries(4) = "Equipment " & (3).ToString()
+        summaries(5) = "Equipment " & (4).ToString()
+        Dim descriptions() As String = {"", "", "", "", "", ""}
+        Dim locations() As String = {"Task : Tsk 1", "Task : Tsk 4", "Task : Tsk 2", "Task : Tsk 2", "Task : Tsk 3", "Task : Tsk 1"}
+        Dim appointment As Appointment = Nothing
+        For i As Integer = 0 To summaries.Length - 1
+            appointment = New Appointment(start(i), [end](i), summaries(i), descriptions(i), locations(i))
+            appointment.BackgroundId = AppointmentBackground.TravelRequired
             Me.Rshcmms.Appointments.Add(appointment)
         Next i
     End Sub
 
-    'Private Sub btnImport_Click(sender As Object, e As EventArgs) Handles btnImport.Click
-    '    Dim openFileDialog As New OpenFileDialog()
-    '    openFileDialog.AddExtension = True
-    '    openFileDialog.DefaultExt = ".ics"
-    '    openFileDialog.Filter = "iCal files (*.ics)|*.ics|All files (*.*)|*.*"
-    '    openFileDialog.Multiselect = False
+    Private Sub addEmployeeAppointments()
+        Rshcmms.Appointments.Clear()
+        Dim baseDate As DateTime = DateTime.Today
+        Dim start() As DateTime = {baseDate.AddHours(4.0), baseDate.AddHours(5.0), baseDate.AddDays(1.0).AddHours(2.0), baseDate.AddDays(-3.0).AddHours(13.0), baseDate.AddDays(-2.0).AddHours(10.0), baseDate.AddDays(-1.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(15.0), baseDate.AddDays(-4.0).AddHours(0.0)}
 
-    '    If openFileDialog.ShowDialog() = DialogResult.OK Then
+        Dim [end]() As DateTime = {baseDate.AddHours(8.0), baseDate.AddHours(6.0), baseDate.AddDays(1.0).AddHours(8.0), baseDate.AddDays(-3.0).AddHours(14.0), baseDate.AddDays(-2.0).AddHours(13.0), baseDate.AddDays(-1.0).AddHours(15.0), baseDate.AddDays(-4.0).AddHours(14.0), baseDate.AddDays(-4.0).AddHours(16.0), baseDate.AddDays(-4.0).AddHours(32.0)}
 
-    '        Using fileStream As FileStream = File.OpenRead(openFileDialog.FileName)
-    '            Me.Rshcmms.Import(fileStream, New SchedulerICalendarImporter())
-    '        End Using
-    '    End If
-    'End Sub
+        Dim summaries(5) As String
+        'For i As Integer = 0 To 5
+        '    summaries(i) = "Equipment " & (i + 1).ToString()
+        'Next
+        summaries(0) = "Employee " & (1).ToString()
+        summaries(1) = "Employee " & (2).ToString()
+        summaries(2) = "Employee " & (3).ToString()
+        summaries(3) = "Employee " & (2).ToString()
+        summaries(4) = "Employee " & (3).ToString()
+        summaries(5) = "Employee " & (4).ToString()
+        Dim descriptions() As String = {"", "", "", "", "", ""}
+        Dim locations() As String = {"Task : Tsk 1", "Task : Tsk 4", "Task : Tsk 2", "Task : Tsk 2", "Task : Tsk 3", "Task : Tsk 1"}
+        Dim backgrounds() As AppointmentBackground = {AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business}
+        'Dim statuses() As AppointmentStatus = {AppointmentStatus.Busy, AppointmentStatus.Free, AppointmentStatus.Busy, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Free, AppointmentStatus.Free, AppointmentStatus.Busy}
+
+        Dim appointment As Appointment = Nothing
+        For i As Integer = 0 To summaries.Length - 1
+            appointment = New Appointment(start(i), [end](i), summaries(i), descriptions(i), locations(i))
+            appointment.BackgroundId = CInt(Fix(backgrounds(i)))
+            'appointment.StatusId = CInt(Fix(statuses(i)))
+            Me.Rshcmms.Appointments.Add(appointment)
+        Next i
+    End Sub
 
     Private Sub btnExport_Click(sender As Object, e As EventArgs) Handles btnExport.Click
         Dim saveFileDialog As New SaveFileDialog()
@@ -125,11 +193,6 @@ Public Class frmTaskShedular
 
     Private Sub Rshcmms_AppointmentFormatting(sender As Object, e As SchedulerAppointmentEventArgs) Handles Rshcmms.AppointmentFormatting
         'e.AppointmentElement.ShowAppointmentDescription = True
-        'e.AppointmentElement.Location.
-    End Sub
-
-    Private Sub SplitContainer2_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer2.Panel1.Paint
-
     End Sub
 
     Private Sub cmbView_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbView.SelectedIndexChanged
@@ -141,4 +204,41 @@ Public Class frmTaskShedular
             Rshcmms.ActiveViewType = SchedulerViewType.Month
         End If
     End Sub
+
+    Private Sub RadWo_CheckedChanged(sender As Object, e As EventArgs) Handles RadWo.CheckedChanged
+        If RadWo.Checked Then
+            ShowSchedular("WorkOrder")
+        End If
+    End Sub
+
+    Private Sub RadTask_CheckedChanged(sender As Object, e As EventArgs) Handles RadTask.CheckedChanged
+        If RadTask.Checked Then
+            ShowSchedular("Task")
+        End If
+    End Sub
+
+    Private Sub RadEmp_CheckedChanged(sender As Object, e As EventArgs) Handles RadEmp.CheckedChanged
+        If RadEmp.Checked Then
+            ShowSchedular("Employee")
+        End If
+    End Sub
+
+    Private Sub RadWoEqp_CheckedChanged(sender As Object, e As EventArgs) Handles RadWoEqp.CheckedChanged
+        If RadWoEqp.Checked Then
+            ShowSchedular("Equipment")
+        End If
+    End Sub
+
+    Private Sub ShowSchedular(Type As String)
+        If Type = "Task" Then
+            addTaskAppointments()
+        ElseIf Type = "Employee" Then
+            addEmployeeAppointments()
+        ElseIf Type = "Equipment" Then
+            addEquipmentAppointments()
+        Else
+            addWoAppointments()
+        End If
+    End Sub
+
 End Class

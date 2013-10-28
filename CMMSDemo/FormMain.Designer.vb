@@ -26,8 +26,9 @@ Partial Class FormMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.DockWindowPlaceholder1 = New Telerik.WinControls.UI.Docking.DockWindowPlaceholder()
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
-        Me.twrptlst = New Telerik.WinControls.UI.Docking.ToolWindow()
+        Me.TwAsset = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip1 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
+        Me.twrptlst = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwUpComming = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwWorkReqList = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.TwSchedMaintList = New Telerik.WinControls.UI.Docking.ToolWindow()
@@ -63,6 +64,7 @@ Partial Class FormMain
         Me.btnCreateTaskInternal = New System.Windows.Forms.Button()
         Me.btnCreateTaskOutsourced = New System.Windows.Forms.Button()
         Me.rpvpScheduledMaintenance = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.btmAssetReading = New System.Windows.Forms.Button()
         Me.btnScheduledMaintainance = New System.Windows.Forms.Button()
         Me.rpvpScheduler = New Telerik.WinControls.UI.RadPageViewPage()
         Me.btnImportEvents = New System.Windows.Forms.Button()
@@ -90,8 +92,6 @@ Partial Class FormMain
         Me.ToolTabStrip22 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip23 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         Me.ToolTabStrip24 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
-        Me.btmAssetReading = New System.Windows.Forms.Button()
-        Me.TwAsset = New Telerik.WinControls.UI.Docking.ToolWindow()
         Me.ToolTabStrip25 = New Telerik.WinControls.UI.Docking.ToolTabStrip()
         CType(Me.RadDockMain, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadDockMain.SuspendLayout()
@@ -172,14 +172,14 @@ Partial Class FormMain
         Me.RadDockMain.TabStop = False
         Me.RadDockMain.Text = "RadDock1"
         '
-        'twrptlst
+        'TwAsset
         '
-        Me.twrptlst.Caption = Nothing
-        Me.twrptlst.Location = New System.Drawing.Point(1, 24)
-        Me.twrptlst.Name = "twrptlst"
-        Me.twrptlst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.twrptlst.Size = New System.Drawing.Size(855, 489)
-        Me.twrptlst.Text = "Report List"
+        Me.TwAsset.Caption = Nothing
+        Me.TwAsset.Location = New System.Drawing.Point(1, 24)
+        Me.TwAsset.Name = "TwAsset"
+        Me.TwAsset.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.TwAsset.Size = New System.Drawing.Size(855, 663)
+        Me.TwAsset.Text = "Asset Readings"
         '
         'ToolTabStrip1
         '
@@ -214,6 +214,15 @@ Partial Class FormMain
         Me.ToolTabStrip1.SizeInfo.SplitterCorrection = New System.Drawing.Size(0, 279)
         Me.ToolTabStrip1.TabIndex = 0
         Me.ToolTabStrip1.TabStop = False
+        '
+        'twrptlst
+        '
+        Me.twrptlst.Caption = Nothing
+        Me.twrptlst.Location = New System.Drawing.Point(1, 24)
+        Me.twrptlst.Name = "twrptlst"
+        Me.twrptlst.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
+        Me.twrptlst.Size = New System.Drawing.Size(855, 489)
+        Me.twrptlst.Text = "Report List"
         '
         'TwUpComming
         '
@@ -624,6 +633,15 @@ Partial Class FormMain
         Me.rpvpScheduledMaintenance.Size = New System.Drawing.Size(199, 175)
         Me.rpvpScheduledMaintenance.Text = "Scheduled Maintenance"
         '
+        'btmAssetReading
+        '
+        Me.btmAssetReading.Location = New System.Drawing.Point(7, 80)
+        Me.btmAssetReading.Name = "btmAssetReading"
+        Me.btmAssetReading.Size = New System.Drawing.Size(165, 54)
+        Me.btmAssetReading.TabIndex = 6
+        Me.btmAssetReading.Text = "Asset Readings"
+        Me.btmAssetReading.UseVisualStyleBackColor = True
+        '
         'btnScheduledMaintainance
         '
         Me.btnScheduledMaintainance.BackColor = System.Drawing.Color.Transparent
@@ -645,7 +663,7 @@ Partial Class FormMain
         Me.rpvpScheduler.Image = CType(resources.GetObject("rpvpScheduler.Image"), System.Drawing.Image)
         Me.rpvpScheduler.Location = New System.Drawing.Point(5, 31)
         Me.rpvpScheduler.Name = "rpvpScheduler"
-        Me.rpvpScheduler.Size = New System.Drawing.Size(191, 123)
+        Me.rpvpScheduler.Size = New System.Drawing.Size(199, 175)
         Me.rpvpScheduler.Text = "Scheduler"
         '
         'btnImportEvents
@@ -980,24 +998,6 @@ Partial Class FormMain
         Me.ToolTabStrip24.Size = New System.Drawing.Size(200, 200)
         Me.ToolTabStrip24.TabIndex = 0
         Me.ToolTabStrip24.TabStop = False
-        '
-        'btmAssetReading
-        '
-        Me.btmAssetReading.Location = New System.Drawing.Point(7, 80)
-        Me.btmAssetReading.Name = "btmAssetReading"
-        Me.btmAssetReading.Size = New System.Drawing.Size(165, 54)
-        Me.btmAssetReading.TabIndex = 6
-        Me.btmAssetReading.Text = "Asset Readings"
-        Me.btmAssetReading.UseVisualStyleBackColor = True
-        '
-        'TwAsset
-        '
-        Me.TwAsset.Caption = Nothing
-        Me.TwAsset.Location = New System.Drawing.Point(1, 24)
-        Me.TwAsset.Name = "TwAsset"
-        Me.TwAsset.PreviousDockState = Telerik.WinControls.UI.Docking.DockState.Docked
-        Me.TwAsset.Size = New System.Drawing.Size(855, 661)
-        Me.TwAsset.Text = "Asset Readings"
         '
         'ToolTabStrip25
         '

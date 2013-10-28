@@ -58,6 +58,7 @@ Partial Class frmSheduleMaintanance
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
+        Me.btnViewWos = New System.Windows.Forms.Button()
         CType(Me.dgvTriggers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvTriggers.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
@@ -396,12 +397,22 @@ Partial Class frmSheduleMaintanance
         Me.Button8.Text = "Save"
         Me.Button8.UseVisualStyleBackColor = True
         '
+        'btnViewWos
+        '
+        Me.btnViewWos.Location = New System.Drawing.Point(580, 76)
+        Me.btnViewWos.Name = "btnViewWos"
+        Me.btnViewWos.Size = New System.Drawing.Size(157, 52)
+        Me.btnViewWos.TabIndex = 177
+        Me.btnViewWos.Text = "View Generated WorkOrders >>"
+        Me.btnViewWos.UseVisualStyleBackColor = True
+        '
         'frmSheduleMaintanance
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(929, 841)
+        Me.Controls.Add(Me.btnViewWos)
         Me.Controls.Add(Me.Button8)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.btnInstructions)
@@ -476,4 +487,5 @@ Partial Class frmSheduleMaintanance
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button8 As System.Windows.Forms.Button
+    Friend WithEvents btnViewWos As System.Windows.Forms.Button
 End Class

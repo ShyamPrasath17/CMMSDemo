@@ -22,14 +22,14 @@ Partial Class frmTaskShedular
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DateTimeInterval2 As Telerik.WinControls.UI.DateTimeInterval = New Telerik.WinControls.UI.DateTimeInterval()
-        Dim SchedulerDailyPrintStyle2 As Telerik.WinControls.UI.SchedulerDailyPrintStyle = New Telerik.WinControls.UI.SchedulerDailyPrintStyle()
+        Dim DateTimeInterval1 As Telerik.WinControls.UI.DateTimeInterval = New Telerik.WinControls.UI.DateTimeInterval()
+        Dim SchedulerDailyPrintStyle1 As Telerik.WinControls.UI.SchedulerDailyPrintStyle = New Telerik.WinControls.UI.SchedulerDailyPrintStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTaskShedular))
         Me.Rshcmms = New Telerik.WinControls.UI.RadScheduler()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Rcal = New Telerik.WinControls.UI.RadCalendar()
-        Me.BtnViewResourceSchedular = New System.Windows.Forms.Button()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.grpType = New System.Windows.Forms.GroupBox()
         Me.GrpView = New System.Windows.Forms.GroupBox()
         Me.cmbView = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -50,6 +50,10 @@ Partial Class frmTaskShedular
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.RadWo = New System.Windows.Forms.RadioButton()
+        Me.RadTask = New System.Windows.Forms.RadioButton()
+        Me.RadWoEqp = New System.Windows.Forms.RadioButton()
+        Me.RadEmp = New System.Windows.Forms.RadioButton()
         CType(Me.Rshcmms, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -58,6 +62,7 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
+        Me.grpType.SuspendLayout()
         Me.GrpView.SuspendLayout()
         Me.grpSite.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -65,9 +70,9 @@ Partial Class frmTaskShedular
         '
         'Rshcmms
         '
-        DateTimeInterval2.End = New Date(CType(0, Long))
-        DateTimeInterval2.Start = New Date(CType(0, Long))
-        Me.Rshcmms.AccessibleInterval = DateTimeInterval2
+        DateTimeInterval1.End = New Date(CType(0, Long))
+        DateTimeInterval1.Start = New Date(CType(0, Long))
+        Me.Rshcmms.AccessibleInterval = DateTimeInterval1
         Me.Rshcmms.ActiveViewType = Telerik.WinControls.UI.SchedulerViewType.Week
         Me.Rshcmms.AppointmentTitleFormat = Nothing
         Me.Rshcmms.Culture = New System.Globalization.CultureInfo("en-US")
@@ -77,12 +82,12 @@ Partial Class frmTaskShedular
         Me.Rshcmms.HeaderFormat = "dd dddd"
         Me.Rshcmms.Location = New System.Drawing.Point(0, 0)
         Me.Rshcmms.Name = "Rshcmms"
-        SchedulerDailyPrintStyle2.AppointmentFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        SchedulerDailyPrintStyle2.DateEndRange = New Date(2013, 10, 28, 0, 0, 0, 0)
-        SchedulerDailyPrintStyle2.DateHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        SchedulerDailyPrintStyle2.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
-        SchedulerDailyPrintStyle2.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
-        Me.Rshcmms.PrintStyle = SchedulerDailyPrintStyle2
+        SchedulerDailyPrintStyle1.AppointmentFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        SchedulerDailyPrintStyle1.DateEndRange = New Date(2013, 10, 28, 0, 0, 0, 0)
+        SchedulerDailyPrintStyle1.DateHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        SchedulerDailyPrintStyle1.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
+        SchedulerDailyPrintStyle1.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.Rshcmms.PrintStyle = SchedulerDailyPrintStyle1
         Me.Rshcmms.Size = New System.Drawing.Size(1054, 547)
         Me.Rshcmms.TabIndex = 0
         Me.Rshcmms.Text = "RadScheduler1"
@@ -115,15 +120,6 @@ Partial Class frmTaskShedular
         Me.Rcal.TabIndex = 0
         Me.Rcal.Text = "RadCalendar1"
         '
-        'BtnViewResourceSchedular
-        '
-        Me.BtnViewResourceSchedular.Location = New System.Drawing.Point(1140, 9)
-        Me.BtnViewResourceSchedular.Name = "BtnViewResourceSchedular"
-        Me.BtnViewResourceSchedular.Size = New System.Drawing.Size(119, 48)
-        Me.BtnViewResourceSchedular.TabIndex = 0
-        Me.BtnViewResourceSchedular.Text = "View Resource Schedule"
-        Me.BtnViewResourceSchedular.UseVisualStyleBackColor = True
-        '
         'SplitContainer2
         '
         Me.SplitContainer2.Dock = System.Windows.Forms.DockStyle.Fill
@@ -133,12 +129,12 @@ Partial Class frmTaskShedular
         '
         'SplitContainer2.Panel1
         '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.grpType)
         Me.SplitContainer2.Panel1.Controls.Add(Me.GrpView)
         Me.SplitContainer2.Panel1.Controls.Add(Me.btnExport)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpSite)
         Me.SplitContainer2.Panel1.Controls.Add(Me.ChkAllAreas)
         Me.SplitContainer2.Panel1.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.BtnViewResourceSchedular)
         '
         'SplitContainer2.Panel2
         '
@@ -146,6 +142,19 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Size = New System.Drawing.Size(1262, 671)
         Me.SplitContainer2.SplitterDistance = 120
         Me.SplitContainer2.TabIndex = 2
+        '
+        'grpType
+        '
+        Me.grpType.Controls.Add(Me.RadEmp)
+        Me.grpType.Controls.Add(Me.RadWoEqp)
+        Me.grpType.Controls.Add(Me.RadTask)
+        Me.grpType.Controls.Add(Me.RadWo)
+        Me.grpType.Location = New System.Drawing.Point(407, 61)
+        Me.grpType.Name = "grpType"
+        Me.grpType.Size = New System.Drawing.Size(392, 46)
+        Me.grpType.TabIndex = 114
+        Me.grpType.TabStop = False
+        Me.grpType.Text = "Schedular Type"
         '
         'GrpView
         '
@@ -181,7 +190,7 @@ Partial Class frmTaskShedular
         '
         Me.btnExport.Location = New System.Drawing.Point(1058, 9)
         Me.btnExport.Name = "btnExport"
-        Me.btnExport.Size = New System.Drawing.Size(79, 48)
+        Me.btnExport.Size = New System.Drawing.Size(192, 48)
         Me.btnExport.TabIndex = 112
         Me.btnExport.Text = "Export Schedule"
         Me.btnExport.UseVisualStyleBackColor = True
@@ -335,6 +344,50 @@ Partial Class frmTaskShedular
         Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
         Me.DateTimePicker1.TabIndex = 3
         '
+        'RadWo
+        '
+        Me.RadWo.AutoSize = True
+        Me.RadWo.Location = New System.Drawing.Point(12, 19)
+        Me.RadWo.Name = "RadWo"
+        Me.RadWo.Size = New System.Drawing.Size(80, 17)
+        Me.RadWo.TabIndex = 0
+        Me.RadWo.TabStop = True
+        Me.RadWo.Text = "Work Order"
+        Me.RadWo.UseVisualStyleBackColor = True
+        '
+        'RadTask
+        '
+        Me.RadTask.AutoSize = True
+        Me.RadTask.Location = New System.Drawing.Point(121, 19)
+        Me.RadTask.Name = "RadTask"
+        Me.RadTask.Size = New System.Drawing.Size(49, 17)
+        Me.RadTask.TabIndex = 1
+        Me.RadTask.TabStop = True
+        Me.RadTask.Text = "Task"
+        Me.RadTask.UseVisualStyleBackColor = True
+        '
+        'RadWoEqp
+        '
+        Me.RadWoEqp.AutoSize = True
+        Me.RadWoEqp.Location = New System.Drawing.Point(301, 19)
+        Me.RadWoEqp.Name = "RadWoEqp"
+        Me.RadWoEqp.Size = New System.Drawing.Size(75, 17)
+        Me.RadWoEqp.TabIndex = 2
+        Me.RadWoEqp.TabStop = True
+        Me.RadWoEqp.Text = "Equipment"
+        Me.RadWoEqp.UseVisualStyleBackColor = True
+        '
+        'RadEmp
+        '
+        Me.RadEmp.AutoSize = True
+        Me.RadEmp.Location = New System.Drawing.Point(210, 19)
+        Me.RadEmp.Name = "RadEmp"
+        Me.RadEmp.Size = New System.Drawing.Size(71, 17)
+        Me.RadEmp.TabIndex = 3
+        Me.RadEmp.TabStop = True
+        Me.RadEmp.Text = "Employee"
+        Me.RadEmp.UseVisualStyleBackColor = True
+        '
         'frmTaskShedular
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -353,6 +406,8 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.ResumeLayout(False)
+        Me.grpType.ResumeLayout(False)
+        Me.grpType.PerformLayout()
         Me.GrpView.ResumeLayout(False)
         Me.GrpView.PerformLayout()
         Me.grpSite.ResumeLayout(False)
@@ -365,7 +420,6 @@ Partial Class frmTaskShedular
     Friend WithEvents Rshcmms As Telerik.WinControls.UI.RadScheduler
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents Rcal As Telerik.WinControls.UI.RadCalendar
-    Friend WithEvents BtnViewResourceSchedular As System.Windows.Forms.Button
     Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
@@ -387,4 +441,9 @@ Partial Class frmTaskShedular
     Friend WithEvents GrpView As System.Windows.Forms.GroupBox
     Friend WithEvents cmbView As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents grpType As System.Windows.Forms.GroupBox
+    Friend WithEvents RadEmp As System.Windows.Forms.RadioButton
+    Friend WithEvents RadWoEqp As System.Windows.Forms.RadioButton
+    Friend WithEvents RadTask As System.Windows.Forms.RadioButton
+    Friend WithEvents RadWo As System.Windows.Forms.RadioButton
 End Class
