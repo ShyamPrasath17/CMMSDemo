@@ -141,10 +141,22 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSCmms.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAssets.Designer.vb">
+      <DependentUpon>frmAssets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAssignEmployees.Designer.vb">
       <DependentUpon>frmAssignEmployees.vb</DependentUpon>
     </Compile>
     <Compile Include="frmAssignEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeterReading.Designer.vb">
+      <DependentUpon>frmMeterReading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMeterReading.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmReportList.Designer.vb">
@@ -332,11 +344,17 @@
     <EmbeddedResource Include="ctlRadGridAdvanceFilterControl.resx">
       <DependentUpon>ctlRadGridAdvanceFilterControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAssets.resx">
+      <DependentUpon>frmAssets.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAssignEmployees.resx">
       <DependentUpon>frmAssignEmployees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMeterReading.resx">
+      <DependentUpon>frmMeterReading.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportList.resx">
       <DependentUpon>frmReportList.vb</DependentUpon>

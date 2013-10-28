@@ -30,6 +30,7 @@ Public Class frmTaskShedular
         SplitContainer2.FixedPanel = FixedPanel.Panel1
         Rshcmms.AllowAppointmentCreateInline = False
         ChkAllAreas.Checked = True
+        cmbView.SelectedItem = "Weekly"
     End Sub
 
     Private Sub Rshcmms_AppointmentElementDoubleClick(sender As Object, e As EventArgs) Handles Rshcmms.AppointmentElementDoubleClick
@@ -59,8 +60,8 @@ Public Class frmTaskShedular
         'End If
     End Sub
 
-    Private Sub BtnViewNonScheduled_Click(sender As Object, e As EventArgs) Handles BtnViewNonScheduled.Click
-
+    Private Sub BtnViewResourceSchedular_Click(sender As Object, e As EventArgs) Handles BtnViewResourceSchedular.Click
+        'FormMain.tw
     End Sub
 
     Private Sub ChkAllAreas_CheckedChanged(sender As Object, e As EventArgs) Handles ChkAllAreas.CheckedChanged
@@ -125,5 +126,19 @@ Public Class frmTaskShedular
     Private Sub Rshcmms_AppointmentFormatting(sender As Object, e As SchedulerAppointmentEventArgs) Handles Rshcmms.AppointmentFormatting
         'e.AppointmentElement.ShowAppointmentDescription = True
         'e.AppointmentElement.Location.
+    End Sub
+
+    Private Sub SplitContainer2_Panel1_Paint(sender As Object, e As PaintEventArgs) Handles SplitContainer2.Panel1.Paint
+
+    End Sub
+
+    Private Sub cmbView_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbView.SelectedIndexChanged
+        If cmbView.SelectedItem.ToString() = "Daily" Then
+            Rshcmms.ActiveViewType = SchedulerViewType.MultiDay
+        ElseIf cmbView.SelectedItem.ToString() = "Weekly" Then
+            Rshcmms.ActiveViewType = SchedulerViewType.Week
+        Else
+            Rshcmms.ActiveViewType = SchedulerViewType.Month
+        End If
     End Sub
 End Class

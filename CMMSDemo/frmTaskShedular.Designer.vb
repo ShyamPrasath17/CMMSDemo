@@ -22,14 +22,17 @@ Partial Class frmTaskShedular
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DateTimeInterval1 As Telerik.WinControls.UI.DateTimeInterval = New Telerik.WinControls.UI.DateTimeInterval()
-        Dim SchedulerDailyPrintStyle1 As Telerik.WinControls.UI.SchedulerDailyPrintStyle = New Telerik.WinControls.UI.SchedulerDailyPrintStyle()
+        Dim DateTimeInterval2 As Telerik.WinControls.UI.DateTimeInterval = New Telerik.WinControls.UI.DateTimeInterval()
+        Dim SchedulerDailyPrintStyle2 As Telerik.WinControls.UI.SchedulerDailyPrintStyle = New Telerik.WinControls.UI.SchedulerDailyPrintStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTaskShedular))
         Me.Rshcmms = New Telerik.WinControls.UI.RadScheduler()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.Rcal = New Telerik.WinControls.UI.RadCalendar()
-        Me.BtnViewNonScheduled = New System.Windows.Forms.Button()
+        Me.BtnViewResourceSchedular = New System.Windows.Forms.Button()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
+        Me.GrpView = New System.Windows.Forms.GroupBox()
+        Me.cmbView = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.grpSite = New System.Windows.Forms.GroupBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -55,15 +58,16 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Panel1.SuspendLayout()
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
+        Me.GrpView.SuspendLayout()
         Me.grpSite.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Rshcmms
         '
-        DateTimeInterval1.End = New Date(CType(0, Long))
-        DateTimeInterval1.Start = New Date(CType(0, Long))
-        Me.Rshcmms.AccessibleInterval = DateTimeInterval1
+        DateTimeInterval2.End = New Date(CType(0, Long))
+        DateTimeInterval2.Start = New Date(CType(0, Long))
+        Me.Rshcmms.AccessibleInterval = DateTimeInterval2
         Me.Rshcmms.ActiveViewType = Telerik.WinControls.UI.SchedulerViewType.Week
         Me.Rshcmms.AppointmentTitleFormat = Nothing
         Me.Rshcmms.Culture = New System.Globalization.CultureInfo("en-US")
@@ -73,13 +77,13 @@ Partial Class frmTaskShedular
         Me.Rshcmms.HeaderFormat = "dd dddd"
         Me.Rshcmms.Location = New System.Drawing.Point(0, 0)
         Me.Rshcmms.Name = "Rshcmms"
-        SchedulerDailyPrintStyle1.AppointmentFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        SchedulerDailyPrintStyle1.DateEndRange = New Date(2013, 10, 15, 0, 0, 0, 0)
-        SchedulerDailyPrintStyle1.DateHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        SchedulerDailyPrintStyle1.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
-        SchedulerDailyPrintStyle1.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
-        Me.Rshcmms.PrintStyle = SchedulerDailyPrintStyle1
-        Me.Rshcmms.Size = New System.Drawing.Size(1054, 602)
+        SchedulerDailyPrintStyle2.AppointmentFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        SchedulerDailyPrintStyle2.DateEndRange = New Date(2013, 10, 28, 0, 0, 0, 0)
+        SchedulerDailyPrintStyle2.DateHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
+        SchedulerDailyPrintStyle2.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
+        SchedulerDailyPrintStyle2.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
+        Me.Rshcmms.PrintStyle = SchedulerDailyPrintStyle2
+        Me.Rshcmms.Size = New System.Drawing.Size(1054, 547)
         Me.Rshcmms.TabIndex = 0
         Me.Rshcmms.Text = "RadScheduler1"
         '
@@ -96,7 +100,7 @@ Partial Class frmTaskShedular
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Rcal)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1262, 602)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1262, 547)
         Me.SplitContainer1.SplitterDistance = 1054
         Me.SplitContainer1.TabIndex = 1
         '
@@ -107,18 +111,18 @@ Partial Class frmTaskShedular
         Me.Rcal.Location = New System.Drawing.Point(0, 0)
         Me.Rcal.MultiViewRows = 2
         Me.Rcal.Name = "Rcal"
-        Me.Rcal.Size = New System.Drawing.Size(204, 602)
+        Me.Rcal.Size = New System.Drawing.Size(204, 547)
         Me.Rcal.TabIndex = 0
         Me.Rcal.Text = "RadCalendar1"
         '
-        'BtnViewNonScheduled
+        'BtnViewResourceSchedular
         '
-        Me.BtnViewNonScheduled.Location = New System.Drawing.Point(1140, 9)
-        Me.BtnViewNonScheduled.Name = "BtnViewNonScheduled"
-        Me.BtnViewNonScheduled.Size = New System.Drawing.Size(119, 48)
-        Me.BtnViewNonScheduled.TabIndex = 0
-        Me.BtnViewNonScheduled.Text = "View Non Scheduled Tasks"
-        Me.BtnViewNonScheduled.UseVisualStyleBackColor = True
+        Me.BtnViewResourceSchedular.Location = New System.Drawing.Point(1140, 9)
+        Me.BtnViewResourceSchedular.Name = "BtnViewResourceSchedular"
+        Me.BtnViewResourceSchedular.Size = New System.Drawing.Size(119, 48)
+        Me.BtnViewResourceSchedular.TabIndex = 0
+        Me.BtnViewResourceSchedular.Text = "View Resource Schedule"
+        Me.BtnViewResourceSchedular.UseVisualStyleBackColor = True
         '
         'SplitContainer2
         '
@@ -129,18 +133,49 @@ Partial Class frmTaskShedular
         '
         'SplitContainer2.Panel1
         '
+        Me.SplitContainer2.Panel1.Controls.Add(Me.GrpView)
         Me.SplitContainer2.Panel1.Controls.Add(Me.btnExport)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpSite)
         Me.SplitContainer2.Panel1.Controls.Add(Me.ChkAllAreas)
         Me.SplitContainer2.Panel1.Controls.Add(Me.GroupBox2)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.BtnViewNonScheduled)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.BtnViewResourceSchedular)
         '
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer1)
         Me.SplitContainer2.Size = New System.Drawing.Size(1262, 671)
-        Me.SplitContainer2.SplitterDistance = 65
+        Me.SplitContainer2.SplitterDistance = 120
         Me.SplitContainer2.TabIndex = 2
+        '
+        'GrpView
+        '
+        Me.GrpView.Controls.Add(Me.cmbView)
+        Me.GrpView.Controls.Add(Me.Label3)
+        Me.GrpView.Location = New System.Drawing.Point(12, 61)
+        Me.GrpView.Name = "GrpView"
+        Me.GrpView.Size = New System.Drawing.Size(292, 46)
+        Me.GrpView.TabIndex = 113
+        Me.GrpView.TabStop = False
+        Me.GrpView.Text = "View"
+        '
+        'cmbView
+        '
+        Me.cmbView.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbView.FormattingEnabled = True
+        Me.cmbView.Items.AddRange(New Object() {"Daily", "Weekly", "Monthly"})
+        Me.cmbView.Location = New System.Drawing.Point(93, 13)
+        Me.cmbView.Name = "cmbView"
+        Me.cmbView.Size = New System.Drawing.Size(188, 21)
+        Me.cmbView.TabIndex = 3
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(6, 16)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(81, 13)
+        Me.Label3.TabIndex = 2
+        Me.Label3.Text = "Schedular View"
         '
         'btnExport
         '
@@ -318,6 +353,8 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.ResumeLayout(False)
+        Me.GrpView.ResumeLayout(False)
+        Me.GrpView.PerformLayout()
         Me.grpSite.ResumeLayout(False)
         Me.grpSite.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
@@ -328,7 +365,7 @@ Partial Class frmTaskShedular
     Friend WithEvents Rshcmms As Telerik.WinControls.UI.RadScheduler
     Friend WithEvents SplitContainer1 As System.Windows.Forms.SplitContainer
     Friend WithEvents Rcal As Telerik.WinControls.UI.RadCalendar
-    Friend WithEvents BtnViewNonScheduled As System.Windows.Forms.Button
+    Friend WithEvents BtnViewResourceSchedular As System.Windows.Forms.Button
     Friend WithEvents SplitContainer2 As System.Windows.Forms.SplitContainer
     Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
@@ -347,4 +384,7 @@ Partial Class frmTaskShedular
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents btnExport As System.Windows.Forms.Button
+    Friend WithEvents GrpView As System.Windows.Forms.GroupBox
+    Friend WithEvents cmbView As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
