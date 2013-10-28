@@ -6,8 +6,7 @@ Public Class CMMSDAL
     Private Shared mySQLAdapter As SqlClient.SqlDataAdapter
     Private Shared cn As SqlConnection
     Private Shared _DSCmms As New DSCmms
-    Public Shared strConn As String = "Data Source=SHYAM-PC\TOWNSUITE;Initial Catalog=DBCMMS;Persist Security Info=True;" & _
-    "User ID=sa;Password=Wheymu1"
+    Public Shared strConn As String = ""
 
     Public Shared Function Create_dtProject() As DataTable
         Return _DSCmms.Tables("CMProject").Clone
@@ -22,9 +21,8 @@ Public Class CMMSDAL
     End Function
 
     Public Shared Function cls_EXE_STORED_PROCEDURE(ByVal storedProcedureName As String) As DataSet
-
-
         Try
+
             MainDS = New DataSet
             MainDS.Clear()
             mySQLCommand = New SqlClient.SqlCommand
@@ -36,12 +34,13 @@ Public Class CMMSDAL
             cn.Open()
             mySQLAdapter = New SqlClient.SqlDataAdapter(mySQLCommand)
             mySQLAdapter.Fill(MainDS)
-            cn.Close()
+
 
             Return MainDS
         Catch ex As Exception
             MessageBox.Show("Wrong Connection")
         Finally
+            cn.Close()
             MainDS.Dispose()
             mySQLCommand.Dispose()
             mySQLAdapter.Dispose()
@@ -55,6 +54,7 @@ Public Class CMMSDAL
         Dim myEnumerator As System.Collections.IEnumerator = _
                 argArray.GetEnumerator
         Try
+
             Dim mySQLParameter As SqlClient.SqlParameter
             cn = New SqlClient.SqlConnection(strConn)
             mySQLCommand = New SqlClient.SqlCommand
@@ -81,12 +81,13 @@ Public Class CMMSDAL
             mySQLAdapter = New SqlClient.SqlDataAdapter(mySQLCommand)
 
             mySQLAdapter.Fill(MainDS)
-            cn.Close()
+
 
             Return MainDS
         Catch ex As Exception
             MessageBox.Show("Wrong Connection")
         Finally
+            cn.Close()
             MainDS.Dispose()
             mySQLCommand.Dispose()
             mySQLAdapter.Dispose()

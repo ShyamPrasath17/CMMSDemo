@@ -3,6 +3,7 @@
     Dim frmloaded As Boolean = False
     Dim dt_wo As DataTable
     Dim ArgArray As ArrayList
+    Public connstring As String
 
     Private Sub frmWorkOrderLists_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frmloaded = False
@@ -53,6 +54,7 @@
 
         ArgArray = New ArrayList
         ArgArray.Add("@ProjectID") : ArgArray.Add(ProjectID.ToString()) : ArgArray.Add(DbType.String)
+        CMMSDAL.strConn = connstring
         dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
         FormMain.frmwolst.dgvWo.DataSource = dt_wo
         
@@ -72,7 +74,9 @@
     End Sub
 
     Private Sub dgvWo_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvWo.CellDoubleClick
-        FormMain.ToolWindowWo.Show()
+        FormMain.ToolWindowWo.DefaultFloatingSize = New Size(900, 1000)
+        FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWo)
+        'FormMain.ToolWindowWo.Show()
         FormMain.ToolWindowWo.Select()
     End Sub
 

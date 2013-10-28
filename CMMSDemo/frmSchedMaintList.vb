@@ -25,17 +25,6 @@
         dtSml.Rows.Add("Maintanance 4", "Name 4", "Asset B", "", "Meter Reading", "New")
         dtSml.Rows.Add("Maintanance 5", "Name 5", "Asset C", "", "Meter Reading", "Approved")
 
-        'For i As Integer = 1 To 15
-        '    If i < 4 Then
-        '        dtSml.Rows.Add("Maintanance " & i.ToString(), "Name " + i.ToString(), "Asset " + i.ToString(), "", "TimeBased", "New")
-        '    ElseIf i >= 4 And i < 8 Then
-        '        dtSml.Rows.Add("Maintanance " & i.ToString(), "Name " + i.ToString(), "Asset " + i.ToString(), "", "Meter Reading", "Approved")
-        '    ElseIf i >= 8 And i < 12 Then
-        '        dtSml.Rows.Add("Maintanance " & i.ToString(), "Name " + i.ToString(), "Asset " + i.ToString(), "", "TimeBased", "Approved")
-        '    Else
-        '        dtSml.Rows.Add("Maintanance " & i.ToString(), "Name " + i.ToString(), "Asset " + i.ToString(), "", "Meter Reading", "Approved")
-        '    End If
-        'Next
         dgvSchedMaint.DataSource = dtSml.Copy()
         dgvSchedMaint.BestFitColumns()
     End Sub
@@ -47,7 +36,9 @@
     End Sub
 
     Private Sub dgvSchedMaint_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvSchedMaint.CellDoubleClick
-        FormMain.TwScheduledMaint.Show()
+        FormMain.TwScheduledMaint.DefaultFloatingSize = New Size(900, 900)
+        FormMain.RadDockMain.FloatWindow(FormMain.TwScheduledMaint)
+        'FormMain.TwScheduledMaint.Show()
         FormMain.TwScheduledMaint.Select()
     End Sub
 End Class

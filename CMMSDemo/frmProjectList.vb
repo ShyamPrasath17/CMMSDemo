@@ -1,9 +1,11 @@
 ﻿Public Class frmProjectList
     Dim dtProject As DataTable
     Dim frmloaded As Boolean = False
+    Public connstring As String
    
     Private Sub dgvProjectList_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvProjectList.CellDoubleClick
-        FormMain.twProject.Show()
+        FormMain.twProject.DefaultFloatingSize = New Size(700, 800)
+        FormMain.RadDockMain.FloatWindow(FormMain.twProject)
         FormMain.twProject.Select()
     End Sub
 
@@ -12,6 +14,7 @@
             If (Not dgvProjectList.CurrentRow.Cells("ProjectID").Value Is Nothing) Then
                 FormMain.frmProj.fillProject(dtProject.Select("ProjectID = '" & dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString() & "'")(0), dtProject)
                 FormMain.frmwolst.SetWoData(dgvProjectList.CurrentRow.Cells("ProjectID").Value.ToString())
+
 
                 '    Dim dt_wo As DataTable = FormMain.frmwolst.dtWo.Copy()
                 '    dt_wo.DefaultView.RowFilter = "ProjectNo = '" & dgvProjectList.CurrentRow.Cells("ProjectNo").Value.ToString() & "'"
@@ -32,6 +35,7 @@
         dgvProjectList.AllowDeleteRow = False
     End Sub
     Private Sub createtable()
+        CMMSDAL.strConn = connstring
         dtProject = CMMSDAL.cls_EXE_STORED_PROCEDURE("CmmsProjectScmd").Tables(0)
 
         dgvProjectList.DataSource = dtProject

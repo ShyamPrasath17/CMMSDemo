@@ -47,6 +47,7 @@ Partial Class frmProject
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnViewWo = New System.Windows.Forms.Button()
+        Me.Button10 = New System.Windows.Forms.Button()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
@@ -239,6 +240,7 @@ Partial Class frmProject
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button10)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnViewWo)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
@@ -289,6 +291,16 @@ Partial Class frmProject
         Me.btnViewWo.Text = "View WorkOrders"
         Me.btnViewWo.UseVisualStyleBackColor = True
         '
+        'Button10
+        '
+        Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button10.Location = New System.Drawing.Point(360, 382)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.TabIndex = 174
+        Me.Button10.Text = "Save"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
         'frmProject
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -329,4 +341,5 @@ Partial Class frmProject
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents btnViewWo As System.Windows.Forms.Button
+    Friend WithEvents Button10 As System.Windows.Forms.Button
 End Class

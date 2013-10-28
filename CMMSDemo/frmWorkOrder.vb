@@ -17,6 +17,7 @@
         txtwono.Text = dr("WorkOrderNo").ToString()
         'Cmbsertype.Text = dr("ServiceType").ToString()
         txtstatus.Text = dr("status").ToString()
+        txtProject.Text = dr("ProjectID").ToString()
     End Sub
 
     Private Sub BtnAddWo_Click(sender As Object, e As EventArgs)
@@ -36,6 +37,8 @@
     End Sub
 
     Private Sub btnViewTasks_Click(sender As Object, e As EventArgs) Handles btnViewTasks.Click
-        FormMain.RadDockMain.DockWindow(FormMain.twTaskList, Telerik.WinControls.UI.Docking.DockPosition.Right)
+        'FormMain.RadDockMain.DockWindow(FormMain.twTaskList, FormMain.ToolWindowWo, Telerik.WinControls.UI.Docking.DockPosition.Right)
+        FormMain.twTaskList.DefaultFloatingSize = New Size(900, 600)
+        FormMain.RadDockMain.FloatWindow(FormMain.twTaskList)
     End Sub
 End Class

@@ -67,6 +67,9 @@
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -138,10 +141,34 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DSCmms.xsd</DependentUpon>
     </Compile>
+    <Compile Include="frmAssets.Designer.vb">
+      <DependentUpon>frmAssets.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAssets.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmAssignEmployees.Designer.vb">
       <DependentUpon>frmAssignEmployees.vb</DependentUpon>
     </Compile>
     <Compile Include="frmAssignEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMeterReading.Designer.vb">
+      <DependentUpon>frmMeterReading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMeterReading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportList.Designer.vb">
+      <DependentUpon>frmReportList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTrigger.Designer.vb">
+      <DependentUpon>frmTrigger.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTrigger.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUpCommingSchedule.Designer.vb">
@@ -288,6 +315,12 @@
     <Compile Include="frmWorkrequestList.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -311,8 +344,23 @@
     <EmbeddedResource Include="ctlRadGridAdvanceFilterControl.resx">
       <DependentUpon>ctlRadGridAdvanceFilterControl.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAssets.resx">
+      <DependentUpon>frmAssets.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAssignEmployees.resx">
       <DependentUpon>frmAssignEmployees.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMeterReading.resx">
+      <DependentUpon>frmMeterReading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportList.resx">
+      <DependentUpon>frmReportList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTrigger.resx">
+      <DependentUpon>frmTrigger.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpCommingSchedule.resx">
       <DependentUpon>frmUpCommingSchedule.vb</DependentUpon>
@@ -405,6 +453,7 @@
     <None Include="DSCmms.xss">
       <DependentUpon>DSCmms.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

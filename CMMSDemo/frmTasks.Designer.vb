@@ -57,11 +57,9 @@ Partial Class frmTasks
         Me.Label8 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtwono = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.txtstatus = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -91,6 +89,8 @@ Partial Class frmTasks
         Me.btnInstructions = New System.Windows.Forms.Button()
         Me.dtpEndTime = New System.Windows.Forms.DateTimePicker()
         Me.dtpStartTime = New System.Windows.Forms.DateTimePicker()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.grpSite.SuspendLayout()
         Me.grpItems.SuspendLayout()
         Me.grpOutSource.SuspendLayout()
@@ -273,7 +273,7 @@ Partial Class frmTasks
         '
         Me.GroupBox2.Controls.Add(Me.radOutsourced)
         Me.GroupBox2.Controls.Add(Me.radInternal)
-        Me.GroupBox2.Location = New System.Drawing.Point(16, 35)
+        Me.GroupBox2.Location = New System.Drawing.Point(16, 5)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(256, 62)
         Me.GroupBox2.TabIndex = 106
@@ -307,7 +307,7 @@ Partial Class frmTasks
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(13, 134)
+        Me.Label9.Location = New System.Drawing.Point(13, 104)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(43, 13)
         Me.Label9.TabIndex = 105
@@ -324,14 +324,14 @@ Partial Class frmTasks
         '
         'txtTaskName
         '
-        Me.txtTaskName.Location = New System.Drawing.Point(131, 153)
+        Me.txtTaskName.Location = New System.Drawing.Point(131, 123)
         Me.txtTaskName.Name = "txtTaskName"
         Me.txtTaskName.Size = New System.Drawing.Size(216, 20)
         Me.txtTaskName.TabIndex = 102
         '
         'txtTaskID
         '
-        Me.txtTaskID.Location = New System.Drawing.Point(131, 127)
+        Me.txtTaskID.Location = New System.Drawing.Point(131, 97)
         Me.txtTaskID.Name = "txtTaskID"
         Me.txtTaskID.ReadOnly = True
         Me.txtTaskID.Size = New System.Drawing.Size(216, 20)
@@ -340,7 +340,7 @@ Partial Class frmTasks
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(13, 156)
+        Me.Label10.Location = New System.Drawing.Point(13, 126)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(61, 13)
         Me.Label10.TabIndex = 103
@@ -419,15 +419,6 @@ Partial Class frmTasks
         Me.Label2.TabIndex = 94
         Me.Label2.Text = "Total Task Cost"
         '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(13, 12)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(42, 13)
-        Me.Label14.TabIndex = 93
-        Me.Label14.Text = "Project"
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -448,23 +439,14 @@ Partial Class frmTasks
         '
         'txtwono
         '
-        Me.txtwono.Location = New System.Drawing.Point(486, 5)
+        Me.txtwono.Location = New System.Drawing.Point(131, 149)
         Me.txtwono.Name = "txtwono"
-        Me.txtwono.ReadOnly = True
-        Me.txtwono.Size = New System.Drawing.Size(185, 20)
+        Me.txtwono.Size = New System.Drawing.Size(216, 20)
         Me.txtwono.TabIndex = 18
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(103, 9)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
-        Me.TextBox1.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox1.TabIndex = 92
         '
         'txtstatus
         '
-        Me.txtstatus.Location = New System.Drawing.Point(131, 103)
+        Me.txtstatus.Location = New System.Drawing.Point(131, 73)
         Me.txtstatus.Name = "txtstatus"
         Me.txtstatus.ReadOnly = True
         Me.txtstatus.Size = New System.Drawing.Size(216, 20)
@@ -473,7 +455,7 @@ Partial Class frmTasks
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 110)
+        Me.Label4.Location = New System.Drawing.Point(13, 80)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 13)
         Me.Label4.TabIndex = 22
@@ -482,7 +464,7 @@ Partial Class frmTasks
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(411, 8)
+        Me.Label1.Location = New System.Drawing.Point(13, 154)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(65, 13)
         Me.Label1.TabIndex = 19
@@ -569,11 +551,12 @@ Partial Class frmTasks
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button6)
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpDurationBased)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnInstructions)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpEndTime)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpStartTime)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label14)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpItems)
@@ -597,7 +580,6 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpEndDate)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label17)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtTaskID)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button2)
@@ -767,6 +749,25 @@ Partial Class frmTasks
         Me.dtpStartTime.Size = New System.Drawing.Size(90, 20)
         Me.dtpStartTime.TabIndex = 115
         '
+        'Button4
+        '
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.Location = New System.Drawing.Point(353, 146)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(24, 24)
+        Me.Button4.TabIndex = 153
+        Me.Button4.Tag = "DISABLE"
+        '
+        'Button6
+        '
+        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button6.Location = New System.Drawing.Point(351, 766)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 175
+        Me.Button6.Text = "Save"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'frmTasks
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -798,9 +799,7 @@ Partial Class frmTasks
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label14 As System.Windows.Forms.Label
     Friend WithEvents txtwono As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents txtstatus As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
@@ -862,4 +861,6 @@ Partial Class frmTasks
     Friend WithEvents Label20 As System.Windows.Forms.Label
     Friend WithEvents Label21 As System.Windows.Forms.Label
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button6 As System.Windows.Forms.Button
 End Class
