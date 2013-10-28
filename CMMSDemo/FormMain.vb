@@ -69,6 +69,7 @@ Public Class FormMain
         addfrmAsset()
         addfrmWorkRequest()
         addfrmRpt()
+
         ' This call is required by the designer.
         InitializeComponent()
 
@@ -92,11 +93,14 @@ Public Class FormMain
         twrptlst.Controls.Add(frmrpt)
         TwAsset.Controls.Add(frmAsset)
         DirectCast(twSearch.TabStrip, ToolTabStrip).AutoHidePosition = AutoHidePosition.Bottom
-        twSearch.AutoHide()
+
 
     End Sub
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        
+
         ToolWindowWo.Hide()
         ToolWindowWoLst.Hide()
         twProject.Hide()
@@ -109,12 +113,17 @@ Public Class FormMain
         TwSchedMaintList.Hide()
         twSettings.Hide()
         twImportSchedule.Hide()
-        TwUpComming.Hide()
         twScheduler.Hide()
-        twDashBoard.Hide()
         twrptlst.Hide()
         TwAsset.Hide()
-        BtnViewUpcomming_Click(Me, e)
+        twDashBoard.Hide()
+
+
+        RadDockMain.DockWindow(TwWorkReqList, TwUpComming, DockPosition.Left)
+        TwWorkReqList.Show()
+        TwUpComming.Show()
+        twSearch.AutoHide()
+
     End Sub
 
     Private Sub addDashBoardFrm()

@@ -82,7 +82,7 @@ Partial Class frmDashBoard
         Me.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Location = New System.Drawing.Point(149, 149)
+        Me.Panel1.Location = New System.Drawing.Point(441, 3)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(140, 140)
         Me.Panel1.TabIndex = 1
@@ -155,7 +155,7 @@ Partial Class frmDashBoard
         Me.Panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Location = New System.Drawing.Point(3, 149)
+        Me.Panel3.Location = New System.Drawing.Point(295, 3)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(140, 140)
         Me.Panel3.TabIndex = 1
@@ -205,10 +205,10 @@ Partial Class frmDashBoard
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel1)
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel5)
         Me.FlowLayoutPanel1.Controls.Add(Me.Panel6)
-        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(576, 0)
+        Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(300, 598)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(916, 170)
         Me.FlowLayoutPanel1.TabIndex = 2
         '
         'Panel5
@@ -218,7 +218,7 @@ Partial Class frmDashBoard
         Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel5.Controls.Add(Me.Label9)
         Me.Panel5.Controls.Add(Me.Label10)
-        Me.Panel5.Location = New System.Drawing.Point(3, 295)
+        Me.Panel5.Location = New System.Drawing.Point(587, 3)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(140, 140)
         Me.Panel5.TabIndex = 2
@@ -255,7 +255,7 @@ Partial Class frmDashBoard
         Me.Panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Panel6.Controls.Add(Me.Label11)
         Me.Panel6.Controls.Add(Me.Label12)
-        Me.Panel6.Location = New System.Drawing.Point(149, 295)
+        Me.Panel6.Location = New System.Drawing.Point(733, 3)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(140, 140)
         Me.Panel6.TabIndex = 5
@@ -289,7 +289,7 @@ Partial Class frmDashBoard
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(876, 598)
+        Me.ClientSize = New System.Drawing.Size(916, 170)
         Me.Controls.Add(Me.FlowLayoutPanel1)
         Me.Name = "frmDashBoard"
         Me.Text = "frmDashBoard"
