@@ -22,28 +22,12 @@ Partial Class frmLogin
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtConn = New System.Windows.Forms.TextBox()
-        Me.Label40 = New System.Windows.Forms.Label()
         Me.btnGo = New System.Windows.Forms.Button()
+        Me.txtDataSource = New System.Windows.Forms.TextBox()
+        Me.txtInitialCatalog = New System.Windows.Forms.TextBox()
+        Me.txtUser = New System.Windows.Forms.TextBox()
+        Me.txtPass = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
-        '
-        'txtConn
-        '
-        Me.txtConn.Location = New System.Drawing.Point(100, 49)
-        Me.txtConn.Name = "txtConn"
-        Me.txtConn.Size = New System.Drawing.Size(523, 20)
-        Me.txtConn.TabIndex = 3
-        Me.txtConn.Text = "Data Source=SHYAM-PC\TOWNSUITE;Initial Catalog=DBCMMS;Persist Security Info=True;" & _
-    "User ID=sa;Password=Wheymu1"
-        '
-        'Label40
-        '
-        Me.Label40.AutoSize = True
-        Me.Label40.Location = New System.Drawing.Point(3, 52)
-        Me.Label40.Name = "Label40"
-        Me.Label40.Size = New System.Drawing.Size(91, 13)
-        Me.Label40.TabIndex = 2
-        Me.Label40.Text = "Connection String"
         '
         'btnGo
         '
@@ -54,22 +38,59 @@ Partial Class frmLogin
         Me.btnGo.Text = "Go"
         Me.btnGo.UseVisualStyleBackColor = True
         '
+        'txtDataSource
+        '
+        Me.txtDataSource.Location = New System.Drawing.Point(162, 34)
+        Me.txtDataSource.Name = "txtDataSource"
+        Me.txtDataSource.Size = New System.Drawing.Size(173, 20)
+        Me.txtDataSource.TabIndex = 5
+        Me.txtDataSource.Text = "THARIK-PC\TOWNSUITE"
+        '
+        'txtInitialCatalog
+        '
+        Me.txtInitialCatalog.Location = New System.Drawing.Point(162, 60)
+        Me.txtInitialCatalog.Name = "txtInitialCatalog"
+        Me.txtInitialCatalog.Size = New System.Drawing.Size(173, 20)
+        Me.txtInitialCatalog.TabIndex = 6
+        Me.txtInitialCatalog.Text = "DBCMMS"
+        '
+        'txtUser
+        '
+        Me.txtUser.Location = New System.Drawing.Point(162, 86)
+        Me.txtUser.Name = "txtUser"
+        Me.txtUser.Size = New System.Drawing.Size(173, 20)
+        Me.txtUser.TabIndex = 7
+        Me.txtUser.Text = "sa"
+        '
+        'txtPass
+        '
+        Me.txtPass.Location = New System.Drawing.Point(162, 109)
+        Me.txtPass.Name = "txtPass"
+        Me.txtPass.Size = New System.Drawing.Size(173, 20)
+        Me.txtPass.TabIndex = 8
+        Me.txtPass.Text = "Wheymu1"
+        Me.txtPass.UseSystemPasswordChar = True
+        '
         'frmLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(660, 198)
+        Me.Controls.Add(Me.txtPass)
+        Me.Controls.Add(Me.txtUser)
+        Me.Controls.Add(Me.txtInitialCatalog)
+        Me.Controls.Add(Me.txtDataSource)
         Me.Controls.Add(Me.btnGo)
-        Me.Controls.Add(Me.txtConn)
-        Me.Controls.Add(Me.Label40)
         Me.Name = "frmLogin"
         Me.Text = "Login"
-        Me.ResumeLayout(False)
-        Me.PerformLayout()
+        Me.ResumeLayout(false)
+        Me.PerformLayout
 
-    End Sub
-    Friend WithEvents txtConn As System.Windows.Forms.TextBox
-    Friend WithEvents Label40 As System.Windows.Forms.Label
+End Sub
     Friend WithEvents btnGo As System.Windows.Forms.Button
+    Friend WithEvents txtDataSource As System.Windows.Forms.TextBox
+    Friend WithEvents txtInitialCatalog As System.Windows.Forms.TextBox
+    Friend WithEvents txtUser As System.Windows.Forms.TextBox
+    Friend WithEvents txtPass As System.Windows.Forms.TextBox
 End Class
