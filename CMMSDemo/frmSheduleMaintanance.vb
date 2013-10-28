@@ -76,4 +76,11 @@ Public Class frmSheduleMaintanance
         dgvEmp.AllowEditRow = False
     End Sub
 
+    Private Sub btnViewWos_Click(sender As Object, e As EventArgs) Handles btnViewWos.Click
+        FormMain.frmwolst.SetTypedWoData("ScheduleMaintanance")
+        FormMain.ToolWindowWoLst.DefaultFloatingSize = New Size(900, 500)
+        FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWoLst)
+        'FormMain.ToolWindowWo.Show()
+        FormMain.ToolWindowWo.Select()
+    End Sub
 End Class

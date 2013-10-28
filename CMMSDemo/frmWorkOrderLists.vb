@@ -60,6 +60,25 @@
         
     End Sub
 
+    Public Sub SetTypedWoData(Type As String)
+        'If Not dt_wo Is Nothing Then
+        '    dt_wo.Clear()
+        '    dt_wo.Dispose()
+        '    GC.Collect()
+        'End If
+
+        If Not ArgArray Is Nothing Then
+            ArgArray.Clear()
+        End If
+
+        ArgArray = New ArrayList
+        ArgArray.Add("@CreateType") : ArgArray.Add(Type.ToString()) : ArgArray.Add(DbType.String)
+        CMMSDAL.strConn = connstring
+        dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsSelTypedWocmd").Tables(0)
+        FormMain.frmwolst.dgvWo.DataSource = dt_wo
+
+    End Sub
+
     Private Sub dgvWo_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvWo.CurrentRowChanged
         If (frmloaded) Then
             If (Not dgvWo.CurrentRow.Cells("WorkOrderNo").Value Is Nothing) Then
