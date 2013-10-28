@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlClient
 Public Class frmLogin
     Private Shared cn As SqlConnection
-    Public Shared strConn_ As String
+    Public strConn_ As String
     Public state As String
     Public connstring As String
     Private Sub frmLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -10,7 +10,7 @@ Public Class frmLogin
 
     Private Sub btnGo_Click(sender As Object, e As EventArgs) Handles btnGo.Click
         Try
-            strConn_ = txtConn.Text.ToString()
+            strConn_ = "Data Source=" + txtDataSource.Text + ";Initial Catalog=" + txtInitialCatalog.Text + ";Persist Security Info=True;User ID=" + txtUser.Text + ";Password=" + txtPass.Text
             cn = New SqlClient.SqlConnection(strConn_)
             cn.Open()
             If cn.State = ConnectionState.Open Then
@@ -21,8 +21,7 @@ Public Class frmLogin
             End If
 
         Catch ex As Exception
-            MessageBox.Show("Wrong Connection")
-
+            MessageBox.Show("Following Exception occured when connecting to database : " + ex.Message)
         End Try
 
     End Sub
