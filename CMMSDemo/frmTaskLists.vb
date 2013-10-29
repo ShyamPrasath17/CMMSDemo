@@ -27,8 +27,8 @@ Public Class frmTaskLists
         ArgArray.Add("@WorkOrderNo") : ArgArray.Add(WoID.ToString()) : ArgArray.Add(DbType.String)
         CMMSDAL.strConn = connstring
         dt_tsk = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsTaskScmd").Tables(0)
-        FormMain.frmTskLst.dgvTasks.DataSource = dt_tsk
-
+        dgvTasks.DataSource = dt_tsk
+        dgvTasks.BestFitColumns()
     End Sub
 
     Private Sub createtable()

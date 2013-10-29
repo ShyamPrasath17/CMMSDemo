@@ -57,7 +57,7 @@
         CMMSDAL.strConn = connstring
         dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsWoScmd").Tables(0)
         FormMain.frmwolst.dgvWo.DataSource = dt_wo
-        
+        dgvWo.BestFitColumns()
     End Sub
 
     Public Sub SetTypedWoData(Type As String)
@@ -76,7 +76,7 @@
         CMMSDAL.strConn = connstring
         dt_wo = CMMSDAL.cls_EXE_STORED_PROCEDURE_PRAM(ArgArray, "CmmsSelTypedWocmd").Tables(0)
         FormMain.frmwolst.dgvWo.DataSource = dt_wo
-
+        dgvWo.BestFitColumns()
     End Sub
 
     Private Sub dgvWo_CurrentRowChanged(sender As Object, e As Telerik.WinControls.UI.CurrentRowChangedEventArgs) Handles dgvWo.CurrentRowChanged

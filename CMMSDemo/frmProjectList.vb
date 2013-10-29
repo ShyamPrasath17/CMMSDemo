@@ -43,4 +43,7 @@
 
     End Sub
 
+    Private Sub dgvProjectList_Click(sender As Object, e As EventArgs) Handles dgvProjectList.Click
+
+    End Sub
 End Class
