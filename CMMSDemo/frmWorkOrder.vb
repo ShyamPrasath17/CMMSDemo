@@ -16,7 +16,7 @@
     Public Sub fillworkorder(ByRef dr As DataRow)
         txtwono.Text = dr("WorkOrderNo").ToString()
         'Cmbsertype.Text = dr("ServiceType").ToString()
-        txtstatus.Text = dr("status").ToString()
+        'txtstatus.Text = dr("status").ToString()
         txtProject.Text = dr("ProjectID").ToString()
     End Sub
 

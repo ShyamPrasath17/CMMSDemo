@@ -23,8 +23,12 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub frmShedular_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Rshcmms.AllowAppointmentMove = False
-        Rshcmms.AllowAppointmentResize = False
+        'Rshcmms.AllowAppointmentMove = False
+        'Rshcmms.AllowAppointmentResize = False
+
+        MonthUpDown.Minimum = 1
+        MonthUpDown.Maximum = 12
+        MonthUpDown.Value = 1
         SplitContainer2.IsSplitterFixed = True
         SplitContainer1.IsSplitterFixed = True
         SplitContainer2.FixedPanel = FixedPanel.Panel1
@@ -78,26 +82,24 @@ Public Class frmTaskShedular
         For i As Integer = 0 To 8
             summaries(i) = "Tsk " & (i + 1).ToString()
         Next
-        Dim descriptions() As String = {"", "", "", "", "", "", "", "", ""}
-        Dim locations() As String = {"WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1"}
-        'Dim backgrounds() As AppointmentBackground = {AppointmentBackground.Important, AppointmentBackground.Important, AppointmentBackground.Important, AppointmentBackground.Important, AppointmentBackground.NeedsPreparation, AppointmentBackground.Birthday, AppointmentBackground.TravelRequired, AppointmentBackground.NeedsPreparation, AppointmentBackground.Business}
-        ' Dim statuses() As AppointmentStatus = {AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy, AppointmentStatus.Busy}
-
         Dim appointment As Appointment = Nothing
         For i As Integer = 0 To summaries.Length - 1
-            appointment = New Appointment(start(i), [end](i), summaries(i), descriptions(i), locations(i))
+            appointment = New Appointment(start(i), [end](i), summaries(i), "", "WorkOrder : Wo1")
             appointment.BackgroundId = AppointmentBackground.MustAttend
-            'appointment.StatusId = CInt(Fix(statuses(i)))
+            Me.Rshcmms.Appointments.Add(appointment)
+        Next i
+        'Dim locations() As String = {"WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1"}
+       
+        appointment = Nothing
+        For i As Integer = 21 To 30
+            appointment = New Appointment(baseDate.AddDays(1).AddHours(6), baseDate.AddDays(1).AddHours(16), "Tsk " & (i + 1).ToString(), "", "WorkOrder : Wo2")
+            appointment.BackgroundId = AppointmentBackground.MustAttend
             Me.Rshcmms.Appointments.Add(appointment)
         Next i
     End Sub
     Private Sub addWoAppointments()
         Rshcmms.Appointments.Clear()
         Dim baseDate As DateTime = DateTime.Today
-        Dim start() As DateTime = {baseDate, baseDate, baseDate, baseDate, baseDate, baseDate.AddDays(-1.0).AddHours(8.0), baseDate.AddDays(-4.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(15.0), baseDate.AddDays(-4.0).AddHours(0.0)}
-
-        Dim [end]() As DateTime = {baseDate.AddHours(16.0), baseDate.AddDays(1.0).AddHours(15.0), baseDate.AddDays(2.0).AddHours(17.0), baseDate.AddDays(-2.0).AddHours(14.0), baseDate.AddDays(-2.0).AddHours(13.0), baseDate.AddDays(-1.0).AddHours(13.0), baseDate.AddDays(-4.0).AddHours(14.0), baseDate.AddDays(-4.0).AddHours(16.0), baseDate.AddDays(-4.0).AddHours(32.0)}
-
         Dim summaries(5) As String
         'For i As Integer = 0 To 5
         '    summaries(i) = "Equipment " & (i + 1).ToString()
@@ -108,16 +110,12 @@ Public Class frmTaskShedular
         summaries(3) = "WorkOrderNo " & (2).ToString()
         summaries(4) = "WorkOrderNo " & (3).ToString()
         summaries(5) = "WorkOrderNo " & (4).ToString()
-        Dim descriptions() As String = {"", "", "", "", "", ""}
-        Dim locations() As String = {"", "", "", "", "", ""}
-        Dim backgrounds() As AppointmentBackground = {AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired, AppointmentBackground.TravelRequired}
-        'Dim statuses() As AppointmentStatus = {AppointmentStatus.Busy, AppointmentStatus.Free, AppointmentStatus.Busy, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Free, AppointmentStatus.Free, AppointmentStatus.Busy}
+       
 
         Dim appointment As Appointment = Nothing
         For i As Integer = 0 To summaries.Length - 1
-            appointment = New Appointment(start(i), [end](i), summaries(i), descriptions(i), locations(i))
-            appointment.BackgroundId = CInt(Fix(backgrounds(i)))
-            'appointment.StatusId = CInt(Fix(statuses(i)))
+            appointment = New Appointment(baseDate, baseDate.AddHours(6), summaries(i), "", "")
+            appointment.BackgroundId = AppointmentBackground.TravelRequired
             Me.Rshcmms.Appointments.Add(appointment)
         Next i
     End Sub
@@ -167,13 +165,11 @@ Public Class frmTaskShedular
         summaries(5) = "Employee " & (4).ToString()
         Dim descriptions() As String = {"", "", "", "", "", ""}
         Dim locations() As String = {"Task : Tsk 1", "Task : Tsk 4", "Task : Tsk 2", "Task : Tsk 2", "Task : Tsk 3", "Task : Tsk 1"}
-        Dim backgrounds() As AppointmentBackground = {AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business, AppointmentBackground.Business}
-        'Dim statuses() As AppointmentStatus = {AppointmentStatus.Busy, AppointmentStatus.Free, AppointmentStatus.Busy, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Tentative, AppointmentStatus.Free, AppointmentStatus.Free, AppointmentStatus.Busy}
-
+        
         Dim appointment As Appointment = Nothing
         For i As Integer = 0 To summaries.Length - 1
             appointment = New Appointment(start(i), [end](i), summaries(i), descriptions(i), locations(i))
-            appointment.BackgroundId = CInt(Fix(backgrounds(i)))
+            appointment.BackgroundId = AppointmentBackground.NeedsPreparation
             'appointment.StatusId = CInt(Fix(statuses(i)))
             Me.Rshcmms.Appointments.Add(appointment)
         Next i
@@ -232,13 +228,51 @@ Public Class frmTaskShedular
     Private Sub ShowSchedular(Type As String)
         If Type = "Task" Then
             addTaskAppointments()
+            ChkAll.Visible = False
+            grpSelect.Visible = False
         ElseIf Type = "Employee" Then
             addEmployeeAppointments()
+            ChkAll.Visible = True
+            grpSelect.Visible = True
+            lblSelect.Text = "Employee"
+            ChkAll.Text = "All Employees"
         ElseIf Type = "Equipment" Then
             addEquipmentAppointments()
+            ChkAll.Visible = True
+            grpSelect.Visible = True
+            lblSelect.Text = "Equipment"
+            ChkAll.Text = "All Equipment"
         Else
-            addWoAppointments()
+            'addWoAppointments()
+            'ChkAll.Visible = False
+            'grpSelect.Visible = False
+
         End If
     End Sub
 
+    Private Sub Rshcmms_ActiveViewChanged(sender As Object, e As SchedulerViewChangedEventArgs) Handles Rshcmms.ActiveViewChanged
+        'Rcal.SelectedDate = Rshcmms.FocusedDate
+        If e.NewView.ViewType <> e.OldView.ViewType AndAlso e.NewView.ViewType = SchedulerViewType.Month Then
+            Me.Rshcmms.GetMonthView().WeekCount = 5
+            grpVisibleM.Visible = False
+        ElseIf e.NewView.ViewType <> e.OldView.ViewType AndAlso e.NewView.ViewType = SchedulerViewType.Day Then
+            Me.Rshcmms.GetDayView().DayCount = 1
+            grpVisibleM.Visible = False
+
+        ElseIf e.NewView.ViewType <> e.OldView.ViewType AndAlso e.NewView.ViewType = SchedulerViewType.Timeline Then
+            Rshcmms.GetTimelineView().ShowTimescale(Timescales.Months)
+            grpVisibleM.Visible = True
+            Dim timescale As SchedulerTimescale = Me.Rshcmms.GetTimelineView().GetScaling()
+            timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
+        Else
+            grpVisibleM.Visible = False
+        End If
+    End Sub
+
+    Private Sub MonthUpDown_ValueChanged(sender As Object, e As EventArgs) Handles MonthUpDown.ValueChanged
+        If Rshcmms.ActiveViewType = SchedulerViewType.Timeline Then
+            Dim timescale As SchedulerTimescale = Me.Rshcmms.GetTimelineView().GetScaling()
+            timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
+        End If
+    End Sub
 End Class

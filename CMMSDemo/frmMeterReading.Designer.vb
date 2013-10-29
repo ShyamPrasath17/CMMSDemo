@@ -28,21 +28,21 @@ Partial Class frmMeterReading
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.cmbrptUom = New System.Windows.Forms.ComboBox()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'GroupBox2
         '
+        Me.GroupBox2.Controls.Add(Me.cmbrptUom)
         Me.GroupBox2.Controls.Add(Me.dtpStartTime)
         Me.GroupBox2.Controls.Add(Me.dtpStartDate)
         Me.GroupBox2.Controls.Add(Me.Label5)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
         Me.GroupBox2.Controls.Add(Me.Label2)
-        Me.GroupBox2.Controls.Add(Me.cmbrptUom)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox2.Name = "GroupBox2"
@@ -92,15 +92,6 @@ Partial Class frmMeterReading
         Me.Label2.TabIndex = 133
         Me.Label2.Text = "Value"
         '
-        'cmbrptUom
-        '
-        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbrptUom.FormattingEnabled = True
-        Me.cmbrptUom.Location = New System.Drawing.Point(77, 59)
-        Me.cmbrptUom.Name = "cmbrptUom"
-        Me.cmbrptUom.Size = New System.Drawing.Size(143, 21)
-        Me.cmbrptUom.TabIndex = 132
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -128,6 +119,15 @@ Partial Class frmMeterReading
         Me.Button5.Text = "Ok"
         Me.Button5.UseVisualStyleBackColor = True
         '
+        'cmbrptUom
+        '
+        Me.cmbrptUom.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbrptUom.FormattingEnabled = True
+        Me.cmbrptUom.Location = New System.Drawing.Point(77, 59)
+        Me.cmbrptUom.Name = "cmbrptUom"
+        Me.cmbrptUom.Size = New System.Drawing.Size(143, 21)
+        Me.cmbrptUom.TabIndex = 157
+        '
         'frmMeterReading
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -150,8 +150,8 @@ Partial Class frmMeterReading
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button5 As System.Windows.Forms.Button
+    Friend WithEvents cmbrptUom As System.Windows.Forms.ComboBox
 End Class

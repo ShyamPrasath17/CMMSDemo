@@ -41,7 +41,7 @@
     Public Sub filltask(ByRef dr As DataRow)
         txtTaskID.Text = dr("TaskID").ToString()
         txtTaskName.Text = dr("TaskName").ToString()
-        txtstatus.Text = dr("Status").ToString()
+        'txtstatus.Text = dr("Status").ToString()
         txtwono.Text = dr("WorkOrderNo").ToString()
     End Sub
 

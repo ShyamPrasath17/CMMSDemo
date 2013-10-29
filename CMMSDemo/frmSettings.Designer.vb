@@ -199,6 +199,112 @@ Partial Class frmSettings
         Me.TabPage16 = New System.Windows.Forms.TabPage()
         Me.TabControl6 = New System.Windows.Forms.TabControl()
         Me.TabPage17 = New System.Windows.Forms.TabPage()
+        Me.TabControl8 = New System.Windows.Forms.TabControl()
+        Me.tabUsers = New System.Windows.Forms.TabPage()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.gpbUserInfo = New System.Windows.Forms.GroupBox()
+        Me.btnUserSearch = New System.Windows.Forms.Button()
+        Me.TextBoxUserName = New System.Windows.Forms.TextBox()
+        Me.TextBoxUserId = New System.Windows.Forms.TextBox()
+        Me.LabelPasswordStrengthNewUser = New System.Windows.Forms.Label()
+        Me.TabControl9 = New System.Windows.Forms.TabControl()
+        Me.TabPage21 = New System.Windows.Forms.TabPage()
+        Me.TextBoxAdUser = New System.Windows.Forms.TextBox()
+        Me.LabelAdUser = New System.Windows.Forms.Label()
+        Me.txtPostCode = New System.Windows.Forms.TextBox()
+        Me.chkAdmin = New System.Windows.Forms.CheckBox()
+        Me.txtEmail = New System.Windows.Forms.TextBox()
+        Me.lblFirstName = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
+        Me.txtTelephone = New System.Windows.Forms.TextBox()
+        Me.txtAddressLn1 = New System.Windows.Forms.TextBox()
+        Me.cboProv = New System.Windows.Forms.ComboBox()
+        Me.txtAddressLn2 = New System.Windows.Forms.TextBox()
+        Me.cboAssignedRole = New System.Windows.Forms.ComboBox()
+        Me.txtAddressLn3 = New System.Windows.Forms.TextBox()
+        Me.lblLastName = New System.Windows.Forms.Label()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
+        Me.lblTelephone = New System.Windows.Forms.Label()
+        Me.lblProv = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Label44 = New System.Windows.Forms.Label()
+        Me.TabPage22 = New System.Windows.Forms.TabPage()
+        Me.dgvAccountable = New System.Windows.Forms.DataGridView()
+        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.include = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.Label46 = New System.Windows.Forms.Label()
+        Me.lblAppManager = New System.Windows.Forms.Label()
+        Me.lblConfirmPassword = New System.Windows.Forms.Label()
+        Me.txtConfrimPassword = New System.Windows.Forms.TextBox()
+        Me.Label47 = New System.Windows.Forms.Label()
+        Me.Label48 = New System.Windows.Forms.Label()
+        Me.lblPassword = New System.Windows.Forms.Label()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtLoginID = New System.Windows.Forms.TextBox()
+        Me.Label66 = New System.Windows.Forms.Label()
+        Me.chkUserActive = New System.Windows.Forms.CheckBox()
+        Me.GroupBox21 = New System.Windows.Forms.GroupBox()
+        Me.lstSystemUsers = New System.Windows.Forms.ListBox()
+        Me.btnCancelUserAction = New System.Windows.Forms.Button()
+        Me.btnResetPwd = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.tabRoles = New System.Windows.Forms.TabPage()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.gpbRoles = New System.Windows.Forms.GroupBox()
+        Me.cboRoles = New System.Windows.Forms.ComboBox()
+        Me.btnCancelRoleAction = New System.Windows.Forms.Button()
+        Me.gpbRestrictDataUpdate = New System.Windows.Forms.GroupBox()
+        Me.chkBLResUpdate = New System.Windows.Forms.CheckBox()
+        Me.chkBKResUpdate = New System.Windows.Forms.CheckBox()
+        Me.chkPOResUpdate = New System.Windows.Forms.CheckBox()
+        Me.chkAPResUpdate = New System.Windows.Forms.CheckBox()
+        Me.chkARResUpdate = New System.Windows.Forms.CheckBox()
+        Me.chkPRResUpdate = New System.Windows.Forms.CheckBox()
+        Me.chkGLResUpdate = New System.Windows.Forms.CheckBox()
+        Me.Label67 = New System.Windows.Forms.Label()
+        Me.txtRoleMemo = New System.Windows.Forms.TextBox()
+        Me.Label68 = New System.Windows.Forms.Label()
+        Me.Label69 = New System.Windows.Forms.Label()
+        Me.btnAddRole = New System.Windows.Forms.Button()
+        Me.btnSaveRole = New System.Windows.Forms.Button()
+        Me.gpbRoleUserInfo = New System.Windows.Forms.GroupBox()
+        Me.btnAddUserToRole = New System.Windows.Forms.Button()
+        Me.Label70 = New System.Windows.Forms.Label()
+        Me.Label71 = New System.Windows.Forms.Label()
+        Me.lstRoleMembers = New System.Windows.Forms.ListBox()
+        Me.lstAvailUsers = New System.Windows.Forms.ListBox()
+        Me.chkPrivacyAct = New System.Windows.Forms.CheckBox()
+        Me.TreeView1 = New System.Windows.Forms.TreeView()
+        Me.tpgChangePwd = New System.Windows.Forms.TabPage()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.gpbChangePwd = New System.Windows.Forms.GroupBox()
+        Me.LabelPasswordStrength = New System.Windows.Forms.Label()
+        Me.Label72 = New System.Windows.Forms.Label()
+        Me.Label73 = New System.Windows.Forms.Label()
+        Me.Label74 = New System.Windows.Forms.Label()
+        Me.lblLoginIDValue = New System.Windows.Forms.Label()
+        Me.lblLoginId = New System.Windows.Forms.Label()
+        Me.btnSavePwd = New System.Windows.Forms.Button()
+        Me.lblConfirmNewPwd = New System.Windows.Forms.Label()
+        Me.lblNewPwd = New System.Windows.Forms.Label()
+        Me.lblOldPwd = New System.Windows.Forms.Label()
+        Me.txtConfirmNewPwd = New System.Windows.Forms.TextBox()
+        Me.txtNewPwd = New System.Windows.Forms.TextBox()
+        Me.txtOldPwd = New System.Windows.Forms.TextBox()
+        Me.tpgPrinters = New System.Windows.Forms.TabPage()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.gpbUserPrinters = New System.Windows.Forms.GroupBox()
+        Me.cboChequesPrinter = New System.Windows.Forms.ComboBox()
+        Me.cboReceiptPrinter = New System.Windows.Forms.ComboBox()
+        Me.cboReportPrinter = New System.Windows.Forms.ComboBox()
+        Me.lblCheques = New System.Windows.Forms.Label()
+        Me.lblReceipts = New System.Windows.Forms.Label()
+        Me.lblReports = New System.Windows.Forms.Label()
+        Me.btnSavePrinterInfo = New System.Windows.Forms.Button()
         Me.TabPage18 = New System.Windows.Forms.TabPage()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.CheckBox19 = New System.Windows.Forms.CheckBox()
@@ -301,118 +407,8 @@ Partial Class frmSettings
         Me.RadioButton34 = New System.Windows.Forms.RadioButton()
         Me.ListBox10 = New System.Windows.Forms.ListBox()
         Me.TabPage19 = New System.Windows.Forms.TabPage()
-        Me.TabControl8 = New System.Windows.Forms.TabControl()
-        Me.tabUsers = New System.Windows.Forms.TabPage()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.gpbUserInfo = New System.Windows.Forms.GroupBox()
-        Me.btnUserSearch = New System.Windows.Forms.Button()
-        Me.TextBoxUserName = New System.Windows.Forms.TextBox()
-        Me.TextBoxUserId = New System.Windows.Forms.TextBox()
-        Me.LabelPasswordStrengthNewUser = New System.Windows.Forms.Label()
-        Me.TabControl9 = New System.Windows.Forms.TabControl()
-        Me.TabPage21 = New System.Windows.Forms.TabPage()
-        Me.TextBoxAdUser = New System.Windows.Forms.TextBox()
-        Me.LabelAdUser = New System.Windows.Forms.Label()
-        Me.chkRevReceipt = New System.Windows.Forms.CheckBox()
         Me.chkAllowOverRideInterest = New System.Windows.Forms.CheckBox()
-        Me.txtPostCode = New System.Windows.Forms.TextBox()
-        Me.chkAdmin = New System.Windows.Forms.CheckBox()
-        Me.txtEmail = New System.Windows.Forms.TextBox()
-        Me.lblFirstName = New System.Windows.Forms.Label()
-        Me.Label41 = New System.Windows.Forms.Label()
-        Me.Label42 = New System.Windows.Forms.Label()
-        Me.txtLastName = New System.Windows.Forms.TextBox()
-        Me.txtTelephone = New System.Windows.Forms.TextBox()
-        Me.txtAddressLn1 = New System.Windows.Forms.TextBox()
-        Me.cboProv = New System.Windows.Forms.ComboBox()
-        Me.txtAddressLn2 = New System.Windows.Forms.TextBox()
-        Me.cboAssignedRole = New System.Windows.Forms.ComboBox()
-        Me.txtAddressLn3 = New System.Windows.Forms.TextBox()
-        Me.lblLastName = New System.Windows.Forms.Label()
-        Me.txtFirstName = New System.Windows.Forms.TextBox()
-        Me.lblTelephone = New System.Windows.Forms.Label()
-        Me.lblProv = New System.Windows.Forms.Label()
-        Me.Label43 = New System.Windows.Forms.Label()
-        Me.Label44 = New System.Windows.Forms.Label()
-        Me.TabPage22 = New System.Windows.Forms.TabPage()
-        Me.dgvAccountable = New System.Windows.Forms.DataGridView()
-        Me.Code = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.desc = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.include = New System.Windows.Forms.DataGridViewCheckBoxColumn()
-        Me.chkAllRQ = New System.Windows.Forms.CheckBox()
-        Me.chkReqApproval = New System.Windows.Forms.CheckBox()
-        Me.txtPOAmount = New System.Windows.Forms.TextBox()
-        Me.Label45 = New System.Windows.Forms.Label()
-        Me.Label46 = New System.Windows.Forms.Label()
-        Me.lblAppManager = New System.Windows.Forms.Label()
-        Me.lblConfirmPassword = New System.Windows.Forms.Label()
-        Me.txtConfrimPassword = New System.Windows.Forms.TextBox()
-        Me.Label47 = New System.Windows.Forms.Label()
-        Me.Label48 = New System.Windows.Forms.Label()
-        Me.lblPassword = New System.Windows.Forms.Label()
-        Me.txtPassword = New System.Windows.Forms.TextBox()
-        Me.txtLoginID = New System.Windows.Forms.TextBox()
-        Me.Label66 = New System.Windows.Forms.Label()
-        Me.chkUserActive = New System.Windows.Forms.CheckBox()
-        Me.GroupBox21 = New System.Windows.Forms.GroupBox()
-        Me.lstSystemUsers = New System.Windows.Forms.ListBox()
-        Me.btnCancelUserAction = New System.Windows.Forms.Button()
-        Me.btnResetPwd = New System.Windows.Forms.Button()
-        Me.btnAdd = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.tabRoles = New System.Windows.Forms.TabPage()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.gpbRoles = New System.Windows.Forms.GroupBox()
-        Me.cboRoles = New System.Windows.Forms.ComboBox()
-        Me.btnCancelRoleAction = New System.Windows.Forms.Button()
-        Me.gpbRestrictDataUpdate = New System.Windows.Forms.GroupBox()
-        Me.chkBLResUpdate = New System.Windows.Forms.CheckBox()
-        Me.chkBKResUpdate = New System.Windows.Forms.CheckBox()
-        Me.chkPOResUpdate = New System.Windows.Forms.CheckBox()
-        Me.chkAPResUpdate = New System.Windows.Forms.CheckBox()
-        Me.chkARResUpdate = New System.Windows.Forms.CheckBox()
-        Me.chkPRResUpdate = New System.Windows.Forms.CheckBox()
-        Me.chkGLResUpdate = New System.Windows.Forms.CheckBox()
-        Me.Label67 = New System.Windows.Forms.Label()
-        Me.txtRoleMemo = New System.Windows.Forms.TextBox()
-        Me.Label68 = New System.Windows.Forms.Label()
-        Me.Label69 = New System.Windows.Forms.Label()
-        Me.btnAddRole = New System.Windows.Forms.Button()
-        Me.btnSaveRole = New System.Windows.Forms.Button()
-        Me.gpbRoleUserInfo = New System.Windows.Forms.GroupBox()
-        Me.btnAddUserToRole = New System.Windows.Forms.Button()
-        Me.Label70 = New System.Windows.Forms.Label()
-        Me.Label71 = New System.Windows.Forms.Label()
-        Me.lstRoleMembers = New System.Windows.Forms.ListBox()
-        Me.lstAvailUsers = New System.Windows.Forms.ListBox()
-        Me.chkPrivacyAct = New System.Windows.Forms.CheckBox()
-        Me.TreeView1 = New System.Windows.Forms.TreeView()
-        Me.tpgChangePwd = New System.Windows.Forms.TabPage()
-        Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.gpbChangePwd = New System.Windows.Forms.GroupBox()
-        Me.LabelPasswordStrength = New System.Windows.Forms.Label()
-        Me.Label72 = New System.Windows.Forms.Label()
-        Me.Label73 = New System.Windows.Forms.Label()
-        Me.Label74 = New System.Windows.Forms.Label()
-        Me.lblLoginIDValue = New System.Windows.Forms.Label()
-        Me.lblLoginId = New System.Windows.Forms.Label()
-        Me.btnSavePwd = New System.Windows.Forms.Button()
-        Me.lblConfirmNewPwd = New System.Windows.Forms.Label()
-        Me.lblNewPwd = New System.Windows.Forms.Label()
-        Me.lblOldPwd = New System.Windows.Forms.Label()
-        Me.txtConfirmNewPwd = New System.Windows.Forms.TextBox()
-        Me.txtNewPwd = New System.Windows.Forms.TextBox()
-        Me.txtOldPwd = New System.Windows.Forms.TextBox()
-        Me.tpgPrinters = New System.Windows.Forms.TabPage()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.gpbUserPrinters = New System.Windows.Forms.GroupBox()
-        Me.cboChequesPrinter = New System.Windows.Forms.ComboBox()
-        Me.cboReceiptPrinter = New System.Windows.Forms.ComboBox()
-        Me.cboReportPrinter = New System.Windows.Forms.ComboBox()
-        Me.lblCheques = New System.Windows.Forms.Label()
-        Me.lblReceipts = New System.Windows.Forms.Label()
-        Me.lblReports = New System.Windows.Forms.Label()
-        Me.btnSavePrinterInfo = New System.Windows.Forms.Button()
+        Me.chkRevReceipt = New System.Windows.Forms.CheckBox()
         Me.TabPage11.SuspendLayout()
         Me.TabControl4.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -449,6 +445,26 @@ Partial Class frmSettings
         Me.TabPage16.SuspendLayout()
         Me.TabControl6.SuspendLayout()
         Me.TabPage17.SuspendLayout()
+        Me.TabControl8.SuspendLayout()
+        Me.tabUsers.SuspendLayout()
+        Me.Panel3.SuspendLayout()
+        Me.gpbUserInfo.SuspendLayout()
+        Me.TabControl9.SuspendLayout()
+        Me.TabPage21.SuspendLayout()
+        Me.TabPage22.SuspendLayout()
+        CType(Me.dgvAccountable, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox21.SuspendLayout()
+        Me.tabRoles.SuspendLayout()
+        Me.Panel5.SuspendLayout()
+        Me.gpbRoles.SuspendLayout()
+        Me.gpbRestrictDataUpdate.SuspendLayout()
+        Me.gpbRoleUserInfo.SuspendLayout()
+        Me.tpgChangePwd.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.gpbChangePwd.SuspendLayout()
+        Me.tpgPrinters.SuspendLayout()
+        Me.Panel4.SuspendLayout()
+        Me.gpbUserPrinters.SuspendLayout()
         Me.TabPage18.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
@@ -472,26 +488,6 @@ Partial Class frmSettings
         Me.TabPage14.SuspendLayout()
         Me.GroupBox24.SuspendLayout()
         Me.GroupBox25.SuspendLayout()
-        Me.TabControl8.SuspendLayout()
-        Me.tabUsers.SuspendLayout()
-        Me.Panel3.SuspendLayout()
-        Me.gpbUserInfo.SuspendLayout()
-        Me.TabControl9.SuspendLayout()
-        Me.TabPage21.SuspendLayout()
-        Me.TabPage22.SuspendLayout()
-        CType(Me.dgvAccountable, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox21.SuspendLayout()
-        Me.tabRoles.SuspendLayout()
-        Me.Panel5.SuspendLayout()
-        Me.gpbRoles.SuspendLayout()
-        Me.gpbRestrictDataUpdate.SuspendLayout()
-        Me.gpbRoleUserInfo.SuspendLayout()
-        Me.tpgChangePwd.SuspendLayout()
-        Me.Panel2.SuspendLayout()
-        Me.gpbChangePwd.SuspendLayout()
-        Me.tpgPrinters.SuspendLayout()
-        Me.Panel4.SuspendLayout()
-        Me.gpbUserPrinters.SuspendLayout()
         Me.SuspendLayout()
         '
         'BtnSave
@@ -2288,6 +2284,1109 @@ Partial Class frmSettings
         Me.TabPage17.Text = "User"
         Me.TabPage17.UseVisualStyleBackColor = True
         '
+        'TabControl8
+        '
+        Me.TabControl8.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TabControl8.Controls.Add(Me.tabUsers)
+        Me.TabControl8.Controls.Add(Me.tabRoles)
+        Me.TabControl8.Controls.Add(Me.tpgChangePwd)
+        Me.TabControl8.Controls.Add(Me.tpgPrinters)
+        Me.TabControl8.ItemSize = New System.Drawing.Size(181, 18)
+        Me.TabControl8.Location = New System.Drawing.Point(3, 6)
+        Me.TabControl8.Name = "TabControl8"
+        Me.TabControl8.SelectedIndex = 0
+        Me.TabControl8.Size = New System.Drawing.Size(921, 512)
+        Me.TabControl8.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
+        Me.TabControl8.TabIndex = 1
+        '
+        'tabUsers
+        '
+        Me.tabUsers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tabUsers.Controls.Add(Me.Panel3)
+        Me.tabUsers.Location = New System.Drawing.Point(4, 22)
+        Me.tabUsers.Name = "tabUsers"
+        Me.tabUsers.Size = New System.Drawing.Size(913, 486)
+        Me.tabUsers.TabIndex = 0
+        Me.tabUsers.Text = "Users"
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Panel3.Controls.Add(Me.gpbUserInfo)
+        Me.Panel3.Controls.Add(Me.GroupBox21)
+        Me.Panel3.Location = New System.Drawing.Point(15, 12)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(890, 467)
+        Me.Panel3.TabIndex = 0
+        '
+        'gpbUserInfo
+        '
+        Me.gpbUserInfo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gpbUserInfo.BackColor = System.Drawing.SystemColors.Control
+        Me.gpbUserInfo.Controls.Add(Me.btnUserSearch)
+        Me.gpbUserInfo.Controls.Add(Me.TextBoxUserName)
+        Me.gpbUserInfo.Controls.Add(Me.TextBoxUserId)
+        Me.gpbUserInfo.Controls.Add(Me.LabelPasswordStrengthNewUser)
+        Me.gpbUserInfo.Controls.Add(Me.TabControl9)
+        Me.gpbUserInfo.Controls.Add(Me.Label46)
+        Me.gpbUserInfo.Controls.Add(Me.lblAppManager)
+        Me.gpbUserInfo.Controls.Add(Me.lblConfirmPassword)
+        Me.gpbUserInfo.Controls.Add(Me.txtConfrimPassword)
+        Me.gpbUserInfo.Controls.Add(Me.Label47)
+        Me.gpbUserInfo.Controls.Add(Me.Label48)
+        Me.gpbUserInfo.Controls.Add(Me.lblPassword)
+        Me.gpbUserInfo.Controls.Add(Me.txtPassword)
+        Me.gpbUserInfo.Controls.Add(Me.txtLoginID)
+        Me.gpbUserInfo.Controls.Add(Me.Label66)
+        Me.gpbUserInfo.Controls.Add(Me.chkUserActive)
+        Me.gpbUserInfo.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.gpbUserInfo.Location = New System.Drawing.Point(232, 8)
+        Me.gpbUserInfo.Name = "gpbUserInfo"
+        Me.gpbUserInfo.Size = New System.Drawing.Size(650, 449)
+        Me.gpbUserInfo.TabIndex = 7
+        Me.gpbUserInfo.TabStop = False
+        Me.gpbUserInfo.Text = "  User Information"
+        '
+        'btnUserSearch
+        '
+        Me.btnUserSearch.Image = CType(resources.GetObject("btnUserSearch.Image"), System.Drawing.Image)
+        Me.btnUserSearch.Location = New System.Drawing.Point(384, 96)
+        Me.btnUserSearch.Name = "btnUserSearch"
+        Me.btnUserSearch.Size = New System.Drawing.Size(24, 21)
+        Me.btnUserSearch.TabIndex = 87
+        Me.btnUserSearch.Tag = "DISABLE"
+        '
+        'TextBoxUserName
+        '
+        Me.TextBoxUserName.Location = New System.Drawing.Point(195, 97)
+        Me.TextBoxUserName.Name = "TextBoxUserName"
+        Me.TextBoxUserName.ReadOnly = True
+        Me.TextBoxUserName.Size = New System.Drawing.Size(186, 20)
+        Me.TextBoxUserName.TabIndex = 86
+        '
+        'TextBoxUserId
+        '
+        Me.TextBoxUserId.Location = New System.Drawing.Point(136, 97)
+        Me.TextBoxUserId.MaxLength = 4
+        Me.TextBoxUserId.Name = "TextBoxUserId"
+        Me.TextBoxUserId.Size = New System.Drawing.Size(53, 20)
+        Me.TextBoxUserId.TabIndex = 85
+        '
+        'LabelPasswordStrengthNewUser
+        '
+        Me.LabelPasswordStrengthNewUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelPasswordStrengthNewUser.Location = New System.Drawing.Point(286, 69)
+        Me.LabelPasswordStrengthNewUser.Name = "LabelPasswordStrengthNewUser"
+        Me.LabelPasswordStrengthNewUser.Size = New System.Drawing.Size(142, 23)
+        Me.LabelPasswordStrengthNewUser.TabIndex = 88
+        Me.LabelPasswordStrengthNewUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LabelPasswordStrengthNewUser.Visible = False
+        '
+        'TabControl9
+        '
+        Me.TabControl9.Controls.Add(Me.TabPage21)
+        Me.TabControl9.Controls.Add(Me.TabPage22)
+        Me.TabControl9.Location = New System.Drawing.Point(28, 126)
+        Me.TabControl9.Name = "TabControl9"
+        Me.TabControl9.SelectedIndex = 0
+        Me.TabControl9.Size = New System.Drawing.Size(590, 290)
+        Me.TabControl9.TabIndex = 84
+        '
+        'TabPage21
+        '
+        Me.TabPage21.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage21.Controls.Add(Me.TextBoxAdUser)
+        Me.TabPage21.Controls.Add(Me.LabelAdUser)
+        Me.TabPage21.Controls.Add(Me.chkRevReceipt)
+        Me.TabPage21.Controls.Add(Me.chkAllowOverRideInterest)
+        Me.TabPage21.Controls.Add(Me.txtPostCode)
+        Me.TabPage21.Controls.Add(Me.chkAdmin)
+        Me.TabPage21.Controls.Add(Me.txtEmail)
+        Me.TabPage21.Controls.Add(Me.lblFirstName)
+        Me.TabPage21.Controls.Add(Me.Label41)
+        Me.TabPage21.Controls.Add(Me.Label42)
+        Me.TabPage21.Controls.Add(Me.txtLastName)
+        Me.TabPage21.Controls.Add(Me.txtTelephone)
+        Me.TabPage21.Controls.Add(Me.txtAddressLn1)
+        Me.TabPage21.Controls.Add(Me.cboProv)
+        Me.TabPage21.Controls.Add(Me.txtAddressLn2)
+        Me.TabPage21.Controls.Add(Me.cboAssignedRole)
+        Me.TabPage21.Controls.Add(Me.txtAddressLn3)
+        Me.TabPage21.Controls.Add(Me.lblLastName)
+        Me.TabPage21.Controls.Add(Me.txtFirstName)
+        Me.TabPage21.Controls.Add(Me.lblTelephone)
+        Me.TabPage21.Controls.Add(Me.lblProv)
+        Me.TabPage21.Controls.Add(Me.Label43)
+        Me.TabPage21.Controls.Add(Me.Label44)
+        Me.TabPage21.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage21.Name = "TabPage21"
+        Me.TabPage21.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage21.Size = New System.Drawing.Size(582, 264)
+        Me.TabPage21.TabIndex = 0
+        Me.TabPage21.Text = "Personal"
+        '
+        'TextBoxAdUser
+        '
+        Me.TextBoxAdUser.Location = New System.Drawing.Point(386, 15)
+        Me.TextBoxAdUser.Name = "TextBoxAdUser"
+        Me.TextBoxAdUser.Size = New System.Drawing.Size(181, 20)
+        Me.TextBoxAdUser.TabIndex = 96
+        '
+        'LabelAdUser
+        '
+        Me.LabelAdUser.AutoSize = True
+        Me.LabelAdUser.Location = New System.Drawing.Point(331, 18)
+        Me.LabelAdUser.Name = "LabelAdUser"
+        Me.LabelAdUser.Size = New System.Drawing.Size(47, 13)
+        Me.LabelAdUser.TabIndex = 95
+        Me.LabelAdUser.Text = "AD User"
+        '
+        'txtPostCode
+        '
+        Me.txtPostCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtPostCode.Location = New System.Drawing.Point(296, 134)
+        Me.txtPostCode.MaxLength = 6
+        Me.txtPostCode.Name = "txtPostCode"
+        Me.txtPostCode.Size = New System.Drawing.Size(72, 20)
+        Me.txtPostCode.TabIndex = 77
+        '
+        'chkAdmin
+        '
+        Me.chkAdmin.Location = New System.Drawing.Point(21, 234)
+        Me.chkAdmin.Name = "chkAdmin"
+        Me.chkAdmin.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkAdmin.Size = New System.Drawing.Size(120, 24)
+        Me.chkAdmin.TabIndex = 92
+        Me.chkAdmin.Text = "Administrator"
+        Me.chkAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'txtEmail
+        '
+        Me.txtEmail.Location = New System.Drawing.Point(122, 181)
+        Me.txtEmail.MaxLength = 500
+        Me.txtEmail.Name = "txtEmail"
+        Me.txtEmail.Size = New System.Drawing.Size(288, 20)
+        Me.txtEmail.TabIndex = 90
+        '
+        'lblFirstName
+        '
+        Me.lblFirstName.Location = New System.Drawing.Point(18, 15)
+        Me.lblFirstName.Name = "lblFirstName"
+        Me.lblFirstName.Size = New System.Drawing.Size(64, 20)
+        Me.lblFirstName.TabIndex = 82
+        Me.lblFirstName.Text = "First Name:"
+        Me.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label41
+        '
+        Me.Label41.Location = New System.Drawing.Point(18, 185)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(56, 20)
+        Me.Label41.TabIndex = 91
+        Me.Label41.Text = "Email:"
+        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label42
+        '
+        Me.Label42.Location = New System.Drawing.Point(18, 63)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(56, 20)
+        Me.Label42.TabIndex = 83
+        Me.Label42.Text = "Address:"
+        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtLastName
+        '
+        Me.txtLastName.Location = New System.Drawing.Point(122, 37)
+        Me.txtLastName.MaxLength = 15
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(144, 20)
+        Me.txtLastName.TabIndex = 72
+        '
+        'txtTelephone
+        '
+        Me.txtTelephone.Location = New System.Drawing.Point(122, 156)
+        Me.txtTelephone.MaxLength = 10
+        Me.txtTelephone.Name = "txtTelephone"
+        Me.txtTelephone.Size = New System.Drawing.Size(100, 20)
+        Me.txtTelephone.TabIndex = 78
+        '
+        'txtAddressLn1
+        '
+        Me.txtAddressLn1.Location = New System.Drawing.Point(122, 63)
+        Me.txtAddressLn1.MaxLength = 30
+        Me.txtAddressLn1.Name = "txtAddressLn1"
+        Me.txtAddressLn1.Size = New System.Drawing.Size(208, 20)
+        Me.txtAddressLn1.TabIndex = 73
+        '
+        'cboProv
+        '
+        Me.cboProv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboProv.Location = New System.Drawing.Point(122, 134)
+        Me.cboProv.Name = "cboProv"
+        Me.cboProv.Size = New System.Drawing.Size(48, 21)
+        Me.cboProv.TabIndex = 76
+        '
+        'txtAddressLn2
+        '
+        Me.txtAddressLn2.Location = New System.Drawing.Point(122, 86)
+        Me.txtAddressLn2.MaxLength = 30
+        Me.txtAddressLn2.Name = "txtAddressLn2"
+        Me.txtAddressLn2.Size = New System.Drawing.Size(208, 20)
+        Me.txtAddressLn2.TabIndex = 74
+        '
+        'cboAssignedRole
+        '
+        Me.cboAssignedRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboAssignedRole.Location = New System.Drawing.Point(122, 205)
+        Me.cboAssignedRole.Name = "cboAssignedRole"
+        Me.cboAssignedRole.Size = New System.Drawing.Size(184, 21)
+        Me.cboAssignedRole.TabIndex = 79
+        '
+        'txtAddressLn3
+        '
+        Me.txtAddressLn3.Location = New System.Drawing.Point(122, 109)
+        Me.txtAddressLn3.MaxLength = 30
+        Me.txtAddressLn3.Name = "txtAddressLn3"
+        Me.txtAddressLn3.Size = New System.Drawing.Size(208, 20)
+        Me.txtAddressLn3.TabIndex = 75
+        '
+        'lblLastName
+        '
+        Me.lblLastName.Location = New System.Drawing.Point(18, 39)
+        Me.lblLastName.Name = "lblLastName"
+        Me.lblLastName.Size = New System.Drawing.Size(72, 23)
+        Me.lblLastName.TabIndex = 87
+        Me.lblLastName.Text = "Last Name:"
+        Me.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtFirstName
+        '
+        Me.txtFirstName.Location = New System.Drawing.Point(122, 15)
+        Me.txtFirstName.MaxLength = 30
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(144, 20)
+        Me.txtFirstName.TabIndex = 71
+        '
+        'lblTelephone
+        '
+        Me.lblTelephone.Location = New System.Drawing.Point(18, 154)
+        Me.lblTelephone.Name = "lblTelephone"
+        Me.lblTelephone.Size = New System.Drawing.Size(80, 23)
+        Me.lblTelephone.TabIndex = 86
+        Me.lblTelephone.Text = "Telephone:"
+        Me.lblTelephone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblProv
+        '
+        Me.lblProv.Location = New System.Drawing.Point(18, 134)
+        Me.lblProv.Name = "lblProv"
+        Me.lblProv.Size = New System.Drawing.Size(64, 23)
+        Me.lblProv.TabIndex = 85
+        Me.lblProv.Text = "Prov/State:"
+        Me.lblProv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label43
+        '
+        Me.Label43.Location = New System.Drawing.Point(18, 203)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(64, 23)
+        Me.Label43.TabIndex = 81
+        Me.Label43.Text = "Member of:"
+        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label44
+        '
+        Me.Label44.Location = New System.Drawing.Point(202, 132)
+        Me.Label44.Name = "Label44"
+        Me.Label44.Size = New System.Drawing.Size(88, 20)
+        Me.Label44.TabIndex = 84
+        Me.Label44.Text = "Postal/Zip Code:"
+        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'TabPage22
+        '
+        Me.TabPage22.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage22.Controls.Add(Me.dgvAccountable)
+        Me.TabPage22.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage22.Name = "TabPage22"
+        Me.TabPage22.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage22.Size = New System.Drawing.Size(582, 264)
+        Me.TabPage22.TabIndex = 1
+        Me.TabPage22.Text = "Accountable"
+        '
+        'dgvAccountable
+        '
+        Me.dgvAccountable.AllowUserToAddRows = False
+        Me.dgvAccountable.AllowUserToDeleteRows = False
+        Me.dgvAccountable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvAccountable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Code, Me.desc, Me.include})
+        Me.dgvAccountable.Location = New System.Drawing.Point(8, 6)
+        Me.dgvAccountable.Name = "dgvAccountable"
+        Me.dgvAccountable.Size = New System.Drawing.Size(429, 234)
+        Me.dgvAccountable.TabIndex = 0
+        '
+        'Code
+        '
+        Me.Code.DataPropertyName = "Code"
+        Me.Code.HeaderText = "Code"
+        Me.Code.Name = "Code"
+        Me.Code.ReadOnly = True
+        '
+        'desc
+        '
+        Me.desc.DataPropertyName = "desc"
+        Me.desc.HeaderText = "Description"
+        Me.desc.MinimumWidth = 30
+        Me.desc.Name = "desc"
+        Me.desc.ReadOnly = True
+        '
+        'include
+        '
+        Me.include.DataPropertyName = "include"
+        Me.include.HeaderText = "Include"
+        Me.include.Name = "include"
+        '
+        'Label46
+        '
+        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label46.ForeColor = System.Drawing.Color.Red
+        Me.Label46.Location = New System.Drawing.Point(24, 72)
+        Me.Label46.Name = "Label46"
+        Me.Label46.Size = New System.Drawing.Size(8, 23)
+        Me.Label46.TabIndex = 73
+        Me.Label46.Text = "*"
+        Me.Label46.Visible = False
+        '
+        'lblAppManager
+        '
+        Me.lblAppManager.Location = New System.Drawing.Point(32, 95)
+        Me.lblAppManager.Name = "lblAppManager"
+        Me.lblAppManager.Size = New System.Drawing.Size(100, 23)
+        Me.lblAppManager.TabIndex = 72
+        Me.lblAppManager.Text = "Approve Manager:"
+        Me.lblAppManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblConfirmPassword
+        '
+        Me.lblConfirmPassword.Location = New System.Drawing.Point(32, 72)
+        Me.lblConfirmPassword.Name = "lblConfirmPassword"
+        Me.lblConfirmPassword.Size = New System.Drawing.Size(100, 23)
+        Me.lblConfirmPassword.TabIndex = 72
+        Me.lblConfirmPassword.Text = "Confirm Password:"
+        Me.lblConfirmPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblConfirmPassword.Visible = False
+        '
+        'txtConfrimPassword
+        '
+        Me.txtConfrimPassword.Location = New System.Drawing.Point(136, 72)
+        Me.txtConfrimPassword.Name = "txtConfrimPassword"
+        Me.txtConfrimPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtConfrimPassword.Size = New System.Drawing.Size(144, 20)
+        Me.txtConfrimPassword.TabIndex = 10
+        Me.txtConfrimPassword.Visible = False
+        '
+        'Label47
+        '
+        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label47.ForeColor = System.Drawing.Color.Red
+        Me.Label47.Location = New System.Drawing.Point(24, 48)
+        Me.Label47.Name = "Label47"
+        Me.Label47.Size = New System.Drawing.Size(8, 23)
+        Me.Label47.TabIndex = 68
+        Me.Label47.Text = "*"
+        Me.Label47.Visible = False
+        '
+        'Label48
+        '
+        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label48.ForeColor = System.Drawing.Color.Red
+        Me.Label48.Location = New System.Drawing.Point(24, 24)
+        Me.Label48.Name = "Label48"
+        Me.Label48.Size = New System.Drawing.Size(8, 23)
+        Me.Label48.TabIndex = 67
+        Me.Label48.Text = "*"
+        '
+        'lblPassword
+        '
+        Me.lblPassword.Location = New System.Drawing.Point(32, 48)
+        Me.lblPassword.Name = "lblPassword"
+        Me.lblPassword.Size = New System.Drawing.Size(64, 23)
+        Me.lblPassword.TabIndex = 59
+        Me.lblPassword.Text = "Password:"
+        Me.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lblPassword.Visible = False
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(136, 48)
+        Me.txtPassword.MaxLength = 40
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtPassword.Size = New System.Drawing.Size(144, 20)
+        Me.txtPassword.TabIndex = 9
+        Me.txtPassword.Visible = False
+        '
+        'txtLoginID
+        '
+        Me.txtLoginID.Enabled = False
+        Me.txtLoginID.Location = New System.Drawing.Point(136, 24)
+        Me.txtLoginID.MaxLength = 30
+        Me.txtLoginID.Name = "txtLoginID"
+        Me.txtLoginID.Size = New System.Drawing.Size(144, 20)
+        Me.txtLoginID.TabIndex = 8
+        '
+        'Label66
+        '
+        Me.Label66.Location = New System.Drawing.Point(32, 24)
+        Me.Label66.Name = "Label66"
+        Me.Label66.Size = New System.Drawing.Size(56, 20)
+        Me.Label66.TabIndex = 48
+        Me.Label66.Text = "Login ID:"
+        Me.Label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'chkUserActive
+        '
+        Me.chkUserActive.Location = New System.Drawing.Point(441, 13)
+        Me.chkUserActive.Name = "chkUserActive"
+        Me.chkUserActive.Size = New System.Drawing.Size(96, 16)
+        Me.chkUserActive.TabIndex = 80
+        Me.chkUserActive.Text = "Active User"
+        '
+        'GroupBox21
+        '
+        Me.GroupBox21.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox21.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox21.Controls.Add(Me.lstSystemUsers)
+        Me.GroupBox21.Controls.Add(Me.btnCancelUserAction)
+        Me.GroupBox21.Controls.Add(Me.btnResetPwd)
+        Me.GroupBox21.Controls.Add(Me.btnAdd)
+        Me.GroupBox21.Controls.Add(Me.Button1)
+        Me.GroupBox21.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.GroupBox21.Location = New System.Drawing.Point(8, 8)
+        Me.GroupBox21.Name = "GroupBox21"
+        Me.GroupBox21.Size = New System.Drawing.Size(216, 449)
+        Me.GroupBox21.TabIndex = 1
+        Me.GroupBox21.TabStop = False
+        Me.GroupBox21.Text = "User List"
+        '
+        'lstSystemUsers
+        '
+        Me.lstSystemUsers.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.lstSystemUsers.Location = New System.Drawing.Point(8, 16)
+        Me.lstSystemUsers.Name = "lstSystemUsers"
+        Me.lstSystemUsers.Size = New System.Drawing.Size(200, 264)
+        Me.lstSystemUsers.TabIndex = 7
+        '
+        'btnCancelUserAction
+        '
+        Me.btnCancelUserAction.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelUserAction.Enabled = False
+        Me.btnCancelUserAction.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnCancelUserAction.Location = New System.Drawing.Point(16, 402)
+        Me.btnCancelUserAction.Name = "btnCancelUserAction"
+        Me.btnCancelUserAction.Size = New System.Drawing.Size(184, 23)
+        Me.btnCancelUserAction.TabIndex = 6
+        Me.btnCancelUserAction.Text = "&Cancel"
+        '
+        'btnResetPwd
+        '
+        Me.btnResetPwd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnResetPwd.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnResetPwd.Location = New System.Drawing.Point(16, 369)
+        Me.btnResetPwd.Name = "btnResetPwd"
+        Me.btnResetPwd.Size = New System.Drawing.Size(184, 23)
+        Me.btnResetPwd.TabIndex = 5
+        Me.btnResetPwd.Text = "&Reset Password"
+        '
+        'btnAdd
+        '
+        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnAdd.Location = New System.Drawing.Point(16, 305)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(184, 23)
+        Me.btnAdd.TabIndex = 3
+        Me.btnAdd.Text = "&Add User"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.Button1.Location = New System.Drawing.Point(16, 337)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(184, 23)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "&Save"
+        '
+        'tabRoles
+        '
+        Me.tabRoles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tabRoles.Controls.Add(Me.Panel5)
+        Me.tabRoles.Controls.Add(Me.TreeView1)
+        Me.tabRoles.Location = New System.Drawing.Point(4, 22)
+        Me.tabRoles.Name = "tabRoles"
+        Me.tabRoles.Size = New System.Drawing.Size(913, 486)
+        Me.tabRoles.TabIndex = 1
+        Me.tabRoles.Text = "Roles"
+        '
+        'Panel5
+        '
+        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Panel5.Controls.Add(Me.gpbRoles)
+        Me.Panel5.Location = New System.Drawing.Point(0, 0)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(512, 430)
+        Me.Panel5.TabIndex = 29
+        '
+        'gpbRoles
+        '
+        Me.gpbRoles.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.gpbRoles.BackColor = System.Drawing.SystemColors.Control
+        Me.gpbRoles.Controls.Add(Me.cboRoles)
+        Me.gpbRoles.Controls.Add(Me.btnCancelRoleAction)
+        Me.gpbRoles.Controls.Add(Me.gpbRestrictDataUpdate)
+        Me.gpbRoles.Controls.Add(Me.Label67)
+        Me.gpbRoles.Controls.Add(Me.txtRoleMemo)
+        Me.gpbRoles.Controls.Add(Me.Label68)
+        Me.gpbRoles.Controls.Add(Me.Label69)
+        Me.gpbRoles.Controls.Add(Me.btnAddRole)
+        Me.gpbRoles.Controls.Add(Me.btnSaveRole)
+        Me.gpbRoles.Controls.Add(Me.gpbRoleUserInfo)
+        Me.gpbRoles.Controls.Add(Me.chkPrivacyAct)
+        Me.gpbRoles.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.gpbRoles.Location = New System.Drawing.Point(8, 8)
+        Me.gpbRoles.Name = "gpbRoles"
+        Me.gpbRoles.Size = New System.Drawing.Size(496, 400)
+        Me.gpbRoles.TabIndex = 0
+        Me.gpbRoles.TabStop = False
+        '
+        'cboRoles
+        '
+        Me.cboRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboRoles.Location = New System.Drawing.Point(73, 16)
+        Me.cboRoles.MaxLength = 30
+        Me.cboRoles.Name = "cboRoles"
+        Me.cboRoles.Size = New System.Drawing.Size(216, 21)
+        Me.cboRoles.TabIndex = 390
+        '
+        'btnCancelRoleAction
+        '
+        Me.btnCancelRoleAction.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelRoleAction.BackColor = System.Drawing.SystemColors.Control
+        Me.btnCancelRoleAction.Enabled = False
+        Me.btnCancelRoleAction.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnCancelRoleAction.Location = New System.Drawing.Point(415, 368)
+        Me.btnCancelRoleAction.Name = "btnCancelRoleAction"
+        Me.btnCancelRoleAction.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancelRoleAction.TabIndex = 388
+        Me.btnCancelRoleAction.Text = "&Cancel"
+        Me.btnCancelRoleAction.UseVisualStyleBackColor = False
+        '
+        'gpbRestrictDataUpdate
+        '
+        Me.gpbRestrictDataUpdate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gpbRestrictDataUpdate.BackColor = System.Drawing.SystemColors.Control
+        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkBLResUpdate)
+        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkBKResUpdate)
+        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkPOResUpdate)
+        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkAPResUpdate)
+        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkARResUpdate)
+        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkPRResUpdate)
+        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkGLResUpdate)
+        Me.gpbRestrictDataUpdate.Location = New System.Drawing.Point(7, 104)
+        Me.gpbRestrictDataUpdate.Name = "gpbRestrictDataUpdate"
+        Me.gpbRestrictDataUpdate.Size = New System.Drawing.Size(484, 80)
+        Me.gpbRestrictDataUpdate.TabIndex = 385
+        Me.gpbRestrictDataUpdate.TabStop = False
+        Me.gpbRestrictDataUpdate.Text = "Master Records Display Only"
+        Me.gpbRestrictDataUpdate.Visible = False
+        '
+        'chkBLResUpdate
+        '
+        Me.chkBLResUpdate.Location = New System.Drawing.Point(136, 48)
+        Me.chkBLResUpdate.Name = "chkBLResUpdate"
+        Me.chkBLResUpdate.Size = New System.Drawing.Size(104, 16)
+        Me.chkBLResUpdate.TabIndex = 39
+        Me.chkBLResUpdate.Text = "Billing"
+        '
+        'chkBKResUpdate
+        '
+        Me.chkBKResUpdate.Location = New System.Drawing.Point(272, 24)
+        Me.chkBKResUpdate.Name = "chkBKResUpdate"
+        Me.chkBKResUpdate.Size = New System.Drawing.Size(104, 16)
+        Me.chkBKResUpdate.TabIndex = 40
+        Me.chkBKResUpdate.Text = "Banking"
+        '
+        'chkPOResUpdate
+        '
+        Me.chkPOResUpdate.Location = New System.Drawing.Point(16, 24)
+        Me.chkPOResUpdate.Name = "chkPOResUpdate"
+        Me.chkPOResUpdate.Size = New System.Drawing.Size(104, 16)
+        Me.chkPOResUpdate.TabIndex = 366
+        Me.chkPOResUpdate.Text = "Purchase Order"
+        '
+        'chkAPResUpdate
+        '
+        Me.chkAPResUpdate.Location = New System.Drawing.Point(16, 48)
+        Me.chkAPResUpdate.Name = "chkAPResUpdate"
+        Me.chkAPResUpdate.Size = New System.Drawing.Size(120, 16)
+        Me.chkAPResUpdate.TabIndex = 37
+        Me.chkAPResUpdate.Text = "Accounts Payable"
+        '
+        'chkARResUpdate
+        '
+        Me.chkARResUpdate.Location = New System.Drawing.Point(136, 24)
+        Me.chkARResUpdate.Name = "chkARResUpdate"
+        Me.chkARResUpdate.Size = New System.Drawing.Size(136, 16)
+        Me.chkARResUpdate.TabIndex = 38
+        Me.chkARResUpdate.Text = "Accounts Receivable"
+        '
+        'chkPRResUpdate
+        '
+        Me.chkPRResUpdate.Location = New System.Drawing.Point(384, 24)
+        Me.chkPRResUpdate.Name = "chkPRResUpdate"
+        Me.chkPRResUpdate.Size = New System.Drawing.Size(64, 16)
+        Me.chkPRResUpdate.TabIndex = 42
+        Me.chkPRResUpdate.Text = "Payroll"
+        '
+        'chkGLResUpdate
+        '
+        Me.chkGLResUpdate.Location = New System.Drawing.Point(272, 48)
+        Me.chkGLResUpdate.Name = "chkGLResUpdate"
+        Me.chkGLResUpdate.Size = New System.Drawing.Size(104, 16)
+        Me.chkGLResUpdate.TabIndex = 41
+        Me.chkGLResUpdate.Text = "General Ledger"
+        '
+        'Label67
+        '
+        Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label67.ForeColor = System.Drawing.Color.Red
+        Me.Label67.Location = New System.Drawing.Point(5, 8)
+        Me.Label67.Name = "Label67"
+        Me.Label67.Size = New System.Drawing.Size(8, 16)
+        Me.Label67.TabIndex = 384
+        Me.Label67.Text = "*"
+        '
+        'txtRoleMemo
+        '
+        Me.txtRoleMemo.Location = New System.Drawing.Point(73, 40)
+        Me.txtRoleMemo.Multiline = True
+        Me.txtRoleMemo.Name = "txtRoleMemo"
+        Me.txtRoleMemo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
+        Me.txtRoleMemo.Size = New System.Drawing.Size(408, 56)
+        Me.txtRoleMemo.TabIndex = 383
+        '
+        'Label68
+        '
+        Me.Label68.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label68.Location = New System.Drawing.Point(17, 40)
+        Me.Label68.Name = "Label68"
+        Me.Label68.Size = New System.Drawing.Size(40, 20)
+        Me.Label68.TabIndex = 381
+        Me.Label68.Text = "Memo:"
+        Me.Label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label69
+        '
+        Me.Label69.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Label69.Location = New System.Drawing.Point(17, 16)
+        Me.Label69.Name = "Label69"
+        Me.Label69.Size = New System.Drawing.Size(48, 20)
+        Me.Label69.TabIndex = 380
+        Me.Label69.Text = "Role ID:"
+        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnAddRole
+        '
+        Me.btnAddRole.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnAddRole.BackColor = System.Drawing.SystemColors.Control
+        Me.btnAddRole.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnAddRole.Location = New System.Drawing.Point(253, 368)
+        Me.btnAddRole.Name = "btnAddRole"
+        Me.btnAddRole.Size = New System.Drawing.Size(75, 23)
+        Me.btnAddRole.TabIndex = 387
+        Me.btnAddRole.Text = "&Add Role"
+        Me.btnAddRole.UseVisualStyleBackColor = False
+        '
+        'btnSaveRole
+        '
+        Me.btnSaveRole.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSaveRole.BackColor = System.Drawing.SystemColors.Control
+        Me.btnSaveRole.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnSaveRole.Location = New System.Drawing.Point(334, 368)
+        Me.btnSaveRole.Name = "btnSaveRole"
+        Me.btnSaveRole.Size = New System.Drawing.Size(75, 23)
+        Me.btnSaveRole.TabIndex = 386
+        Me.btnSaveRole.Text = "&Save Role"
+        Me.btnSaveRole.UseVisualStyleBackColor = False
+        '
+        'gpbRoleUserInfo
+        '
+        Me.gpbRoleUserInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.gpbRoleUserInfo.BackColor = System.Drawing.SystemColors.Control
+        Me.gpbRoleUserInfo.Controls.Add(Me.btnAddUserToRole)
+        Me.gpbRoleUserInfo.Controls.Add(Me.Label70)
+        Me.gpbRoleUserInfo.Controls.Add(Me.Label71)
+        Me.gpbRoleUserInfo.Controls.Add(Me.lstRoleMembers)
+        Me.gpbRoleUserInfo.Controls.Add(Me.lstAvailUsers)
+        Me.gpbRoleUserInfo.Location = New System.Drawing.Point(7, 192)
+        Me.gpbRoleUserInfo.Name = "gpbRoleUserInfo"
+        Me.gpbRoleUserInfo.Size = New System.Drawing.Size(484, 168)
+        Me.gpbRoleUserInfo.TabIndex = 379
+        Me.gpbRoleUserInfo.TabStop = False
+        Me.gpbRoleUserInfo.Text = "View && Assign Role Members"
+        '
+        'btnAddUserToRole
+        '
+        Me.btnAddUserToRole.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnAddUserToRole.Location = New System.Drawing.Point(200, 80)
+        Me.btnAddUserToRole.Name = "btnAddUserToRole"
+        Me.btnAddUserToRole.Size = New System.Drawing.Size(56, 23)
+        Me.btnAddUserToRole.TabIndex = 37
+        Me.btnAddUserToRole.Text = ">>"
+        '
+        'Label70
+        '
+        Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label70.Location = New System.Drawing.Point(276, 24)
+        Me.Label70.Name = "Label70"
+        Me.Label70.Size = New System.Drawing.Size(140, 16)
+        Me.Label70.TabIndex = 36
+        Me.Label70.Text = "Members of Current Role:"
+        Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'Label71
+        '
+        Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label71.Location = New System.Drawing.Point(24, 16)
+        Me.Label71.Name = "Label71"
+        Me.Label71.Size = New System.Drawing.Size(208, 16)
+        Me.Label71.TabIndex = 35
+        Me.Label71.Text = "TownSuite Users:"
+        Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lstRoleMembers
+        '
+        Me.lstRoleMembers.Location = New System.Drawing.Point(276, 40)
+        Me.lstRoleMembers.Name = "lstRoleMembers"
+        Me.lstRoleMembers.Size = New System.Drawing.Size(164, 108)
+        Me.lstRoleMembers.TabIndex = 33
+        '
+        'lstAvailUsers
+        '
+        Me.lstAvailUsers.Location = New System.Drawing.Point(16, 40)
+        Me.lstAvailUsers.Name = "lstAvailUsers"
+        Me.lstAvailUsers.Size = New System.Drawing.Size(164, 108)
+        Me.lstAvailUsers.TabIndex = 0
+        '
+        'chkPrivacyAct
+        '
+        Me.chkPrivacyAct.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.chkPrivacyAct.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.chkPrivacyAct.Location = New System.Drawing.Point(29, 368)
+        Me.chkPrivacyAct.Name = "chkPrivacyAct"
+        Me.chkPrivacyAct.Size = New System.Drawing.Size(88, 24)
+        Me.chkPrivacyAct.TabIndex = 389
+        Me.chkPrivacyAct.Text = "&Privacy Act"
+        '
+        'TreeView1
+        '
+        Me.TreeView1.AllowDrop = True
+        Me.TreeView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TreeView1.BackColor = System.Drawing.SystemColors.Window
+        Me.TreeView1.CheckBoxes = True
+        Me.TreeView1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.TreeView1.FullRowSelect = True
+        Me.TreeView1.HotTracking = True
+        Me.TreeView1.Location = New System.Drawing.Point(512, 0)
+        Me.TreeView1.Name = "TreeView1"
+        Me.TreeView1.Size = New System.Drawing.Size(240, 430)
+        Me.TreeView1.TabIndex = 28
+        '
+        'tpgChangePwd
+        '
+        Me.tpgChangePwd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tpgChangePwd.Controls.Add(Me.Panel2)
+        Me.tpgChangePwd.Location = New System.Drawing.Point(4, 22)
+        Me.tpgChangePwd.Name = "tpgChangePwd"
+        Me.tpgChangePwd.Size = New System.Drawing.Size(913, 486)
+        Me.tpgChangePwd.TabIndex = 2
+        Me.tpgChangePwd.Text = "Change Password"
+        '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.gpbChangePwd)
+        Me.Panel2.Location = New System.Drawing.Point(15, 11)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(688, 394)
+        Me.Panel2.TabIndex = 1
+        '
+        'gpbChangePwd
+        '
+        Me.gpbChangePwd.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gpbChangePwd.BackColor = System.Drawing.SystemColors.Control
+        Me.gpbChangePwd.Controls.Add(Me.LabelPasswordStrength)
+        Me.gpbChangePwd.Controls.Add(Me.Label72)
+        Me.gpbChangePwd.Controls.Add(Me.Label73)
+        Me.gpbChangePwd.Controls.Add(Me.Label74)
+        Me.gpbChangePwd.Controls.Add(Me.lblLoginIDValue)
+        Me.gpbChangePwd.Controls.Add(Me.lblLoginId)
+        Me.gpbChangePwd.Controls.Add(Me.btnSavePwd)
+        Me.gpbChangePwd.Controls.Add(Me.lblConfirmNewPwd)
+        Me.gpbChangePwd.Controls.Add(Me.lblNewPwd)
+        Me.gpbChangePwd.Controls.Add(Me.lblOldPwd)
+        Me.gpbChangePwd.Controls.Add(Me.txtConfirmNewPwd)
+        Me.gpbChangePwd.Controls.Add(Me.txtNewPwd)
+        Me.gpbChangePwd.Controls.Add(Me.txtOldPwd)
+        Me.gpbChangePwd.Location = New System.Drawing.Point(8, 8)
+        Me.gpbChangePwd.Name = "gpbChangePwd"
+        Me.gpbChangePwd.Size = New System.Drawing.Size(672, 376)
+        Me.gpbChangePwd.TabIndex = 0
+        Me.gpbChangePwd.TabStop = False
+        '
+        'LabelPasswordStrength
+        '
+        Me.LabelPasswordStrength.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LabelPasswordStrength.Location = New System.Drawing.Point(515, 126)
+        Me.LabelPasswordStrength.Name = "LabelPasswordStrength"
+        Me.LabelPasswordStrength.Size = New System.Drawing.Size(142, 23)
+        Me.LabelPasswordStrength.TabIndex = 89
+        Me.LabelPasswordStrength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.LabelPasswordStrength.Visible = False
+        '
+        'Label72
+        '
+        Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label72.ForeColor = System.Drawing.Color.Red
+        Me.Label72.Location = New System.Drawing.Point(176, 129)
+        Me.Label72.Name = "Label72"
+        Me.Label72.Size = New System.Drawing.Size(8, 23)
+        Me.Label72.TabIndex = 82
+        Me.Label72.Text = "*"
+        '
+        'Label73
+        '
+        Me.Label73.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label73.ForeColor = System.Drawing.Color.Red
+        Me.Label73.Location = New System.Drawing.Point(176, 97)
+        Me.Label73.Name = "Label73"
+        Me.Label73.Size = New System.Drawing.Size(8, 23)
+        Me.Label73.TabIndex = 81
+        Me.Label73.Text = "*"
+        '
+        'Label74
+        '
+        Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label74.ForeColor = System.Drawing.Color.Red
+        Me.Label74.Location = New System.Drawing.Point(176, 161)
+        Me.Label74.Name = "Label74"
+        Me.Label74.Size = New System.Drawing.Size(8, 23)
+        Me.Label74.TabIndex = 80
+        Me.Label74.Text = "*"
+        '
+        'lblLoginIDValue
+        '
+        Me.lblLoginIDValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.lblLoginIDValue.Location = New System.Drawing.Point(328, 57)
+        Me.lblLoginIDValue.Name = "lblLoginIDValue"
+        Me.lblLoginIDValue.Size = New System.Drawing.Size(168, 20)
+        Me.lblLoginIDValue.TabIndex = 79
+        Me.lblLoginIDValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblLoginId
+        '
+        Me.lblLoginId.Location = New System.Drawing.Point(184, 57)
+        Me.lblLoginId.Name = "lblLoginId"
+        Me.lblLoginId.Size = New System.Drawing.Size(100, 23)
+        Me.lblLoginId.TabIndex = 78
+        Me.lblLoginId.Text = "Login ID:"
+        Me.lblLoginId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnSavePwd
+        '
+        Me.btnSavePwd.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnSavePwd.Location = New System.Drawing.Point(400, 201)
+        Me.btnSavePwd.Name = "btnSavePwd"
+        Me.btnSavePwd.Size = New System.Drawing.Size(96, 23)
+        Me.btnSavePwd.TabIndex = 74
+        Me.btnSavePwd.Text = "&Save Password"
+        '
+        'lblConfirmNewPwd
+        '
+        Me.lblConfirmNewPwd.Location = New System.Drawing.Point(184, 161)
+        Me.lblConfirmNewPwd.Name = "lblConfirmNewPwd"
+        Me.lblConfirmNewPwd.Size = New System.Drawing.Size(128, 23)
+        Me.lblConfirmNewPwd.TabIndex = 76
+        Me.lblConfirmNewPwd.Text = "Confirm New Password:"
+        Me.lblConfirmNewPwd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblNewPwd
+        '
+        Me.lblNewPwd.Location = New System.Drawing.Point(184, 129)
+        Me.lblNewPwd.Name = "lblNewPwd"
+        Me.lblNewPwd.Size = New System.Drawing.Size(128, 23)
+        Me.lblNewPwd.TabIndex = 75
+        Me.lblNewPwd.Text = "New Password:"
+        Me.lblNewPwd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblOldPwd
+        '
+        Me.lblOldPwd.Location = New System.Drawing.Point(184, 97)
+        Me.lblOldPwd.Name = "lblOldPwd"
+        Me.lblOldPwd.Size = New System.Drawing.Size(128, 23)
+        Me.lblOldPwd.TabIndex = 74
+        Me.lblOldPwd.Text = "Old Password:"
+        Me.lblOldPwd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'txtConfirmNewPwd
+        '
+        Me.txtConfirmNewPwd.Location = New System.Drawing.Point(328, 161)
+        Me.txtConfirmNewPwd.Name = "txtConfirmNewPwd"
+        Me.txtConfirmNewPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtConfirmNewPwd.Size = New System.Drawing.Size(168, 20)
+        Me.txtConfirmNewPwd.TabIndex = 73
+        '
+        'txtNewPwd
+        '
+        Me.txtNewPwd.Location = New System.Drawing.Point(328, 129)
+        Me.txtNewPwd.Name = "txtNewPwd"
+        Me.txtNewPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtNewPwd.Size = New System.Drawing.Size(168, 20)
+        Me.txtNewPwd.TabIndex = 72
+        '
+        'txtOldPwd
+        '
+        Me.txtOldPwd.Location = New System.Drawing.Point(328, 97)
+        Me.txtOldPwd.Name = "txtOldPwd"
+        Me.txtOldPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtOldPwd.Size = New System.Drawing.Size(168, 20)
+        Me.txtOldPwd.TabIndex = 71
+        '
+        'tpgPrinters
+        '
+        Me.tpgPrinters.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.tpgPrinters.Controls.Add(Me.Panel4)
+        Me.tpgPrinters.Location = New System.Drawing.Point(4, 22)
+        Me.tpgPrinters.Name = "tpgPrinters"
+        Me.tpgPrinters.Size = New System.Drawing.Size(913, 486)
+        Me.tpgPrinters.TabIndex = 3
+        Me.tpgPrinters.Text = "Printers"
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
+        Me.Panel4.Controls.Add(Me.gpbUserPrinters)
+        Me.Panel4.Location = New System.Drawing.Point(15, 11)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(688, 394)
+        Me.Panel4.TabIndex = 0
+        '
+        'gpbUserPrinters
+        '
+        Me.gpbUserPrinters.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.gpbUserPrinters.BackColor = System.Drawing.SystemColors.Control
+        Me.gpbUserPrinters.Controls.Add(Me.cboChequesPrinter)
+        Me.gpbUserPrinters.Controls.Add(Me.cboReceiptPrinter)
+        Me.gpbUserPrinters.Controls.Add(Me.cboReportPrinter)
+        Me.gpbUserPrinters.Controls.Add(Me.lblCheques)
+        Me.gpbUserPrinters.Controls.Add(Me.lblReceipts)
+        Me.gpbUserPrinters.Controls.Add(Me.lblReports)
+        Me.gpbUserPrinters.Controls.Add(Me.btnSavePrinterInfo)
+        Me.gpbUserPrinters.Location = New System.Drawing.Point(8, 8)
+        Me.gpbUserPrinters.Name = "gpbUserPrinters"
+        Me.gpbUserPrinters.Size = New System.Drawing.Size(672, 376)
+        Me.gpbUserPrinters.TabIndex = 0
+        Me.gpbUserPrinters.TabStop = False
+        Me.gpbUserPrinters.Text = "Default Printer Setup"
+        '
+        'cboChequesPrinter
+        '
+        Me.cboChequesPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboChequesPrinter.Location = New System.Drawing.Point(88, 144)
+        Me.cboChequesPrinter.Name = "cboChequesPrinter"
+        Me.cboChequesPrinter.Size = New System.Drawing.Size(552, 21)
+        Me.cboChequesPrinter.TabIndex = 11
+        '
+        'cboReceiptPrinter
+        '
+        Me.cboReceiptPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboReceiptPrinter.Location = New System.Drawing.Point(88, 96)
+        Me.cboReceiptPrinter.Name = "cboReceiptPrinter"
+        Me.cboReceiptPrinter.Size = New System.Drawing.Size(552, 21)
+        Me.cboReceiptPrinter.TabIndex = 10
+        '
+        'cboReportPrinter
+        '
+        Me.cboReportPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboReportPrinter.Location = New System.Drawing.Point(88, 48)
+        Me.cboReportPrinter.Name = "cboReportPrinter"
+        Me.cboReportPrinter.Size = New System.Drawing.Size(552, 21)
+        Me.cboReportPrinter.TabIndex = 9
+        '
+        'lblCheques
+        '
+        Me.lblCheques.Location = New System.Drawing.Point(32, 144)
+        Me.lblCheques.Name = "lblCheques"
+        Me.lblCheques.Size = New System.Drawing.Size(72, 23)
+        Me.lblCheques.TabIndex = 2
+        Me.lblCheques.Text = "Cheques:"
+        Me.lblCheques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblReceipts
+        '
+        Me.lblReceipts.Location = New System.Drawing.Point(32, 96)
+        Me.lblReceipts.Name = "lblReceipts"
+        Me.lblReceipts.Size = New System.Drawing.Size(72, 23)
+        Me.lblReceipts.TabIndex = 1
+        Me.lblReceipts.Text = "Receipts:"
+        Me.lblReceipts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lblReports
+        '
+        Me.lblReports.Location = New System.Drawing.Point(32, 48)
+        Me.lblReports.Name = "lblReports"
+        Me.lblReports.Size = New System.Drawing.Size(72, 23)
+        Me.lblReports.TabIndex = 0
+        Me.lblReports.Text = "Reports:"
+        Me.lblReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'btnSavePrinterInfo
+        '
+        Me.btnSavePrinterInfo.FlatStyle = System.Windows.Forms.FlatStyle.System
+        Me.btnSavePrinterInfo.Location = New System.Drawing.Point(520, 176)
+        Me.btnSavePrinterInfo.Name = "btnSavePrinterInfo"
+        Me.btnSavePrinterInfo.Size = New System.Drawing.Size(120, 23)
+        Me.btnSavePrinterInfo.TabIndex = 1
+        Me.btnSavePrinterInfo.Text = "&Save Printer Defaults"
+        '
         'TabPage18
         '
         Me.TabPage18.Controls.Add(Me.GroupBox2)
@@ -3299,173 +4398,16 @@ Partial Class frmSettings
         Me.TabPage19.Text = "Employee Notification"
         Me.TabPage19.UseVisualStyleBackColor = True
         '
-        'TabControl8
+        'chkAllowOverRideInterest
         '
-        Me.TabControl8.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TabControl8.Controls.Add(Me.tabUsers)
-        Me.TabControl8.Controls.Add(Me.tabRoles)
-        Me.TabControl8.Controls.Add(Me.tpgChangePwd)
-        Me.TabControl8.Controls.Add(Me.tpgPrinters)
-        Me.TabControl8.ItemSize = New System.Drawing.Size(181, 18)
-        Me.TabControl8.Location = New System.Drawing.Point(3, 6)
-        Me.TabControl8.Name = "TabControl8"
-        Me.TabControl8.SelectedIndex = 0
-        Me.TabControl8.Size = New System.Drawing.Size(921, 512)
-        Me.TabControl8.SizeMode = System.Windows.Forms.TabSizeMode.Fixed
-        Me.TabControl8.TabIndex = 1
-        '
-        'tabUsers
-        '
-        Me.tabUsers.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tabUsers.Controls.Add(Me.Panel3)
-        Me.tabUsers.Location = New System.Drawing.Point(4, 22)
-        Me.tabUsers.Name = "tabUsers"
-        Me.tabUsers.Size = New System.Drawing.Size(913, 486)
-        Me.tabUsers.TabIndex = 0
-        Me.tabUsers.Text = "Users"
-        '
-        'Panel3
-        '
-        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel3.Controls.Add(Me.gpbUserInfo)
-        Me.Panel3.Controls.Add(Me.GroupBox21)
-        Me.Panel3.Location = New System.Drawing.Point(15, 12)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(890, 467)
-        Me.Panel3.TabIndex = 0
-        '
-        'gpbUserInfo
-        '
-        Me.gpbUserInfo.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gpbUserInfo.BackColor = System.Drawing.SystemColors.Control
-        Me.gpbUserInfo.Controls.Add(Me.btnUserSearch)
-        Me.gpbUserInfo.Controls.Add(Me.TextBoxUserName)
-        Me.gpbUserInfo.Controls.Add(Me.TextBoxUserId)
-        Me.gpbUserInfo.Controls.Add(Me.LabelPasswordStrengthNewUser)
-        Me.gpbUserInfo.Controls.Add(Me.TabControl9)
-        Me.gpbUserInfo.Controls.Add(Me.chkAllRQ)
-        Me.gpbUserInfo.Controls.Add(Me.chkReqApproval)
-        Me.gpbUserInfo.Controls.Add(Me.txtPOAmount)
-        Me.gpbUserInfo.Controls.Add(Me.Label45)
-        Me.gpbUserInfo.Controls.Add(Me.Label46)
-        Me.gpbUserInfo.Controls.Add(Me.lblAppManager)
-        Me.gpbUserInfo.Controls.Add(Me.lblConfirmPassword)
-        Me.gpbUserInfo.Controls.Add(Me.txtConfrimPassword)
-        Me.gpbUserInfo.Controls.Add(Me.Label47)
-        Me.gpbUserInfo.Controls.Add(Me.Label48)
-        Me.gpbUserInfo.Controls.Add(Me.lblPassword)
-        Me.gpbUserInfo.Controls.Add(Me.txtPassword)
-        Me.gpbUserInfo.Controls.Add(Me.txtLoginID)
-        Me.gpbUserInfo.Controls.Add(Me.Label66)
-        Me.gpbUserInfo.Controls.Add(Me.chkUserActive)
-        Me.gpbUserInfo.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.gpbUserInfo.Location = New System.Drawing.Point(232, 8)
-        Me.gpbUserInfo.Name = "gpbUserInfo"
-        Me.gpbUserInfo.Size = New System.Drawing.Size(650, 449)
-        Me.gpbUserInfo.TabIndex = 7
-        Me.gpbUserInfo.TabStop = False
-        Me.gpbUserInfo.Text = "  User Information"
-        '
-        'btnUserSearch
-        '
-        Me.btnUserSearch.Image = CType(resources.GetObject("btnUserSearch.Image"), System.Drawing.Image)
-        Me.btnUserSearch.Location = New System.Drawing.Point(384, 96)
-        Me.btnUserSearch.Name = "btnUserSearch"
-        Me.btnUserSearch.Size = New System.Drawing.Size(24, 21)
-        Me.btnUserSearch.TabIndex = 87
-        Me.btnUserSearch.Tag = "DISABLE"
-        '
-        'TextBoxUserName
-        '
-        Me.TextBoxUserName.Location = New System.Drawing.Point(195, 97)
-        Me.TextBoxUserName.Name = "TextBoxUserName"
-        Me.TextBoxUserName.ReadOnly = True
-        Me.TextBoxUserName.Size = New System.Drawing.Size(186, 20)
-        Me.TextBoxUserName.TabIndex = 86
-        '
-        'TextBoxUserId
-        '
-        Me.TextBoxUserId.Location = New System.Drawing.Point(136, 97)
-        Me.TextBoxUserId.MaxLength = 4
-        Me.TextBoxUserId.Name = "TextBoxUserId"
-        Me.TextBoxUserId.Size = New System.Drawing.Size(53, 20)
-        Me.TextBoxUserId.TabIndex = 85
-        '
-        'LabelPasswordStrengthNewUser
-        '
-        Me.LabelPasswordStrengthNewUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LabelPasswordStrengthNewUser.Location = New System.Drawing.Point(286, 69)
-        Me.LabelPasswordStrengthNewUser.Name = "LabelPasswordStrengthNewUser"
-        Me.LabelPasswordStrengthNewUser.Size = New System.Drawing.Size(142, 23)
-        Me.LabelPasswordStrengthNewUser.TabIndex = 88
-        Me.LabelPasswordStrengthNewUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.LabelPasswordStrengthNewUser.Visible = False
-        '
-        'TabControl9
-        '
-        Me.TabControl9.Controls.Add(Me.TabPage21)
-        Me.TabControl9.Controls.Add(Me.TabPage22)
-        Me.TabControl9.Location = New System.Drawing.Point(28, 126)
-        Me.TabControl9.Name = "TabControl9"
-        Me.TabControl9.SelectedIndex = 0
-        Me.TabControl9.Size = New System.Drawing.Size(590, 290)
-        Me.TabControl9.TabIndex = 84
-        '
-        'TabPage21
-        '
-        Me.TabPage21.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage21.Controls.Add(Me.TextBoxAdUser)
-        Me.TabPage21.Controls.Add(Me.LabelAdUser)
-        Me.TabPage21.Controls.Add(Me.chkRevReceipt)
-        Me.TabPage21.Controls.Add(Me.chkAllowOverRideInterest)
-        Me.TabPage21.Controls.Add(Me.txtPostCode)
-        Me.TabPage21.Controls.Add(Me.chkAdmin)
-        Me.TabPage21.Controls.Add(Me.txtEmail)
-        Me.TabPage21.Controls.Add(Me.lblFirstName)
-        Me.TabPage21.Controls.Add(Me.Label41)
-        Me.TabPage21.Controls.Add(Me.Label42)
-        Me.TabPage21.Controls.Add(Me.txtLastName)
-        Me.TabPage21.Controls.Add(Me.txtTelephone)
-        Me.TabPage21.Controls.Add(Me.txtAddressLn1)
-        Me.TabPage21.Controls.Add(Me.cboProv)
-        Me.TabPage21.Controls.Add(Me.txtAddressLn2)
-        Me.TabPage21.Controls.Add(Me.cboAssignedRole)
-        Me.TabPage21.Controls.Add(Me.txtAddressLn3)
-        Me.TabPage21.Controls.Add(Me.lblLastName)
-        Me.TabPage21.Controls.Add(Me.txtFirstName)
-        Me.TabPage21.Controls.Add(Me.lblTelephone)
-        Me.TabPage21.Controls.Add(Me.lblProv)
-        Me.TabPage21.Controls.Add(Me.Label43)
-        Me.TabPage21.Controls.Add(Me.Label44)
-        Me.TabPage21.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage21.Name = "TabPage21"
-        Me.TabPage21.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage21.Size = New System.Drawing.Size(582, 264)
-        Me.TabPage21.TabIndex = 0
-        Me.TabPage21.Text = "Personal"
-        '
-        'TextBoxAdUser
-        '
-        Me.TextBoxAdUser.Location = New System.Drawing.Point(386, 15)
-        Me.TextBoxAdUser.Name = "TextBoxAdUser"
-        Me.TextBoxAdUser.Size = New System.Drawing.Size(181, 20)
-        Me.TextBoxAdUser.TabIndex = 96
-        '
-        'LabelAdUser
-        '
-        Me.LabelAdUser.AutoSize = True
-        Me.LabelAdUser.Location = New System.Drawing.Point(331, 18)
-        Me.LabelAdUser.Name = "LabelAdUser"
-        Me.LabelAdUser.Size = New System.Drawing.Size(47, 13)
-        Me.LabelAdUser.TabIndex = 95
-        Me.LabelAdUser.Text = "AD User"
+        Me.chkAllowOverRideInterest.Location = New System.Drawing.Point(296, 234)
+        Me.chkAllowOverRideInterest.Name = "chkAllowOverRideInterest"
+        Me.chkAllowOverRideInterest.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkAllowOverRideInterest.Size = New System.Drawing.Size(141, 24)
+        Me.chkAllowOverRideInterest.TabIndex = 93
+        Me.chkAllowOverRideInterest.Text = "Allow Override Interest"
+        Me.chkAllowOverRideInterest.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkAllowOverRideInterest.Visible = False
         '
         'chkRevReceipt
         '
@@ -3476,987 +4418,7 @@ Partial Class frmSettings
         Me.chkRevReceipt.TabIndex = 94
         Me.chkRevReceipt.Text = "Reverse Receipt"
         Me.chkRevReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'chkAllowOverRideInterest
-        '
-        Me.chkAllowOverRideInterest.Location = New System.Drawing.Point(296, 234)
-        Me.chkAllowOverRideInterest.Name = "chkAllowOverRideInterest"
-        Me.chkAllowOverRideInterest.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkAllowOverRideInterest.Size = New System.Drawing.Size(141, 24)
-        Me.chkAllowOverRideInterest.TabIndex = 93
-        Me.chkAllowOverRideInterest.Text = "Allow Override Interest"
-        Me.chkAllowOverRideInterest.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtPostCode
-        '
-        Me.txtPostCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
-        Me.txtPostCode.Location = New System.Drawing.Point(296, 134)
-        Me.txtPostCode.MaxLength = 6
-        Me.txtPostCode.Name = "txtPostCode"
-        Me.txtPostCode.Size = New System.Drawing.Size(72, 20)
-        Me.txtPostCode.TabIndex = 77
-        '
-        'chkAdmin
-        '
-        Me.chkAdmin.Location = New System.Drawing.Point(21, 234)
-        Me.chkAdmin.Name = "chkAdmin"
-        Me.chkAdmin.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkAdmin.Size = New System.Drawing.Size(120, 24)
-        Me.chkAdmin.TabIndex = 92
-        Me.chkAdmin.Text = "Administrator"
-        Me.chkAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        '
-        'txtEmail
-        '
-        Me.txtEmail.Location = New System.Drawing.Point(122, 181)
-        Me.txtEmail.MaxLength = 500
-        Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(288, 20)
-        Me.txtEmail.TabIndex = 90
-        '
-        'lblFirstName
-        '
-        Me.lblFirstName.Location = New System.Drawing.Point(18, 15)
-        Me.lblFirstName.Name = "lblFirstName"
-        Me.lblFirstName.Size = New System.Drawing.Size(64, 20)
-        Me.lblFirstName.TabIndex = 82
-        Me.lblFirstName.Text = "First Name:"
-        Me.lblFirstName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label41
-        '
-        Me.Label41.Location = New System.Drawing.Point(18, 185)
-        Me.Label41.Name = "Label41"
-        Me.Label41.Size = New System.Drawing.Size(56, 20)
-        Me.Label41.TabIndex = 91
-        Me.Label41.Text = "Email:"
-        Me.Label41.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label42
-        '
-        Me.Label42.Location = New System.Drawing.Point(18, 63)
-        Me.Label42.Name = "Label42"
-        Me.Label42.Size = New System.Drawing.Size(56, 20)
-        Me.Label42.TabIndex = 83
-        Me.Label42.Text = "Address:"
-        Me.Label42.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtLastName
-        '
-        Me.txtLastName.Location = New System.Drawing.Point(122, 37)
-        Me.txtLastName.MaxLength = 15
-        Me.txtLastName.Name = "txtLastName"
-        Me.txtLastName.Size = New System.Drawing.Size(144, 20)
-        Me.txtLastName.TabIndex = 72
-        '
-        'txtTelephone
-        '
-        Me.txtTelephone.Location = New System.Drawing.Point(122, 156)
-        Me.txtTelephone.MaxLength = 10
-        Me.txtTelephone.Name = "txtTelephone"
-        Me.txtTelephone.Size = New System.Drawing.Size(100, 20)
-        Me.txtTelephone.TabIndex = 78
-        '
-        'txtAddressLn1
-        '
-        Me.txtAddressLn1.Location = New System.Drawing.Point(122, 63)
-        Me.txtAddressLn1.MaxLength = 30
-        Me.txtAddressLn1.Name = "txtAddressLn1"
-        Me.txtAddressLn1.Size = New System.Drawing.Size(208, 20)
-        Me.txtAddressLn1.TabIndex = 73
-        '
-        'cboProv
-        '
-        Me.cboProv.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboProv.Location = New System.Drawing.Point(122, 134)
-        Me.cboProv.Name = "cboProv"
-        Me.cboProv.Size = New System.Drawing.Size(48, 21)
-        Me.cboProv.TabIndex = 76
-        '
-        'txtAddressLn2
-        '
-        Me.txtAddressLn2.Location = New System.Drawing.Point(122, 86)
-        Me.txtAddressLn2.MaxLength = 30
-        Me.txtAddressLn2.Name = "txtAddressLn2"
-        Me.txtAddressLn2.Size = New System.Drawing.Size(208, 20)
-        Me.txtAddressLn2.TabIndex = 74
-        '
-        'cboAssignedRole
-        '
-        Me.cboAssignedRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboAssignedRole.Location = New System.Drawing.Point(122, 205)
-        Me.cboAssignedRole.Name = "cboAssignedRole"
-        Me.cboAssignedRole.Size = New System.Drawing.Size(184, 21)
-        Me.cboAssignedRole.TabIndex = 79
-        '
-        'txtAddressLn3
-        '
-        Me.txtAddressLn3.Location = New System.Drawing.Point(122, 109)
-        Me.txtAddressLn3.MaxLength = 30
-        Me.txtAddressLn3.Name = "txtAddressLn3"
-        Me.txtAddressLn3.Size = New System.Drawing.Size(208, 20)
-        Me.txtAddressLn3.TabIndex = 75
-        '
-        'lblLastName
-        '
-        Me.lblLastName.Location = New System.Drawing.Point(18, 39)
-        Me.lblLastName.Name = "lblLastName"
-        Me.lblLastName.Size = New System.Drawing.Size(72, 23)
-        Me.lblLastName.TabIndex = 87
-        Me.lblLastName.Text = "Last Name:"
-        Me.lblLastName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtFirstName
-        '
-        Me.txtFirstName.Location = New System.Drawing.Point(122, 15)
-        Me.txtFirstName.MaxLength = 30
-        Me.txtFirstName.Name = "txtFirstName"
-        Me.txtFirstName.Size = New System.Drawing.Size(144, 20)
-        Me.txtFirstName.TabIndex = 71
-        '
-        'lblTelephone
-        '
-        Me.lblTelephone.Location = New System.Drawing.Point(18, 154)
-        Me.lblTelephone.Name = "lblTelephone"
-        Me.lblTelephone.Size = New System.Drawing.Size(80, 23)
-        Me.lblTelephone.TabIndex = 86
-        Me.lblTelephone.Text = "Telephone:"
-        Me.lblTelephone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblProv
-        '
-        Me.lblProv.Location = New System.Drawing.Point(18, 134)
-        Me.lblProv.Name = "lblProv"
-        Me.lblProv.Size = New System.Drawing.Size(64, 23)
-        Me.lblProv.TabIndex = 85
-        Me.lblProv.Text = "Prov/State:"
-        Me.lblProv.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label43
-        '
-        Me.Label43.Location = New System.Drawing.Point(18, 203)
-        Me.Label43.Name = "Label43"
-        Me.Label43.Size = New System.Drawing.Size(64, 23)
-        Me.Label43.TabIndex = 81
-        Me.Label43.Text = "Member of:"
-        Me.Label43.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label44
-        '
-        Me.Label44.Location = New System.Drawing.Point(202, 132)
-        Me.Label44.Name = "Label44"
-        Me.Label44.Size = New System.Drawing.Size(88, 20)
-        Me.Label44.TabIndex = 84
-        Me.Label44.Text = "Postal/Zip Code:"
-        Me.Label44.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'TabPage22
-        '
-        Me.TabPage22.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage22.Controls.Add(Me.dgvAccountable)
-        Me.TabPage22.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage22.Name = "TabPage22"
-        Me.TabPage22.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage22.Size = New System.Drawing.Size(582, 264)
-        Me.TabPage22.TabIndex = 1
-        Me.TabPage22.Text = "Accountable"
-        '
-        'dgvAccountable
-        '
-        Me.dgvAccountable.AllowUserToAddRows = False
-        Me.dgvAccountable.AllowUserToDeleteRows = False
-        Me.dgvAccountable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvAccountable.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Code, Me.desc, Me.include})
-        Me.dgvAccountable.Location = New System.Drawing.Point(8, 6)
-        Me.dgvAccountable.Name = "dgvAccountable"
-        Me.dgvAccountable.Size = New System.Drawing.Size(429, 234)
-        Me.dgvAccountable.TabIndex = 0
-        '
-        'Code
-        '
-        Me.Code.DataPropertyName = "Code"
-        Me.Code.HeaderText = "Code"
-        Me.Code.Name = "Code"
-        Me.Code.ReadOnly = True
-        '
-        'desc
-        '
-        Me.desc.DataPropertyName = "desc"
-        Me.desc.HeaderText = "Description"
-        Me.desc.MinimumWidth = 30
-        Me.desc.Name = "desc"
-        Me.desc.ReadOnly = True
-        '
-        'include
-        '
-        Me.include.DataPropertyName = "include"
-        Me.include.HeaderText = "Include"
-        Me.include.Name = "include"
-        '
-        'chkAllRQ
-        '
-        Me.chkAllRQ.Location = New System.Drawing.Point(441, 71)
-        Me.chkAllRQ.Name = "chkAllRQ"
-        Me.chkAllRQ.Size = New System.Drawing.Size(141, 25)
-        Me.chkAllRQ.TabIndex = 83
-        Me.chkAllRQ.Text = "All Requisition Approval"
-        '
-        'chkReqApproval
-        '
-        Me.chkReqApproval.Location = New System.Drawing.Point(441, 53)
-        Me.chkReqApproval.Name = "chkReqApproval"
-        Me.chkReqApproval.Size = New System.Drawing.Size(128, 22)
-        Me.chkReqApproval.TabIndex = 81
-        Me.chkReqApproval.Text = "Requisition Approval"
-        '
-        'txtPOAmount
-        '
-        Me.txtPOAmount.Location = New System.Drawing.Point(518, 29)
-        Me.txtPOAmount.Name = "txtPOAmount"
-        Me.txtPOAmount.Size = New System.Drawing.Size(100, 20)
-        Me.txtPOAmount.TabIndex = 76
-        Me.txtPOAmount.Text = "0.00"
-        Me.txtPOAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'Label45
-        '
-        Me.Label45.Location = New System.Drawing.Point(438, 32)
-        Me.Label45.Name = "Label45"
-        Me.Label45.Size = New System.Drawing.Size(80, 23)
-        Me.Label45.TabIndex = 75
-        Me.Label45.Text = "PO AMOUNT:"
-        '
-        'Label46
-        '
-        Me.Label46.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label46.ForeColor = System.Drawing.Color.Red
-        Me.Label46.Location = New System.Drawing.Point(24, 72)
-        Me.Label46.Name = "Label46"
-        Me.Label46.Size = New System.Drawing.Size(8, 23)
-        Me.Label46.TabIndex = 73
-        Me.Label46.Text = "*"
-        Me.Label46.Visible = False
-        '
-        'lblAppManager
-        '
-        Me.lblAppManager.Location = New System.Drawing.Point(32, 95)
-        Me.lblAppManager.Name = "lblAppManager"
-        Me.lblAppManager.Size = New System.Drawing.Size(100, 23)
-        Me.lblAppManager.TabIndex = 72
-        Me.lblAppManager.Text = "Approve Manager:"
-        Me.lblAppManager.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblConfirmPassword
-        '
-        Me.lblConfirmPassword.Location = New System.Drawing.Point(32, 72)
-        Me.lblConfirmPassword.Name = "lblConfirmPassword"
-        Me.lblConfirmPassword.Size = New System.Drawing.Size(100, 23)
-        Me.lblConfirmPassword.TabIndex = 72
-        Me.lblConfirmPassword.Text = "Confirm Password:"
-        Me.lblConfirmPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblConfirmPassword.Visible = False
-        '
-        'txtConfrimPassword
-        '
-        Me.txtConfrimPassword.Location = New System.Drawing.Point(136, 72)
-        Me.txtConfrimPassword.Name = "txtConfrimPassword"
-        Me.txtConfrimPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfrimPassword.Size = New System.Drawing.Size(144, 20)
-        Me.txtConfrimPassword.TabIndex = 10
-        Me.txtConfrimPassword.Visible = False
-        '
-        'Label47
-        '
-        Me.Label47.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label47.ForeColor = System.Drawing.Color.Red
-        Me.Label47.Location = New System.Drawing.Point(24, 48)
-        Me.Label47.Name = "Label47"
-        Me.Label47.Size = New System.Drawing.Size(8, 23)
-        Me.Label47.TabIndex = 68
-        Me.Label47.Text = "*"
-        Me.Label47.Visible = False
-        '
-        'Label48
-        '
-        Me.Label48.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label48.ForeColor = System.Drawing.Color.Red
-        Me.Label48.Location = New System.Drawing.Point(24, 24)
-        Me.Label48.Name = "Label48"
-        Me.Label48.Size = New System.Drawing.Size(8, 23)
-        Me.Label48.TabIndex = 67
-        Me.Label48.Text = "*"
-        '
-        'lblPassword
-        '
-        Me.lblPassword.Location = New System.Drawing.Point(32, 48)
-        Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(64, 23)
-        Me.lblPassword.TabIndex = 59
-        Me.lblPassword.Text = "Password:"
-        Me.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.lblPassword.Visible = False
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(136, 48)
-        Me.txtPassword.MaxLength = 40
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtPassword.Size = New System.Drawing.Size(144, 20)
-        Me.txtPassword.TabIndex = 9
-        Me.txtPassword.Visible = False
-        '
-        'txtLoginID
-        '
-        Me.txtLoginID.Enabled = False
-        Me.txtLoginID.Location = New System.Drawing.Point(136, 24)
-        Me.txtLoginID.MaxLength = 30
-        Me.txtLoginID.Name = "txtLoginID"
-        Me.txtLoginID.Size = New System.Drawing.Size(144, 20)
-        Me.txtLoginID.TabIndex = 8
-        '
-        'Label66
-        '
-        Me.Label66.Location = New System.Drawing.Point(32, 24)
-        Me.Label66.Name = "Label66"
-        Me.Label66.Size = New System.Drawing.Size(56, 20)
-        Me.Label66.TabIndex = 48
-        Me.Label66.Text = "Login ID:"
-        Me.Label66.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'chkUserActive
-        '
-        Me.chkUserActive.Location = New System.Drawing.Point(441, 13)
-        Me.chkUserActive.Name = "chkUserActive"
-        Me.chkUserActive.Size = New System.Drawing.Size(96, 16)
-        Me.chkUserActive.TabIndex = 80
-        Me.chkUserActive.Text = "Active User"
-        '
-        'GroupBox21
-        '
-        Me.GroupBox21.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.GroupBox21.BackColor = System.Drawing.SystemColors.Control
-        Me.GroupBox21.Controls.Add(Me.lstSystemUsers)
-        Me.GroupBox21.Controls.Add(Me.btnCancelUserAction)
-        Me.GroupBox21.Controls.Add(Me.btnResetPwd)
-        Me.GroupBox21.Controls.Add(Me.btnAdd)
-        Me.GroupBox21.Controls.Add(Me.Button1)
-        Me.GroupBox21.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.GroupBox21.Location = New System.Drawing.Point(8, 8)
-        Me.GroupBox21.Name = "GroupBox21"
-        Me.GroupBox21.Size = New System.Drawing.Size(216, 449)
-        Me.GroupBox21.TabIndex = 1
-        Me.GroupBox21.TabStop = False
-        Me.GroupBox21.Text = "User List"
-        '
-        'lstSystemUsers
-        '
-        Me.lstSystemUsers.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.lstSystemUsers.Location = New System.Drawing.Point(8, 16)
-        Me.lstSystemUsers.Name = "lstSystemUsers"
-        Me.lstSystemUsers.Size = New System.Drawing.Size(200, 264)
-        Me.lstSystemUsers.TabIndex = 7
-        '
-        'btnCancelUserAction
-        '
-        Me.btnCancelUserAction.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelUserAction.Enabled = False
-        Me.btnCancelUserAction.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnCancelUserAction.Location = New System.Drawing.Point(16, 402)
-        Me.btnCancelUserAction.Name = "btnCancelUserAction"
-        Me.btnCancelUserAction.Size = New System.Drawing.Size(184, 23)
-        Me.btnCancelUserAction.TabIndex = 6
-        Me.btnCancelUserAction.Text = "&Cancel"
-        '
-        'btnResetPwd
-        '
-        Me.btnResetPwd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnResetPwd.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnResetPwd.Location = New System.Drawing.Point(16, 369)
-        Me.btnResetPwd.Name = "btnResetPwd"
-        Me.btnResetPwd.Size = New System.Drawing.Size(184, 23)
-        Me.btnResetPwd.TabIndex = 5
-        Me.btnResetPwd.Text = "&Reset Password"
-        '
-        'btnAdd
-        '
-        Me.btnAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnAdd.Location = New System.Drawing.Point(16, 305)
-        Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(184, 23)
-        Me.btnAdd.TabIndex = 3
-        Me.btnAdd.Text = "&Add User"
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.Button1.Location = New System.Drawing.Point(16, 337)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(184, 23)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "&Save"
-        '
-        'tabRoles
-        '
-        Me.tabRoles.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tabRoles.Controls.Add(Me.Panel5)
-        Me.tabRoles.Controls.Add(Me.TreeView1)
-        Me.tabRoles.Location = New System.Drawing.Point(4, 22)
-        Me.tabRoles.Name = "tabRoles"
-        Me.tabRoles.Size = New System.Drawing.Size(913, 486)
-        Me.tabRoles.TabIndex = 1
-        Me.tabRoles.Text = "Roles"
-        '
-        'Panel5
-        '
-        Me.Panel5.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel5.Controls.Add(Me.gpbRoles)
-        Me.Panel5.Location = New System.Drawing.Point(0, 0)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(512, 430)
-        Me.Panel5.TabIndex = 29
-        '
-        'gpbRoles
-        '
-        Me.gpbRoles.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.gpbRoles.BackColor = System.Drawing.SystemColors.Control
-        Me.gpbRoles.Controls.Add(Me.cboRoles)
-        Me.gpbRoles.Controls.Add(Me.btnCancelRoleAction)
-        Me.gpbRoles.Controls.Add(Me.gpbRestrictDataUpdate)
-        Me.gpbRoles.Controls.Add(Me.Label67)
-        Me.gpbRoles.Controls.Add(Me.txtRoleMemo)
-        Me.gpbRoles.Controls.Add(Me.Label68)
-        Me.gpbRoles.Controls.Add(Me.Label69)
-        Me.gpbRoles.Controls.Add(Me.btnAddRole)
-        Me.gpbRoles.Controls.Add(Me.btnSaveRole)
-        Me.gpbRoles.Controls.Add(Me.gpbRoleUserInfo)
-        Me.gpbRoles.Controls.Add(Me.chkPrivacyAct)
-        Me.gpbRoles.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.gpbRoles.Location = New System.Drawing.Point(8, 8)
-        Me.gpbRoles.Name = "gpbRoles"
-        Me.gpbRoles.Size = New System.Drawing.Size(496, 400)
-        Me.gpbRoles.TabIndex = 0
-        Me.gpbRoles.TabStop = False
-        '
-        'cboRoles
-        '
-        Me.cboRoles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboRoles.Location = New System.Drawing.Point(73, 16)
-        Me.cboRoles.MaxLength = 30
-        Me.cboRoles.Name = "cboRoles"
-        Me.cboRoles.Size = New System.Drawing.Size(216, 21)
-        Me.cboRoles.TabIndex = 390
-        '
-        'btnCancelRoleAction
-        '
-        Me.btnCancelRoleAction.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelRoleAction.BackColor = System.Drawing.SystemColors.Control
-        Me.btnCancelRoleAction.Enabled = False
-        Me.btnCancelRoleAction.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnCancelRoleAction.Location = New System.Drawing.Point(415, 368)
-        Me.btnCancelRoleAction.Name = "btnCancelRoleAction"
-        Me.btnCancelRoleAction.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelRoleAction.TabIndex = 388
-        Me.btnCancelRoleAction.Text = "&Cancel"
-        Me.btnCancelRoleAction.UseVisualStyleBackColor = False
-        '
-        'gpbRestrictDataUpdate
-        '
-        Me.gpbRestrictDataUpdate.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gpbRestrictDataUpdate.BackColor = System.Drawing.SystemColors.Control
-        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkBLResUpdate)
-        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkBKResUpdate)
-        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkPOResUpdate)
-        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkAPResUpdate)
-        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkARResUpdate)
-        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkPRResUpdate)
-        Me.gpbRestrictDataUpdate.Controls.Add(Me.chkGLResUpdate)
-        Me.gpbRestrictDataUpdate.Location = New System.Drawing.Point(7, 104)
-        Me.gpbRestrictDataUpdate.Name = "gpbRestrictDataUpdate"
-        Me.gpbRestrictDataUpdate.Size = New System.Drawing.Size(484, 80)
-        Me.gpbRestrictDataUpdate.TabIndex = 385
-        Me.gpbRestrictDataUpdate.TabStop = False
-        Me.gpbRestrictDataUpdate.Text = "Master Records Display Only"
-        '
-        'chkBLResUpdate
-        '
-        Me.chkBLResUpdate.Location = New System.Drawing.Point(136, 48)
-        Me.chkBLResUpdate.Name = "chkBLResUpdate"
-        Me.chkBLResUpdate.Size = New System.Drawing.Size(104, 16)
-        Me.chkBLResUpdate.TabIndex = 39
-        Me.chkBLResUpdate.Text = "Billing"
-        '
-        'chkBKResUpdate
-        '
-        Me.chkBKResUpdate.Location = New System.Drawing.Point(272, 24)
-        Me.chkBKResUpdate.Name = "chkBKResUpdate"
-        Me.chkBKResUpdate.Size = New System.Drawing.Size(104, 16)
-        Me.chkBKResUpdate.TabIndex = 40
-        Me.chkBKResUpdate.Text = "Banking"
-        '
-        'chkPOResUpdate
-        '
-        Me.chkPOResUpdate.Location = New System.Drawing.Point(16, 24)
-        Me.chkPOResUpdate.Name = "chkPOResUpdate"
-        Me.chkPOResUpdate.Size = New System.Drawing.Size(104, 16)
-        Me.chkPOResUpdate.TabIndex = 366
-        Me.chkPOResUpdate.Text = "Purchase Order"
-        '
-        'chkAPResUpdate
-        '
-        Me.chkAPResUpdate.Location = New System.Drawing.Point(16, 48)
-        Me.chkAPResUpdate.Name = "chkAPResUpdate"
-        Me.chkAPResUpdate.Size = New System.Drawing.Size(120, 16)
-        Me.chkAPResUpdate.TabIndex = 37
-        Me.chkAPResUpdate.Text = "Accounts Payable"
-        '
-        'chkARResUpdate
-        '
-        Me.chkARResUpdate.Location = New System.Drawing.Point(136, 24)
-        Me.chkARResUpdate.Name = "chkARResUpdate"
-        Me.chkARResUpdate.Size = New System.Drawing.Size(136, 16)
-        Me.chkARResUpdate.TabIndex = 38
-        Me.chkARResUpdate.Text = "Accounts Receivable"
-        '
-        'chkPRResUpdate
-        '
-        Me.chkPRResUpdate.Location = New System.Drawing.Point(384, 24)
-        Me.chkPRResUpdate.Name = "chkPRResUpdate"
-        Me.chkPRResUpdate.Size = New System.Drawing.Size(64, 16)
-        Me.chkPRResUpdate.TabIndex = 42
-        Me.chkPRResUpdate.Text = "Payroll"
-        '
-        'chkGLResUpdate
-        '
-        Me.chkGLResUpdate.Location = New System.Drawing.Point(272, 48)
-        Me.chkGLResUpdate.Name = "chkGLResUpdate"
-        Me.chkGLResUpdate.Size = New System.Drawing.Size(104, 16)
-        Me.chkGLResUpdate.TabIndex = 41
-        Me.chkGLResUpdate.Text = "General Ledger"
-        '
-        'Label67
-        '
-        Me.Label67.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label67.ForeColor = System.Drawing.Color.Red
-        Me.Label67.Location = New System.Drawing.Point(5, 8)
-        Me.Label67.Name = "Label67"
-        Me.Label67.Size = New System.Drawing.Size(8, 16)
-        Me.Label67.TabIndex = 384
-        Me.Label67.Text = "*"
-        '
-        'txtRoleMemo
-        '
-        Me.txtRoleMemo.Location = New System.Drawing.Point(73, 40)
-        Me.txtRoleMemo.Multiline = True
-        Me.txtRoleMemo.Name = "txtRoleMemo"
-        Me.txtRoleMemo.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
-        Me.txtRoleMemo.Size = New System.Drawing.Size(408, 56)
-        Me.txtRoleMemo.TabIndex = 383
-        '
-        'Label68
-        '
-        Me.Label68.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label68.Location = New System.Drawing.Point(17, 40)
-        Me.Label68.Name = "Label68"
-        Me.Label68.Size = New System.Drawing.Size(40, 20)
-        Me.Label68.TabIndex = 381
-        Me.Label68.Text = "Memo:"
-        Me.Label68.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label69
-        '
-        Me.Label69.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Label69.Location = New System.Drawing.Point(17, 16)
-        Me.Label69.Name = "Label69"
-        Me.Label69.Size = New System.Drawing.Size(48, 20)
-        Me.Label69.TabIndex = 380
-        Me.Label69.Text = "Role ID:"
-        Me.Label69.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnAddRole
-        '
-        Me.btnAddRole.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnAddRole.BackColor = System.Drawing.SystemColors.Control
-        Me.btnAddRole.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnAddRole.Location = New System.Drawing.Point(253, 368)
-        Me.btnAddRole.Name = "btnAddRole"
-        Me.btnAddRole.Size = New System.Drawing.Size(75, 23)
-        Me.btnAddRole.TabIndex = 387
-        Me.btnAddRole.Text = "&Add Role"
-        Me.btnAddRole.UseVisualStyleBackColor = False
-        '
-        'btnSaveRole
-        '
-        Me.btnSaveRole.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSaveRole.BackColor = System.Drawing.SystemColors.Control
-        Me.btnSaveRole.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnSaveRole.Location = New System.Drawing.Point(334, 368)
-        Me.btnSaveRole.Name = "btnSaveRole"
-        Me.btnSaveRole.Size = New System.Drawing.Size(75, 23)
-        Me.btnSaveRole.TabIndex = 386
-        Me.btnSaveRole.Text = "&Save Role"
-        Me.btnSaveRole.UseVisualStyleBackColor = False
-        '
-        'gpbRoleUserInfo
-        '
-        Me.gpbRoleUserInfo.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.gpbRoleUserInfo.BackColor = System.Drawing.SystemColors.Control
-        Me.gpbRoleUserInfo.Controls.Add(Me.btnAddUserToRole)
-        Me.gpbRoleUserInfo.Controls.Add(Me.Label70)
-        Me.gpbRoleUserInfo.Controls.Add(Me.Label71)
-        Me.gpbRoleUserInfo.Controls.Add(Me.lstRoleMembers)
-        Me.gpbRoleUserInfo.Controls.Add(Me.lstAvailUsers)
-        Me.gpbRoleUserInfo.Location = New System.Drawing.Point(7, 192)
-        Me.gpbRoleUserInfo.Name = "gpbRoleUserInfo"
-        Me.gpbRoleUserInfo.Size = New System.Drawing.Size(484, 168)
-        Me.gpbRoleUserInfo.TabIndex = 379
-        Me.gpbRoleUserInfo.TabStop = False
-        Me.gpbRoleUserInfo.Text = "View && Assign Role Members"
-        '
-        'btnAddUserToRole
-        '
-        Me.btnAddUserToRole.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnAddUserToRole.Location = New System.Drawing.Point(200, 80)
-        Me.btnAddUserToRole.Name = "btnAddUserToRole"
-        Me.btnAddUserToRole.Size = New System.Drawing.Size(56, 23)
-        Me.btnAddUserToRole.TabIndex = 37
-        Me.btnAddUserToRole.Text = ">>"
-        '
-        'Label70
-        '
-        Me.Label70.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label70.Location = New System.Drawing.Point(276, 24)
-        Me.Label70.Name = "Label70"
-        Me.Label70.Size = New System.Drawing.Size(140, 16)
-        Me.Label70.TabIndex = 36
-        Me.Label70.Text = "Members of Current Role:"
-        Me.Label70.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'Label71
-        '
-        Me.Label71.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label71.Location = New System.Drawing.Point(24, 16)
-        Me.Label71.Name = "Label71"
-        Me.Label71.Size = New System.Drawing.Size(208, 16)
-        Me.Label71.TabIndex = 35
-        Me.Label71.Text = "TownSuite Users:"
-        Me.Label71.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lstRoleMembers
-        '
-        Me.lstRoleMembers.Location = New System.Drawing.Point(276, 40)
-        Me.lstRoleMembers.Name = "lstRoleMembers"
-        Me.lstRoleMembers.Size = New System.Drawing.Size(164, 108)
-        Me.lstRoleMembers.TabIndex = 33
-        '
-        'lstAvailUsers
-        '
-        Me.lstAvailUsers.Location = New System.Drawing.Point(16, 40)
-        Me.lstAvailUsers.Name = "lstAvailUsers"
-        Me.lstAvailUsers.Size = New System.Drawing.Size(164, 108)
-        Me.lstAvailUsers.TabIndex = 0
-        '
-        'chkPrivacyAct
-        '
-        Me.chkPrivacyAct.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.chkPrivacyAct.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.chkPrivacyAct.Location = New System.Drawing.Point(29, 368)
-        Me.chkPrivacyAct.Name = "chkPrivacyAct"
-        Me.chkPrivacyAct.Size = New System.Drawing.Size(88, 24)
-        Me.chkPrivacyAct.TabIndex = 389
-        Me.chkPrivacyAct.Text = "&Privacy Act"
-        '
-        'TreeView1
-        '
-        Me.TreeView1.AllowDrop = True
-        Me.TreeView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TreeView1.BackColor = System.Drawing.SystemColors.Window
-        Me.TreeView1.CheckBoxes = True
-        Me.TreeView1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.TreeView1.FullRowSelect = True
-        Me.TreeView1.HotTracking = True
-        Me.TreeView1.Location = New System.Drawing.Point(512, 0)
-        Me.TreeView1.Name = "TreeView1"
-        Me.TreeView1.Size = New System.Drawing.Size(240, 430)
-        Me.TreeView1.TabIndex = 28
-        '
-        'tpgChangePwd
-        '
-        Me.tpgChangePwd.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tpgChangePwd.Controls.Add(Me.Panel2)
-        Me.tpgChangePwd.Location = New System.Drawing.Point(4, 22)
-        Me.tpgChangePwd.Name = "tpgChangePwd"
-        Me.tpgChangePwd.Size = New System.Drawing.Size(913, 486)
-        Me.tpgChangePwd.TabIndex = 2
-        Me.tpgChangePwd.Text = "Change Password"
-        '
-        'Panel2
-        '
-        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.gpbChangePwd)
-        Me.Panel2.Location = New System.Drawing.Point(15, 11)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(688, 394)
-        Me.Panel2.TabIndex = 1
-        '
-        'gpbChangePwd
-        '
-        Me.gpbChangePwd.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gpbChangePwd.BackColor = System.Drawing.SystemColors.Control
-        Me.gpbChangePwd.Controls.Add(Me.LabelPasswordStrength)
-        Me.gpbChangePwd.Controls.Add(Me.Label72)
-        Me.gpbChangePwd.Controls.Add(Me.Label73)
-        Me.gpbChangePwd.Controls.Add(Me.Label74)
-        Me.gpbChangePwd.Controls.Add(Me.lblLoginIDValue)
-        Me.gpbChangePwd.Controls.Add(Me.lblLoginId)
-        Me.gpbChangePwd.Controls.Add(Me.btnSavePwd)
-        Me.gpbChangePwd.Controls.Add(Me.lblConfirmNewPwd)
-        Me.gpbChangePwd.Controls.Add(Me.lblNewPwd)
-        Me.gpbChangePwd.Controls.Add(Me.lblOldPwd)
-        Me.gpbChangePwd.Controls.Add(Me.txtConfirmNewPwd)
-        Me.gpbChangePwd.Controls.Add(Me.txtNewPwd)
-        Me.gpbChangePwd.Controls.Add(Me.txtOldPwd)
-        Me.gpbChangePwd.Location = New System.Drawing.Point(8, 8)
-        Me.gpbChangePwd.Name = "gpbChangePwd"
-        Me.gpbChangePwd.Size = New System.Drawing.Size(672, 376)
-        Me.gpbChangePwd.TabIndex = 0
-        Me.gpbChangePwd.TabStop = False
-        '
-        'LabelPasswordStrength
-        '
-        Me.LabelPasswordStrength.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.LabelPasswordStrength.Location = New System.Drawing.Point(515, 126)
-        Me.LabelPasswordStrength.Name = "LabelPasswordStrength"
-        Me.LabelPasswordStrength.Size = New System.Drawing.Size(142, 23)
-        Me.LabelPasswordStrength.TabIndex = 89
-        Me.LabelPasswordStrength.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.LabelPasswordStrength.Visible = False
-        '
-        'Label72
-        '
-        Me.Label72.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label72.ForeColor = System.Drawing.Color.Red
-        Me.Label72.Location = New System.Drawing.Point(176, 129)
-        Me.Label72.Name = "Label72"
-        Me.Label72.Size = New System.Drawing.Size(8, 23)
-        Me.Label72.TabIndex = 82
-        Me.Label72.Text = "*"
-        '
-        'Label73
-        '
-        Me.Label73.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label73.ForeColor = System.Drawing.Color.Red
-        Me.Label73.Location = New System.Drawing.Point(176, 97)
-        Me.Label73.Name = "Label73"
-        Me.Label73.Size = New System.Drawing.Size(8, 23)
-        Me.Label73.TabIndex = 81
-        Me.Label73.Text = "*"
-        '
-        'Label74
-        '
-        Me.Label74.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label74.ForeColor = System.Drawing.Color.Red
-        Me.Label74.Location = New System.Drawing.Point(176, 161)
-        Me.Label74.Name = "Label74"
-        Me.Label74.Size = New System.Drawing.Size(8, 23)
-        Me.Label74.TabIndex = 80
-        Me.Label74.Text = "*"
-        '
-        'lblLoginIDValue
-        '
-        Me.lblLoginIDValue.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.lblLoginIDValue.Location = New System.Drawing.Point(328, 57)
-        Me.lblLoginIDValue.Name = "lblLoginIDValue"
-        Me.lblLoginIDValue.Size = New System.Drawing.Size(168, 20)
-        Me.lblLoginIDValue.TabIndex = 79
-        Me.lblLoginIDValue.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblLoginId
-        '
-        Me.lblLoginId.Location = New System.Drawing.Point(184, 57)
-        Me.lblLoginId.Name = "lblLoginId"
-        Me.lblLoginId.Size = New System.Drawing.Size(100, 23)
-        Me.lblLoginId.TabIndex = 78
-        Me.lblLoginId.Text = "Login ID:"
-        Me.lblLoginId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnSavePwd
-        '
-        Me.btnSavePwd.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnSavePwd.Location = New System.Drawing.Point(400, 201)
-        Me.btnSavePwd.Name = "btnSavePwd"
-        Me.btnSavePwd.Size = New System.Drawing.Size(96, 23)
-        Me.btnSavePwd.TabIndex = 74
-        Me.btnSavePwd.Text = "&Save Password"
-        '
-        'lblConfirmNewPwd
-        '
-        Me.lblConfirmNewPwd.Location = New System.Drawing.Point(184, 161)
-        Me.lblConfirmNewPwd.Name = "lblConfirmNewPwd"
-        Me.lblConfirmNewPwd.Size = New System.Drawing.Size(128, 23)
-        Me.lblConfirmNewPwd.TabIndex = 76
-        Me.lblConfirmNewPwd.Text = "Confirm New Password:"
-        Me.lblConfirmNewPwd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblNewPwd
-        '
-        Me.lblNewPwd.Location = New System.Drawing.Point(184, 129)
-        Me.lblNewPwd.Name = "lblNewPwd"
-        Me.lblNewPwd.Size = New System.Drawing.Size(128, 23)
-        Me.lblNewPwd.TabIndex = 75
-        Me.lblNewPwd.Text = "New Password:"
-        Me.lblNewPwd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblOldPwd
-        '
-        Me.lblOldPwd.Location = New System.Drawing.Point(184, 97)
-        Me.lblOldPwd.Name = "lblOldPwd"
-        Me.lblOldPwd.Size = New System.Drawing.Size(128, 23)
-        Me.lblOldPwd.TabIndex = 74
-        Me.lblOldPwd.Text = "Old Password:"
-        Me.lblOldPwd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'txtConfirmNewPwd
-        '
-        Me.txtConfirmNewPwd.Location = New System.Drawing.Point(328, 161)
-        Me.txtConfirmNewPwd.Name = "txtConfirmNewPwd"
-        Me.txtConfirmNewPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtConfirmNewPwd.Size = New System.Drawing.Size(168, 20)
-        Me.txtConfirmNewPwd.TabIndex = 73
-        '
-        'txtNewPwd
-        '
-        Me.txtNewPwd.Location = New System.Drawing.Point(328, 129)
-        Me.txtNewPwd.Name = "txtNewPwd"
-        Me.txtNewPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtNewPwd.Size = New System.Drawing.Size(168, 20)
-        Me.txtNewPwd.TabIndex = 72
-        '
-        'txtOldPwd
-        '
-        Me.txtOldPwd.Location = New System.Drawing.Point(328, 97)
-        Me.txtOldPwd.Name = "txtOldPwd"
-        Me.txtOldPwd.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtOldPwd.Size = New System.Drawing.Size(168, 20)
-        Me.txtOldPwd.TabIndex = 71
-        '
-        'tpgPrinters
-        '
-        Me.tpgPrinters.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.tpgPrinters.Controls.Add(Me.Panel4)
-        Me.tpgPrinters.Location = New System.Drawing.Point(4, 22)
-        Me.tpgPrinters.Name = "tpgPrinters"
-        Me.tpgPrinters.Size = New System.Drawing.Size(913, 486)
-        Me.tpgPrinters.TabIndex = 3
-        Me.tpgPrinters.Text = "Printers"
-        '
-        'Panel4
-        '
-        Me.Panel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(24, Byte), Integer), CType(CType(69, Byte), Integer), CType(CType(114, Byte), Integer))
-        Me.Panel4.Controls.Add(Me.gpbUserPrinters)
-        Me.Panel4.Location = New System.Drawing.Point(15, 11)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(688, 394)
-        Me.Panel4.TabIndex = 0
-        '
-        'gpbUserPrinters
-        '
-        Me.gpbUserPrinters.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.gpbUserPrinters.BackColor = System.Drawing.SystemColors.Control
-        Me.gpbUserPrinters.Controls.Add(Me.cboChequesPrinter)
-        Me.gpbUserPrinters.Controls.Add(Me.cboReceiptPrinter)
-        Me.gpbUserPrinters.Controls.Add(Me.cboReportPrinter)
-        Me.gpbUserPrinters.Controls.Add(Me.lblCheques)
-        Me.gpbUserPrinters.Controls.Add(Me.lblReceipts)
-        Me.gpbUserPrinters.Controls.Add(Me.lblReports)
-        Me.gpbUserPrinters.Controls.Add(Me.btnSavePrinterInfo)
-        Me.gpbUserPrinters.Location = New System.Drawing.Point(8, 8)
-        Me.gpbUserPrinters.Name = "gpbUserPrinters"
-        Me.gpbUserPrinters.Size = New System.Drawing.Size(672, 376)
-        Me.gpbUserPrinters.TabIndex = 0
-        Me.gpbUserPrinters.TabStop = False
-        Me.gpbUserPrinters.Text = "Default Printer Setup"
-        '
-        'cboChequesPrinter
-        '
-        Me.cboChequesPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboChequesPrinter.Location = New System.Drawing.Point(88, 144)
-        Me.cboChequesPrinter.Name = "cboChequesPrinter"
-        Me.cboChequesPrinter.Size = New System.Drawing.Size(552, 21)
-        Me.cboChequesPrinter.TabIndex = 11
-        '
-        'cboReceiptPrinter
-        '
-        Me.cboReceiptPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboReceiptPrinter.Location = New System.Drawing.Point(88, 96)
-        Me.cboReceiptPrinter.Name = "cboReceiptPrinter"
-        Me.cboReceiptPrinter.Size = New System.Drawing.Size(552, 21)
-        Me.cboReceiptPrinter.TabIndex = 10
-        '
-        'cboReportPrinter
-        '
-        Me.cboReportPrinter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboReportPrinter.Location = New System.Drawing.Point(88, 48)
-        Me.cboReportPrinter.Name = "cboReportPrinter"
-        Me.cboReportPrinter.Size = New System.Drawing.Size(552, 21)
-        Me.cboReportPrinter.TabIndex = 9
-        '
-        'lblCheques
-        '
-        Me.lblCheques.Location = New System.Drawing.Point(32, 144)
-        Me.lblCheques.Name = "lblCheques"
-        Me.lblCheques.Size = New System.Drawing.Size(72, 23)
-        Me.lblCheques.TabIndex = 2
-        Me.lblCheques.Text = "Cheques:"
-        Me.lblCheques.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblReceipts
-        '
-        Me.lblReceipts.Location = New System.Drawing.Point(32, 96)
-        Me.lblReceipts.Name = "lblReceipts"
-        Me.lblReceipts.Size = New System.Drawing.Size(72, 23)
-        Me.lblReceipts.TabIndex = 1
-        Me.lblReceipts.Text = "Receipts:"
-        Me.lblReceipts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lblReports
-        '
-        Me.lblReports.Location = New System.Drawing.Point(32, 48)
-        Me.lblReports.Name = "lblReports"
-        Me.lblReports.Size = New System.Drawing.Size(72, 23)
-        Me.lblReports.TabIndex = 0
-        Me.lblReports.Text = "Reports:"
-        Me.lblReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'btnSavePrinterInfo
-        '
-        Me.btnSavePrinterInfo.FlatStyle = System.Windows.Forms.FlatStyle.System
-        Me.btnSavePrinterInfo.Location = New System.Drawing.Point(520, 176)
-        Me.btnSavePrinterInfo.Name = "btnSavePrinterInfo"
-        Me.btnSavePrinterInfo.Size = New System.Drawing.Size(120, 23)
-        Me.btnSavePrinterInfo.TabIndex = 1
-        Me.btnSavePrinterInfo.Text = "&Save Printer Defaults"
+        Me.chkRevReceipt.Visible = False
         '
         'frmSettings
         '
@@ -4528,6 +4490,30 @@ Partial Class frmSettings
         Me.TabPage16.ResumeLayout(False)
         Me.TabControl6.ResumeLayout(False)
         Me.TabPage17.ResumeLayout(False)
+        Me.TabControl8.ResumeLayout(False)
+        Me.tabUsers.ResumeLayout(False)
+        Me.Panel3.ResumeLayout(False)
+        Me.gpbUserInfo.ResumeLayout(False)
+        Me.gpbUserInfo.PerformLayout()
+        Me.TabControl9.ResumeLayout(False)
+        Me.TabPage21.ResumeLayout(False)
+        Me.TabPage21.PerformLayout()
+        Me.TabPage22.ResumeLayout(False)
+        CType(Me.dgvAccountable, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox21.ResumeLayout(False)
+        Me.tabRoles.ResumeLayout(False)
+        Me.Panel5.ResumeLayout(False)
+        Me.gpbRoles.ResumeLayout(False)
+        Me.gpbRoles.PerformLayout()
+        Me.gpbRestrictDataUpdate.ResumeLayout(False)
+        Me.gpbRoleUserInfo.ResumeLayout(False)
+        Me.tpgChangePwd.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.gpbChangePwd.ResumeLayout(False)
+        Me.gpbChangePwd.PerformLayout()
+        Me.tpgPrinters.ResumeLayout(False)
+        Me.Panel4.ResumeLayout(False)
+        Me.gpbUserPrinters.ResumeLayout(False)
         Me.TabPage18.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
@@ -4563,30 +4549,6 @@ Partial Class frmSettings
         Me.GroupBox24.PerformLayout()
         Me.GroupBox25.ResumeLayout(False)
         Me.GroupBox25.PerformLayout()
-        Me.TabControl8.ResumeLayout(False)
-        Me.tabUsers.ResumeLayout(False)
-        Me.Panel3.ResumeLayout(False)
-        Me.gpbUserInfo.ResumeLayout(False)
-        Me.gpbUserInfo.PerformLayout()
-        Me.TabControl9.ResumeLayout(False)
-        Me.TabPage21.ResumeLayout(False)
-        Me.TabPage21.PerformLayout()
-        Me.TabPage22.ResumeLayout(False)
-        CType(Me.dgvAccountable, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox21.ResumeLayout(False)
-        Me.tabRoles.ResumeLayout(False)
-        Me.Panel5.ResumeLayout(False)
-        Me.gpbRoles.ResumeLayout(False)
-        Me.gpbRoles.PerformLayout()
-        Me.gpbRestrictDataUpdate.ResumeLayout(False)
-        Me.gpbRoleUserInfo.ResumeLayout(False)
-        Me.tpgChangePwd.ResumeLayout(False)
-        Me.Panel2.ResumeLayout(False)
-        Me.gpbChangePwd.ResumeLayout(False)
-        Me.gpbChangePwd.PerformLayout()
-        Me.tpgPrinters.ResumeLayout(False)
-        Me.Panel4.ResumeLayout(False)
-        Me.gpbUserPrinters.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -4880,8 +4842,6 @@ Partial Class frmSettings
     Friend WithEvents TabPage21 As System.Windows.Forms.TabPage
     Friend WithEvents TextBoxAdUser As System.Windows.Forms.TextBox
     Friend WithEvents LabelAdUser As System.Windows.Forms.Label
-    Friend WithEvents chkRevReceipt As System.Windows.Forms.CheckBox
-    Friend WithEvents chkAllowOverRideInterest As System.Windows.Forms.CheckBox
     Friend WithEvents txtPostCode As System.Windows.Forms.TextBox
     Friend WithEvents chkAdmin As System.Windows.Forms.CheckBox
     Friend WithEvents txtEmail As System.Windows.Forms.TextBox
@@ -4906,10 +4866,6 @@ Partial Class frmSettings
     Friend WithEvents Code As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents desc As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents include As System.Windows.Forms.DataGridViewCheckBoxColumn
-    Friend WithEvents chkAllRQ As System.Windows.Forms.CheckBox
-    Friend WithEvents chkReqApproval As System.Windows.Forms.CheckBox
-    Friend WithEvents txtPOAmount As System.Windows.Forms.TextBox
-    Friend WithEvents Label45 As System.Windows.Forms.Label
     Friend WithEvents Label46 As System.Windows.Forms.Label
     Friend WithEvents lblAppManager As System.Windows.Forms.Label
     Friend WithEvents lblConfirmPassword As System.Windows.Forms.Label
@@ -4980,4 +4936,6 @@ Partial Class frmSettings
     Friend WithEvents lblReceipts As System.Windows.Forms.Label
     Friend WithEvents lblReports As System.Windows.Forms.Label
     Friend WithEvents btnSavePrinterInfo As System.Windows.Forms.Button
+    Friend WithEvents chkRevReceipt As System.Windows.Forms.CheckBox
+    Friend WithEvents chkAllowOverRideInterest As System.Windows.Forms.CheckBox
 End Class
