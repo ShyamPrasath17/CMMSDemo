@@ -23,7 +23,6 @@ Partial Class frmProject
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProject))
-        Me.txtstatus = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -43,23 +42,15 @@ Partial Class frmProject
         Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.btnViewWo = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         CType(Me.RadScrollablePanel1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.RadScrollablePanel1.PanelContainer.SuspendLayout()
         Me.RadScrollablePanel1.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'txtstatus
-        '
-        Me.txtstatus.Location = New System.Drawing.Point(118, 37)
-        Me.txtstatus.Name = "txtstatus"
-        Me.txtstatus.ReadOnly = True
-        Me.txtstatus.Size = New System.Drawing.Size(185, 20)
-        Me.txtstatus.TabIndex = 105
         '
         'Label2
         '
@@ -222,16 +213,6 @@ Partial Class frmProject
         Me.DateTimePicker1.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker1.TabIndex = 79
         '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(441, 382)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(105, 23)
-        Me.Button1.TabIndex = 111
-        Me.Button1.Text = "Close Project"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'RadScrollablePanel1
         '
         Me.RadScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -240,13 +221,12 @@ Partial Class frmProject
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.ComboBox4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button10)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.btnViewWo)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtprojectID)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtstatus)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label14)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtpname)
@@ -273,6 +253,16 @@ Partial Class frmProject
         Me.RadScrollablePanel1.TabIndex = 112
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
         '
+        'Button10
+        '
+        Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button10.Location = New System.Drawing.Point(471, 390)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 23)
+        Me.Button10.TabIndex = 174
+        Me.Button10.Text = "Save"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
         'Button3
         '
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
@@ -291,15 +281,15 @@ Partial Class frmProject
         Me.btnViewWo.Text = "View WorkOrders"
         Me.btnViewWo.UseVisualStyleBackColor = True
         '
-        'Button10
+        'ComboBox4
         '
-        Me.Button10.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button10.Location = New System.Drawing.Point(360, 382)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 23)
-        Me.Button10.TabIndex = 174
-        Me.Button10.Text = "Save"
-        Me.Button10.UseVisualStyleBackColor = True
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Open", "Work In progress", "Closed"})
+        Me.ComboBox4.Location = New System.Drawing.Point(116, 36)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(187, 21)
+        Me.ComboBox4.TabIndex = 178
         '
         'frmProject
         '
@@ -335,11 +325,10 @@ Partial Class frmProject
     Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents txtstatus As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents RadScrollablePanel1 As Telerik.WinControls.UI.RadScrollablePanel
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents btnViewWo As System.Windows.Forms.Button
     Friend WithEvents Button10 As System.Windows.Forms.Button
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
 End Class

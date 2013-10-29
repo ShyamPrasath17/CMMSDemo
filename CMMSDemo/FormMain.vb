@@ -346,14 +346,14 @@ Public Class FormMain
         twProject.Show()
         twProject.Select()
         frmProj.txtprojectID.Text = ""
-        frmProj.txtstatus.Text = ""
+        'frmProj.txtstatus.Text = ""
     End Sub
 
     Private Sub btnCreateWorkOrder_Click(sender As Object, e As EventArgs) Handles btnCreateWorkOrder.Click
         ToolWindowWo.Show()
         ToolWindowWo.Select()
         frmwo.txtwono.Text = ""
-        frmwo.txtstatus.Text = ""
+        'frmwo.txtstatus.Text = ""
         frmwo.txtProject.Text = ""
         frmwo.txtReq.Text = ""
     End Sub
@@ -364,7 +364,7 @@ Public Class FormMain
         frmTsk.radInternal.Checked = True
         frmTsk.txtTaskID.Text = ""
         frmTsk.txtTaskName.Text = ""
-        frmTsk.txtstatus.Text = ""
+        'frmTsk.txtstatus.Text = ""
         frmTsk.txtwono.Text = ""
     End Sub
 
@@ -374,7 +374,7 @@ Public Class FormMain
         frmTsk.radOutsourced.Checked = True
         frmTsk.txtTaskID.Text = ""
         frmTsk.txtTaskName.Text = ""
-        frmTsk.txtstatus.Text = ""
+        'frmTsk.txtstatus.Text = ""
         frmTsk.txtwono.Text = ""
     End Sub
 
@@ -427,7 +427,7 @@ Public Class FormMain
     End Sub
 
     Private Sub btmAssetReading_Click(sender As Object, e As EventArgs) Handles btmAssetReading.Click
-        TwAsset.DefaultFloatingSize = New Size(600, 800)
+        TwAsset.DefaultFloatingSize = New Size(600, 500)
         RadDockMain.FloatWindow(TwAsset)
     End Sub
 End Class

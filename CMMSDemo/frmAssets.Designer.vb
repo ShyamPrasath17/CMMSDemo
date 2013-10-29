@@ -33,16 +33,15 @@ Partial Class frmAssets
         Me.Button1 = New System.Windows.Forms.Button()
         Me.txtAddReading = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.dgvAssetmaint = New Telerik.WinControls.UI.RadGridView()
-        Me.txtAddMaintanance = New System.Windows.Forms.Button()
+        Me.btnGo = New System.Windows.Forms.Button()
+        Me.DateTimePicker2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         CType(Me.dgvmeter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvmeter.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
-        CType(Me.dgvAssetmaint, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.dgvAssetmaint.MasterTemplate, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox2
@@ -80,28 +79,29 @@ Partial Class frmAssets
         '
         'dgvmeter
         '
-        Me.dgvmeter.Location = New System.Drawing.Point(0, 30)
+        Me.dgvmeter.Location = New System.Drawing.Point(3, 74)
         Me.dgvmeter.Name = "dgvmeter"
-        Me.dgvmeter.Size = New System.Drawing.Size(567, 187)
+        Me.dgvmeter.Size = New System.Drawing.Size(567, 204)
         Me.dgvmeter.TabIndex = 89
         Me.dgvmeter.Text = "RadGridView1"
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.Button2)
         Me.GroupBox1.Controls.Add(Me.Button1)
         Me.GroupBox1.Controls.Add(Me.dgvmeter)
         Me.GroupBox1.Controls.Add(Me.txtAddReading)
-        Me.GroupBox1.Location = New System.Drawing.Point(13, 51)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 34)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(572, 265)
+        Me.GroupBox1.Size = New System.Drawing.Size(572, 313)
         Me.GroupBox1.TabIndex = 90
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Asset Meter Reading History"
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(88, 236)
+        Me.Button2.Location = New System.Drawing.Point(85, 284)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(76, 23)
         Me.Button2.TabIndex = 140
@@ -110,7 +110,7 @@ Partial Class frmAssets
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(170, 236)
+        Me.Button1.Location = New System.Drawing.Point(167, 284)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(76, 23)
         Me.Button1.TabIndex = 139
@@ -119,7 +119,7 @@ Partial Class frmAssets
         '
         'txtAddReading
         '
-        Me.txtAddReading.Location = New System.Drawing.Point(6, 236)
+        Me.txtAddReading.Location = New System.Drawing.Point(3, 284)
         Me.txtAddReading.Name = "txtAddReading"
         Me.txtAddReading.Size = New System.Drawing.Size(76, 23)
         Me.txtAddReading.TabIndex = 138
@@ -128,59 +128,66 @@ Partial Class frmAssets
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Controls.Add(Me.dgvAssetmaint)
-        Me.GroupBox2.Controls.Add(Me.txtAddMaintanance)
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 346)
+        Me.GroupBox2.Controls.Add(Me.btnGo)
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker2)
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Controls.Add(Me.Label2)
+        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 22)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(572, 265)
+        Me.GroupBox2.Size = New System.Drawing.Size(338, 46)
         Me.GroupBox2.TabIndex = 91
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Asset Maintanance"
         '
-        'Button3
+        'btnGo
         '
-        Me.Button3.Location = New System.Drawing.Point(88, 236)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(76, 23)
-        Me.Button3.TabIndex = 140
-        Me.Button3.Text = "Edit"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnGo.Location = New System.Drawing.Point(287, 11)
+        Me.btnGo.Name = "btnGo"
+        Me.btnGo.Size = New System.Drawing.Size(45, 29)
+        Me.btnGo.TabIndex = 5
+        Me.btnGo.Text = "Go"
+        Me.btnGo.UseVisualStyleBackColor = True
         '
-        'Button4
+        'DateTimePicker2
         '
-        Me.Button4.Location = New System.Drawing.Point(170, 236)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(76, 23)
-        Me.Button4.TabIndex = 139
-        Me.Button4.Text = "Delete"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker2.Location = New System.Drawing.Point(182, 20)
+        Me.DateTimePicker2.Name = "DateTimePicker2"
+        Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
+        Me.DateTimePicker2.TabIndex = 4
         '
-        'dgvAssetmaint
+        'Label1
         '
-        Me.dgvAssetmaint.Location = New System.Drawing.Point(0, 30)
-        Me.dgvAssetmaint.Name = "dgvAssetmaint"
-        Me.dgvAssetmaint.Size = New System.Drawing.Size(567, 187)
-        Me.dgvAssetmaint.TabIndex = 89
-        Me.dgvAssetmaint.Text = "RadGridView2"
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(6, 24)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(30, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "From"
         '
-        'txtAddMaintanance
+        'Label2
         '
-        Me.txtAddMaintanance.Location = New System.Drawing.Point(6, 236)
-        Me.txtAddMaintanance.Name = "txtAddMaintanance"
-        Me.txtAddMaintanance.Size = New System.Drawing.Size(76, 23)
-        Me.txtAddMaintanance.TabIndex = 138
-        Me.txtAddMaintanance.Text = "Add"
-        Me.txtAddMaintanance.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(156, 24)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(20, 13)
+        Me.Label2.TabIndex = 2
+        Me.Label2.Text = "To"
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DateTimePicker1.Location = New System.Drawing.Point(42, 20)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(99, 20)
+        Me.DateTimePicker1.TabIndex = 3
         '
         'frmAssets
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(779, 690)
-        Me.Controls.Add(Me.GroupBox2)
+        Me.ClientSize = New System.Drawing.Size(603, 359)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.TextBox2)
@@ -192,8 +199,7 @@ Partial Class frmAssets
         CType(Me.dgvmeter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox2.ResumeLayout(False)
-        CType(Me.dgvAssetmaint.MasterTemplate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.dgvAssetmaint, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -208,8 +214,9 @@ Partial Class frmAssets
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents dgvAssetmaint As Telerik.WinControls.UI.RadGridView
-    Friend WithEvents txtAddMaintanance As System.Windows.Forms.Button
+    Friend WithEvents btnGo As System.Windows.Forms.Button
+    Friend WithEvents DateTimePicker2 As System.Windows.Forms.DateTimePicker
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents DateTimePicker1 As System.Windows.Forms.DateTimePicker
 End Class

@@ -60,7 +60,6 @@ Partial Class frmTasks
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.txtwono = New System.Windows.Forms.TextBox()
-        Me.txtstatus = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -68,10 +67,9 @@ Partial Class frmTasks
         Me.dtpEndDate = New System.Windows.Forms.DateTimePicker()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.dtpStartDate = New System.Windows.Forms.DateTimePicker()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.RadScrollablePanel1 = New Telerik.WinControls.UI.RadScrollablePanel()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
         Me.grpDurationBased = New System.Windows.Forms.GroupBox()
         Me.TextBox13 = New System.Windows.Forms.TextBox()
         Me.Label18 = New System.Windows.Forms.Label()
@@ -89,8 +87,7 @@ Partial Class frmTasks
         Me.btnInstructions = New System.Windows.Forms.Button()
         Me.dtpEndTime = New System.Windows.Forms.DateTimePicker()
         Me.dtpStartTime = New System.Windows.Forms.DateTimePicker()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
+        Me.ComboBox4 = New System.Windows.Forms.ComboBox()
         Me.grpSite.SuspendLayout()
         Me.grpItems.SuspendLayout()
         Me.grpOutSource.SuspendLayout()
@@ -444,14 +441,6 @@ Partial Class frmTasks
         Me.txtwono.Size = New System.Drawing.Size(216, 20)
         Me.txtwono.TabIndex = 18
         '
-        'txtstatus
-        '
-        Me.txtstatus.Location = New System.Drawing.Point(131, 73)
-        Me.txtstatus.Name = "txtstatus"
-        Me.txtstatus.ReadOnly = True
-        Me.txtstatus.Size = New System.Drawing.Size(216, 20)
-        Me.txtstatus.TabIndex = 15
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -513,36 +502,6 @@ Partial Class frmTasks
         Me.dtpStartDate.Size = New System.Drawing.Size(120, 20)
         Me.dtpStartDate.TabIndex = 79
         '
-        'Button5
-        '
-        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button5.Location = New System.Drawing.Point(434, 766)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(75, 23)
-        Me.Button5.TabIndex = 110
-        Me.Button5.Text = "Complete"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(515, 766)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 32
-        Me.Button1.Text = "Hold"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(596, 766)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 23)
-        Me.Button2.TabIndex = 33
-        Me.Button2.Text = "Suspend"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'RadScrollablePanel1
         '
         Me.RadScrollablePanel1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -551,6 +510,7 @@ Partial Class frmTasks
         '
         'RadScrollablePanel1.PanelContainer
         '
+        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.ComboBox4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button6)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button4)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpDurationBased)
@@ -558,7 +518,6 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpEndTime)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpStartTime)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.TextBox3)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.grpItems)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.GroupBox1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label1)
@@ -576,13 +535,10 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtwono)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label5)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtTaskName)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtstatus)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button1)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.dtpEndDate)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label17)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.txtTaskID)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Label2)
-        Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.Button2)
         Me.RadScrollablePanel1.PanelContainer.Controls.Add(Me.GroupBox2)
         Me.RadScrollablePanel1.PanelContainer.Size = New System.Drawing.Size(680, 800)
         '
@@ -592,6 +548,25 @@ Partial Class frmTasks
         Me.RadScrollablePanel1.Size = New System.Drawing.Size(682, 802)
         Me.RadScrollablePanel1.TabIndex = 115
         Me.RadScrollablePanel1.Text = "RadScrollablePanel1"
+        '
+        'Button6
+        '
+        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button6.Location = New System.Drawing.Point(596, 774)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 175
+        Me.Button6.Text = "Save"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
+        Me.Button4.Location = New System.Drawing.Point(353, 146)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(24, 24)
+        Me.Button4.TabIndex = 153
+        Me.Button4.Tag = "DISABLE"
         '
         'grpDurationBased
         '
@@ -749,24 +724,15 @@ Partial Class frmTasks
         Me.dtpStartTime.Size = New System.Drawing.Size(90, 20)
         Me.dtpStartTime.TabIndex = 115
         '
-        'Button4
+        'ComboBox4
         '
-        Me.Button4.Image = CType(resources.GetObject("Button4.Image"), System.Drawing.Image)
-        Me.Button4.Location = New System.Drawing.Point(353, 146)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(24, 24)
-        Me.Button4.TabIndex = 153
-        Me.Button4.Tag = "DISABLE"
-        '
-        'Button6
-        '
-        Me.Button6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button6.Location = New System.Drawing.Point(351, 766)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(75, 23)
-        Me.Button6.TabIndex = 175
-        Me.Button6.Text = "Save"
-        Me.Button6.UseVisualStyleBackColor = True
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Open", "Approved", "Work In progress", "On Hold", "Completed", "Suspended"})
+        Me.ComboBox4.Location = New System.Drawing.Point(131, 70)
+        Me.ComboBox4.Name = "ComboBox4"
+        Me.ComboBox4.Size = New System.Drawing.Size(216, 21)
+        Me.ComboBox4.TabIndex = 177
         '
         'frmTasks
         '
@@ -800,7 +766,6 @@ Partial Class frmTasks
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents txtwono As System.Windows.Forms.TextBox
-    Friend WithEvents txtstatus As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label5 As System.Windows.Forms.Label
@@ -808,8 +773,6 @@ Partial Class frmTasks
     Friend WithEvents dtpEndDate As System.Windows.Forms.DateTimePicker
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents dtpStartDate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
     Friend WithEvents Button3 As System.Windows.Forms.Button
@@ -837,7 +800,6 @@ Partial Class frmTasks
     Friend WithEvents Label16 As System.Windows.Forms.Label
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
-    Friend WithEvents Button5 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label12 As System.Windows.Forms.Label
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
@@ -863,4 +825,5 @@ Partial Class frmTasks
     Friend WithEvents TextBox12 As System.Windows.Forms.TextBox
     Friend WithEvents Button4 As System.Windows.Forms.Button
     Friend WithEvents Button6 As System.Windows.Forms.Button
+    Friend WithEvents ComboBox4 As System.Windows.Forms.ComboBox
 End Class

@@ -6,7 +6,7 @@ Public Class frmProject
     End Sub
     Public Sub fillProject(ByRef dr As DataRow, ByRef dt As DataTable)
         txtprojectID.Text = dr("ProjectID").ToString()
-        txtstatus.Text = dr("status").ToString()
+        'txtstatus.Text = dr("status").ToString()
     End Sub
 
     Private Sub BtnAddWo_Click(sender As Object, e As EventArgs)

@@ -22,7 +22,7 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim AutoHideGroup1 As Telerik.WinControls.UI.Docking.AutoHideGroup = New Telerik.WinControls.UI.Docking.AutoHideGroup()
+        Dim AutoHideGroup2 As Telerik.WinControls.UI.Docking.AutoHideGroup = New Telerik.WinControls.UI.Docking.AutoHideGroup()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormMain))
         Me.DockWindowPlaceholder1 = New Telerik.WinControls.UI.Docking.DockWindowPlaceholder()
         Me.RadDockMain = New Telerik.WinControls.UI.Docking.RadDock()
@@ -165,8 +165,8 @@ Partial Class FormMain
         '
         Me.RadDockMain.RootElement.MinSize = New System.Drawing.Size(25, 25)
         Me.RadDockMain.RootElement.Padding = New System.Windows.Forms.Padding(5)
-        AutoHideGroup1.Windows.Add(Me.DockWindowPlaceholder1)
-        Me.RadDockMain.SerializableAutoHideContainer.BottomAutoHideGroups.Add(AutoHideGroup1)
+        AutoHideGroup2.Windows.Add(Me.DockWindowPlaceholder1)
+        Me.RadDockMain.SerializableAutoHideContainer.BottomAutoHideGroups.Add(AutoHideGroup2)
         Me.RadDockMain.Size = New System.Drawing.Size(867, 840)
         Me.RadDockMain.TabIndex = 0
         Me.RadDockMain.TabStop = False
