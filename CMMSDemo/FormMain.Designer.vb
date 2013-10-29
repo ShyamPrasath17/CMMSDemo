@@ -448,7 +448,7 @@ Partial Class FormMain
         Me.rpvMain.Location = New System.Drawing.Point(0, 0)
         Me.rpvMain.Name = "rpvMain"
         Me.rpvMain.PageBackColor = System.Drawing.Color.White
-        Me.rpvMain.SelectedPage = Me.rpvpDashBoard
+        Me.rpvMain.SelectedPage = Me.rpvpScheduledMaintenance
         Me.rpvMain.Size = New System.Drawing.Size(209, 840)
         Me.rpvMain.TabIndex = 1
         Me.rpvMain.Text = "RadPageView1"
@@ -635,12 +635,16 @@ Partial Class FormMain
         '
         'btmAssetReading
         '
+        Me.btmAssetReading.BackColor = System.Drawing.Color.Transparent
+        Me.btmAssetReading.BackgroundImage = CType(resources.GetObject("btmAssetReading.BackgroundImage"), System.Drawing.Image)
+        Me.btmAssetReading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btmAssetReading.FlatAppearance.BorderSize = 0
+        Me.btmAssetReading.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btmAssetReading.Location = New System.Drawing.Point(7, 80)
         Me.btmAssetReading.Name = "btmAssetReading"
-        Me.btmAssetReading.Size = New System.Drawing.Size(165, 54)
+        Me.btmAssetReading.Size = New System.Drawing.Size(175, 50)
         Me.btmAssetReading.TabIndex = 6
-        Me.btmAssetReading.Text = "Asset Readings"
-        Me.btmAssetReading.UseVisualStyleBackColor = True
+        Me.btmAssetReading.UseVisualStyleBackColor = False
         '
         'btnScheduledMaintainance
         '
