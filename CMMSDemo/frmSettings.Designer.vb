@@ -211,6 +211,8 @@ Partial Class frmSettings
         Me.TabPage21 = New System.Windows.Forms.TabPage()
         Me.TextBoxAdUser = New System.Windows.Forms.TextBox()
         Me.LabelAdUser = New System.Windows.Forms.Label()
+        Me.chkRevReceipt = New System.Windows.Forms.CheckBox()
+        Me.chkAllowOverRideInterest = New System.Windows.Forms.CheckBox()
         Me.txtPostCode = New System.Windows.Forms.TextBox()
         Me.chkAdmin = New System.Windows.Forms.CheckBox()
         Me.txtEmail = New System.Windows.Forms.TextBox()
@@ -406,9 +408,10 @@ Partial Class frmSettings
         Me.RadioButton33 = New System.Windows.Forms.RadioButton()
         Me.RadioButton34 = New System.Windows.Forms.RadioButton()
         Me.ListBox10 = New System.Windows.Forms.ListBox()
-        Me.TabPage19 = New System.Windows.Forms.TabPage()
-        Me.chkAllowOverRideInterest = New System.Windows.Forms.CheckBox()
-        Me.chkRevReceipt = New System.Windows.Forms.CheckBox()
+        Me.Label45 = New System.Windows.Forms.Label()
+        Me.ComboBox8 = New System.Windows.Forms.ComboBox()
+        Me.TextBox37 = New System.Windows.Forms.TextBox()
+        Me.Label75 = New System.Windows.Forms.Label()
         Me.TabPage11.SuspendLayout()
         Me.TabControl4.SuspendLayout()
         Me.TabPage1.SuspendLayout()
@@ -2448,6 +2451,28 @@ Partial Class frmSettings
         Me.LabelAdUser.TabIndex = 95
         Me.LabelAdUser.Text = "AD User"
         '
+        'chkRevReceipt
+        '
+        Me.chkRevReceipt.Location = New System.Drawing.Point(158, 234)
+        Me.chkRevReceipt.Name = "chkRevReceipt"
+        Me.chkRevReceipt.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkRevReceipt.Size = New System.Drawing.Size(120, 24)
+        Me.chkRevReceipt.TabIndex = 94
+        Me.chkRevReceipt.Text = "Reverse Receipt"
+        Me.chkRevReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkRevReceipt.Visible = False
+        '
+        'chkAllowOverRideInterest
+        '
+        Me.chkAllowOverRideInterest.Location = New System.Drawing.Point(296, 234)
+        Me.chkAllowOverRideInterest.Name = "chkAllowOverRideInterest"
+        Me.chkAllowOverRideInterest.RightToLeft = System.Windows.Forms.RightToLeft.Yes
+        Me.chkAllowOverRideInterest.Size = New System.Drawing.Size(141, 24)
+        Me.chkAllowOverRideInterest.TabIndex = 93
+        Me.chkAllowOverRideInterest.Text = "Allow Override Interest"
+        Me.chkAllowOverRideInterest.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.chkAllowOverRideInterest.Visible = False
+        '
         'txtPostCode
         '
         Me.txtPostCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
@@ -4177,7 +4202,6 @@ Partial Class frmSettings
         'TabControl7
         '
         Me.TabControl7.Controls.Add(Me.TabPage14)
-        Me.TabControl7.Controls.Add(Me.TabPage19)
         Me.TabControl7.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TabControl7.Location = New System.Drawing.Point(0, 0)
         Me.TabControl7.Name = "TabControl7"
@@ -4187,6 +4211,10 @@ Partial Class frmSettings
         '
         'TabPage14
         '
+        Me.TabPage14.Controls.Add(Me.TextBox37)
+        Me.TabPage14.Controls.Add(Me.Label75)
+        Me.TabPage14.Controls.Add(Me.ComboBox8)
+        Me.TabPage14.Controls.Add(Me.Label45)
         Me.TabPage14.Controls.Add(Me.TextBox47)
         Me.TabPage14.Controls.Add(Me.Label50)
         Me.TabPage14.Controls.Add(Me.TextBox48)
@@ -4208,7 +4236,7 @@ Partial Class frmSettings
         '
         'TextBox47
         '
-        Me.TextBox47.Location = New System.Drawing.Point(285, 126)
+        Me.TextBox47.Location = New System.Drawing.Point(293, 126)
         Me.TextBox47.Name = "TextBox47"
         Me.TextBox47.Size = New System.Drawing.Size(302, 20)
         Me.TextBox47.TabIndex = 49
@@ -4224,7 +4252,7 @@ Partial Class frmSettings
         '
         'TextBox48
         '
-        Me.TextBox48.Location = New System.Drawing.Point(285, 100)
+        Me.TextBox48.Location = New System.Drawing.Point(293, 100)
         Me.TextBox48.Name = "TextBox48"
         Me.TextBox48.Size = New System.Drawing.Size(302, 20)
         Me.TextBox48.TabIndex = 47
@@ -4240,7 +4268,7 @@ Partial Class frmSettings
         '
         'TextBox49
         '
-        Me.TextBox49.Location = New System.Drawing.Point(285, 152)
+        Me.TextBox49.Location = New System.Drawing.Point(293, 152)
         Me.TextBox49.Name = "TextBox49"
         Me.TextBox49.Size = New System.Drawing.Size(302, 20)
         Me.TextBox49.TabIndex = 45
@@ -4256,7 +4284,7 @@ Partial Class frmSettings
         '
         'TextBox50
         '
-        Me.TextBox50.Location = New System.Drawing.Point(285, 74)
+        Me.TextBox50.Location = New System.Drawing.Point(293, 74)
         Me.TextBox50.Name = "TextBox50"
         Me.TextBox50.Size = New System.Drawing.Size(302, 20)
         Me.TextBox50.TabIndex = 43
@@ -4272,7 +4300,7 @@ Partial Class frmSettings
         '
         'TextBox46
         '
-        Me.TextBox46.Location = New System.Drawing.Point(285, 48)
+        Me.TextBox46.Location = New System.Drawing.Point(293, 48)
         Me.TextBox46.Name = "TextBox46"
         Me.TextBox46.Size = New System.Drawing.Size(174, 20)
         Me.TextBox46.TabIndex = 32
@@ -4282,9 +4310,9 @@ Partial Class frmSettings
         Me.Label49.AutoSize = True
         Me.Label49.Location = New System.Drawing.Point(206, 51)
         Me.Label49.Name = "Label49"
-        Me.Label49.Size = New System.Drawing.Size(60, 13)
+        Me.Label49.Size = New System.Drawing.Size(35, 13)
         Me.Label49.TabIndex = 31
-        Me.Label49.Text = "User Name"
+        Me.Label49.Text = "Name"
         '
         'GroupBox24
         '
@@ -4388,37 +4416,40 @@ Partial Class frmSettings
         Me.ListBox10.Size = New System.Drawing.Size(146, 199)
         Me.ListBox10.TabIndex = 0
         '
-        'TabPage19
+        'Label45
         '
-        Me.TabPage19.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage19.Name = "TabPage19"
-        Me.TabPage19.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage19.Size = New System.Drawing.Size(1069, 674)
-        Me.TabPage19.TabIndex = 1
-        Me.TabPage19.Text = "Employee Notification"
-        Me.TabPage19.UseVisualStyleBackColor = True
+        Me.Label45.AutoSize = True
+        Me.Label45.Location = New System.Drawing.Point(206, 190)
+        Me.Label45.Name = "Label45"
+        Me.Label45.Size = New System.Drawing.Size(80, 13)
+        Me.Label45.TabIndex = 50
+        Me.Label45.Text = "Employee Type"
         '
-        'chkAllowOverRideInterest
+        'ComboBox8
         '
-        Me.chkAllowOverRideInterest.Location = New System.Drawing.Point(296, 234)
-        Me.chkAllowOverRideInterest.Name = "chkAllowOverRideInterest"
-        Me.chkAllowOverRideInterest.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkAllowOverRideInterest.Size = New System.Drawing.Size(141, 24)
-        Me.chkAllowOverRideInterest.TabIndex = 93
-        Me.chkAllowOverRideInterest.Text = "Allow Override Interest"
-        Me.chkAllowOverRideInterest.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkAllowOverRideInterest.Visible = False
+        Me.ComboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox8.FormattingEnabled = True
+        Me.ComboBox8.Items.AddRange(New Object() {"Engineer", "Technician"})
+        Me.ComboBox8.Location = New System.Drawing.Point(293, 181)
+        Me.ComboBox8.Name = "ComboBox8"
+        Me.ComboBox8.Size = New System.Drawing.Size(302, 21)
+        Me.ComboBox8.TabIndex = 51
         '
-        'chkRevReceipt
+        'TextBox37
         '
-        Me.chkRevReceipt.Location = New System.Drawing.Point(158, 234)
-        Me.chkRevReceipt.Name = "chkRevReceipt"
-        Me.chkRevReceipt.RightToLeft = System.Windows.Forms.RightToLeft.Yes
-        Me.chkRevReceipt.Size = New System.Drawing.Size(120, 24)
-        Me.chkRevReceipt.TabIndex = 94
-        Me.chkRevReceipt.Text = "Reverse Receipt"
-        Me.chkRevReceipt.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkRevReceipt.Visible = False
+        Me.TextBox37.Location = New System.Drawing.Point(293, 217)
+        Me.TextBox37.Name = "TextBox37"
+        Me.TextBox37.Size = New System.Drawing.Size(174, 20)
+        Me.TextBox37.TabIndex = 53
+        '
+        'Label75
+        '
+        Me.Label75.AutoSize = True
+        Me.Label75.Location = New System.Drawing.Point(206, 220)
+        Me.Label75.Name = "Label75"
+        Me.Label75.Size = New System.Drawing.Size(58, 13)
+        Me.Label75.TabIndex = 52
+        Me.Label75.Text = "Hourly rate"
         '
         'frmSettings
         '
@@ -4749,7 +4780,6 @@ Partial Class frmSettings
     Friend WithEvents TabPage4 As System.Windows.Forms.TabPage
     Friend WithEvents TabControl7 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage14 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage19 As System.Windows.Forms.TabPage
     Friend WithEvents TextBox47 As System.Windows.Forms.TextBox
     Friend WithEvents Label50 As System.Windows.Forms.Label
     Friend WithEvents TextBox48 As System.Windows.Forms.TextBox
@@ -4938,4 +4968,8 @@ Partial Class frmSettings
     Friend WithEvents btnSavePrinterInfo As System.Windows.Forms.Button
     Friend WithEvents chkRevReceipt As System.Windows.Forms.CheckBox
     Friend WithEvents chkAllowOverRideInterest As System.Windows.Forms.CheckBox
+    Friend WithEvents TextBox37 As System.Windows.Forms.TextBox
+    Friend WithEvents Label75 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox8 As System.Windows.Forms.ComboBox
+    Friend WithEvents Label45 As System.Windows.Forms.Label
 End Class
