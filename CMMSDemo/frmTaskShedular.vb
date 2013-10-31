@@ -11,16 +11,16 @@ Imports System.Collections.Generic
 Imports Telerik.WinControls.UI.Scheduler.Dialogs
 
 Public Class frmTaskShedular
-    Dim RSWo As RadScheduler = New RadScheduler()
-    Dim RSEmp As RadScheduler = New RadScheduler()
-    Dim RSEqp As RadScheduler = New RadScheduler()
-    Dim Rshcmms As RadScheduler = New RadScheduler()
+    'Dim RSWo As RadScheduler = New RadScheduler()
+    'Dim RSEmp As RadScheduler = New RadScheduler()
+    'Dim RSEqp As RadScheduler = New RadScheduler()
+    'Dim Rshcmms As RadScheduler = New RadScheduler()
     'Dim tpWo As TableLayoutPanel = New TableLayoutPanel()
 
-    Dim LblTsk As Label = New Label()
-    Dim Lblwo As Label = New Label()
-    Dim Lblemp As Label = New Label()
-    Dim Lbleqp As Label = New Label()
+    'Dim LblTsk As Label = New Label()
+    'Dim Lblwo As Label = New Label()
+    'Dim Lblemp As Label = New Label()
+    'Dim Lbleqp As Label = New Label()
 
     Private Sub Rshcmms_Click(sender As Object, e As EventArgs)
 
@@ -28,14 +28,16 @@ Public Class frmTaskShedular
 
     Private Sub Rcal_SelectionChanged(sender As Object, e As EventArgs) Handles Rcal.SelectionChanged
         If Me.Rcal.SelectedDates.Count > 0 Then
-            Me.Rshcmms.ActiveView.StartDate = Me.Rcal.SelectedDate
-            Me.RSWo.ActiveView.StartDate = Me.Rcal.SelectedDate
+            Me.RsTask.ActiveView.StartDate = Me.Rcal.SelectedDate
+            Me.RSwo.ActiveView.StartDate = Me.Rcal.SelectedDate
             Me.RSEmp.ActiveView.StartDate = Me.Rcal.SelectedDate
             Me.RSEqp.ActiveView.StartDate = Me.Rcal.SelectedDate
         End If
     End Sub
 
     Private Sub frmShedular_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TPsch.AutoSize = True
+        TPsch.Dock = DockStyle.Fill
         'tpWo.GrowStyle = TableLayoutPanelGrowStyle.AddRows
         'tpWo.AutoSize = True
         'tpWo.Controls.Add(Lblwo)
@@ -46,13 +48,27 @@ Public Class frmTaskShedular
 
         'Rshcmms.AllowAppointmentMove = False
         'Rshcmms.AllowAppointmentResize = False
-        LblTsk.Text = "Task"
-        Lblwo.Text = "Work Order"
-        Lblemp.Text = "Employee"
-        Lbleqp.Text = "Equipment"
+        'LblTsk.Text = "Task"
+        'Lblwo.Text = "Work Order"
+        'Lblemp.Text = "Employee"
+        'Lbleqp.Text = "Equipment"
 
-        AddHandler Rshcmms.ActiveViewChanged, AddressOf Rshcmms_ActiveViewChanged
-        AddHandler Rshcmms.ViewNavigated, AddressOf Rshcmms_ViewNavigated
+        'For i As Integer = 1 To 3
+        '    TPsch.ColumnStyles.RemoveAt(0)
+        'Next
+
+
+
+        Adjustpanel()
+        TPsch.Controls.Remove(TpWo)
+        TPsch.Controls.Remove(TpTask)
+        TPsch.Controls.Remove(TpEmp)
+        TPsch.Controls.Remove(TpEqp)
+        TPsch.ColumnCount = 0
+
+
+        AddHandler RsTask.ActiveViewChanged, AddressOf Rshcmms_ActiveViewChanged
+        AddHandler RsTask.ViewNavigated, AddressOf Rshcmms_ViewNavigated
 
         MonthUpDown.Minimum = 1
         MonthUpDown.Maximum = 12
@@ -60,13 +76,13 @@ Public Class frmTaskShedular
         SplitContainer2.IsSplitterFixed = True
         SplitContainer1.IsSplitterFixed = True
         SplitContainer2.FixedPanel = FixedPanel.Panel1
-        Rshcmms.AllowAppointmentCreateInline = False
+        RsTask.AllowAppointmentCreateInline = False
         ChkAllAreas.Checked = True
         radMultiView.Checked = True
-        ChkAll.Checked = True
-        SchedulerNav.AssociatedScheduler = Rshcmms
 
-        Rshcmms.ActiveViewType = SchedulerViewType.Month
+        SchedulerNav.AssociatedScheduler = RsTask
+
+        RsTask.ActiveViewType = SchedulerViewType.Month
     End Sub
 
     Private Sub Rshcmms_AppointmentElementDoubleClick(sender As Object, e As EventArgs)
@@ -104,7 +120,7 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub addTaskAppointments()
-        Rshcmms.Appointments.Clear()
+        RsTask.Appointments.Clear()
         Dim baseDate As DateTime = DateTime.Today
         Dim start() As DateTime = {baseDate.AddHours(14.0), baseDate.AddDays(1.0).AddHours(9.0), baseDate.AddDays(2.0).AddHours(13.0), baseDate.AddDays(-3.0).AddHours(13.0), baseDate.AddDays(-2.0).AddHours(10.0), baseDate.AddDays(-1.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(12.0), baseDate.AddDays(-4.0).AddHours(15.0), baseDate.AddDays(-4.0).AddHours(0.0)}
 
@@ -118,15 +134,15 @@ Public Class frmTaskShedular
         For i As Integer = 0 To summaries.Length - 1
             appointment = New Appointment(start(i), [end](i), summaries(i), "", "WorkOrder : Wo1")
             appointment.BackgroundId = AppointmentBackground.MustAttend
-            Me.Rshcmms.Appointments.Add(appointment)
+            Me.RsTask.Appointments.Add(appointment)
         Next i
         'Dim locations() As String = {"WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1", "WorkOrder : Wo1"}
-       
+
         appointment = Nothing
         For i As Integer = 21 To 30
             appointment = New Appointment(baseDate.AddDays(1).AddHours(6), baseDate.AddDays(1).AddHours(16), "Tsk " & (i + 1).ToString(), "", "WorkOrder : Wo2")
             appointment.BackgroundId = AppointmentBackground.MustAttend
-            Me.Rshcmms.Appointments.Add(appointment)
+            Me.RsTask.Appointments.Add(appointment)
         Next i
     End Sub
     Private Sub addWoAppointments(ByRef sche As RadScheduler)
@@ -214,7 +230,7 @@ Public Class frmTaskShedular
         saveFileDialog.Filter = "iCal files (*.ics)|*.ics|All files (*.*)|*.*"
         If saveFileDialog.ShowDialog() = DialogResult.OK Then
             Using fileStream As FileStream = File.Create(saveFileDialog.FileName)
-                Me.Rshcmms.Export(fileStream, New SchedulerICalendarExporter())
+                Me.RsTask.Export(fileStream, New SchedulerICalendarExporter())
             End Using
         End If
     End Sub
@@ -250,54 +266,40 @@ Public Class frmTaskShedular
     Private Sub ShowSchedular(Type As String)
         If Type = "Task" Then
             addTaskAppointments()
-            ChkAll.Visible = False
-            grpSelect.Visible = False
-        ElseIf Type = "Employee" Then
-            addEmployeeAppointments(Rshcmms)
-            ChkAll.Visible = True
-            grpSelect.Visible = True
-            lblSelect.Text = "Employee"
-            ChkAll.Text = "All Employees"
-        ElseIf Type = "Equipment" Then
-            addEquipmentAppointments(Rshcmms)
-            ChkAll.Visible = True
-            grpSelect.Visible = True
-            lblSelect.Text = "Equipment"
-            ChkAll.Text = "All Equipment"
-        Else
-            addWoAppointments(Rshcmms)
-            ChkAll.Visible = False
-            grpSelect.Visible = False
-            ChkAll.Visible = True
-            grpSelect.Visible = True
-            lblSelect.Text = "Work Order"
-            ChkAll.Text = "All Work Orders"
 
+        ElseIf Type = "Employee" Then
+            addEmployeeAppointments(RsTask)
+          
+        ElseIf Type = "Equipment" Then
+            addEquipmentAppointments(RsTask)
+           
+        Else
+            addWoAppointments(RsTask)
         End If
     End Sub
 
     Private Sub Rshcmms_ActiveViewChanged(sender As Object, e As SchedulerViewChangedEventArgs)
-        RSWo.ActiveViewType = e.NewView.ViewType
+        RSwo.ActiveViewType = e.NewView.ViewType
         RSEmp.ActiveViewType = e.NewView.ViewType
         RSEqp.ActiveViewType = e.NewView.ViewType
 
         If e.NewView.ViewType <> e.OldView.ViewType AndAlso e.NewView.ViewType = SchedulerViewType.Month Then
-            Me.Rshcmms.GetMonthView().WeekCount = 5
-            RSWo.GetMonthView().WeekCount = 5
+            Me.RsTask.GetMonthView().WeekCount = 5
+            RSwo.GetMonthView().WeekCount = 5
             RSEmp.GetMonthView().WeekCount = 5
             RSEqp.GetMonthView().WeekCount = 5
             grpVisibleM.Visible = False
         ElseIf e.NewView.ViewType <> e.OldView.ViewType AndAlso e.NewView.ViewType = SchedulerViewType.Day Then
-            Me.Rshcmms.GetDayView().DayCount = 1
+            Me.RsTask.GetDayView().DayCount = 1
             grpVisibleM.Visible = False
-            RSWo.GetDayView().DayCount = 1
+            RSwo.GetDayView().DayCount = 1
             RSEmp.GetDayView().DayCount = 1
             RSEqp.GetDayView().DayCount = 1
         ElseIf e.NewView.ViewType <> e.OldView.ViewType AndAlso e.NewView.ViewType = SchedulerViewType.Timeline Then
-            Rshcmms.GetTimelineView().ShowTimescale(Timescales.Months)
+            RsTask.GetTimelineView().ShowTimescale(Timescales.Months)
             grpVisibleM.Visible = True
 
-            Dim timescale As SchedulerTimescale = Me.Rshcmms.GetTimelineView().GetScaling()
+            Dim timescale As SchedulerTimescale = Me.RsTask.GetTimelineView().GetScaling()
             timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
 
             timescale = RSEmp.GetTimelineView().GetScaling()
@@ -306,7 +308,7 @@ Public Class frmTaskShedular
             timescale = RSEqp.GetTimelineView().GetScaling()
             timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
 
-            timescale = RSWo.GetTimelineView().GetScaling()
+            timescale = RSwo.GetTimelineView().GetScaling()
             timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
         Else
             grpVisibleM.Visible = False
@@ -314,9 +316,9 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub MonthUpDown_ValueChanged(sender As Object, e As EventArgs) Handles MonthUpDown.ValueChanged
-        If Rshcmms.ActiveViewType = SchedulerViewType.Timeline Then
+        If RsTask.ActiveViewType = SchedulerViewType.Timeline Then
             Dim timescale As SchedulerTimescale
-            timescale = Me.Rshcmms.GetTimelineView().GetScaling()
+            timescale = Me.RsTask.GetTimelineView().GetScaling()
             timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
 
             timescale = RSEmp.GetTimelineView().GetScaling()
@@ -325,17 +327,13 @@ Public Class frmTaskShedular
             timescale = RSEqp.GetTimelineView().GetScaling()
             timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
 
-            timescale = RSWo.GetTimelineView().GetScaling()
+            timescale = RSwo.GetTimelineView().GetScaling()
             timescale.DisplayedCellsCount = CInt(Fix(Me.MonthUpDown.Value))
         End If
     End Sub
 
-    Private Sub ChkAll_CheckedChanged(sender As Object, e As EventArgs) Handles ChkAll.CheckedChanged
-        If ChkAll.Checked Then
-            grpSelect.Enabled = False
-        Else
-            grpSelect.Enabled = True
-        End If
+    Private Sub ChkAll_CheckedChanged(sender As Object, e As EventArgs)
+
     End Sub
 
     Private Sub ChkWo_CheckedChanged(sender As Object, e As EventArgs) Handles ChkWo.CheckedChanged
@@ -343,11 +341,12 @@ Public Class frmTaskShedular
             'TPsch.Controls.Add(tpWo)
             'tpWo.Dock = DockStyle.Fill
             'tpWo.Visible = True
-            TPsch.Controls.Add(RSWo)
-            RSWo.Dock = DockStyle.Fill
-            RSWo.Visible = True
-            RSWo.ActiveViewType = Rshcmms.ActiveViewType
-            addWoAppointments(RSWo)
+            TPsch.ColumnCount = TPsch.ColumnCount + 1
+            TPsch.Controls.Add(TpWo)
+            TpWo.Dock = DockStyle.Fill
+            TpWo.Visible = True
+            RSwo.ActiveViewType = RsTask.ActiveViewType
+            addWoAppointments(RSwo)
         Else
             'If TPsch.Controls.Contains(tpWo) Then
             '    TPsch.Controls.Remove(tpWo)
@@ -355,68 +354,80 @@ Public Class frmTaskShedular
             '    'RSWo.Visible = False
             'End If
 
-            If TPsch.Controls.Contains(RSWo) Then
-                TPsch.Controls.Remove(RSWo)
-                RSWo.Visible = False
+            If TPsch.Controls.Contains(TpWo) Then
+                TPsch.Controls.Remove(TpWo)
+                TPsch.ColumnCount = TPsch.ColumnCount - 1
+                TpWo.Visible = False
             End If
-            Adjustpanel()
-            End If
+
+        End If
+        Adjustpanel()
     End Sub
 
     Private Sub ChkTask_CheckedChanged(sender As Object, e As EventArgs) Handles ChkTask.CheckedChanged
         If ChkTask.Checked Then
-            If Not TPsch.Controls.Contains(Rshcmms) Then
-                TPsch.Controls.Add(Rshcmms)
-                Rshcmms.Dock = DockStyle.Fill
-                Rshcmms.Visible = True
-                Rshcmms.ActiveViewType = Rshcmms.ActiveViewType
-                addTaskAppointments()
-            End If
+            TPsch.ColumnCount = TPsch.ColumnCount + 1
+            TPsch.Controls.Contains(TpTask)
+            TPsch.Controls.Add(TpTask)
+            TpTask.Dock = DockStyle.Fill
+            TpTask.Visible = True
+            RsTask.ActiveViewType = RsTask.ActiveViewType
+            addTaskAppointments()
+
 
             'SchedulerNav.AssociatedScheduler=
         Else
-            If TPsch.Controls.Contains(Rshcmms) Then
-                TPsch.Controls.Remove(Rshcmms)
-                Rshcmms.Visible = False
+            If TPsch.Controls.Contains(TpTask) Then
+                TPsch.Controls.Remove(TpTask)
+                TPsch.ColumnCount = TPsch.ColumnCount - 1
+                TpTask.Visible = False
             End If
-            Adjustpanel()
+
         End If
+        Adjustpanel()
     End Sub
 
     Private Sub ChkEmployee_CheckedChanged(sender As Object, e As EventArgs) Handles ChkEmployee.CheckedChanged
         If ChkEmployee.Checked Then
-            TPsch.Controls.Add(RSEmp)
-            RSEmp.Dock = DockStyle.Fill
-            RSEmp.Visible = True
-            RSEmp.ActiveViewType = Rshcmms.ActiveViewType
+            TPsch.ColumnCount = TPsch.ColumnCount + 1
+            TPsch.Controls.Add(TpEmp)
+            TpEmp.Dock = DockStyle.Fill
+            TpEmp.Visible = True
+            RSEmp.ActiveViewType = RsTask.ActiveViewType
             addEmployeeAppointments(RSEmp)
             'SchedulerNav.AssociatedScheduler=
         Else
-            If TPsch.Controls.Contains(RSEmp) Then
-                TPsch.Controls.Remove(RSEmp)
-                RSEmp.Visible = False
+            If TPsch.Controls.Contains(TpEmp) Then
+                TPsch.Controls.Remove(TpEmp)
+                TPsch.ColumnCount = TPsch.ColumnCount - 1
+                TpEmp.Visible = False
             End If
-            Adjustpanel()
+
         End If
+        Adjustpanel()
     End Sub
 
     Private Sub ChkEquipment_CheckedChanged(sender As Object, e As EventArgs) Handles ChkEquipment.CheckedChanged
         If ChkEquipment.Checked Then
-            TPsch.Controls.Add(RSEqp)
-            RSEqp.Dock = DockStyle.Fill
-            RSEqp.Visible = True
-            RSEmp.ActiveViewType = Rshcmms.ActiveViewType
+            TPsch.ColumnCount = TPsch.ColumnCount + 1
+            TPsch.Controls.Add(TpEqp)
+            TpEqp.Dock = DockStyle.Fill
+            TpEqp.Visible = True
+            RSEmp.ActiveViewType = RsTask.ActiveViewType
             addEquipmentAppointments(RSEqp)
         Else
-            If TPsch.Controls.Contains(RSEqp) Then
-                TPsch.Controls.Remove(RSEqp)
-                RSEqp.Visible = False
+            If TPsch.Controls.Contains(TpEqp) Then
+                TPsch.Controls.Remove(TpEqp)
+                TPsch.ColumnCount = TPsch.ColumnCount - 1
+                TpEqp.Visible = False
             End If
-            Adjustpanel()
         End If
+        Adjustpanel()
+
     End Sub
 
     Private Sub Adjustpanel()
+
         For Each p As ColumnStyle In TPsch.ColumnStyles
             Dim i As Integer = TPsch.ColumnCount
             p.SizeType = SizeType.Percent
@@ -429,7 +440,7 @@ Public Class frmTaskShedular
     Private Sub radsingleView_CheckedChanged(sender As Object, e As EventArgs) Handles radsingleView.CheckedChanged
 
         'RadTask.Checked = True
-        ChkAll.Checked = True
+
         If radsingleView.Checked Then
             grpType.Visible = True
             grpMultiType.Visible = False
@@ -449,33 +460,41 @@ Public Class frmTaskShedular
     End Sub
 
     Private Sub Rshcmms_ViewNavigated(sender As Object, e As SchedulerViewNavigatedEventArgs)
-        RSWo.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
-        RSEmp.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
-        RSEqp.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
+        RSwo.ActiveView.StartDate = RsTask.ActiveView.StartDate
+        RSEmp.ActiveView.StartDate = RsTask.ActiveView.StartDate
+        RSEqp.ActiveView.StartDate = RsTask.ActiveView.StartDate
 
     End Sub
 
     Private Sub SchedulerNav_NavigateBackwardsClick(sender As Object, e As EventArgs) Handles SchedulerNav.NavigateBackwardsClick
-        RSWo.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
-        RSEmp.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
-        RSEqp.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
+        RSwo.ActiveView.StartDate = RsTask.ActiveView.StartDate
+        RSEmp.ActiveView.StartDate = RsTask.ActiveView.StartDate
+        RSEqp.ActiveView.StartDate = RsTask.ActiveView.StartDate
     End Sub
 
     Private Sub SchedulerNav_NavigateForwardsClick(sender As Object, e As EventArgs) Handles SchedulerNav.NavigateForwardsClick
-        RSWo.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
-        RSEmp.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
-        RSEqp.ActiveView.StartDate = Rshcmms.ActiveView.StartDate
+        RSwo.ActiveView.StartDate = RsTask.ActiveView.StartDate
+        RSEmp.ActiveView.StartDate = RsTask.ActiveView.StartDate
+        RSEqp.ActiveView.StartDate = RsTask.ActiveView.StartDate
     End Sub
 
     Private Sub SchedulerNav_ShowWeekendStateChanged(sender As Object, args As StateChangedEventArgs) Handles SchedulerNav.ShowWeekendStateChanged
-        If Rshcmms.ActiveViewType = SchedulerViewType.Month Then
-            RSWo.GetMonthView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
+        If RsTask.ActiveViewType = SchedulerViewType.Month Then
+            RSwo.GetMonthView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
             RSEmp.GetMonthView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
             RSEqp.GetMonthView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
-        ElseIf Rshcmms.ActiveViewType = SchedulerViewType.Week Then
-            RSWo.GetWeekView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
+        ElseIf RsTask.ActiveViewType = SchedulerViewType.Week Then
+            RSwo.GetWeekView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
             RSEmp.GetWeekView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
             RSEqp.GetWeekView().ShowWeekend = SchedulerNav.ShowWeekendCheckBox.Checked
         End If
+    End Sub
+
+    Private Sub TpTask_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub btnPrint_Click(sender As Object, e As EventArgs) Handles btnPrint.Click
+
     End Sub
 End Class
