@@ -23,16 +23,18 @@ Partial Class frmTaskShedular
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmTaskShedular))
-        Dim DateTimeInterval1 As Telerik.WinControls.UI.DateTimeInterval = New Telerik.WinControls.UI.DateTimeInterval()
-        Dim SchedulerDailyPrintStyle1 As Telerik.WinControls.UI.SchedulerDailyPrintStyle = New Telerik.WinControls.UI.SchedulerDailyPrintStyle()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.TPsch = New System.Windows.Forms.TableLayoutPanel()
         Me.Rcal = New Telerik.WinControls.UI.RadCalendar()
         Me.SplitContainer2 = New System.Windows.Forms.SplitContainer()
         Me.grpMultiType = New System.Windows.Forms.GroupBox()
-        Me.ChkTask = New System.Windows.Forms.CheckBox()
         Me.ChkEquipment = New System.Windows.Forms.CheckBox()
+        Me.ChkTask = New System.Windows.Forms.CheckBox()
         Me.ChkEmployee = New System.Windows.Forms.CheckBox()
         Me.ChkWo = New System.Windows.Forms.CheckBox()
+        Me.grpMultiview = New System.Windows.Forms.GroupBox()
+        Me.radMultiView = New System.Windows.Forms.RadioButton()
+        Me.radsingleView = New System.Windows.Forms.RadioButton()
         Me.grpType = New System.Windows.Forms.GroupBox()
         Me.RadEmp = New System.Windows.Forms.RadioButton()
         Me.RadWoEqp = New System.Windows.Forms.RadioButton()
@@ -47,9 +49,6 @@ Partial Class frmTaskShedular
         Me.Button1 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.lblSelect = New System.Windows.Forms.Label()
-        Me.GrpView = New System.Windows.Forms.GroupBox()
-        Me.cmbView = New System.Windows.Forms.ComboBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.grpSite = New System.Windows.Forms.GroupBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
@@ -62,11 +61,6 @@ Partial Class frmTaskShedular
         Me.Button10 = New System.Windows.Forms.Button()
         Me.TextBox10 = New System.Windows.Forms.TextBox()
         Me.ChkAllAreas = New System.Windows.Forms.CheckBox()
-        Me.TPsch = New System.Windows.Forms.TableLayoutPanel()
-        Me.Rshcmms = New Telerik.WinControls.UI.RadScheduler()
-        Me.grpMultiview = New System.Windows.Forms.GroupBox()
-        Me.radsingleView = New System.Windows.Forms.RadioButton()
-        Me.radMultiView = New System.Windows.Forms.RadioButton()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -75,17 +69,14 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.Panel2.SuspendLayout()
         Me.SplitContainer2.SuspendLayout()
         Me.grpMultiType.SuspendLayout()
+        Me.grpMultiview.SuspendLayout()
         Me.grpType.SuspendLayout()
         CType(Me.SchedulerNav, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SchedulerNav.SuspendLayout()
         Me.grpVisibleM.SuspendLayout()
         CType(Me.MonthUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpSelect.SuspendLayout()
-        Me.GrpView.SuspendLayout()
         Me.grpSite.SuspendLayout()
-        Me.TPsch.SuspendLayout()
-        CType(Me.Rshcmms, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.grpMultiview.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -104,6 +95,26 @@ Partial Class frmTaskShedular
         Me.SplitContainer1.Size = New System.Drawing.Size(1533, 599)
         Me.SplitContainer1.SplitterDistance = 1275
         Me.SplitContainer1.TabIndex = 1
+        '
+        'TPsch
+        '
+        Me.TPsch.AutoSize = True
+        Me.TPsch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.TPsch.ColumnCount = 1
+        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.TPsch.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TPsch.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns
+        Me.TPsch.Location = New System.Drawing.Point(0, 0)
+        Me.TPsch.Name = "TPsch"
+        Me.TPsch.RowCount = 1
+        Me.TPsch.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TPsch.Size = New System.Drawing.Size(1275, 599)
+        Me.TPsch.TabIndex = 1
         '
         'Rcal
         '
@@ -125,13 +136,12 @@ Partial Class frmTaskShedular
         '
         'SplitContainer2.Panel1
         '
-        Me.SplitContainer2.Panel1.Controls.Add(Me.grpMultiview)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpMultiType)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.grpMultiview)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpType)
         Me.SplitContainer2.Panel1.Controls.Add(Me.SchedulerNav)
         Me.SplitContainer2.Panel1.Controls.Add(Me.ChkAll)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpSelect)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.GrpView)
         Me.SplitContainer2.Panel1.Controls.Add(Me.btnExport)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpSite)
         Me.SplitContainer2.Panel1.Controls.Add(Me.ChkAllAreas)
@@ -149,22 +159,12 @@ Partial Class frmTaskShedular
         Me.grpMultiType.Controls.Add(Me.ChkTask)
         Me.grpMultiType.Controls.Add(Me.ChkEmployee)
         Me.grpMultiType.Controls.Add(Me.ChkWo)
-        Me.grpMultiType.Location = New System.Drawing.Point(1036, 12)
+        Me.grpMultiType.Location = New System.Drawing.Point(708, 12)
         Me.grpMultiType.Name = "grpMultiType"
-        Me.grpMultiType.Size = New System.Drawing.Size(387, 77)
+        Me.grpMultiType.Size = New System.Drawing.Size(380, 74)
         Me.grpMultiType.TabIndex = 115
         Me.grpMultiType.TabStop = False
         Me.grpMultiType.Text = "View Schedulars"
-        '
-        'ChkTask
-        '
-        Me.ChkTask.AutoSize = True
-        Me.ChkTask.Location = New System.Drawing.Point(112, 34)
-        Me.ChkTask.Name = "ChkTask"
-        Me.ChkTask.Size = New System.Drawing.Size(50, 17)
-        Me.ChkTask.TabIndex = 3
-        Me.ChkTask.Text = "Task"
-        Me.ChkTask.UseVisualStyleBackColor = True
         '
         'ChkEquipment
         '
@@ -175,6 +175,16 @@ Partial Class frmTaskShedular
         Me.ChkEquipment.TabIndex = 2
         Me.ChkEquipment.Text = "Equipment"
         Me.ChkEquipment.UseVisualStyleBackColor = True
+        '
+        'ChkTask
+        '
+        Me.ChkTask.AutoSize = True
+        Me.ChkTask.Location = New System.Drawing.Point(112, 34)
+        Me.ChkTask.Name = "ChkTask"
+        Me.ChkTask.Size = New System.Drawing.Size(50, 17)
+        Me.ChkTask.TabIndex = 3
+        Me.ChkTask.Text = "Task"
+        Me.ChkTask.UseVisualStyleBackColor = True
         '
         'ChkEmployee
         '
@@ -196,13 +206,46 @@ Partial Class frmTaskShedular
         Me.ChkWo.Text = "Work Order"
         Me.ChkWo.UseVisualStyleBackColor = True
         '
+        'grpMultiview
+        '
+        Me.grpMultiview.Controls.Add(Me.radMultiView)
+        Me.grpMultiview.Controls.Add(Me.radsingleView)
+        Me.grpMultiview.Location = New System.Drawing.Point(702, 9)
+        Me.grpMultiview.Name = "grpMultiview"
+        Me.grpMultiview.Size = New System.Drawing.Size(302, 77)
+        Me.grpMultiview.TabIndex = 118
+        Me.grpMultiview.TabStop = False
+        Me.grpMultiview.Visible = False
+        '
+        'radMultiView
+        '
+        Me.radMultiView.AutoSize = True
+        Me.radMultiView.Location = New System.Drawing.Point(163, 29)
+        Me.radMultiView.Name = "radMultiView"
+        Me.radMultiView.Size = New System.Drawing.Size(124, 17)
+        Me.radMultiView.TabIndex = 1
+        Me.radMultiView.TabStop = True
+        Me.radMultiView.Text = "Multi Schedular View"
+        Me.radMultiView.UseVisualStyleBackColor = True
+        '
+        'radsingleView
+        '
+        Me.radsingleView.AutoSize = True
+        Me.radsingleView.Location = New System.Drawing.Point(17, 29)
+        Me.radsingleView.Name = "radsingleView"
+        Me.radsingleView.Size = New System.Drawing.Size(131, 17)
+        Me.radsingleView.TabIndex = 0
+        Me.radsingleView.TabStop = True
+        Me.radsingleView.Text = "Single Schedular View"
+        Me.radsingleView.UseVisualStyleBackColor = True
+        '
         'grpType
         '
         Me.grpType.Controls.Add(Me.RadEmp)
         Me.grpType.Controls.Add(Me.RadWoEqp)
         Me.grpType.Controls.Add(Me.RadWo)
         Me.grpType.Controls.Add(Me.RadTask)
-        Me.grpType.Location = New System.Drawing.Point(1036, 12)
+        Me.grpType.Location = New System.Drawing.Point(1094, 12)
         Me.grpType.Name = "grpType"
         Me.grpType.Size = New System.Drawing.Size(413, 77)
         Me.grpType.TabIndex = 114
@@ -255,7 +298,7 @@ Partial Class frmTaskShedular
         '
         'SchedulerNav
         '
-        Me.SchedulerNav.AssociatedScheduler = Me.Rshcmms
+        Me.SchedulerNav.AssociatedScheduler = Nothing
         Me.SchedulerNav.Controls.Add(Me.grpVisibleM)
         Me.SchedulerNav.DateFormat = "yyyy/MM/dd"
         Me.SchedulerNav.Location = New System.Drawing.Point(12, 9)
@@ -341,37 +384,6 @@ Partial Class frmTaskShedular
         Me.lblSelect.Size = New System.Drawing.Size(58, 13)
         Me.lblSelect.TabIndex = 3
         Me.lblSelect.Text = "Employees"
-        '
-        'GrpView
-        '
-        Me.GrpView.Controls.Add(Me.cmbView)
-        Me.GrpView.Controls.Add(Me.Label3)
-        Me.GrpView.Location = New System.Drawing.Point(1142, 9)
-        Me.GrpView.Name = "GrpView"
-        Me.GrpView.Size = New System.Drawing.Size(264, 46)
-        Me.GrpView.TabIndex = 113
-        Me.GrpView.TabStop = False
-        Me.GrpView.Text = "View"
-        Me.GrpView.Visible = False
-        '
-        'cmbView
-        '
-        Me.cmbView.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cmbView.FormattingEnabled = True
-        Me.cmbView.Items.AddRange(New Object() {"Daily", "Weekly", "Monthly"})
-        Me.cmbView.Location = New System.Drawing.Point(93, 13)
-        Me.cmbView.Name = "cmbView"
-        Me.cmbView.Size = New System.Drawing.Size(188, 21)
-        Me.cmbView.TabIndex = 3
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(6, 16)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(81, 13)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Schedular View"
         '
         'btnExport
         '
@@ -485,83 +497,6 @@ Partial Class frmTaskShedular
         Me.ChkAllAreas.Text = "All Areas"
         Me.ChkAllAreas.UseVisualStyleBackColor = True
         '
-        'TPsch
-        '
-        Me.TPsch.AutoSize = True
-        Me.TPsch.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.TPsch.ColumnCount = 1
-        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TPsch.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TPsch.Controls.Add(Me.Rshcmms, 0, 0)
-        Me.TPsch.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TPsch.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.AddColumns
-        Me.TPsch.Location = New System.Drawing.Point(0, 0)
-        Me.TPsch.Name = "TPsch"
-        Me.TPsch.RowCount = 1
-        Me.TPsch.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TPsch.Size = New System.Drawing.Size(1275, 599)
-        Me.TPsch.TabIndex = 1
-        '
-        'Rshcmms
-        '
-        DateTimeInterval1.End = New Date(CType(0, Long))
-        DateTimeInterval1.Start = New Date(CType(0, Long))
-        Me.Rshcmms.AccessibleInterval = DateTimeInterval1
-        Me.Rshcmms.ActiveViewType = Telerik.WinControls.UI.SchedulerViewType.Month
-        Me.Rshcmms.AppointmentTitleFormat = Nothing
-        Me.Rshcmms.Culture = New System.Globalization.CultureInfo("en-US")
-        Me.Rshcmms.DataSource = Nothing
-        Me.Rshcmms.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Rshcmms.GroupType = Telerik.WinControls.UI.GroupType.None
-        Me.Rshcmms.HeaderFormat = "dd dddd"
-        Me.Rshcmms.Location = New System.Drawing.Point(3, 3)
-        Me.Rshcmms.Name = "Rshcmms"
-        SchedulerDailyPrintStyle1.AppointmentFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        SchedulerDailyPrintStyle1.DateEndRange = New Date(2013, 10, 30, 0, 0, 0, 0)
-        SchedulerDailyPrintStyle1.DateHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold)
-        SchedulerDailyPrintStyle1.DateStartRange = New Date(2013, 10, 4, 0, 0, 0, 0)
-        SchedulerDailyPrintStyle1.PageHeadingFont = New System.Drawing.Font("Microsoft Sans Serif", 22.0!, System.Drawing.FontStyle.Bold)
-        Me.Rshcmms.PrintStyle = SchedulerDailyPrintStyle1
-        Me.Rshcmms.Size = New System.Drawing.Size(1269, 593)
-        Me.Rshcmms.TabIndex = 0
-        Me.Rshcmms.Text = "RadScheduler1"
-        '
-        'grpMultiview
-        '
-        Me.grpMultiview.Controls.Add(Me.radMultiView)
-        Me.grpMultiview.Controls.Add(Me.radsingleView)
-        Me.grpMultiview.Location = New System.Drawing.Point(702, 9)
-        Me.grpMultiview.Name = "grpMultiview"
-        Me.grpMultiview.Size = New System.Drawing.Size(302, 77)
-        Me.grpMultiview.TabIndex = 118
-        Me.grpMultiview.TabStop = False
-        '
-        'radsingleView
-        '
-        Me.radsingleView.AutoSize = True
-        Me.radsingleView.Location = New System.Drawing.Point(17, 29)
-        Me.radsingleView.Name = "radsingleView"
-        Me.radsingleView.Size = New System.Drawing.Size(131, 17)
-        Me.radsingleView.TabIndex = 0
-        Me.radsingleView.TabStop = True
-        Me.radsingleView.Text = "Single Schedular View"
-        Me.radsingleView.UseVisualStyleBackColor = True
-        '
-        'radMultiView
-        '
-        Me.radMultiView.AutoSize = True
-        Me.radMultiView.Location = New System.Drawing.Point(163, 29)
-        Me.radMultiView.Name = "radMultiView"
-        Me.radMultiView.Size = New System.Drawing.Size(124, 17)
-        Me.radMultiView.TabIndex = 1
-        Me.radMultiView.TabStop = True
-        Me.radMultiView.Text = "Multi Schedular View"
-        Me.radMultiView.UseVisualStyleBackColor = True
-        '
         'frmTaskShedular
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -582,6 +517,8 @@ Partial Class frmTaskShedular
         Me.SplitContainer2.ResumeLayout(False)
         Me.grpMultiType.ResumeLayout(False)
         Me.grpMultiType.PerformLayout()
+        Me.grpMultiview.ResumeLayout(False)
+        Me.grpMultiview.PerformLayout()
         Me.grpType.ResumeLayout(False)
         Me.grpType.PerformLayout()
         CType(Me.SchedulerNav, System.ComponentModel.ISupportInitialize).EndInit()
@@ -592,14 +529,8 @@ Partial Class frmTaskShedular
         CType(Me.MonthUpDown, System.ComponentModel.ISupportInitialize).EndInit()
         Me.grpSelect.ResumeLayout(False)
         Me.grpSelect.PerformLayout()
-        Me.GrpView.ResumeLayout(False)
-        Me.GrpView.PerformLayout()
         Me.grpSite.ResumeLayout(False)
         Me.grpSite.PerformLayout()
-        Me.TPsch.ResumeLayout(False)
-        CType(Me.Rshcmms, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.grpMultiview.ResumeLayout(False)
-        Me.grpMultiview.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -618,9 +549,6 @@ Partial Class frmTaskShedular
     Friend WithEvents Button10 As System.Windows.Forms.Button
     Friend WithEvents TextBox10 As System.Windows.Forms.TextBox
     Friend WithEvents btnExport As System.Windows.Forms.Button
-    Friend WithEvents GrpView As System.Windows.Forms.GroupBox
-    Friend WithEvents cmbView As System.Windows.Forms.ComboBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents grpType As System.Windows.Forms.GroupBox
     Friend WithEvents RadEmp As System.Windows.Forms.RadioButton
     Friend WithEvents RadWoEqp As System.Windows.Forms.RadioButton
@@ -641,7 +569,6 @@ Partial Class frmTaskShedular
     Friend WithEvents ChkEmployee As System.Windows.Forms.CheckBox
     Friend WithEvents ChkWo As System.Windows.Forms.CheckBox
     Friend WithEvents TPsch As System.Windows.Forms.TableLayoutPanel
-    Friend WithEvents Rshcmms As Telerik.WinControls.UI.RadScheduler
     Friend WithEvents grpMultiview As System.Windows.Forms.GroupBox
     Friend WithEvents radMultiView As System.Windows.Forms.RadioButton
     Friend WithEvents radsingleView As System.Windows.Forms.RadioButton
