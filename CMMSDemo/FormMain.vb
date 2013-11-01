@@ -22,7 +22,7 @@ Public Class FormMain
     Public frmWorkRequest_ As frmWorkRequest
     Public frmWorkRequestList_ As frmWorkrequestList
 
-    Public frmschedular As frmTaskShedular
+    Public frmschedular As frmShedular
 
     Public frmSettings_ As frmSettings
 
@@ -99,7 +99,7 @@ Public Class FormMain
 
     Private Sub FormMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        
+
 
         ToolWindowWo.Hide()
         ToolWindowWoLst.Hide()
@@ -217,7 +217,7 @@ Public Class FormMain
         'frmCommonTskPool.Show()
     End Sub
     Private Sub addfrmschedular()
-        frmschedular = New frmTaskShedular()
+        frmschedular = New frmShedular()
         frmschedular.Dock = DockStyle.Fill
         frmschedular.TopLevel = False
         frmschedular.FormBorderStyle = Windows.Forms.FormBorderStyle.None
