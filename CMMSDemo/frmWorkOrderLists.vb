@@ -93,7 +93,7 @@
     End Sub
 
     Private Sub dgvWo_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvWo.CellDoubleClick
-        FormMain.ToolWindowWo.DefaultFloatingSize = New Size(900, 1000)
+        FormMain.ToolWindowWo.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWo)
         'FormMain.ToolWindowWo.Show()
         FormMain.ToolWindowWo.Select()
