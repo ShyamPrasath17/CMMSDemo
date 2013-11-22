@@ -98,6 +98,10 @@ Partial Class frmShedular
         Me.MonthUpDown = New System.Windows.Forms.NumericUpDown()
         Me.btnExport = New System.Windows.Forms.Button()
         Me.ChkAllAreas = New System.Windows.Forms.CheckBox()
+        Me.RadPageView1 = New Telerik.WinControls.UI.RadPageView()
+        Me.RadPageViewPage1 = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadPageViewPage2 = New Telerik.WinControls.UI.RadPageViewPage()
+        Me.RadPageViewPage3 = New Telerik.WinControls.UI.RadPageViewPage()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
@@ -128,6 +132,11 @@ Partial Class frmShedular
         Me.SchedulerNav.SuspendLayout()
         Me.grpVisibleM.SuspendLayout()
         CType(Me.MonthUpDown, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.RadPageView1.SuspendLayout()
+        Me.RadPageViewPage1.SuspendLayout()
+        Me.RadPageViewPage2.SuspendLayout()
+        Me.RadPageViewPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -147,7 +156,7 @@ Partial Class frmShedular
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.Rcal)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1530, 669)
+        Me.SplitContainer1.Size = New System.Drawing.Size(1530, 625)
         Me.SplitContainer1.SplitterDistance = 1246
         Me.SplitContainer1.TabIndex = 1
         '
@@ -577,7 +586,7 @@ Partial Class frmShedular
         Me.Rcal.Location = New System.Drawing.Point(0, 0)
         Me.Rcal.MultiViewRows = 3
         Me.Rcal.Name = "Rcal"
-        Me.Rcal.Size = New System.Drawing.Size(280, 669)
+        Me.Rcal.Size = New System.Drawing.Size(280, 625)
         Me.Rcal.TabIndex = 0
         Me.Rcal.Text = "WorkOrders"
         '
@@ -590,26 +599,20 @@ Partial Class frmShedular
         '
         'SplitContainer2.Panel1
         '
-        Me.SplitContainer2.Panel1.Controls.Add(Me.btnPrint)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.grpSite)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.grpMultiType)
+        Me.SplitContainer2.Panel1.Controls.Add(Me.RadPageView1)
         Me.SplitContainer2.Panel1.Controls.Add(Me.grpMultiview)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.grpType)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.SchedulerNav)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.btnExport)
-        Me.SplitContainer2.Panel1.Controls.Add(Me.ChkAllAreas)
         '
         'SplitContainer2.Panel2
         '
         Me.SplitContainer2.Panel2.Controls.Add(Me.SplitContainer1)
         Me.SplitContainer2.Size = New System.Drawing.Size(1530, 769)
-        Me.SplitContainer2.SplitterDistance = 96
+        Me.SplitContainer2.SplitterDistance = 140
         Me.SplitContainer2.TabIndex = 2
         '
         'btnPrint
         '
         Me.btnPrint.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.btnPrint.Location = New System.Drawing.Point(1414, 3)
+        Me.btnPrint.Location = New System.Drawing.Point(501, 0)
         Me.btnPrint.Name = "btnPrint"
         Me.btnPrint.Size = New System.Drawing.Size(104, 40)
         Me.btnPrint.TabIndex = 119
@@ -627,7 +630,7 @@ Partial Class frmShedular
         Me.grpSite.Controls.Add(Me.Label16)
         Me.grpSite.Controls.Add(Me.Button10)
         Me.grpSite.Controls.Add(Me.TextBox10)
-        Me.grpSite.Location = New System.Drawing.Point(834, 28)
+        Me.grpSite.Location = New System.Drawing.Point(7, 22)
         Me.grpSite.Name = "grpSite"
         Me.grpSite.Size = New System.Drawing.Size(561, 55)
         Me.grpSite.TabIndex = 110
@@ -645,7 +648,7 @@ Partial Class frmShedular
         Me.Label13.AutoSize = True
         Me.Label13.Location = New System.Drawing.Point(192, 34)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(44, 13)
+        Me.Label13.Size = New System.Drawing.Size(46, 13)
         Me.Label13.TabIndex = 86
         Me.Label13.Text = "SubSite"
         '
@@ -679,7 +682,7 @@ Partial Class frmShedular
         Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(386, 32)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(29, 13)
+        Me.Label15.Size = New System.Drawing.Size(30, 13)
         Me.Label15.TabIndex = 89
         Me.Label15.Text = "Area"
         '
@@ -688,7 +691,7 @@ Partial Class frmShedular
         Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(9, 32)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(25, 13)
+        Me.Label16.Size = New System.Drawing.Size(26, 13)
         Me.Label16.TabIndex = 92
         Me.Label16.Text = "Site"
         '
@@ -714,7 +717,7 @@ Partial Class frmShedular
         Me.grpMultiType.Controls.Add(Me.ChkTask)
         Me.grpMultiType.Controls.Add(Me.ChkEmployee)
         Me.grpMultiType.Controls.Add(Me.ChkWo)
-        Me.grpMultiType.Location = New System.Drawing.Point(492, 9)
+        Me.grpMultiType.Location = New System.Drawing.Point(3, 6)
         Me.grpMultiType.Name = "grpMultiType"
         Me.grpMultiType.Size = New System.Drawing.Size(319, 77)
         Me.grpMultiType.TabIndex = 115
@@ -726,7 +729,7 @@ Partial Class frmShedular
         Me.ChkEquipment.AutoSize = True
         Me.ChkEquipment.Location = New System.Drawing.Point(231, 34)
         Me.ChkEquipment.Name = "ChkEquipment"
-        Me.ChkEquipment.Size = New System.Drawing.Size(76, 17)
+        Me.ChkEquipment.Size = New System.Drawing.Size(82, 17)
         Me.ChkEquipment.TabIndex = 2
         Me.ChkEquipment.Text = "Equipment"
         Me.ChkEquipment.UseVisualStyleBackColor = True
@@ -736,7 +739,7 @@ Partial Class frmShedular
         Me.ChkTask.AutoSize = True
         Me.ChkTask.Location = New System.Drawing.Point(97, 34)
         Me.ChkTask.Name = "ChkTask"
-        Me.ChkTask.Size = New System.Drawing.Size(50, 17)
+        Me.ChkTask.Size = New System.Drawing.Size(48, 17)
         Me.ChkTask.TabIndex = 3
         Me.ChkTask.Text = "Task"
         Me.ChkTask.UseVisualStyleBackColor = True
@@ -746,7 +749,7 @@ Partial Class frmShedular
         Me.ChkEmployee.AutoSize = True
         Me.ChkEmployee.Location = New System.Drawing.Point(153, 34)
         Me.ChkEmployee.Name = "ChkEmployee"
-        Me.ChkEmployee.Size = New System.Drawing.Size(72, 17)
+        Me.ChkEmployee.Size = New System.Drawing.Size(75, 17)
         Me.ChkEmployee.TabIndex = 1
         Me.ChkEmployee.Text = "Employee"
         Me.ChkEmployee.UseVisualStyleBackColor = True
@@ -756,7 +759,7 @@ Partial Class frmShedular
         Me.ChkWo.AutoSize = True
         Me.ChkWo.Location = New System.Drawing.Point(10, 34)
         Me.ChkWo.Name = "ChkWo"
-        Me.ChkWo.Size = New System.Drawing.Size(81, 17)
+        Me.ChkWo.Size = New System.Drawing.Size(87, 17)
         Me.ChkWo.TabIndex = 0
         Me.ChkWo.Text = "Work Order"
         Me.ChkWo.UseVisualStyleBackColor = True
@@ -765,7 +768,8 @@ Partial Class frmShedular
         '
         Me.grpMultiview.Controls.Add(Me.radMultiView)
         Me.grpMultiview.Controls.Add(Me.radsingleView)
-        Me.grpMultiview.Location = New System.Drawing.Point(720, 9)
+        Me.grpMultiview.Controls.Add(Me.grpType)
+        Me.grpMultiview.Location = New System.Drawing.Point(29, 28)
         Me.grpMultiview.Name = "grpMultiview"
         Me.grpMultiview.Size = New System.Drawing.Size(68, 71)
         Me.grpMultiview.TabIndex = 118
@@ -779,13 +783,13 @@ Partial Class frmShedular
         Me.radMultiView.Name = "radMultiView"
         Me.radMultiView.Size = New System.Drawing.Size(124, 17)
         Me.radMultiView.TabIndex = 1
-        Me.radMultiView.TabStop = True
         Me.radMultiView.Text = "Multi Schedular View"
         Me.radMultiView.UseVisualStyleBackColor = True
         '
         'radsingleView
         '
         Me.radsingleView.AutoSize = True
+        Me.radsingleView.Checked = True
         Me.radsingleView.Location = New System.Drawing.Point(17, 29)
         Me.radsingleView.Name = "radsingleView"
         Me.radsingleView.Size = New System.Drawing.Size(131, 17)
@@ -800,7 +804,7 @@ Partial Class frmShedular
         Me.grpType.Controls.Add(Me.RadWoEqp)
         Me.grpType.Controls.Add(Me.RadWo)
         Me.grpType.Controls.Add(Me.RadTask)
-        Me.grpType.Location = New System.Drawing.Point(1111, 28)
+        Me.grpType.Location = New System.Drawing.Point(6, 4)
         Me.grpType.Name = "grpType"
         Me.grpType.Size = New System.Drawing.Size(247, 42)
         Me.grpType.TabIndex = 114
@@ -854,7 +858,7 @@ Partial Class frmShedular
         Me.SchedulerNav.AssociatedScheduler = Nothing
         Me.SchedulerNav.Controls.Add(Me.grpVisibleM)
         Me.SchedulerNav.DateFormat = "yyyy/MM/dd"
-        Me.SchedulerNav.Location = New System.Drawing.Point(12, 9)
+        Me.SchedulerNav.Location = New System.Drawing.Point(0, 3)
         Me.SchedulerNav.Name = "SchedulerNav"
         Me.SchedulerNav.NavigationStepType = Telerik.WinControls.UI.NavigationStepTypes.Day
         '
@@ -895,7 +899,7 @@ Partial Class frmShedular
         'btnExport
         '
         Me.btnExport.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.btnExport.Location = New System.Drawing.Point(1414, 43)
+        Me.btnExport.Location = New System.Drawing.Point(501, 40)
         Me.btnExport.Name = "btnExport"
         Me.btnExport.Size = New System.Drawing.Size(104, 40)
         Me.btnExport.TabIndex = 112
@@ -905,12 +909,51 @@ Partial Class frmShedular
         'ChkAllAreas
         '
         Me.ChkAllAreas.AutoSize = True
-        Me.ChkAllAreas.Location = New System.Drawing.Point(834, 12)
+        Me.ChkAllAreas.Location = New System.Drawing.Point(7, 6)
         Me.ChkAllAreas.Name = "ChkAllAreas"
-        Me.ChkAllAreas.Size = New System.Drawing.Size(67, 17)
+        Me.ChkAllAreas.Size = New System.Drawing.Size(70, 17)
         Me.ChkAllAreas.TabIndex = 7
         Me.ChkAllAreas.Text = "All Areas"
         Me.ChkAllAreas.UseVisualStyleBackColor = True
+        '
+        'RadPageView1
+        '
+        Me.RadPageView1.Controls.Add(Me.RadPageViewPage1)
+        Me.RadPageView1.Controls.Add(Me.RadPageViewPage2)
+        Me.RadPageView1.Controls.Add(Me.RadPageViewPage3)
+        Me.RadPageView1.Location = New System.Drawing.Point(3, 3)
+        Me.RadPageView1.Name = "RadPageView1"
+        Me.RadPageView1.SelectedPage = Me.RadPageViewPage1
+        Me.RadPageView1.Size = New System.Drawing.Size(627, 134)
+        Me.RadPageView1.TabIndex = 120
+        Me.RadPageView1.Text = "RadPageView1"
+        '
+        'RadPageViewPage1
+        '
+        Me.RadPageViewPage1.Controls.Add(Me.SchedulerNav)
+        Me.RadPageViewPage1.Controls.Add(Me.btnExport)
+        Me.RadPageViewPage1.Controls.Add(Me.btnPrint)
+        Me.RadPageViewPage1.Location = New System.Drawing.Point(10, 37)
+        Me.RadPageViewPage1.Name = "RadPageViewPage1"
+        Me.RadPageViewPage1.Size = New System.Drawing.Size(606, 86)
+        Me.RadPageViewPage1.Text = "Views"
+        '
+        'RadPageViewPage2
+        '
+        Me.RadPageViewPage2.Controls.Add(Me.grpMultiType)
+        Me.RadPageViewPage2.Location = New System.Drawing.Point(10, 37)
+        Me.RadPageViewPage2.Name = "RadPageViewPage2"
+        Me.RadPageViewPage2.Size = New System.Drawing.Size(606, 86)
+        Me.RadPageViewPage2.Text = "Visible schedulars"
+        '
+        'RadPageViewPage3
+        '
+        Me.RadPageViewPage3.Controls.Add(Me.ChkAllAreas)
+        Me.RadPageViewPage3.Controls.Add(Me.grpSite)
+        Me.RadPageViewPage3.Location = New System.Drawing.Point(10, 37)
+        Me.RadPageViewPage3.Name = "RadPageViewPage3"
+        Me.RadPageViewPage3.Size = New System.Drawing.Size(606, 86)
+        Me.RadPageViewPage3.Text = "Area Filter"
         '
         'frmShedular
         '
@@ -948,7 +991,6 @@ Partial Class frmShedular
         Me.GroupBox4.PerformLayout()
         CType(Me.Rcal, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer2.Panel1.ResumeLayout(False)
-        Me.SplitContainer2.Panel1.PerformLayout()
         Me.SplitContainer2.Panel2.ResumeLayout(False)
         Me.SplitContainer2.ResumeLayout(False)
         Me.grpSite.ResumeLayout(False)
@@ -965,6 +1007,13 @@ Partial Class frmShedular
         Me.grpVisibleM.ResumeLayout(False)
         Me.grpVisibleM.PerformLayout()
         CType(Me.MonthUpDown, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RadPageView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.RadPageView1.ResumeLayout(False)
+        Me.RadPageViewPage1.ResumeLayout(False)
+        Me.RadPageViewPage1.PerformLayout()
+        Me.RadPageViewPage2.ResumeLayout(False)
+        Me.RadPageViewPage3.ResumeLayout(False)
+        Me.RadPageViewPage3.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1035,4 +1084,8 @@ Partial Class frmShedular
     Friend WithEvents RadWoEqp As System.Windows.Forms.RadioButton
     Friend WithEvents RadWo As System.Windows.Forms.RadioButton
     Friend WithEvents RadTask As System.Windows.Forms.RadioButton
+    Friend WithEvents RadPageView1 As Telerik.WinControls.UI.RadPageView
+    Friend WithEvents RadPageViewPage1 As Telerik.WinControls.UI.RadPageViewPage
+    Friend WithEvents RadPageViewPage2 As Telerik.WinControls.UI.RadPageViewPage
+    Friend WithEvents RadPageViewPage3 As Telerik.WinControls.UI.RadPageViewPage
 End Class
