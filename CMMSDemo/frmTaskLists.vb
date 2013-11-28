@@ -78,7 +78,7 @@ Public Class frmTaskLists
     End Sub
 
     Private Sub dgvTasks_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvTasks.CellDoubleClick
-        FormMain.twTask.DefaultFloatingSize = New Size(900, 1000)
+        FormMain.twTask.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.twTask)
         'FormMain.twTask.Show()
         FormMain.twTask.Select()

@@ -61,7 +61,7 @@ Partial Class frmUpCommingSchedule
         'SplitContainer1.Panel2
         '
         Me.SplitContainer1.Panel2.Controls.Add(Me.DgvUpComming)
-        Me.SplitContainer1.Size = New System.Drawing.Size(815, 751)
+        Me.SplitContainer1.Size = New System.Drawing.Size(663, 489)
         Me.SplitContainer1.SplitterDistance = 71
         Me.SplitContainer1.TabIndex = 0
         '
@@ -71,9 +71,9 @@ Partial Class frmUpCommingSchedule
         Me.grpfilter.Controls.Add(Me.Label16)
         Me.grpfilter.Controls.Add(Me.Button9)
         Me.grpfilter.Enabled = False
-        Me.grpfilter.Location = New System.Drawing.Point(406, 14)
+        Me.grpfilter.Location = New System.Drawing.Point(343, 10)
         Me.grpfilter.Name = "grpfilter"
-        Me.grpfilter.Size = New System.Drawing.Size(392, 50)
+        Me.grpfilter.Size = New System.Drawing.Size(318, 50)
         Me.grpfilter.TabIndex = 99
         Me.grpfilter.TabStop = False
         '
@@ -81,7 +81,7 @@ Partial Class frmUpCommingSchedule
         '
         Me.TextBox10.Location = New System.Drawing.Point(140, 17)
         Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(216, 20)
+        Me.TextBox10.Size = New System.Drawing.Size(144, 20)
         Me.TextBox10.TabIndex = 96
         '
         'Label16
@@ -96,7 +96,7 @@ Partial Class frmUpCommingSchedule
         'Button9
         '
         Me.Button9.Image = CType(resources.GetObject("Button9.Image"), System.Drawing.Image)
-        Me.Button9.Location = New System.Drawing.Point(362, 13)
+        Me.Button9.Location = New System.Drawing.Point(290, 14)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(24, 24)
         Me.Button9.TabIndex = 98
@@ -105,7 +105,7 @@ Partial Class frmUpCommingSchedule
         'ChkFilter
         '
         Me.ChkFilter.AutoSize = True
-        Me.ChkFilter.Location = New System.Drawing.Point(352, 37)
+        Me.ChkFilter.Location = New System.Drawing.Point(289, 34)
         Me.ChkFilter.Name = "ChkFilter"
         Me.ChkFilter.Size = New System.Drawing.Size(48, 17)
         Me.ChkFilter.TabIndex = 95
@@ -118,9 +118,9 @@ Partial Class frmUpCommingSchedule
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.Label2)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
-        Me.GroupBox2.Location = New System.Drawing.Point(15, 14)
+        Me.GroupBox2.Location = New System.Drawing.Point(3, 14)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(292, 46)
+        Me.GroupBox2.Size = New System.Drawing.Size(280, 46)
         Me.GroupBox2.TabIndex = 94
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Date Range"
@@ -128,7 +128,7 @@ Partial Class frmUpCommingSchedule
         'DateTimePicker2
         '
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker2.Location = New System.Drawing.Point(182, 20)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(173, 20)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.Size = New System.Drawing.Size(99, 20)
         Me.DateTimePicker2.TabIndex = 4
@@ -145,7 +145,7 @@ Partial Class frmUpCommingSchedule
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(156, 24)
+        Me.Label2.Location = New System.Drawing.Point(147, 24)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(20, 13)
         Me.Label2.TabIndex = 2
@@ -164,7 +164,7 @@ Partial Class frmUpCommingSchedule
         Me.DgvUpComming.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvUpComming.Location = New System.Drawing.Point(0, 0)
         Me.DgvUpComming.Name = "DgvUpComming"
-        Me.DgvUpComming.Size = New System.Drawing.Size(815, 676)
+        Me.DgvUpComming.Size = New System.Drawing.Size(663, 414)
         Me.DgvUpComming.TabIndex = 0
         Me.DgvUpComming.Text = "RadGridView1"
         '
@@ -173,7 +173,7 @@ Partial Class frmUpCommingSchedule
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(233, Byte), Integer), CType(CType(240, Byte), Integer), CType(CType(249, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(815, 751)
+        Me.ClientSize = New System.Drawing.Size(663, 489)
         Me.Controls.Add(Me.SplitContainer1)
         Me.MaximizeBox = False
         Me.Name = "frmUpCommingSchedule"

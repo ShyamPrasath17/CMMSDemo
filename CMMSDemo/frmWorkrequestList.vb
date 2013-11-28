@@ -46,7 +46,7 @@ Public Class frmWorkrequestList
     End Sub
 
     Private Sub dgvWorkReq_CellDoubleClick(sender As Object, e As GridViewCellEventArgs) Handles dgvWorkReq.CellDoubleClick
-        FormMain.TwWorkReq.DefaultFloatingSize = New Size(800, 900)
+        FormMain.TwWorkReq.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.TwWorkReq)
         'FormMain.TwWorkReq.Show()
         FormMain.TwWorkReq.Select()
@@ -54,7 +54,7 @@ Public Class frmWorkrequestList
 
     Private Sub dgvWorkReq_CommandCellClick(sender As Object, e As EventArgs) Handles dgvWorkReq.CommandCellClick
         If Not dgvWorkReq.CurrentRow Is Nothing Then
-            FormMain.ToolWindowWo.DefaultFloatingSize = New Size(900, 1000)
+            FormMain.ToolWindowWo.DefaultFloatingSize = New Size(700, 650)
             FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWo)
             FormMain.frmwo.txtReq.Text = dgvWorkReq.CurrentRow.Cells("RequestID").Value.ToString()
             'FormMain.ToolWindowWo.Show()

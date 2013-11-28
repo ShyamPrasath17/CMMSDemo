@@ -36,7 +36,7 @@
     End Sub
 
     Private Sub dgvSchedMaint_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvSchedMaint.CellDoubleClick
-        FormMain.TwScheduledMaint.DefaultFloatingSize = New Size(900, 900)
+        FormMain.TwScheduledMaint.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.TwScheduledMaint)
         'FormMain.TwScheduledMaint.Show()
         FormMain.TwScheduledMaint.Select()

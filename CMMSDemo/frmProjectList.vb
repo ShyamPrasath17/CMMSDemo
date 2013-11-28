@@ -4,7 +4,7 @@
     Public connstring As String
    
     Private Sub dgvProjectList_CellDoubleClick(sender As Object, e As Telerik.WinControls.UI.GridViewCellEventArgs) Handles dgvProjectList.CellDoubleClick
-        FormMain.twProject.DefaultFloatingSize = New Size(700, 800)
+        FormMain.twProject.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.twProject)
         FormMain.twProject.Select()
     End Sub
