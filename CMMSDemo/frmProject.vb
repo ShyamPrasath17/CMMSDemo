@@ -14,7 +14,7 @@ Public Class frmProject
     End Sub
 
     Private Sub btnViewWo_Click(sender As Object, e As EventArgs) Handles btnViewWo.Click
-        FormMain.ToolWindowWoLst.DefaultFloatingSize = New Size(900, 600)
+        FormMain.ToolWindowWoLst.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWoLst)
         'FormMain.RadDockMain.DockWindow(FormMain.ToolWindowWoLst, Telerik.WinControls.UI.Docking.DockPosition.Right)
     End Sub

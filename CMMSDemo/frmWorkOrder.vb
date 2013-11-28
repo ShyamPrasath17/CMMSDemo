@@ -38,7 +38,7 @@
 
     Private Sub btnViewTasks_Click(sender As Object, e As EventArgs) Handles btnViewTasks.Click
         'FormMain.RadDockMain.DockWindow(FormMain.twTaskList, FormMain.ToolWindowWo, Telerik.WinControls.UI.Docking.DockPosition.Right)
-        FormMain.twTaskList.DefaultFloatingSize = New Size(900, 600)
+        FormMain.twTaskList.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.twTaskList)
     End Sub
 End Class

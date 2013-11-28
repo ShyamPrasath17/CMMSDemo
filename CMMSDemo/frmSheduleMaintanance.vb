@@ -21,7 +21,7 @@ Public Class frmSheduleMaintanance
     End Sub
 
     Private Sub btnViewUpComming_Click(sender As Object, e As EventArgs) Handles btnViewUpComming.Click
-        FormMain.TwUpComming.DefaultFloatingSize = New Size(900, 600)
+        FormMain.TwUpComming.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.TwUpComming)
         'FormMain.RadDockMain.DockWindow(FormMain.TwUpComming, DockPosition.Right)
         'FormMain.TwUpComming.TabStrip.SizeInfo.SizeMode = SplitPanelSizeMode.Absolute
@@ -78,7 +78,7 @@ Public Class frmSheduleMaintanance
 
     Private Sub btnViewWos_Click(sender As Object, e As EventArgs) Handles btnViewWos.Click
         FormMain.frmwolst.SetTypedWoData("ScheduleMaintanance")
-        FormMain.ToolWindowWoLst.DefaultFloatingSize = New Size(900, 500)
+        FormMain.ToolWindowWoLst.DefaultFloatingSize = New Size(700, 650)
         FormMain.RadDockMain.FloatWindow(FormMain.ToolWindowWoLst)
         'FormMain.ToolWindowWo.Show()
         FormMain.ToolWindowWo.Select()
